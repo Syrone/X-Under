@@ -1,0 +1,79 @@
+.header
+	&-dropdown
+		max-height: 310px
+	&-dropdown, .offcanvas-body
+		/* Стилизация скроллбара */
+		/* Толщина скроллбара */
+		&::-webkit-scrollbar
+			width: 2px
+
+		/* Цвет фона скроллбара */
+		&::-webkit-scrollbar-track
+			background: var(--item-color)
+
+		/* Цвет полоски скроллбара */
+		&::-webkit-scrollbar-thumb
+			background-color: var(--item-color-light)
+			border-radius: 5px
+
+		/* Цвет полоски скроллбара при наведении */
+		&::-webkit-scrollbar-thumb:hover
+			background-color: var(--text-color)
+	.dropdown-menu
+		min-width: 380px
+	.dropdown-overflow
+		height: 80vh
+		&::-webkit-scrollbar
+			display: none
+	.dropdown-item
+		&:is(:focus, :active)
+			background: var(--item-color-light)
+		&:hover
+			background: var(--text-color)
+	.dropdown-card
+		&:first-child
+			padding-top: 0!important
+	.dropdown-toggle:after
+		display: none
+	.empty-cart-msg
+		display: none
+		min-height: 150px
+
+	&-offcanvas-btn
+		width: 100px
+		background-position: 90%
+
+	.accordion-body
+		padding: 0 var(--bs-accordion-body-padding-x) var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x)
+	.accordion-button:not(.collapsed)
+		box-shadow: none
+
+	.list-group-item
+		padding: 0
+
+
+@include media-breakpoint-down(md)
+	.header
+		&-logo
+			width: 100px
+		&-navbar
+			width: 40px
+			height: 30px
+		&-icon
+			width: 20px
+		&-current
+			font-size: .625rem
+
+@include media-breakpoint-down(sm)
+	.header
+		&-logo
+			width: 80px
+		&-navbar
+			width: 35px
+			height: 30px
+		&-icon
+			width: 15px
+		&-current
+			font-size: .5rem
+		.dropdown-menu
+			min-width: 280px

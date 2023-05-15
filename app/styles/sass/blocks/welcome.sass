@@ -1,0 +1,75 @@
+.welcome
+	padding: 0
+	position: relative
+	&__bg
+		width: 100%
+		height: 100vh
+		background-size: contain
+		background-position: center
+		background-repeat: no-repeat
+		svg
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: cover
+			fill: #212121
+	&__item
+		height: 100%
+		background-color: var(--body-color)
+		box-shadow: 0 0 60px 25px #000
+		text-transform: uppercase
+		z-index: 1
+		&::after
+			content: ''
+			width: 100vh
+			height: 100vh
+			background: url(../images/dist/welcome-logo--dark.svg) no-repeat center
+			background-size: contain
+			right: -50%
+			transform: translateX(50%)
+			position: absolute
+			z-index: -1
+		&::before
+			content: ''
+			width: 100%
+			height: 50px
+			background: var(--gradient-m)
+			top: 50%
+			transform: translateY(-50%)
+			position: absolute
+			left: 0
+		&:last-child
+			.welcome__item-text
+				background: var(--gradient-w)
+				-webkit-background-clip: text
+				-webkit-text-fill-color: transparent
+			&::after
+				right: unset
+				left: -50%
+				transform: translateX(-50%)
+			&::before
+				background: var(--gradient-w)
+		&-text
+			background: var(--gradient-m)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+		&-logo
+			margin-bottom: 125px
+
+@include media-breakpoint-down(md)
+	.welcome
+		&__item
+			box-shadow: none
+			&::after
+				display: none
+			&:last-child::after
+				display: none
+
+@include media-breakpoint-down(sm)
+	.welcome__item
+		&-text
+			max-width: 100px
+		&-logo
+			margin-bottom: 100px
+		&::before
+			top: calc( 42% + 6vw )

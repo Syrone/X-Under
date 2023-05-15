@@ -1,0 +1,113 @@
+// GENERAL PROJECT STYLES
+
+.popover
+	max-width: 310px
+	padding: 1.4rem 0.3rem 2.4rem
+	background: var(--item-color)
+	.popover-header
+		display: flex
+		justify-content: center
+		align-items: center
+		gap: 10px
+		font-size: 1.5rem
+		font-weight: 400
+		background: var(--item-color)
+		color: var(--accent-m)
+		border: none
+	.popover-header #info-icon
+		display: inline-block
+		margin-right: 0.5rem
+	.popover-body
+		color: var(--text-color)
+	.popover-arrow
+		display: none
+
+//Reassigning Variables
+.bg-dark
+	background-color: var(--body-color)!important
+
+.bg-primary
+	background-color: var(--accent-m)!important
+
+.bg-secondary
+	background-color: var(--accent-w)!important
+
+.border-dark
+	border-color: var(--item-color-light)!important
+
+.border-primary
+	border-color: var(--accent-m)!important
+
+.border-secondary
+	border-color: var(--accent-w)!important
+
+.text-primary
+	color: var(--accent-m)!important
+
+.text-secondary
+	color: var(--accent-w)!important
+
+.text-black
+	color: var(--text-color)!important
+
+.text-dark
+	color: var(--text-color-light)!important
+
+.offcanvas, .offcanvas-lg, .offcanvas-md, .offcanvas-sm, .offcanvas-xl, .offcanvas-xxl
+	--bs-offcanvas-width: 500px
+
+.accordion
+	--bs-accordion-btn-focus-border-color: var(--text-color)
+	--bs-accordion-btn-focus-box-shadow: 0 0 0 0.10rem var(--text-color)
+	--bs-accordion-btn-padding-x: 0
+	--bs-accordion-body-padding-x: 0
+	--bs-accordion-btn-icon: url('../images/dist/icons/close.svg')
+	--bs-accordion-btn-active-icon: url('../images/dist/icons/close.svg')
+	--bs-accordion-btn-icon-width: 0.85rem
+
+.list-group
+	--bs-list-group-color: var(--text-color-light)
+	--bs-list-group-action-hover-color: var(--text-color)
+	--bs-list-group-action-active-color: var(--item-color-light)
+	--bs-list-group-item-padding-x: 0
+//END Reassigning Variables
+
+.tiny
+	font-size: .7rem
+
+.btn-m
+	background: var(--gradient-m)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	&:is(:hover, :focus)
+		border: 2px solid var(--accent-m)
+		box-shadow: var(--box-shadow-m)
+
+.btn-w
+	background: var(--gradient-w)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	&:is(:hover, :focus)
+		border: 2px solid var(--accent-w)
+		box-shadow: var(--box-shadow-w)
+
+.btn-close.btn-close-m
+	background: url(../images/dist/icons/close-m.svg) 50%/1em auto no-repeat
+
+.btn-close.btn-close-w
+	background: url(../images/dist/icons/close-w.svg) 50%/1em auto no-repeat
+
+.brackets
+	&::before
+		content: '('
+	&::after
+		content: ')'
+
+.accordion-button
+	line-height: initial
+	cursor: pointer
+	&:after
+		transform: var(--rotate-icon)
+
+.accordion-link:after
+	display: none

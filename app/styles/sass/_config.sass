@@ -1,0 +1,80 @@
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+@import 'node_modules/bootstrap/scss/bootstrap.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('Swiss', normal, 300, '../fonts/SwisLight.woff2')
+@include font('Swiss', italic, 300, '../fonts/SwisLightItalic.woff2')
+@include font('Swiss', normal, 400, '../fonts/SwisRegular.woff2')
+@include font('Swiss', italic, 400, '../fonts/SwisRegularItalic.woff2')
+@include font('Swiss', normal, 700, '../fonts/SwisBold.woff2')
+@include font('Swiss', italic, 700, '../fonts/SwisBoldItalic.woff2')
+
+// GENERAL CSS SETTINGS
+
+:root
+	--userfont: Swiss, sans-serif
+	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif
+
+	--font-size: 1rem
+	--lineheight: 1.65
+
+	--accent-m: rgb(0, 255, 255)
+	--accent-w: rgb(230, 0, 148)
+	--gradient-m: linear-gradient(90deg, var(--accent-m)  0%, rgb(37, 204, 251) 100%)
+	--gradient-w: linear-gradient(90deg, var(--accent-w)  0%, rgb(242, 1, 94) 100%)
+	--body-color: #1a1a1a
+	--item-color: #333
+	--item-color-light: #4d4d4d
+	--text-color: #808080
+	--text-color-light: #ccc
+
+	--box-shadow-m: 0 0 0 0.25rem rgba(0, 255, 255,.25)
+	--box-shadow-w: 0 0 0 0.25rem rgba(230, 0, 148,.25)
+
+	--rotate-icon: rotate(-45deg)
+
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: var(--accent)
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: var(--userfont)
+	font-size: var(--font-size)
+	line-height: var(--lineheight)
+	color: var(--textcolor)
+	background-color: var(--body-color)
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+
+a
+	display: block
+	font: inherit
+	color: inherit
+	text-decoration: none
+
