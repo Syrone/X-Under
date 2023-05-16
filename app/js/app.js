@@ -1,4 +1,4 @@
-// import bootstrap from 'bootstrap'
+import Swiper from 'swiper/bundle'
 
 document.addEventListener('DOMContentLoaded', () => {
 	// HEADER POPOVER

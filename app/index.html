@@ -5,20 +5,32 @@
 	<div class="row g-0">
 		<h1 class="visually-hidden">Online Store X-Under</h1>
 
-		<div class="welcome__bg col-12" style="background-image: url(./images/dist/welcome-logo.svg);"></div>
-
-		<div class="welcome__item col-6 col-md-4 d-flex align-items-end flex-column justify-content-center text-end position-absolute top-0 start-0 overflow-hidden ps-2 pe-3 ps-sm-2 pe-sm-5">
-			<img src="./images/dist/logo-m--tiny.svg" width="112" height="76" alt="Logo MEN"
-				class="welcome__item-logo">
-			<h2 class="welcome__item-text">MEN'S SHOP</h2>
-			<a href="./main-man.html" class="btn btn-m btn-lg border border-2 border-primary text-uppercase">GO TO SHOP</a>
+		<div class="welcome__bg d-flex gap-5 flex-column align-items-center justify-content-center col-12" style="background-image: url(./images/dist/welcome-logo.svg);">
+			<div class="d-flex d-md-none flex-column align-items-center justify-content-center mb-5">
+				<h3 class="welcome__item-text">MEN'S SHOP</h3>
+				<a href="./main-man.html" class="btn btn-m btn-lg border border-2 border-primary text-uppercase">GO TO
+					SHOP</a>
+			</div>
+			<div class="d-flex d-md-none flex-column align-items-center justify-content-center">
+				<h3 class="welcome__item-text woman">WOMEN'S SHOP</h3>
+				<a href="./main-women.html" class="btn btn-w btn-lg border border-2 border-secondary text-uppercase">GO TO
+					SHOP</a>
+			</div>
 		</div>
 
-		<div class="welcome__item col-6 col-md-4 d-flex align-items-start flex-column justify-content-center position-absolute top-0 end-0 overflow-hidden ps-3 pe-2 ps-sm-5 pe-sm-2">
-			<img src="./images/dist/logo-w--tiny.svg" width="112" height="76" alt="Logo WOMEN"
-				class="welcome__item-logo">
-			<h2 class="welcome__item-text">WOMEN'S SHOP</h2>
-			<a href="./main-women.html" class="btn btn-w btn-lg border border-2 border-secondary text-uppercase">GO TO SHOP</a>
+		<div
+			class="welcome__item col-1 col-sm-2 col-md-4 d-flex align-items-end flex-column justify-content-center text-end position-absolute top-0 start-0 overflow-hidden ps-2 pe-3 ps-sm-2 pe-lg-5">
+			<img src="./images/dist/logo-m--tiny.svg" width="112" height="76" alt="Logo MEN" class="welcome__item-logo d-none d-md-block">
+			<h2 class="welcome__item-text d-none d-md-block">MEN'S SHOP</h2>
+			<a href="./main-man.html" class="d-none d-md-block btn btn-m btn-lg border border-2 border-primary text-uppercase">GO TO SHOP</a>
+		</div>
+
+		<div
+			class="welcome__item col-1 col-sm-2 col-md-4 d-flex align-items-start flex-column justify-content-center position-absolute top-0 end-0 overflow-hidden ps-3 pe-2 pe-sm-2 ps-lg-5">
+			<img src="./images/dist/logo-w--tiny.svg" width="112" height="76" alt="Logo WOMEN" class="welcome__item-logo d-none d-md-block">
+			<h2 class="welcome__item-text woman d-none d-md-block">WOMEN'S SHOP</h2>
+			<a href="./main-women.html" class="d-none d-md-block btn btn-w btn-lg border border-2 border-secondary text-uppercase">GO TO
+				SHOP</a>
 		</div>
 	</div>
 </div>

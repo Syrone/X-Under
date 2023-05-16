@@ -1,5 +1,8 @@
 // GENERAL PROJECT STYLES
 
+.container
+	max-width: 1720px
+
 .popover
 	max-width: 310px
 	padding: 1.4rem 0.3rem 2.4rem
@@ -14,6 +17,8 @@
 		background: var(--item-color)
 		color: var(--accent-m)
 		border: none
+		&::before
+			display: none
 	.popover-header #info-icon
 		display: inline-block
 		margin-right: 0.5rem

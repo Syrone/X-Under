@@ -16,7 +16,7 @@
 	&__item
 		height: 100%
 		background-color: var(--body-color)
-		box-shadow: 0 0 60px 25px #000
+		box-shadow: 0 0 3.75rem 1.5rem #000
 		text-transform: uppercase
 		z-index: 1
 		&::after
@@ -32,17 +32,13 @@
 		&::before
 			content: ''
 			width: 100%
-			height: 50px
+			height: 40px
 			background: var(--gradient-m)
 			top: 50%
 			transform: translateY(-50%)
 			position: absolute
 			left: 0
 		&:last-child
-			.welcome__item-text
-				background: var(--gradient-w)
-				-webkit-background-clip: text
-				-webkit-text-fill-color: transparent
 			&::after
 				right: unset
 				left: -50%
@@ -53,23 +49,30 @@
 			background: var(--gradient-m)
 			-webkit-background-clip: text
 			-webkit-text-fill-color: transparent
+			&.woman
+				background: var(--gradient-w)
+				-webkit-background-clip: text
+				-webkit-text-fill-color: transparent
 		&-logo
 			margin-bottom: 125px
 
 @include media-breakpoint-down(md)
 	.welcome
 		&__item
-			box-shadow: none
+			box-shadow: 0 0 2.25rem 0.75rem #000
 			&::after
-				display: none
+				right: -200%
+			&::before
+				height: 30px
 			&:last-child::after
-				display: none
+				left: -200%
 
 @include media-breakpoint-down(sm)
-	.welcome__item
-		&-text
-			max-width: 100px
-		&-logo
-			margin-bottom: 100px
-		&::before
-			top: calc( 42% + 6vw )
+	.welcome
+		&__bg
+			background-size: cover
+		&__item
+			&::after
+				right: -480%
+			&:last-child::after
+				left: -480%
