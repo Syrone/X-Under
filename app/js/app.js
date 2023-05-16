@@ -1,6 +1,19 @@
 import Swiper from 'swiper/bundle'
 
 document.addEventListener('DOMContentLoaded', () => {
+	// Delay Handler
+	function delayHandler(func, delay) {
+		let timeoutId;
+		return function () {
+			if (timeoutId) {
+				clearTimeout(timeoutId);
+			}
+			timeoutId = setTimeout(() => {
+				func();
+			}, delay);
+		}
+	}
+
 	// HEADER POPOVER
 	const popoverTShirt = document.querySelector('.tshirt-popover');
 	const infoIcon = document.getElementById('info-icon');
@@ -28,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const observer = new MutationObserver(updateCardInfo);
 	if (dropdownCard && dropdownCard instanceof Node) {
 		observer.observe(dropdownCard, { childList: true, subtree: true });
-	 }
+	}
 
 	closeButtons.forEach(button => button.addEventListener('click', function () {
 		button.closest('.dropdown-card').remove();
@@ -70,6 +83,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if (closeButtons && dropdownCard && currentCard && totalPriceTag && emptyCartMsg && bagText && totalDropdown && btnCheckout && brackets) {
 		updateCardInfo();
+	}
+
+	const heroSwiper = new Swiper('.hero-swiper', {
+		// Optional parameters
+		loop: true,
+
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+
+	});
+
+	const heroSwiperImg = document.querySelector('.hero-swiper-img');
+
+	if (heroSwiperImg) {
+		const heroSwiperPagination = document.querySelector('.hero-swiper-pagination');
+		let heroSwiperImgHeight, heroSwiperPaginationTop;
+
+		function setHeroSwiperPaginationTop() {
+			heroSwiperImgHeight = heroSwiperImg.offsetHeight;
+			heroSwiperPaginationTop = heroSwiperImgHeight - 50;
+			heroSwiperPagination.style.top = heroSwiperPaginationTop + 'px';
+
+			// добавляем проверку ширины экрана
+			if (window.innerWidth <= 768) {
+				heroSwiperPagination.style.top = heroSwiperImgHeight - 35 + 'px';
+			}
+		}
+
+		setHeroSwiperPaginationTop();
+
+		window.addEventListener('resize', delayHandler(setHeroSwiperPaginationTop, 50));
+
+		// добавляем обработчик изменения ориентации экрана
+		window.addEventListener('orientationchange', setHeroSwiperPaginationTop);
 	}
 
 });

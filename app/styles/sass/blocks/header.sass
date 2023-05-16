@@ -22,7 +22,6 @@
 	.dropdown-menu
 		min-width: 380px
 	.dropdown-overflow
-		height: 80vh
 		&::-webkit-scrollbar
 			display: none
 	.dropdown-item
@@ -50,26 +49,3 @@
 
 	.list-group-item
 		padding: 0
-
-
-@include media-breakpoint-down(md)
-	.header
-		&-logo
-			width: 100px
-		&-navbar
-			width: 40px
-			height: 30px
-		&-current
-			font-size: .625rem
-
-@include media-breakpoint-down(sm)
-	.header
-		&-logo
-			width: 80px
-		&-navbar
-			width: 35px
-			height: 30px
-		&-current
-			font-size: .5rem
-		.dropdown-menu
-			min-width: 300px

@@ -55,24 +55,3 @@
 				-webkit-text-fill-color: transparent
 		&-logo
 			margin-bottom: 125px
-
-@include media-breakpoint-down(md)
-	.welcome
-		&__item
-			box-shadow: 0 0 2.25rem 0.75rem #000
-			&::after
-				right: -200%
-			&::before
-				height: 30px
-			&:last-child::after
-				left: -200%
-
-@include media-breakpoint-down(sm)
-	.welcome
-		&__bg
-			background-size: cover
-		&__item
-			&::after
-				right: -480%
-			&:last-child::after
-				left: -480%
