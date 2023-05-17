@@ -125,14 +125,13 @@ document.addEventListener('DOMContentLoaded', () => {
 	//CLOCK
 	const els = {
 		s: initElements('s'),
-		m: initElements('m'),
-		h: initElements('h')
+		m: initElements('m')
 	}
 
 	function initElements(type) {
 		const els = [{}, {}]
 
-		if (!['s', 'm', 'h'].includes(type)) return els
+		if (!['s', 'm'].includes(type)) return els
 
 		const target = document.querySelector(`.flip-clock-${type}`)
 
@@ -157,41 +156,40 @@ document.addEventListener('DOMContentLoaded', () => {
 		return els
 	}
 
-	(function runClock() {
-		const date = new Date(),
+	function runClock() {
+		const endTime = new Date("May 18, 2023 00:00:00").getTime(),
+			nowTime = new Date().getTime(),
+			distanceTime = endTime - nowTime,
 			now = {
-				h: date.getHours(),
-				m: date.getMinutes(),
-				s: date.getSeconds()
+				m: Math.floor((distanceTime % (1000 * 60 * 60)) / (1000 * 60)),
+				s: Math.floor((distanceTime % (1000 * 60)) / 1000)
 			}
-		now.h = now.h < 10 ? `0${now.h}` : `${now.h}`
+
+		// now.d = now.d 
 		now.m = now.m < 10 ? `0${now.m}` : `${now.m}`
 		now.s = now.s < 10 ? `0${now.s}` : `${now.s}`
-		now.h0 = now.h[0]
-		now.h1 = now.h[1]
-		now.m0 = now.m[0]
-		now.m1 = now.m[1]
-		now.s0 = now.s[0]
-		now.s1 = now.s[1]
-
-		console.log(`${now.h0}${now.h1}:${now.m0}${now.m1}:${now.s0}${now.s1}`);
+		now.m0 = now.m[1]
+		now.m1 = now.m[0]
+		now.s0 = now.s[1]
+		now.s1 = now.s[0]
 
 		for (const t of Object.keys(els)) {
 			for (const i of ['0', '1']) {
 				const curr = now[`${t}${i}`]
-				let next = +curr + 1
-				if (t === 'h') {
-					if (i === '0') next = next < 3 ? `${next}` : '0'
-					if (i === '1') next = next < 4 ? `${next}` : '0'
+				let next = curr - 1
+
+				if (t === 'h' && i === '0' && next < 0) {
+					next = 5
+				} else if (t === 'm' && i === '0' && next < 0) {
+					next = 9
+				} else if (t === 'm' && i === '1' && next < 0) {
+					next = 5
+				} else if (t === 's' && i === '0' && next < 0) {
+					next = 9
+				} else if (t === 's' && i === '1' && next < 0) {
+					next = 5
 				}
-				if (t === 'm') {
-					if (i === '0') next = next < 6 ? `${next}` : '0'
-					if (i === '1') next = next < 10 ? `${next}` : '0'
-				}
-				if (t === 's') {
-					if (i === '0') next = next < 3 ? `${next}` : '0'
-					if (i === '1') next = next < 4 ? `${next}` : '0'
-				}
+
 				const el = els[t][i]
 				if (el && el.digit) {
 					if (!el.digit.dataset.digitBefore) {
@@ -224,6 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 
 		setTimeout(runClock, 1000)
-	})()
+	}
 
+	runClock();
 });
