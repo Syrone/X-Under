@@ -97,6 +97,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	});
 
+	const featuredSwiper = new Swiper('.featured-swiper', {
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				slidesPerGroup: 1,
+				spaceBetween: 100
+			},
+			768: {
+				slidesPerView: 2,
+				slidesPerGroup: 1,
+				spaceBetween: 20
+			},
+			1200: {
+				slidesPerView: 3,
+				slidesPerGroup: 1,
+				spaceBetween: 20
+			},
+			1400: {
+				slidesPerGroup: 1,
+				spaceBetween: 50
+			}
+		},
+
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+			appendNavigation: '.featured-swiper',
+		},
+
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+	})
+
 	const heroSwiperImg = document.querySelector('.hero-swiper-img');
 
 	if (heroSwiperImg) {

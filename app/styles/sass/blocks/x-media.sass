@@ -2,9 +2,23 @@
 	.container
 		max-width: 1720px
 
+@include media-breakpoint-down(xl)
+	.featured
+		.card-title
+			font-size: calc( 1rem + .65vw )
+
+@include media-breakpoint-down(lg)
+	.swiper-button-next
+		right: -.5rem
+	.swiper-button-prev
+		left: -.5rem
+
 @include media-breakpoint-down(md)
 	.container
 		max-width: 700px
+
+	.section
+		padding-top: 5rem
 
 	.welcome
 		&__bg
@@ -12,11 +26,11 @@
 		&__item
 			box-shadow: 0 0 2.25rem 0.75rem #000
 			&::after
-				right: -200%
+				right: -180%
 			&::before
 				height: 30px
 			&:last-child::after
-				left: -200%
+				left: -180%
 
 	.strip
 		height: 30px
@@ -37,13 +51,21 @@
 				position: static
 			&-content
 				max-width: unset
+				margin-bottom: 0
 			&-title
 				font-size: calc( 2.4rem + .4vw )
 			&-text
 				max-width: 400px
 				font-size: calc( 1.3rem + .4vw )
 
+	.featured
+		&-swiper
+			width: 70%
+
 @include media-breakpoint-down(sm)
+	.section
+		padding-top: 3.5rem
+
 	.welcome
 		&__item
 			&::after
@@ -71,3 +93,7 @@
 			&-text
 				max-width: 400px
 				font-size: calc( 1.1rem + .6vw )
+
+	.featured
+		.card-title
+			font-size: 1.25rem

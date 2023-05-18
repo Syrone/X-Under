@@ -34,7 +34,9 @@ $gutter: $grid-gutter-width
 	--lineheight: 1.65
 
 	--accent-m: rgb(0, 255, 255)
+	--accent-m-active: rgb(25, 191, 191)
 	--accent-w: rgb(230, 0, 148)
+	--accent-w-active: rgb(200, 31, 141)
 	--gradient-m: linear-gradient(90deg, var(--accent-m)  0%, rgb(37, 204, 251) 100%)
 	--gradient-w: linear-gradient(90deg, var(--accent-w)  0%, rgb(242, 1, 94) 100%)
 	--body-color: #1a1a1a
@@ -42,6 +44,7 @@ $gutter: $grid-gutter-width
 	--item-color-light: #4d4d4d
 	--text-color: #808080
 	--text-color-light: #ccc
+	--transparent: transparent
 
 	--box-shadow-m: 0 0 0 0.25rem rgba(0, 255, 255,.25)
 	--box-shadow-w: 0 0 0 0.25rem rgba(230, 0, 148,.25)
@@ -80,6 +83,10 @@ input, textarea
 	&:required:valid
 		border-color: green
 
+html, body
+	overflow-x: hidden
+
+
 body
 	font-family: var(--userfont)
 	font-size: var(--font-size)
@@ -88,7 +95,6 @@ body
 	background-color: var(--body-color)
 	min-width: 320px
 	position: relative
-	overflow-x: hidden
 
 a
 	display: block

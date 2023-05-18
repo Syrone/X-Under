@@ -2,6 +2,22 @@
 .wrapper
 	margin-top: 3.75rem
 
+.section
+	padding-top: 6.25rem
+
+//NEW CLASS ITEM
+.text-item
+	color: var(--item-color)
+
+.text-gradient
+	background: var(--gradient-m)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	&--woman
+		background: var(--gradient-w)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+
 .strip
 	display: block
 	width: 100%
@@ -9,6 +25,76 @@
 	background: var(--gradient-m)
 	position: absolute
 	bottom: 15%
+
+.tiny
+	font-size: .7rem
+
+.btn-m
+	background: var(--gradient-m)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	&:is(:hover, :focus)
+		border: 2px solid var(--accent-m)
+		box-shadow: var(--box-shadow-m)
+
+.btn-w
+	background: var(--gradient-w)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	&:is(:hover, :focus)
+		border: 2px solid var(--accent-w)
+		box-shadow: var(--box-shadow-w)
+
+.btn-close.btn-close-m
+	background: url(../images/dist/icons/close-m.svg) 50%/1em auto no-repeat
+
+.btn-close.btn-close-w
+	background: url(../images/dist/icons/close-w.svg) 50%/1em auto no-repeat
+
+.brackets
+	&::before
+		content: '('
+	&::after
+		content: ')'
+
+.icon-star
+	display: block
+	width: 1rem
+	height: 1rem
+	margin-inline: .3rem
+	background: url('../images/dist/icons/star-m.svg') center/cover no-repeat
+	&--w
+		background: url('../images/dist/icons/star-w.svg') center/cover no-repeat
+	&--disabled
+		background: url('../images/dist/icons/star-disabled.svg') center/cover no-repeat
+
+.icon-watched
+	display: block
+	width: .75rem
+	height: 1rem
+	margin-inline: .3rem
+	background: url('../images/dist/icons/watched-m.svg') center/cover no-repeat
+	&--w
+		background: url('../images/dist/icons/watched-w.svg') center/cover no-repeat
+
+.card-event
+	display: flex
+	flex-direction: column
+	top: 1.5rem
+	left: -2rem
+	position: relative
+	z-index: 5
+	&::after
+		content: ''
+		width: 2rem
+		height: 50%
+		background: var(--item-color-light)
+		transform: skewY(30deg)
+		position: absolute
+		bottom: -.625rem
+		z-index: -1
+
+//END NEW CLASS ITEM
 
 .popover
 	max-width: 310px
@@ -34,9 +120,42 @@
 	.popover-arrow
 		display: none
 
-//Reassigning Variables
+//Reassigning Variables BOOTSTRAP
+.btn-primary
+	--bs-btn-color: var(--item-color)
+	--bs-btn-bg: var(--accent-m)
+	--bs-btn-border-color: var(--accent-m)
+	--bs-btn-hover-color: var(--accent-m)
+	--bs-btn-hover-bg: var(--transparent)
+	--bs-btn-hover-border-color: var(--accent-m)
+	--bs-btn-active-color: var(--accent-m-active)
+	--bs-btn-active-bg: var(--transparent)
+	--bs-btn-active-border-color: var(--accent-m-active)
+	--bs-btn-disabled-color: var(--item-color)
+	--bs-btn-disabled-bg: var(--accent-m-active)
+	--bs-btn-disabled-border-color: var(--accent-m-active)
+	--bs-btn-border-width: 2px
+
+.btn-secondary
+	--bs-btn-color: var(--item-color)
+	--bs-btn-bg: var(--accent-w)
+	--bs-btn-border-color: var(--accent-w)
+	--bs-btn-hover-color: var(--accent-w)
+	--bs-btn-hover-bg: var(--transparent)
+	--bs-btn-hover-border-color: var(--accent-w)
+	--bs-btn-active-color: var(--accent-w-active)
+	--bs-btn-active-bg: var(--transparent)
+	--bs-btn-active-border-color: var(--accent-w-active)
+	--bs-btn-disabled-color: var(--item-color)
+	--bs-btn-disabled-bg: var(--accent-w-active)
+	--bs-btn-disabled-border-color: var(--accent-w-active)
+	--bs-btn-border-width: 2px
+
 .bg-dark
 	background-color: var(--body-color)!important
+
+.bg-black
+	background-color: var(--item-color)!important
 
 .bg-primary
 	background-color: var(--accent-m)!important
@@ -84,36 +203,30 @@
 	--bs-list-group-item-padding-x: 0
 //END Reassigning Variables
 
-.tiny
-	font-size: .7rem
+//Reassigning Variables SWIPER.JS
+.swiper-wrapper
+	cursor: grab
 
-.btn-m
-	background: var(--gradient-m)
-	-webkit-background-clip: text
-	-webkit-text-fill-color: transparent
-	&:is(:hover, :focus)
-		border: 2px solid var(--accent-m)
-		box-shadow: var(--box-shadow-m)
+.swiper-pagination-bullet
+	width: 3.125rem
+	height: .25rem
+	border-radius: var(--bs-border-radius)
+	background: var(--item-color)
+	opacity: 1
+	&-active
+		background: var(--accent-m)
 
-.btn-w
-	background: var(--gradient-w)
-	-webkit-background-clip: text
-	-webkit-text-fill-color: transparent
-	&:is(:hover, :focus)
-		border: 2px solid var(--accent-w)
-		box-shadow: var(--box-shadow-w)
+.swiper-button-next, .swiper-button-prev
+	color: var(--accent-m)
+	background: var(--item-color)
+	padding: 2rem
+	border-radius: 50%
 
-.btn-close.btn-close-m
-	background: url(../images/dist/icons/close-m.svg) 50%/1em auto no-repeat
-
-.btn-close.btn-close-w
-	background: url(../images/dist/icons/close-w.svg) 50%/1em auto no-repeat
-
-.brackets
-	&::before
-		content: '('
-	&::after
-		content: ')'
+.swiper-button-next:after
+	margin-right: -.5rem
+.swiper-button-prev:after
+	margin-left: -.5rem
+//END Reassigning Variables SWIPER.JS
 
 .accordion-button
 	line-height: initial
@@ -123,12 +236,3 @@
 
 .accordion-link:after
 	display: none
-
-.swiper-pagination-bullet
-	width: 50px
-	height: 4px
-	border-radius: var(--bs-border-radius)
-	background: var(--item-color)
-	opacity: 1
-	&-active
-		background: var(--accent-m)
