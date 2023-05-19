@@ -98,8 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	const featuredSwiper = new Swiper('.featured-swiper', {
+		slidesPerView: 3,
+		slidesPerGroup: 1,
+		spaceBetween: 50,
 		breakpoints: {
-			320: {
+			280: {
 				slidesPerView: 1,
 				slidesPerGroup: 1,
 				spaceBetween: 100

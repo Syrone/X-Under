@@ -20,6 +20,12 @@
 	.section
 		padding-top: 5rem
 
+	.badge
+		--bs-badge-font-size: calc( .5rem + 1vw )
+
+	.swiper-pagination-bullet
+		width: calc( 2.2rem + 2vw )
+
 	.welcome
 		&__bg
 			background-size: cover
@@ -61,10 +67,22 @@
 	.featured
 		&-swiper
 			width: 70%
+		.btn
+			font-size: calc( .5rem + 1vw )
+			max-width: calc( 150px + 1vw )
 
 @include media-breakpoint-down(sm)
 	.section
 		padding-top: 3.5rem
+
+	.swiper-button-next, .swiper-button-prev
+		padding: calc( 1rem + 1.5vw )
+		&::after
+			font-size: calc( 1rem + 2vw )
+	.swiper-button-next:after
+		margin-right: -.2rem
+	.swiper-button-prev:after
+		margin-left: -.2rem
 
 	.welcome
 		&__item
@@ -95,5 +113,12 @@
 				font-size: calc( 1.1rem + .6vw )
 
 	.featured
-		.card-title
-			font-size: 1.25rem
+		&-swiper
+			width: 85%
+		&-card
+			padding: .75rem
+		.card
+			&-body
+				padding-top: .75rem
+			&-stars, &-reviews
+				margin-bottom: 0

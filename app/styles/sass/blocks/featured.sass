@@ -2,7 +2,7 @@
 	&-swiper
 		width: 80%
 		margin-inline: auto
-		padding-bottom: 5rem
+		padding: 0 1rem 5rem
 		&-slide
 			display: flex
 			align-items: stretch
@@ -11,20 +11,28 @@
 	&-card
 		height: 100%
 		padding: var(--bs-card-img-overlay-padding)
-	.card-img-overlay
-		display: flex
-		flex-direction: column
-		align-items: center
-		justify-content: flex-end
-	.card-watched
-		display: flex
-		align-items: center
-		justify-content: center
-		margin-bottom: .4rem
-	.card-reviews
-		margin-bottom: .4rem
-	.card-stars
-		display: flex
-		align-items: center
-		justify-content: center
-		margin-bottom: .25rem
+	.card
+		&-body
+			padding: 1rem 0 0
+		&-img-overlay
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: flex-end
+		&-favorite
+			position: absolute
+			z-index: 1
+			top: 1rem
+			right: 1rem
+		&-watched
+			display: flex
+			align-items: center
+			justify-content: center
+			margin-bottom: .4rem
+		&-reviews
+			margin-bottom: .4rem
+		&-stars
+			display: flex
+			align-items: center
+			justify-content: center
+			margin-bottom: .25rem

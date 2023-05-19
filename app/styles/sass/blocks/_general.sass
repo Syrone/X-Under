@@ -57,25 +57,42 @@
 	&::after
 		content: ')'
 
-.icon-star
-	display: block
-	width: 1rem
-	height: 1rem
-	margin-inline: .3rem
-	background: url('../images/dist/icons/star-m.svg') center/cover no-repeat
-	&--w
-		background: url('../images/dist/icons/star-w.svg') center/cover no-repeat
-	&--disabled
-		background: url('../images/dist/icons/star-disabled.svg') center/cover no-repeat
-
-.icon-watched
-	display: block
-	width: .75rem
-	height: 1rem
-	margin-inline: .3rem
-	background: url('../images/dist/icons/watched-m.svg') center/cover no-repeat
-	&--w
-		background: url('../images/dist/icons/watched-w.svg') center/cover no-repeat
+.icon
+	&-star
+		display: block
+		width: 1rem
+		height: 1rem
+		margin-inline: .3rem
+		background: url('../images/dist/icons/star-m.svg') center/cover no-repeat
+		&--w
+			background: url('../images/dist/icons/star-w.svg') center/cover no-repeat
+		&--disabled
+			background: url('../images/dist/icons/star-disabled.svg') center/cover no-repeat
+	&-watched
+		display: block
+		width: .75rem
+		height: 1rem
+		margin-inline: .3rem
+		background: url('../images/dist/icons/watched-m.svg') center/cover no-repeat
+		&--w
+			background: url('../images/dist/icons/watched-w.svg') center/cover no-repeat
+	&-favorite
+		display: block
+		width: 2.5rem
+		height: 2.5rem
+		background: url('../images/dist/icons/favorites-outline.svg') center/contain no-repeat
+		cursor: pointer
+		transition: var(--trt-1)
+		&--m
+			&:hover
+				background: url('../images/dist/icons/favorites-m-outline.svg') center/contain no-repeat
+			&:is(:focus, :active)
+				background: url('../images/dist/icons/favorites-m.svg') center/contain no-repeat
+		&--w
+			&:hover
+				background: url('../images/dist/icons/favorites-w-outline.svg') center/contain no-repeat
+			&:is(:focus, :active)
+				background: url('../images/dist/icons/favorites-w.svg') center/contain no-repeat
 
 .card-event
 	display: flex
