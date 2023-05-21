@@ -111,7 +111,6 @@
 		position: absolute
 		bottom: -.625rem
 		z-index: -1
-
 //END NEW CLASS ITEM
 
 .popover
@@ -215,12 +214,16 @@
 	background: var(--item-color)
 	padding: 2rem
 	border-radius: 50%
-	top: 40%
 
 .swiper-button-next:after
 	margin-right: -.5rem
 .swiper-button-prev:after
 	margin-left: -.5rem
+
+.featured, .banner
+	.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction
+		bottom: -4rem
+
 //END Reassigning Variables SWIPER.JS
 
 .accordion-button

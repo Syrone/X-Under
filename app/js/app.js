@@ -322,5 +322,22 @@ document.addEventListener('DOMContentLoaded', () => {
 		runClock()
 	}
 
+	//WRAPPING IN SPAN
+	// const bannerTitles = document.querySelectorAll('.banner-title');
+	// bannerTitles.forEach(bannerTitle => {
+	// 	const words = bannerTitle.textContent.split(' ');
+	// 	bannerTitle.textContent = '';
+	// 	words.forEach(word => {
+	// 		let newWord = '';
+	// 		for (let i = 0; i < word.length; i++) {
+	// 			if (word[i].toLowerCase() === 'o') {
+	// 				newWord += '<span>' + word[i] + '</span>';
+	// 			} else {
+	// 				newWord += word[i];
+	// 			}
+	// 		}
+	// 		bannerTitle.innerHTML += newWord + ' ';
+	// 	});
+	// });
 
 });

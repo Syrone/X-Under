@@ -1,10 +1,33 @@
 .banner
-	&-swiper
-		padding-bottom: 5rem
+	padding-bottom: 5rem
 	&-img-overlay
 		max-width: calc( 100px + 16vw )
 		padding: calc( 10px + 2.3vw )
-		margin-bottom: -5rem
-		.card-title
-			font-size: calc( 1rem + 3vw )
-			font-weight: 300
+		.card
+			&-title
+				font-size: calc( 2rem + 4vw )
+				font-weight: 300
+				line-height: 1
+				// span
+				// 	display: inline-block
+				// 	position: relative
+				// 	&::after
+				// 		content: ''
+				// 		width: 80%
+				// 		height: 2px
+				// 		background: #fff
+				// 		position: absolute
+				// 		top: 0
+				// 		left: 50%
+				// 		transform: translateX(-50%)
+			&-subtitle
+				display: block
+				font-size: calc( .1rem + .5vw )
+				letter-spacing: 0.3rem
+				margin-bottom: 3rem
+		.btn
+			margin-bottom: 2rem
+			&-title
+				font-size: calc( 1rem + 3vw )
+				font-weight: 300
+				margin-bottom: 1rem

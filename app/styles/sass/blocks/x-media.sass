@@ -10,7 +10,12 @@
 		&-img-overlay
 			max-width: 260px
 			padding: 1.9rem
-			.card-title
+			.card
+				&-title
+					font-size: 4.5rem
+				&-subtitle
+					margin-bottom: 2rem
+			.btn-title
 				font-size: var(--clock-fs)
 
 @include media-breakpoint-down(xl)
@@ -25,8 +30,16 @@
 		&-img-overlay
 			max-width: 220px
 			padding: 1.7rem
-			.card-title
-				font-size: var(--clock-fs)
+			.card
+				&-title
+					font-size: 3.8rem
+				&-subtitle
+					margin-bottom: 1.5rem
+			.btn
+				margin-bottom: 1rem
+				&-title
+					font-size: var(--clock-fs)
+					margin-bottom: 0.5rem
 
 @include media-breakpoint-down(lg)
 	:root
@@ -42,10 +55,15 @@
 			max-width: 160px
 			padding: 1.2rem
 			margin-bottom: -2.5rem
-			.card-title
-				font-size: var(--clock-fs)
+			.card
+				&-title
+					font-size: 2.8rem
+				&-subtitle
+					margin-bottom: 1rem
 			.btn
 				font-size: .8rem
+				&-title
+					font-size: var(--clock-fs)
 
 @include media-breakpoint-down(md)
 	:root
@@ -115,11 +133,14 @@
 		&-img-overlay
 			max-width: calc(10px + 25vw)
 			padding: calc(1px + 3vw)
-			.card-title
-				font-size: var(--clock-fs)
-				margin-bottom: 4px
+			.card
+				&-title
+					font-size: calc( .1rem + 7vw )
 			.btn
 				font-size: calc(.1rem + 1.5vw)
+				&-title
+					font-size: var(--clock-fs)
+					margin-bottom: .4rem
 
 @include media-breakpoint-down(sm)
 	.section
@@ -173,3 +194,24 @@
 				padding-top: .75rem
 			&-stars, &-reviews
 				margin-bottom: 0
+
+	.featured, .banner
+		padding-bottom: 3rem
+		.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction
+			bottom: -2rem
+
+	.banner
+		.swiper-container
+			width: 100%
+		&-img-overlay
+			max-width: calc(50px + 25vw)
+			padding: calc(.1px + 3vw)
+			.card
+				&-title
+					font-size: calc( .1rem + 9vw )
+			.btn
+				font-size: calc(.1rem + 1.5vw)
+				margin-bottom: .6rem
+				&-title
+					font-size: var(--clock-fs)
+					margin-bottom: .3rem
