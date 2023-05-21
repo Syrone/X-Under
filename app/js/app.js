@@ -1,6 +1,28 @@
 import Swiper from 'swiper/bundle'
 
 document.addEventListener('DOMContentLoaded', () => {
+	//COLOR SELECTION
+	const versionBtns = document.querySelectorAll('.version-button');
+	const welcomePage = document.querySelector('.welcome')
+
+	if (versionBtns) {
+		versionBtns.forEach(button => {
+			button.addEventListener('click', () => {
+				const versionBtn = button.getAttribute('data-version');
+				localStorage.setItem('version', versionBtn);
+			});
+		});
+	}
+
+	const version = localStorage.getItem('version') || 'male';
+	if (version == "male" || welcomePage) {
+		document.body.classList.remove('female');
+	} else if (version == "female") {
+		document.body.classList.add('female');
+	}
+
+
+
 	// Delay Handler
 	function delayHandler(func, delay) {
 		let timeoutId;
@@ -91,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		// If we need pagination
 		pagination: {
-			el: '.swiper-pagination',
+			el: '.hero-swiper-pagination',
 			clickable: true,
 		},
 
@@ -124,13 +146,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.featured-button-next',
+			prevEl: '.featured-button-prev',
 			appendNavigation: '.featured-swiper',
 		},
 
 		pagination: {
-			el: '.swiper-pagination',
+			el: '.featured-pagination',
 			clickable: true,
 		},
 	})
@@ -160,8 +182,24 @@ document.addEventListener('DOMContentLoaded', () => {
 		window.addEventListener('orientationchange', setHeroSwiperPaginationTop);
 	}
 
+	const bannerSwiper = new Swiper('.banner-swiper', {
+		// Optional parameters
+		loop: true,
+
+		navigation: {
+			nextEl: '.banner-button-next',
+			prevEl: '.banner-button-prev',
+			appendNavigation: '.banner-swiper',
+		},
+		// If we need pagination
+		pagination: {
+			el: '.banner-pagination',
+			clickable: true,
+		},
+	})
+
 	//CLOCK
-	if (document.getElementById("clock")) {
+	if (document.querySelectorAll("clock")) {
 		const els = {
 			s: initElements('s'),
 			m: initElements('m')
@@ -281,10 +319,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			setTimeout(runClock, 1000)
 		}
-
-		runClock();
+		runClock()
 	}
-
 
 
 });

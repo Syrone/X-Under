@@ -2,18 +2,55 @@
 	.container
 		max-width: 1720px
 
+@include media-breakpoint-down(xxl)
+	:root
+		--clock-fs: 2.5rem
+
+	.banner
+		&-img-overlay
+			max-width: 260px
+			padding: 1.9rem
+			.card-title
+				font-size: var(--clock-fs)
+
 @include media-breakpoint-down(xl)
+	:root
+		--clock-fs: 2rem
+
 	.featured
 		.card-title
 			font-size: calc( 1rem + .65vw )
 
+	.banner
+		&-img-overlay
+			max-width: 220px
+			padding: 1.7rem
+			.card-title
+				font-size: var(--clock-fs)
+
 @include media-breakpoint-down(lg)
+	:root
+		--clock-fs: 1.5rem
+
 	.swiper-button-next
 		right: -.5rem
 	.swiper-button-prev
 		left: -.5rem
 
+	.banner
+		&-img-overlay
+			max-width: 160px
+			padding: 1.2rem
+			margin-bottom: -2.5rem
+			.card-title
+				font-size: var(--clock-fs)
+			.btn
+				font-size: .8rem
+
 @include media-breakpoint-down(md)
+	:root
+		--clock-fs: calc(.1rem + 4vw)
+
 	.container
 		max-width: 700px
 
@@ -22,6 +59,9 @@
 
 	.badge
 		--bs-badge-font-size: calc( .5rem + 1vw )
+
+	.swiper-container
+		width: 70%
 
 	.swiper-pagination-bullet
 		width: calc( 2.2rem + 2vw )
@@ -65,15 +105,28 @@
 				font-size: calc( 1.3rem + .4vw )
 
 	.featured
-		&-swiper
-			width: 70%
 		.btn
 			font-size: calc( .5rem + 1vw )
 			max-width: calc( 150px + 1vw )
 
+	.banner
+		.swiper-container
+			width: 100%
+		&-img-overlay
+			max-width: calc(10px + 25vw)
+			padding: calc(1px + 3vw)
+			.card-title
+				font-size: var(--clock-fs)
+				margin-bottom: 4px
+			.btn
+				font-size: calc(.1rem + 1.5vw)
+
 @include media-breakpoint-down(sm)
 	.section
 		padding-top: 3.5rem
+
+	.swiper-container
+		width: 85%
 
 	.swiper-button-next, .swiper-button-prev
 		padding: calc( 1rem + 1.5vw )
@@ -113,8 +166,6 @@
 				font-size: calc( 1.1rem + .6vw )
 
 	.featured
-		&-swiper
-			width: 85%
 		&-card
 			padding: .75rem
 		.card

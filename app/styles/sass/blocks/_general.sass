@@ -10,40 +10,28 @@
 	color: var(--item-color)
 
 .text-gradient
-	background: var(--gradient-m)
+	background: var(--gradient-accent)
 	-webkit-background-clip: text
 	-webkit-text-fill-color: transparent
-	&--woman
-		background: var(--gradient-w)
-		-webkit-background-clip: text
-		-webkit-text-fill-color: transparent
 
 .strip
 	display: block
 	width: 100%
 	height: 40px
-	background: var(--gradient-m)
+	background: var(--gradient-accent)
 	position: absolute
 	bottom: 15%
 
 .tiny
 	font-size: .7rem
 
-.btn-m
-	background: var(--gradient-m)
+.btn-accent
+	background: var(--gradient-accent)
 	-webkit-background-clip: text
 	-webkit-text-fill-color: transparent
 	&:is(:hover, :focus)
-		border: 2px solid var(--accent-m)
-		box-shadow: var(--box-shadow-m)
-
-.btn-w
-	background: var(--gradient-w)
-	-webkit-background-clip: text
-	-webkit-text-fill-color: transparent
-	&:is(:hover, :focus)
-		border: 2px solid var(--accent-w)
-		box-shadow: var(--box-shadow-w)
+		border: 2px solid var(--accent)
+		box-shadow: var(--box-shadow)
 
 .btn-close.btn-close-m
 	background: url(../images/dist/icons/close-m.svg) 50%/1em auto no-repeat
@@ -58,41 +46,54 @@
 		content: ')'
 
 .icon
-	&-star
-		display: block
-		width: 1rem
-		height: 1rem
-		margin-inline: .3rem
-		background: url('../images/dist/icons/star-m.svg') center/cover no-repeat
-		&--w
-			background: url('../images/dist/icons/star-w.svg') center/cover no-repeat
-		&--disabled
-			background: url('../images/dist/icons/star-disabled.svg') center/cover no-repeat
-	&-watched
-		display: block
-		width: .75rem
-		height: 1rem
-		margin-inline: .3rem
-		background: url('../images/dist/icons/watched-m.svg') center/cover no-repeat
-		&--w
-			background: url('../images/dist/icons/watched-w.svg') center/cover no-repeat
 	&-favorite
 		display: block
-		width: 2.5rem
-		height: 2.5rem
-		background: url('../images/dist/icons/favorites-outline.svg') center/contain no-repeat
+		width: 45px
+		height: 45px
 		cursor: pointer
-		transition: var(--trt-1)
-		&--m
-			&:hover
-				background: url('../images/dist/icons/favorites-m-outline.svg') center/contain no-repeat
-			&:is(:focus, :active)
-				background: url('../images/dist/icons/favorites-m.svg') center/contain no-repeat
-		&--w
-			&:hover
-				background: url('../images/dist/icons/favorites-w-outline.svg') center/contain no-repeat
-			&:is(:focus, :active)
-				background: url('../images/dist/icons/favorites-w.svg') center/contain no-repeat
+		svg
+			display: block
+			width: 100%
+			height: 100%
+			fill: none
+			stroke: var(--text-color)
+			stroke-width: 3px
+			object-fit: cover
+			transition: fill var(--trt-1), stroke var(--trt-1)
+		&:is(:hover, :focus)
+			svg
+				stroke: var(--accent)
+		&:active, &.active
+			svg
+				fill: var(--accent)
+				stroke: none
+	&-star
+		display: inline-block
+		width: 1rem
+		height: .8rem
+		margin-inline: .3rem
+		cursor: pointer
+		svg
+			display: block
+			width: 100%
+			height: 100%
+			fill: var(--text-color)
+			object-fit: cover
+		&.active
+			svg
+				fill: var(--accent)
+	&-watched
+		display: inline-block
+		width: 1.5rem
+		height: 1.8rem
+		cursor: pointer
+		svg
+			display: block
+			width: 100%
+			height: 100%
+			fill: var(--accent)
+			object-fit: cover
+			transform: scale(.75) rotate(180deg)
 
 .card-event
 	display: flex
@@ -125,7 +126,7 @@
 		font-size: 1.5rem
 		font-weight: 400
 		background: var(--item-color)
-		color: var(--accent-m)
+		color: var(--accent)
 		border: none
 		&::before
 			display: none
@@ -140,32 +141,17 @@
 //Reassigning Variables BOOTSTRAP
 .btn-primary
 	--bs-btn-color: var(--item-color)
-	--bs-btn-bg: var(--accent-m)
-	--bs-btn-border-color: var(--accent-m)
-	--bs-btn-hover-color: var(--accent-m)
+	--bs-btn-bg: var(--accent)
+	--bs-btn-border-color: var(--accent)
+	--bs-btn-hover-color: var(--accent)
 	--bs-btn-hover-bg: var(--transparent)
-	--bs-btn-hover-border-color: var(--accent-m)
-	--bs-btn-active-color: var(--accent-m-active)
+	--bs-btn-hover-border-color: var(--accent)
+	--bs-btn-active-color: var(--accent-active)
 	--bs-btn-active-bg: var(--transparent)
-	--bs-btn-active-border-color: var(--accent-m-active)
+	--bs-btn-active-border-color: var(--accent-active)
 	--bs-btn-disabled-color: var(--item-color)
-	--bs-btn-disabled-bg: var(--accent-m-active)
-	--bs-btn-disabled-border-color: var(--accent-m-active)
-	--bs-btn-border-width: 2px
-
-.btn-secondary
-	--bs-btn-color: var(--item-color)
-	--bs-btn-bg: var(--accent-w)
-	--bs-btn-border-color: var(--accent-w)
-	--bs-btn-hover-color: var(--accent-w)
-	--bs-btn-hover-bg: var(--transparent)
-	--bs-btn-hover-border-color: var(--accent-w)
-	--bs-btn-active-color: var(--accent-w-active)
-	--bs-btn-active-bg: var(--transparent)
-	--bs-btn-active-border-color: var(--accent-w-active)
-	--bs-btn-disabled-color: var(--item-color)
-	--bs-btn-disabled-bg: var(--accent-w-active)
-	--bs-btn-disabled-border-color: var(--accent-w-active)
+	--bs-btn-disabled-bg: var(--accent-active)
+	--bs-btn-disabled-border-color: var(--accent-active)
 	--bs-btn-border-width: 2px
 
 .bg-dark
@@ -175,25 +161,16 @@
 	background-color: var(--item-color)!important
 
 .bg-primary
-	background-color: var(--accent-m)!important
-
-.bg-secondary
-	background-color: var(--accent-w)!important
+	background-color: var(--accent)!important
 
 .border-dark
 	border-color: var(--item-color-light)!important
 
 .border-primary
-	border-color: var(--accent-m)!important
-
-.border-secondary
-	border-color: var(--accent-w)!important
+	border-color: var(--accent)!important
 
 .text-primary
-	color: var(--accent-m)!important
-
-.text-secondary
-	color: var(--accent-w)!important
+	color: var(--accent)!important
 
 .text-black
 	color: var(--text-color)!important
@@ -231,13 +208,14 @@
 	background: var(--item-color)
 	opacity: 1
 	&-active
-		background: var(--accent-m)
+		background: var(--accent)
 
 .swiper-button-next, .swiper-button-prev
-	color: var(--accent-m)
+	color: var(--accent)
 	background: var(--item-color)
 	padding: 2rem
 	border-radius: 50%
+	top: 40%
 
 .swiper-button-next:after
 	margin-right: -.5rem
@@ -253,3 +231,7 @@
 
 .accordion-link:after
 	display: none
+
+.swiper-container
+	width: 80%
+	margin-inline: auto

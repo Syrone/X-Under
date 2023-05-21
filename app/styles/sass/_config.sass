@@ -33,12 +33,9 @@ $gutter: $grid-gutter-width
 	--font-size: 1rem
 	--lineheight: 1.65
 
-	--accent-m: rgb(0, 255, 255)
-	--accent-m-active: rgb(25, 191, 191)
-	--accent-w: rgb(230, 0, 148)
-	--accent-w-active: rgb(200, 31, 141)
-	--gradient-m: linear-gradient(90deg, var(--accent-m)  0%, rgb(37, 204, 251) 100%)
-	--gradient-w: linear-gradient(90deg, var(--accent-w)  0%, rgb(242, 1, 94) 100%)
+	--accent: rgb(0, 255, 255)
+	--accent-active: rgb(25, 191, 191)
+	--gradient-accent: linear-gradient(90deg, var(--accent) 0%, rgb(37, 204, 251) 100%)
 	--body-color: #1a1a1a
 	--item-color: #333
 	--item-color-light: #4d4d4d
@@ -46,11 +43,10 @@ $gutter: $grid-gutter-width
 	--text-color-light: #ccc
 	--transparent: transparent
 
-	--box-shadow-m: 0 0 0 0.25rem rgba(0, 255, 255,.25)
-	--box-shadow-w: 0 0 0 0.25rem rgba(230, 0, 148,.25)
+	--box-shadow: 0 0 0 0.25rem rgba(0, 255, 255,.25)
 	--box-shadow-1: 0 0 2px 1px rgba(255, 255, 255, 0.1)
 
-	--clock-fs: 1.5rem
+	--clock-fs: calc( 1rem + 3vw )
 	--clock-w: calc( var(--clock-fs) / 1.4 )
 	--clock-h: calc( var(--clock-fs) * 1.25 )
 	--clock-bg: white
@@ -58,7 +54,7 @@ $gutter: $grid-gutter-width
 	--clock-radius-t: calc( var(--clock-fs) / 10 ) calc( var(--clock-fs) / 10 ) 0 0
 	--clock-radius-b: 0 0 calc( var(--clock-fs) / 10 ) calc( var(--clock-fs) / 10 )
 	--clock-mi-colon: calc( var(--clock-fs) / 8 )
-	--clock-gap: calc( (var(--clock-fs) / 20) + .1px )
+	--clock-gap: calc( (var(--clock-fs) / 30) + .1px )
 
 	--border-radius: .3rem
 	--border-radius-t: .3rem .3rem 0 0
@@ -70,6 +66,11 @@ $gutter: $grid-gutter-width
 
 	--trt-1: 300ms ease-in-out
 
+body.female, .female
+	--accent: rgb(230, 0, 148)
+	--accent-active: rgb(200, 31, 141)
+	--gradient-accent: linear-gradient(90deg, var(--accent) 0%, rgb(242, 1, 94) 100%)
+	--box-shadow: 0 0 0 0.25rem rgba(230, 0, 148,.25)
 
 ::placeholder
 	color: #666
@@ -88,7 +89,6 @@ input, textarea
 html, body
 	overflow-x: hidden
 
-
 body
 	font-family: var(--userfont)
 	font-size: var(--font-size)
@@ -103,4 +103,3 @@ a
 	font: inherit
 	color: inherit
 	text-decoration: none
-
