@@ -198,6 +198,42 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 	})
 
+	const advantagesSwiper = new Swiper('.advantages-swiper', {
+		// Optional parameters
+
+		slidesPerView: 3,
+		slidesPerGroup: 1,
+		spaceBetween: 50,
+		breakpoints: {
+			280: {
+				slidesPerView: 1,
+				slidesPerGroup: 1,
+				spaceBetween: 100
+			},
+			768: {
+				slidesPerView: 2,
+				slidesPerGroup: 1,
+				spaceBetween: 20
+			},
+			992: {
+				slidesPerGroup: 3,
+				slidesPerGroup: 1,
+				spaceBetween: 50
+			}
+		},
+
+		navigation: {
+			nextEl: '.advantages-button-next',
+			prevEl: '.advantages-button-prev',
+			appendNavigation: '.advantages-swiper',
+		},
+		// If we need pagination
+		pagination: {
+			el: '.advantages-pagination',
+			clickable: true,
+		},
+	})
+
 	//CLOCK
 	if (document.querySelectorAll("clock")) {
 		const els = {

@@ -4,6 +4,7 @@
 
 .section
 	padding-top: 6.25rem
+	padding-bottom: 5rem
 
 //NEW CLASS ITEM
 .text-item
@@ -148,9 +149,22 @@
 	--bs-btn-active-color: var(--accent-active)
 	--bs-btn-active-bg: var(--transparent)
 	--bs-btn-active-border-color: var(--accent-active)
-	--bs-btn-disabled-color: var(--item-color)
 	--bs-btn-disabled-bg: var(--accent-active)
 	--bs-btn-disabled-border-color: var(--accent-active)
+	--bs-btn-border-width: 2px
+
+.btn-dark
+	--bs-btn-color: var(--accent)
+	--bs-btn-bg: var(--item-color)
+	--bs-btn-border-color: var(--item-color)
+	--bs-btn-hover-color: var(--accent)
+	--bs-btn-hover-bg: var(--item-color-light)
+	--bs-btn-hover-border-color: var(--item-color)
+	--bs-btn-active-color: var(--item-color)
+	--bs-btn-active-bg: var(--transparent)
+	--bs-btn-active-border-color: var(--item-color-light)
+	--bs-btn-disabled-bg: var(--item-color-light)
+	--bs-btn-disabled-border-color: var(--item-color-light)
 	--bs-btn-border-width: 2px
 
 .bg-dark
@@ -220,7 +234,7 @@
 .swiper-button-prev:after
 	margin-left: -.5rem
 
-.featured, .banner
+.featured, .banner, .advantages
 	.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction
 		bottom: -4rem
 

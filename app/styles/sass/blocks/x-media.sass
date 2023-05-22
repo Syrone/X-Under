@@ -18,6 +18,13 @@
 			.btn-title
 				font-size: var(--clock-fs)
 
+	.footer-top
+		gap: 1rem
+		&-pay
+			order: 1
+		&-items
+			width: 100%
+
 @include media-breakpoint-down(xl)
 	:root
 		--clock-fs: 2rem
@@ -64,6 +71,11 @@
 				font-size: .8rem
 				&-title
 					font-size: var(--clock-fs)
+
+	.notification
+		&-form
+			.form-control
+				max-width: 100%
 
 @include media-breakpoint-down(md)
 	:root
@@ -142,9 +154,14 @@
 					font-size: var(--clock-fs)
 					margin-bottom: .4rem
 
+	.advantages
+		.swiper-container
+			width: 60%
+
 @include media-breakpoint-down(sm)
 	.section
 		padding-top: 3.5rem
+		padding-bottom: 3rem
 
 	.swiper-container
 		width: 85%
@@ -195,8 +212,7 @@
 			&-stars, &-reviews
 				margin-bottom: 0
 
-	.featured, .banner
-		padding-bottom: 3rem
+	.featured, .banner, .advantages
 		.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction
 			bottom: -2rem
 
@@ -215,3 +231,20 @@
 				&-title
 					font-size: var(--clock-fs)
 					margin-bottom: .3rem
+
+	.advantages
+		.swiper-container
+			width: 70%
+
+	.notification-form
+		.btn
+			width: 100%
+
+	.footer-top
+		&-protection
+			img:nth-child(1)
+				width: 30vw
+			img:nth-child(2)
+				width: 14vw
+			img:nth-child(3)
+				width: 14vw
