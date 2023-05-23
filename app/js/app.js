@@ -199,8 +199,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	const bannerSwiper = new Swiper('.banner-swiper', {
-		// Optional parameters
-		loop: true,
 
 		navigation: {
 			nextEl: '.banner-button-next',
