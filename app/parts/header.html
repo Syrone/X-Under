@@ -1,5 +1,52 @@
 <header class="header">
 	<nav class="navbar navbar-dark bg-dark fixed-top">
+		<div class="container-fluid">
+			<div class="alert alert-info alert-dismissible w-100 border border-0 mb-0 fade show" role="alert">
+				<div class="position-relative">
+					<div class="swiper swiper-container alert-swiper">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper">
+							<!-- Slides -->
+							<div class="swiper-slide alert-swiper-slide">
+								<div class="d-flex justify-content-center align-items-center">
+									<div class="text-black text-center">
+										<span class="sale">20% OFF</span> $150+ Use Code: <span class="promocode">WOW20</span>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide alert-swiper-slide">
+								<div class="d-flex justify-content-center align-items-center">
+									<div class="text-black text-center text-uppercase">
+										Free shipping on orders of $150+
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide alert-swiper-slide">
+								<div class="d-flex justify-content-center align-items-center">
+									<div class="text-black text-center text-uppercase">
+										<span class="sale">5% OFF</span> + Free shipping on your first order!
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- If we need navigation buttons -->
+						<div class="swiper-button-prev alert-button-prev d-none d-sm-flex"></div>
+						<div class="swiper-button-next alert-button-next d-none d-sm-flex"></div>
+					</div>
+
+					<!-- If we need pagination -->
+					<div class="swiper-pagination alert-pagination"></div>
+
+				</div>
+				<button type="button"
+					class="btn-close btn-close-white btn-close-word d-flex align-items-center opacity-75 h5 m-0"
+					data-bs-dismiss="alert" aria-label="Close">
+					<span class="d-none d-md-block">
+						Close
+					</span>
+				</button>
+			</div>
+		</div>
 		<div class="container">
 			<div class="d-flex align-items-center gap-3">
 				<button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas"
@@ -95,17 +142,17 @@
 					</div>
 				</div>
 			</div>
-			<div class="offcanvas bg-dark offcanvas-start pt-3 pe-3 ps-3 pt-sm-5 pe-sm-5 ps-sm-5" tabindex="-1" id="offcanvasNavbar"
-				aria-labelledby="offcanvasNavbarLabel">
+			<div class="offcanvas bg-dark offcanvas-start pt-3 pe-3 ps-3 pt-sm-5 pe-sm-5 ps-sm-5" tabindex="-1"
+				id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 				<div class="offcanvas-header ps-3 pe-3 ps-sm-4 pe-sm-5">
 					<h5 class="offcanvas-title text-white opacity-75 d-flex gap-3 align-items-center"
 						id="offcanvasNavbarLabel">
-						<img class="header-navbar d-none d-sm-block" src="./images/dist/icons/navbar.svg" width="40" height="30"
-							alt="open menu">
+						<img class="header-navbar d-none d-sm-block" src="./images/dist/icons/navbar.svg" width="40"
+							height="30" alt="open menu">
 						Menu
 					</h5>
 					<button type="button"
-						class="btn-close btn-close-white header-offcanvas-btn d-flex align-items-center opacity-75 h5"
+						class="btn-close btn-close-white btn-close-word d-flex align-items-center opacity-75 h5"
 						data-bs-dismiss="offcanvas" aria-label="Close">Close</button>
 				</div>
 				<div class="offcanvas-body ps-3 pe-3 ps-sm-4 pe-sm-5">
@@ -124,13 +171,20 @@
 									data-bs-parent="#accordionHeaderOne">
 									<div class="accordion-body">
 										<div class="list-group fw-light">
-											<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">All Underwaer</a>
-											<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
-											<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">Trunks</a>
-											<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">Boxer Briefs</a>
+											<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">All
+												Underwaer</a>
+											<a href="#"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
+											<a href="#"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Trunks</a>
+											<a href="#"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Boxer
+												Briefs</a>
 											<a class="list-group-item border border-0 list-group-item-action bg-dark">Boxers</a>
-											<a class="list-group-item border border-0 list-group-item-action bg-dark">Jocks & Thongs</a>
-											<a class="list-group-item border border-0 list-group-item-action bg-dark">Long Underwear</a>
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Jocks &
+												Thongs</a>
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Long
+												Underwear</a>
 										</div>
 									</div>
 								</div>
@@ -148,13 +202,20 @@
 									data-bs-parent="#accordionHeaderOne">
 									<div class="accordion-body">
 										<div class="list-group fw-light">
-											<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">All Underwaer</a>
-											<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
-											<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">Trunks</a>
-											<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">Boxer Briefs</a>
+											<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">All
+												Underwaer</a>
+											<a href="#"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
+											<a href="#"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Trunks</a>
+											<a href="#"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Boxer
+												Briefs</a>
 											<a class="list-group-item border border-0 list-group-item-action bg-dark">Boxers</a>
-											<a class="list-group-item border border-0 list-group-item-action bg-dark">Jocks & Thongs</a>
-											<a class="list-group-item border border-0 list-group-item-action bg-dark">Long Underwear</a>
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Jocks &
+												Thongs</a>
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Long
+												Underwear</a>
 										</div>
 									</div>
 								</div>
@@ -172,13 +233,20 @@
 									data-bs-parent="#accordionHeaderOne">
 									<div class="accordion-body">
 										<div class="list-group fw-light">
-											<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">All Underwaer</a>
-											<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
-											<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">Trunks</a>
-											<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">Boxer Briefs</a>
+											<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">All
+												Underwaer</a>
+											<a href="#"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
+											<a href="#"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Trunks</a>
+											<a href="#"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Boxer
+												Briefs</a>
 											<a class="list-group-item border border-0 list-group-item-action bg-dark">Boxers</a>
-											<a class="list-group-item border border-0 list-group-item-action bg-dark">Jocks & Thongs</a>
-											<a class="list-group-item border border-0 list-group-item-action bg-dark">Long Underwear</a>
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Jocks &
+												Thongs</a>
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Long
+												Underwear</a>
 										</div>
 									</div>
 								</div>
@@ -196,13 +264,20 @@
 									data-bs-parent="#accordionHeaderOne">
 									<div class="accordion-body">
 										<div class="list-group fw-light">
-											<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">All Underwaer</a>
-											<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
-											<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">Trunks</a>
-											<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">Boxer Briefs</a>
+											<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">All
+												Underwaer</a>
+											<a href="#"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
+											<a href="#"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Trunks</a>
+											<a href="#"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Boxer
+												Briefs</a>
 											<a class="list-group-item border border-0 list-group-item-action bg-dark">Boxers</a>
-											<a class="list-group-item border border-0 list-group-item-action bg-dark">Jocks & Thongs</a>
-											<a class="list-group-item border border-0 list-group-item-action bg-dark">Long Underwear</a>
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Jocks &
+												Thongs</a>
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Long
+												Underwear</a>
 										</div>
 									</div>
 								</div>
@@ -234,13 +309,19 @@
 								data-bs-parent="#accordionHeaderOne">
 								<div class="accordion-body">
 									<div class="list-group fw-light">
-										<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">All Underwaer</a>
-										<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
-										<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">Trunks</a>
-										<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">Boxer Briefs</a>
+										<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">All
+											Underwaer</a>
+										<a href="#"
+											class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
+										<a href="#"
+											class="list-group-item border border-0 list-group-item-action bg-dark">Trunks</a>
+										<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">Boxer
+											Briefs</a>
 										<a class="list-group-item border border-0 list-group-item-action bg-dark">Boxers</a>
-										<a class="list-group-item border border-0 list-group-item-action bg-dark">Jocks & Thongs</a>
-										<a class="list-group-item border border-0 list-group-item-action bg-dark">Long Underwear</a>
+										<a class="list-group-item border border-0 list-group-item-action bg-dark">Jocks &
+											Thongs</a>
+										<a class="list-group-item border border-0 list-group-item-action bg-dark">Long
+											Underwear</a>
 									</div>
 								</div>
 							</div>
@@ -278,13 +359,19 @@
 								data-bs-parent="#accordionHeaderOne">
 								<div class="accordion-body">
 									<div class="list-group fw-light">
-										<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">All Underwaer</a>
-										<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
-										<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">Trunks</a>
-										<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">Boxer Briefs</a>
+										<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">All
+											Underwaer</a>
+										<a href="#"
+											class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
+										<a href="#"
+											class="list-group-item border border-0 list-group-item-action bg-dark">Trunks</a>
+										<a href="#" class="list-group-item border border-0 list-group-item-action bg-dark">Boxer
+											Briefs</a>
 										<a class="list-group-item border border-0 list-group-item-action bg-dark">Boxers</a>
-										<a class="list-group-item border border-0 list-group-item-action bg-dark">Jocks & Thongs</a>
-										<a class="list-group-item border border-0 list-group-item-action bg-dark">Long Underwear</a>
+										<a class="list-group-item border border-0 list-group-item-action bg-dark">Jocks &
+											Thongs</a>
+										<a class="list-group-item border border-0 list-group-item-action bg-dark">Long
+											Underwear</a>
 									</div>
 								</div>
 							</div>

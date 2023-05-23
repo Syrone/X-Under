@@ -107,6 +107,22 @@ document.addEventListener('DOMContentLoaded', () => {
 		updateCardInfo();
 	}
 
+	const alertSwiper = new Swiper('.alert-swiper', {
+
+		// If we need pagination
+		pagination: {
+			el: '.alert-pagination',
+			clickable: true,
+		},
+
+		navigation: {
+			nextEl: '.alert-button-next',
+			prevEl: '.alert-button-prev',
+			appendNavigation: '.alert-swiper',
+		},
+
+	});
+
 	const heroSwiper = new Swiper('.hero-swiper', {
 		// Optional parameters
 		loop: true,
@@ -375,4 +391,20 @@ document.addEventListener('DOMContentLoaded', () => {
 	// 		bannerTitle.innerHTML += newWord + ' ';
 	// 	});
 	// });
+
+	//COOKIES
+	const cookieAlert = document.querySelector('.cookie-alert');
+	const acceptCookies = document.querySelector('.accept-cookies');
+
+	if (!localStorage.getItem('cookieAlertClosed')) {
+		cookieAlert.classList.remove('d-none');
+	}
+
+	acceptCookies.addEventListener('click', () => {
+		localStorage.setItem('cookieAlertClosed', true);
+		cookieAlert.classList.add('d-none');
+	});
+
+
+
 });

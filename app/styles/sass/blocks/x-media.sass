@@ -18,12 +18,13 @@
 			.btn-title
 				font-size: var(--clock-fs)
 
-	.footer-top
-		gap: 1rem
-		&-pay
-			order: 1
-		&-items
-			width: 100%
+	.footer
+		&-top
+			gap: 1rem
+			&-pay
+				order: 1
+			&-items
+				width: 100%
 
 @include media-breakpoint-down(xl)
 	:root
@@ -56,6 +57,10 @@
 		right: -.5rem
 	.swiper-button-prev
 		left: -.5rem
+
+	.alert-info
+		.swiper-container
+			width: 75%
 
 	.banner
 		&-img-overlay
@@ -182,6 +187,17 @@
 			&:last-child::after
 				left: -480%
 
+	.alert-info
+		.swiper-container
+			width: 90%
+		.alert-swiper-slide
+			div
+				max-width: 240px
+				margin-inline: auto
+		.btn-close-word
+			padding: 1rem
+			width: max-content
+
 	.header
 		&-logo
 			width: 80px
@@ -248,3 +264,8 @@
 				width: 14vw
 			img:nth-child(3)
 				width: 14vw
+
+	.cookie-alert
+		.btn
+			display: block
+			max-width: unset
