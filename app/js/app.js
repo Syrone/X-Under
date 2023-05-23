@@ -375,5 +375,4 @@ document.addEventListener('DOMContentLoaded', () => {
 	// 		bannerTitle.innerHTML += newWord + ' ';
 	// 	});
 	// });
-
 });
