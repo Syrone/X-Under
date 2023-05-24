@@ -21,8 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		document.body.classList.add('female');
 	}
 
-
-
 	// Delay Handler
 	function delayHandler(func, delay) {
 		let timeoutId;
@@ -37,15 +35,25 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	// HEADER POPOVER
-	const popoverTShirt = document.querySelector('.tshirt-popover');
-	const infoIcon = document.getElementById('info-icon');
+	const popoverBtn = document.getElementById("myPopoverBtn");
+	const popover = document.getElementById("myPopover");
 
-	if (popoverTShirt && infoIcon) {
-		const popover = new bootstrap.Popover(popoverTShirt, {
-			container: 'body',
-			offset: [0, -40],
-			title: infoIcon.innerHTML + 'NOTICE',
-			html: true
+	if (popoverBtn && popover) {
+		// Отслеживаем клик на кнопке
+		popoverBtn.addEventListener("click", function () {
+			// Показываем popover
+			popover.classList.toggle("d-none");
+		});
+
+		// Отслеживаем клик в любом месте страницы
+		document.addEventListener("click", function (event) {
+			const isClickInsidePopover = popover.contains(event.target);
+			const isClickInsidePopoverBtn = popoverBtn.contains(event.target);
+
+			// Если клик был вне popover и вне кнопки, то закрываем popover
+			if (!isClickInsidePopover && !isClickInsidePopoverBtn) {
+				popover.classList.add("d-none");
+			}
 		});
 	}
 
