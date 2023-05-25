@@ -45,6 +45,25 @@ document.addEventListener('DOMContentLoaded', () => {
 		navbar.addEventListener('DOMSubtreeModified', updateWrapperMarginTop);
 	}
 
+	//SCROLL TOP
+	const scrollButton = document.querySelector(".btn-scroll-top"); // Получаем кнопку по ID
+
+	if (scrollButton) {
+		window.addEventListener("scroll", function () {
+			if (window.scrollY > 200) {
+				scrollButton.classList.remove("visually-hidden");
+			} else {
+				scrollButton.classList.add("visually-hidden");
+			}
+		});
+
+		function scrollToTop() {
+			window.scrollTo({ top: 0, behavior: "smooth" });
+		}
+
+		scrollButton.addEventListener("click", scrollToTop);
+	}
+
 	// Delay Handler
 	function delayHandler(func, delay) {
 		let timeoutId;
