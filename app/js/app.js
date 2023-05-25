@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	//COLOR SELECTION
 	const versionBtns = document.querySelectorAll('.version-button');
 	const welcomePage = document.querySelector('.welcome')
+	const currentPath = window.location.pathname;
 
 	if (versionBtns) {
 		versionBtns.forEach(button => {
@@ -18,6 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (version == "male" || welcomePage) {
 		document.body.classList.remove('female');
 	} else if (version == "female") {
+		document.body.classList.add('female');
+	}
+
+	if (version == "female" || currentPath.includes('main-female.html')) {
 		document.body.classList.add('female');
 	}
 
