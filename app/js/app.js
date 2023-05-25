@@ -16,13 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	const version = localStorage.getItem('version') || 'male';
-	if (version == "female" || currentPath.includes('main-female.html')) {
-		document.body.classList.add('female');
-	}
 	if (version == "male" || welcomePage) {
 		document.body.classList.remove('female');
 	} else if (version == "female") {
 		document.body.classList.add('female');
+	}
+	if (version == "female" || currentPath.includes('main-female.html')) {
+		document.body.classList.add('female');
+	}
+	if (welcomePage) {
+		document.body.classList.remove('female');
 	}
 
 	//TOP INDENT .wrapper
@@ -38,6 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (wrapper) {
 		window.addEventListener('load', updateWrapperMarginTop);
 		window.addEventListener('resize', updateWrapperMarginTop);
+
+		navbar.addEventListener('DOMSubtreeModified', updateWrapperMarginTop);
 	}
 
 	// Delay Handler
