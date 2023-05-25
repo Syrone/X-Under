@@ -3,30 +3,84 @@ import Swiper from 'swiper/bundle'
 document.addEventListener('DOMContentLoaded', () => {
 	//COLOR SELECTION
 	const versionBtns = document.querySelectorAll('.version-button');
-	const welcomePage = document.querySelector('.welcome')
+	const welcomePage = document.querySelector('.welcome');
 	const currentPath = window.location.pathname;
 
+	const malePath = currentPath.endsWith('main-male.html');
+	const femalePath = currentPath.endsWith('main-female.html');
+
 	if (versionBtns) {
-		versionBtns.forEach(button => {
+		versionBtns.forEach((button) => {
 			button.addEventListener('click', () => {
-				const versionBtn = button.getAttribute('data-version');
-				localStorage.setItem('version', versionBtn);
+				const date = new Date();
+				date.setTime(date.getTime() + 365 * 24 * 60 * 60 * 1000);
+				document.cookie = `version=${button.getAttribute('data-version')}; path=/; expires=${date.toUTCString()}`;
+				location.reload();
 			});
 		});
 	}
 
-	const version = localStorage.getItem('version') || 'male';
-	if (version == "male" || welcomePage) {
-		document.body.classList.remove('female');
-	} else if (version == "female") {
-		document.body.classList.add('female');
+	let version = 'male';
+	if (femalePath) {
+		version = 'female';
 	}
-	if (version == "female" || currentPath.includes('main-female.html')) {
-		document.body.classList.add('female');
+
+	const cookies = document.cookie.split(';');
+
+	for (let cookie of cookies) {
+		const [name, value] = cookie.trim().split('=');
+
+		if (name === 'version') {
+			version = value;
+			break;
+		}
 	}
+
 	if (welcomePage) {
+		version = 'male';
+		document.body.classList.remove('female');
+	} else if (version === 'female' || femalePath) {
+		document.body.classList.add('female');
+	} else {
 		document.body.classList.remove('female');
 	}
+
+	if (version === 'female' && malePath) {
+		version = 'male';
+		document.body.classList.remove('female');
+	}
+
+	if (malePath || femalePath) {
+		const links = document.querySelectorAll('a');
+		links.forEach((link) => {
+			link.addEventListener('click', (e) => {
+				e.preventDefault();
+				const href = link.getAttribute('href');
+				const url = new URL(href, window.location.origin);
+				if (femalePath) {
+					url.searchParams.set('version', 'female');
+					document.cookie = `version=female; path=/`;
+				} else {
+					url.searchParams.set('version', 'male');
+					document.cookie = `version=male; path=/`;
+				}
+				window.location.href = url.toString();
+			});
+		});
+	}
+
+	window.addEventListener('popstate', () => {
+		const urlParams = new URLSearchParams(window.location.search);
+		const newVersion = urlParams.get('version');
+		if (newVersion) {
+			version = newVersion;
+			if (version === 'female') {
+				document.body.classList.add('female');
+			} else {
+				document.body.classList.remove('female');
+			}
+		}
+	});
 
 	//TOP INDENT .wrapper
 	const navbar = document.querySelector('.navbar');
@@ -50,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if (scrollButton) {
 		window.addEventListener("scroll", function () {
-			if (window.scrollY > 200) {
+			if (window.scrollY > 150) {
 				scrollButton.classList.remove("visually-hidden");
 			} else {
 				scrollButton.classList.add("visually-hidden");
