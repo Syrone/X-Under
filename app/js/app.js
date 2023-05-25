@@ -16,14 +16,28 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	const version = localStorage.getItem('version') || 'male';
+	if (version == "female" || currentPath.includes('main-female.html')) {
+		document.body.classList.add('female');
+	}
 	if (version == "male" || welcomePage) {
 		document.body.classList.remove('female');
 	} else if (version == "female") {
 		document.body.classList.add('female');
 	}
 
-	if (version == "female" || currentPath.includes('main-female.html')) {
-		document.body.classList.add('female');
+	//TOP INDENT .wrapper
+	const navbar = document.querySelector('.navbar');
+	const wrapper = document.querySelector('.wrapper');
+
+	function updateWrapperMarginTop() {
+		const navbarHeight = navbar.clientHeight;
+		wrapper.style.marginTop = navbarHeight + 'px';
+	}
+
+	// Обновляем значение margin-top при загрузке страницы и изменении размера окна
+	if (wrapper) {
+		window.addEventListener('load', updateWrapperMarginTop);
+		window.addEventListener('resize', updateWrapperMarginTop);
 	}
 
 	// Delay Handler
@@ -407,14 +421,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	const cookieAlert = document.querySelector('.cookie-alert');
 	const acceptCookies = document.querySelector('.accept-cookies');
 
-	if (!localStorage.getItem('cookieAlertClosed')) {
-		cookieAlert.classList.remove('d-none');
-	}
+	if (cookieAlert && acceptCookies) {
+		if (!localStorage.getItem('cookieAlertClosed')) {
+			cookieAlert.classList.remove('d-none');
+		}
 
-	acceptCookies.addEventListener('click', () => {
-		localStorage.setItem('cookieAlertClosed', true);
-		cookieAlert.classList.add('d-none');
-	});
+		acceptCookies.addEventListener('click', () => {
+			localStorage.setItem('cookieAlertClosed', true);
+			cookieAlert.classList.add('d-none');
+		});
+	}
 
 
 
