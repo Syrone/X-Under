@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^main-male\.html$ /main-male.html?version=male [L,QSA]
+RewriteRule ^main-female\.html$ /main-female.html?version=female [L,QSA]
