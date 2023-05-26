@@ -293,17 +293,17 @@ document.addEventListener('DOMContentLoaded', () => {
 			heroSwiperPaginationTop = heroSwiperImgHeight - 50;
 			heroSwiperPagination.style.top = heroSwiperPaginationTop + 'px';
 
-			// добавляем проверку ширины экрана
 			if (window.innerWidth <= 768) {
 				heroSwiperPagination.style.top = heroSwiperImgHeight - 35 + 'px';
 			}
 		}
 
-		setHeroSwiperPaginationTop();
+		window.onload = function () {
+			setHeroSwiperPaginationTop();
+		};
 
-		window.addEventListener('resize', delayHandler(setHeroSwiperPaginationTop, 50));
+		window.addEventListener('resize', delayHandler(setHeroSwiperPaginationTop, 100));
 
-		// добавляем обработчик изменения ориентации экрана
 		window.addEventListener('orientationchange', setHeroSwiperPaginationTop);
 	}
 
