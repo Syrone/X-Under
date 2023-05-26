@@ -56,7 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			link.addEventListener('click', (e) => {
 				e.preventDefault();
 				const href = link.getAttribute('href');
-				const url = new URL(href, window.location.origin);
+				const currentUrl = new URL(window.location.href);
+				const url = new URL(currentUrl.origin + currentUrl.pathname);
+				url.pathname = url.pathname.replace(/\/[^/]*$/, '/') + href;
+
 				if (femalePath) {
 					url.searchParams.set('version', 'female');
 					document.cookie = `version=female; path=/`;
@@ -68,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		});
 	}
+
 
 	window.addEventListener('popstate', () => {
 		const urlParams = new URLSearchParams(window.location.search);
