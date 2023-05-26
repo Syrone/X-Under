@@ -95,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		wrapper.style.marginTop = navbarHeight + 'px';
 	}
 
-	// Обновляем значение margin-top при загрузке страницы и изменении размера окна
 	if (wrapper) {
 		window.addEventListener('load', updateWrapperMarginTop);
 		window.addEventListener('resize', updateWrapperMarginTop);
@@ -140,18 +139,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	const popover = document.getElementById("myPopover");
 
 	if (popoverBtn && popover) {
-		// Отслеживаем клик на кнопке
 		popoverBtn.addEventListener("click", function () {
-			// Показываем popover
 			popover.classList.toggle("d-none");
 		});
 
-		// Отслеживаем клик в любом месте страницы
 		document.addEventListener("click", function (event) {
 			const isClickInsidePopover = popover.contains(event.target);
 			const isClickInsidePopoverBtn = popoverBtn.contains(event.target);
 
-			// Если клик был вне popover и вне кнопки, то закрываем popover
 			if (!isClickInsidePopover && !isClickInsidePopoverBtn) {
 				popover.classList.add("d-none");
 			}
@@ -218,7 +213,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const alertSwiper = new Swiper('.alert-swiper', {
 
-		// If we need pagination
 		pagination: {
 			el: '.alert-pagination',
 			clickable: true,
@@ -233,10 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	const heroSwiper = new Swiper('.hero-swiper', {
-		// Optional parameters
-		loop: true,
 
-		// If we need pagination
 		pagination: {
 			el: '.hero-swiper-pagination',
 			clickable: true,
@@ -265,6 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				spaceBetween: 20
 			},
 			1400: {
+				slidesPerView: 3,
 				slidesPerGroup: 1,
 				spaceBetween: 50
 			}
@@ -309,12 +301,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const bannerSwiper = new Swiper('.banner-swiper', {
 
+		spaceBetween: 16,
+
 		navigation: {
 			nextEl: '.banner-button-next',
 			prevEl: '.banner-button-prev',
 			appendNavigation: '.banner-swiper',
 		},
-		// If we need pagination
 		pagination: {
 			el: '.banner-pagination',
 			clickable: true,
@@ -322,7 +315,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 	const advantagesSwiper = new Swiper('.advantages-swiper', {
-		// Optional parameters
 
 		slidesPerView: 3,
 		slidesPerGroup: 1,

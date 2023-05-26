@@ -29,6 +29,17 @@
 			background-color: var(--text-color)
 	.dropdown-menu
 		min-width: 380px
+		top: 150%
+		.dropdown-arrow
+			width: 0
+			height: 0
+			border: 0 solid transparent
+			border-right-width: 20px
+			border-left-width: 20px
+			border-bottom: 27px solid var(--body-color)
+			position: absolute
+			top: -15px
+			right: 5px
 	.dropdown-overflow
 		&::-webkit-scrollbar
 			display: none
@@ -46,10 +57,18 @@
 		display: none
 		min-height: 150px
 
-	.accordion-body
-		padding: 0 var(--bs-accordion-body-padding-x) var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x)
-	.accordion-button:not(.collapsed)
-		box-shadow: none
+	&-menu
+		.accordion-body
+			padding: 0 var(--bs-accordion-body-padding-x) var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x)
+		.accordion-button
+			&:focus
+				border-color: var(--transparent)
+				box-shadow: none
+			&:not(.collapsed)
+				box-shadow: none
+
+	.icon-bag, .icon-favorite
+		margin-top: -.2rem
 
 	.list-group-item
 		padding: 0

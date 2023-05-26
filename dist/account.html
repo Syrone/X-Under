@@ -21,7 +21,7 @@
 <body>
 <header class="header">
 	<nav class="navbar navbar-dark bg-dark fixed-top p-0">
-		<div class="container-fluid">
+		<div class="container-fluid alert-container">
 			<div class="alert alert-info alert-dismissible w-100 border border-0 mb-0 fade show" role="alert">
 				<div class="position-relative">
 					<div class="swiper swiper-container alert-swiper">
@@ -94,7 +94,9 @@
 						<img src="./images/dist/ATS_logo.svg" width="65" alt="A-T-Shirt">
 						<img src="./images/dist/icons/info.svg" width="20" alt="info">
 					</button>
-					<div id="myPopover" class="popover-custom start-50 translate-middle-x position-absolute rounded rounded-2 d-none" tabindex="-1">
+					<div id="myPopover"
+						class="popover-custom start-50 translate-middle-x position-absolute rounded rounded-2 d-none"
+						tabindex="-1">
 						<div class="popover-inner">
 							<div class="popover-header">
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"
@@ -105,7 +107,8 @@
 								NOTICE
 							</div>
 							<div class="popover-body">
-								Our official partner - A-T-Shirt brands, offer a unique range of product that all can express themselves through.
+								Our official partner - A-T-Shirt brands, offer a unique range of product that all can express
+								themselves through.
 							</div>
 						</div>
 					</div>
@@ -134,6 +137,7 @@
 					</button>
 					<div class="dropdown-menu dropdown-cards dropdown-menu-end bg-dark w-100 p-2 p-sm-4"
 						aria-labelledby="dropdownMenuClickableInside">
+						<div class="dropdown-arrow"></div>
 						<div class="dropdown-overflow overflow-auto">
 							<div class="header-dropdown overflow-auto pe-2">
 								<div
@@ -177,26 +181,77 @@
 								</p>
 							</div>
 							<ul class="list-group text-uppercase text-primary">
-								<li><a href="#"
-										class="dropdown-item text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">Bag
-										<span class="current-bag brackets"></span></a>
+								<li>
+									<a href="#"
+										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
+										<span class="icon icon-bag">
+											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 9.333">
+												<path
+													d="M26.027 60.176c6.664 0 12.067-4.582 12.079-10.235h4.105c2.836 0 5.156-2.32 5.156-5.16V12.535c0-2.84-2.32-5.16-5.156-5.16H9.844c-2.836 0-5.156 2.32-5.156 5.16v32.246c0 2.84 2.32 5.16 5.156 5.16h4.105c.016 5.653 5.418 10.235 12.078 10.235zM16.773 49.94h18.508c-.011 4.328-4.152 7.832-9.254 7.832-5.101 0-9.242-3.504-9.254-7.832"
+													transform="matrix(.13333 0 0 -.13333 0 9.333)" />
+											</svg>
+										</span>
+										Bag
+										<span class="current-bag brackets"></span>
+									</a>
 								</li>
-								<li><a href="#"
-										class="dropdown-item  text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">Favorites</a>
+								<li>
+									<a href="#"
+										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
+										<span class="icon icon-favorite">
+											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 9.333 9.333">
+												<path
+													d="M62.504 43.715c0 9.09-7.367 16.46-16.461 16.46-5.934 0-11.117-3.152-14.012-7.863-2.898 4.711-8.082 7.864-14.02 7.864-9.09 0-16.46-7.371-16.46-16.461 0-4.95 2.195-9.375 5.652-12.39l23.324-23.33a2.122 2.122 0 0 1 1.504-.621 2.12 2.12 0 0 1 1.5.621l23.325 23.328c3.456 3.016 5.648 7.442 5.648 12.39"
+													transform="matrix(.13333 0 0 -.13333 0 9.333)" />
+											</svg>
+										</span>
+										Favorites
+									</a>
 								</li>
-								<li><a href="#"
-										class="dropdown-item  text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">Orders</a>
+								<li>
+									<a href="#"
+										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
+										<span class="icon icon-order">
+											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 8 9.333">
+												<path
+													d="M11.422 46.04H46.75a7.78 7.78 0 0 1 7.781 7.78 7.78 7.78 0 0 1-7.781 7.782H11.422a7.782 7.782 0 0 1 0-15.563zm35.328-3.11H11.422a7.78 7.78 0 1 1 0-15.559H46.75a7.78 7.78 0 1 1 0 15.559zM11.422 32.215a3.052 3.052 0 0 0-3.055 3.047 3.05 3.05 0 1 0 6.098 0 3.047 3.047 0 0 0-3.043-3.047zm35.328-7.852H11.422a7.78 7.78 0 0 1-7.781-7.781 7.78 7.78 0 0 1 7.78-7.781H46.75c4.3 0 7.781 3.48 7.781 7.781a7.78 7.78 0 0 1-7.781 7.781zM11.422 13.551a3.052 3.052 0 0 0-3.055 3.047c0 1.68 1.367 3.05 3.055 3.05a3.05 3.05 0 0 0 3.043-3.05 3.047 3.047 0 0 0-3.043-3.047zm0 43.328a3.046 3.046 0 0 0 3.043-3.05 3.05 3.05 0 0 0-3.043-3.052 3.056 3.056 0 0 0-3.055 3.051 3.056 3.056 0 0 0 3.055 3.05"
+													transform="matrix(.13333 0 0 -.13333 0 9.333)" />
+											</svg>
+										</span>
+										Orders
+									</a>
 								</li>
-								<li><a href="#"
-										class="dropdown-item  text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">Account</a>
+								<li>
+									<a href="#"
+										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
+										<span class="icon icon-gears">
+											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 8 8">
+												<path
+													d="M5.914 39.926a13.21 13.21 0 0 1 1.164-2.758l-1.398-1.77a1.446 1.446 0 0 1 .105-1.921L8.2 31.059a1.446 1.446 0 0 1 1.922-.106l1.758 1.39a12.85 12.85 0 0 1 2.867-1.21l.262-2.262a1.448 1.448 0 0 1 1.437-1.281h3.418c.73 0 1.348.547 1.438 1.281l.25 2.18c1.074.277 2.105.699 3.074 1.238l1.7-1.344a1.455 1.455 0 0 1 1.921.11l2.414 2.414c.52.523.567 1.347.11 1.926l-1.325 1.675c.551.95.98 1.961 1.27 3.02l2.035.238a1.442 1.442 0 0 1 1.281 1.434v3.418c0 .73-.547 1.347-1.281 1.433l-2.008.235a12.598 12.598 0 0 1-1.215 2.988l1.239 1.562a1.45 1.45 0 0 1-.114 1.922l-2.406 2.41a1.442 1.442 0 0 1-1.922.11l-1.52-1.2a12.756 12.756 0 0 1-3.14 1.313l-.226 1.961A1.449 1.449 0 0 1 20 59.2h-3.418c-.73 0-1.348-.55-1.434-1.285l-.23-1.96a12.591 12.591 0 0 1-3.223-1.364l-1.574 1.25a1.45 1.45 0 0 1-1.922-.11l-2.414-2.414a1.441 1.441 0 0 1-.105-1.922l1.312-1.663a12.43 12.43 0 0 1-1.187-3.016l-2.11-.242a1.452 1.452 0 0 1-1.28-1.438v-3.414c0-.734.55-1.355 1.28-1.437zm8.23-20.77a1.428 1.428 0 0 1-1.28-1.406l-.016-1.445a1.43 1.43 0 0 1 1.246-1.438l1.066-.137c.176-.648.43-1.265.754-1.847l-.687-.848a1.423 1.423 0 0 1 .086-1.898l1.011-1.04a1.434 1.434 0 0 1 1.903-.128l.851.656a8.323 8.323 0 0 1 1.902-.832l.114-1.094A1.425 1.425 0 0 1 22.5 6.418l1.45-.02a1.42 1.42 0 0 1 1.433 1.247l.137 1.043a8.498 8.498 0 0 1 2.054.8l.805-.644a1.423 1.423 0 0 1 1.898.082l1.035 1.015c.52.508.579 1.32.133 1.899l-.613.797a8.31 8.31 0 0 1 .871 2.004l.95.093a1.43 1.43 0 0 1 1.28 1.407l.016 1.449a1.424 1.424 0 0 1-1.246 1.437l-.926.121a8.75 8.75 0 0 1-.785 2.004l.578.707a1.423 1.423 0 0 1-.086 1.899l-1.011 1.039a1.425 1.425 0 0 1-1.899.129l-.695-.531a8.295 8.295 0 0 1-2.082.902l-.094.898a1.425 1.425 0 0 1-1.402 1.285l-1.45.016a1.424 1.424 0 0 1-1.437-1.246l-.113-.895a8.66 8.66 0 0 1-2.156-.878l-.72.582a1.427 1.427 0 0 1-1.898-.086l-1.043-1.02a1.43 1.43 0 0 1-.132-1.898l.613-.79a8.283 8.283 0 0 1-.817-2.003zm9.348 1.64a3.768 3.768 0 0 0 3.719-3.812 3.768 3.768 0 0 0-3.813-3.718 3.77 3.77 0 0 0-3.718 3.812 3.77 3.77 0 0 0 3.812 3.719zm28.574 18.29-1.8 1.523a1.436 1.436 0 0 1-1.903-.054l-.992-.934c-.844.41-1.734.695-2.656.86l-.281 1.375a1.432 1.432 0 0 1-1.524 1.14l-2.347-.2a1.428 1.428 0 0 1-1.313-1.378l-.047-1.395a10.29 10.29 0 0 1-2.535-1.336l-1.188.794a1.432 1.432 0 0 1-1.882-.27l-1.524-1.816a1.422 1.422 0 0 1 .051-1.899l1.043-1.11a10.708 10.708 0 0 1-.77-2.538l-1.488-.305a1.448 1.448 0 0 1-1.144-1.524l.203-2.351a1.43 1.43 0 0 1 1.379-1.309l1.609-.05c.29-.77.672-1.496 1.137-2.176l-.899-1.36a1.424 1.424 0 0 1 .27-1.878l1.8-1.524a1.432 1.432 0 0 1 1.903.05l1.176 1.106c.773-.359 1.59-.629 2.422-.793l.324-1.609a1.447 1.447 0 0 1 1.523-1.148l2.352.203a1.433 1.433 0 0 1 1.312 1.379l.051 1.578c.856.304 1.672.715 2.422 1.226l1.297-.86a1.432 1.432 0 0 1 1.883.27l1.523 1.805c.469.55.445 1.371-.05 1.899l-1.051 1.105c.386.816.664 1.676.828 2.555l1.43.293c.706.14 1.203.8 1.14 1.523l-.195 2.348a1.431 1.431 0 0 1-1.383 1.312l-1.434.047a10.47 10.47 0 0 1-1.195 2.36l.781 1.175a1.424 1.424 0 0 1-.258 1.89zm-8.863-13.598a4.625 4.625 0 0 0-4.996 4.219 4.62 4.62 0 0 0 4.219 4.992 4.625 4.625 0 0 0 4.996-4.218 4.62 4.62 0 0 0-4.219-4.993zm-24.91 23.68a5.656 5.656 0 0 0 5.648-5.649 5.656 5.656 0 0 0-5.648-5.648 5.659 5.659 0 0 0-5.649 5.648 5.66 5.66 0 0 0 5.649 5.649"
+													transform="matrix(.13333 0 0 -.13333 0 8)" />
+											</svg>
+										</span>
+										Account
+									</a>
 								</li>
-								<li><a href="#" class="dropdown-item  text-primary ps-0">Sign out</a></li>
+								<li>
+									<a href="#" class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0">
+										<span class="icon icon-account">
+											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 8 9.333">
+												<path
+													d="M4.27 16.09c0-6.395 3.02-8.715 10.03-8.715h27.458c7.012 0 10.031 2.32 10.031 8.715 0 3.984-2.144 8.016-4.152 10.101-2.125 2.207-6.184 4.946-9.574 4.946-.86 0-.516-.133-.883-.969l-.145-.383a21.062 21.062 0 0 0-.387-.668c-2.945-4.015-16.566-4.668-18.125 2.02-1.957 0-4.203-.828-5.617-1.508-4.48-2.16-8.636-7.735-8.636-13.54Zm10.562 31.152c0-10.441 12.05-27.637 22.441-11.886 3.985 6.042 6.118 14.917.332 20.667-1.359 1.348-1.746 1.829-3.585 2.754a13.547 13.547 0 0 1-4.801 1.399h-2.383c-6.59-.614-12.004-6.305-12.004-12.934Zm2.11-2.117c0 3.137 1.59 6.43 3.43 7.66 1.226-5.254 12.398-3.418 16.097-3.113 1.601.129 2.648-2.445 2.648-4.547 0-5.344-5.68-13.988-11.09-13.988-5.375 0-11.086 8.672-11.086 13.988"
+													transform="matrix(.13333 0 0 -.13333 0 9.333)" />
+											</svg>
+										</span>
+										Sign out
+									</a>
+								</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="offcanvas bg-dark offcanvas-start pt-3 pe-3 ps-3 pt-sm-5 pe-sm-5 ps-sm-5" tabindex="-1"
+			<div class="header-menu offcanvas bg-dark offcanvas-start pt-3 pe-3 ps-3 pt-sm-5 pe-sm-5 ps-sm-5" tabindex="-1"
 				id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 				<div class="offcanvas-header ps-3 pe-3 ps-sm-4 pe-sm-5">
 					<h5 class="offcanvas-title text-white opacity-75 d-flex gap-3 align-items-center"
@@ -503,75 +558,95 @@
 	</svg>
 </button>
 
-	<footer class="footer pt-4 pb-4">
-		<div class="container">
-			<div class="footer-top pt-3 pb-3">
-				<img src="./images/dist/icons/pay_logo.svg" loading="lazy" alt="Payment methods" class="footer-top-pay">
+<footer class="footer pt-4 pb-4">
+	<div class="container">
+		<div class="footer-top pt-3 pb-3">
+			<img src="./images/dist/icons/pay_logo.svg" loading="lazy" alt="Payment methods" class="footer-top-pay">
 
-				<div class="footer-top-items d-flex gap-0 gap-sm-5 justify-content-between align-items-center">
-					<div class="footer-top-protection d-flex align-items-center gap-3">
-						<img src="./images/dist/icons/pay_secure.svg" loading="lazy" alt="Secure Methods">
-						<img src="./images/dist/icons/msfee.svg" loading="lazy" alt="McAfee">
-						<img src="./images/dist/icons/norton.svg" loading="lazy" alt="Northon">
-					</div>
-	
-					<div class="footer-top-socials d-flex align-items-center gap-3">
-						<a href="#">
-							<img src="./images/dist/icons/facebook.svg" loading="lazy" alt="Facebook">
-						</a>
-						<a href="#">
-							<img src="./images/dist/icons/instagram.svg" loading="lazy" alt="Instagram">
-						</a>
-					</div>
+			<div class="footer-top-items d-flex gap-0 gap-sm-5 justify-content-between align-items-center">
+				<div class="footer-top-protection d-flex align-items-center gap-3">
+					<img src="./images/dist/icons/pay_secure.svg" loading="lazy" alt="Secure Methods">
+					<img src="./images/dist/icons/msfee.svg" loading="lazy" alt="McAfee">
+					<img src="./images/dist/icons/norton.svg" loading="lazy" alt="Northon">
 				</div>
-			</div>
 
-			<div class="footer-bottom pt-3 pb-3 row">
-				<div class="col-12 col-lg-7 col-xxl-8 d-flex flex-wrap">
-					<ul class="list-group-flush m-0 p-0 d-flex flex-wrap justify-content-center gap-3">
-						<li class="list-group-item">
-							<a href="#">
-								United States
-							</a>
-						</li>
-						<li class="list-group-item">
-							<a href="#">
-								Feedback
-							</a>
-						</li>
-						<li class="list-group-item">
-							<a href="#">
-								Terms of use
-							</a>
-						</li>
-						<li class="list-group-item">
-							<a href="#">
-								Privacy & Cookie Policy
-							</a>
-						</li>
-					</ul>
-					<div class="pt-1 pb-3 pt-lg-0 pb-lg-0 ms-0 ms-xxl-3 text-secondary order-last order-xxl-0">
-						This site is protected by recaptcha & the Google Privacy Policy & Terms of Service apply.
-					</div>
-					<div class="pt-2 pb-1 pt-lg-0 pb-lg-0">
-						*Plus, receive personalized emails from X-Under with exclusive offers, news and more (see privacy policy).
-					</div>
-				</div>
-				<div class="col-12 col-lg-5 col-xxl-4 text-start text-lg-end">
-					<div class="footer-copyright">
-						Copyright 2023 X-Under LLC. All rights reserved. Powered by Dennetic Group.
-					</div>
-					
-					<div class="footer-address">
-						XXX West 25 Street, Suite XX, New York, NY XXXXX.
-					</div>
+				<div class="footer-top-socials d-flex align-items-center gap-3">
+					<a href="#">
+						<img src="./images/dist/icons/facebook.svg" loading="lazy" alt="Facebook">
+					</a>
+					<a href="#">
+						<img src="./images/dist/icons/instagram.svg" loading="lazy" alt="Instagram">
+					</a>
 				</div>
 			</div>
 		</div>
-	</footer>
 
-	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/app.min.js"></script>
+		<div class="footer-bottom pt-3 pb-3 row">
+			<div class="col-12 col-lg-7 col-xxl-8 d-flex flex-wrap">
+				<ul class="list-group-flush m-0 p-0 d-flex flex-wrap justify-content-center gap-3">
+					<li class="list-group-item">
+						<a href="#" class="footer-link d-flex align-items-center gap-1">
+							<span class="icon icon-usa">
+								<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+									style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd"
+									viewBox="0 0 57376 35431">
+									<defs>
+									</defs>
+									<g id="layer_1">
+										<g id="_500948784">
+											<path class="fil0" d="M26914 19090H13V0h26901z" />
+											<path
+												d="m2212 745 251 774h814l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm22522 15023 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4579 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4580 0 251 774h814l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm22522-3756 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zM4501 14038l251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4467 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h814l251-774zm4592 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4466 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4466 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h814l251-774zm-2337-2026 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4580 0 251 774h814l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm22522-3756 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zM4501 10282l251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4467 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h814l251-774zm4592 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4466 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4466 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h814l251-774zm-2337-2026 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4580 0 251 774h814l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm22522-3756 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zM4501 6526l251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4467 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h814l251-774zm4592 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4466 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4466 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h814l251-774zm-2337-2026 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4580 0 251 774h814l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zM24735 744l251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zM4501 2770l251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4467 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h814l251-774zm4592 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4466 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4466 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h814l251-774zM20155 744l251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774z"
+												style="fill:#fefefe" />
+											<path class="fil0"
+												d="M57376 2771H26915V0h30461v2771zm0 32661H0v-2771h57376v2771zm0-5472H0v-2771h57376v2771zm0-5472H0v-2771h57376v2771zm0-5397H26915v-2771h30461v2771zm0-5397H26915v-2771h30461v2771zm0-5409H26915V5514h30461v2771z" />
+										</g>
+									</g>
+								</svg>
+							</span>
+							United States
+						</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#">
+							Feedback
+						</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#">
+							Terms of use
+						</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#">
+							Privacy & Cookie Policy
+						</a>
+					</li>
+				</ul>
+				<div class="pt-1 pb-3 pt-lg-0 pb-lg-0 ms-0 ms-xxl-3 text-secondary order-last order-xxl-0">
+					This site is protected by recaptcha & the Google Privacy Policy & Terms of Service apply.
+				</div>
+				<div class="pt-2 pb-1 pt-lg-0 pb-lg-0">
+					*Plus, receive personalized emails from X-Under with exclusive offers, news and more (see privacy
+					policy).
+				</div>
+			</div>
+			<div class="col-12 col-lg-5 col-xxl-4 text-start text-lg-end">
+				<div class="footer-copyright">
+					Copyright 2023 X-Under LLC. All rights reserved. Powered by Dennetic Group.
+				</div>
+
+				<div class="footer-address">
+					XXX West 25 Street, Suite XX, New York, NY XXXXX.
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/app.min.js"></script>
 
 </body>
+
 </html>

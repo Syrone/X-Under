@@ -71,54 +71,72 @@
 		content: ')'
 
 .icon
-	&-favorite
+	display: inline-block
+	svg
 		display: block
-		width: 45px
-		height: 45px
-		cursor: pointer
-		svg
+		width: 100%
+		height: 100%
+		fill: var(--accent)
+		object-fit: cover
+	&-favorite
+		width: 1.25rem
+		height: 1.25rem
+		&--outline
 			display: block
-			width: 100%
-			height: 100%
-			fill: none
-			stroke: var(--text-color)
-			stroke-width: 3px
-			object-fit: cover
-			transition: fill var(--trt-1), stroke var(--trt-1)
-		&:is(:hover, :focus)
+			width: 2.8rem
+			height: 2.8rem
+			cursor: pointer
 			svg
-				stroke: var(--accent)
-		&:active, &.active
-			svg
-				fill: var(--accent)
-				stroke: none
+				fill: none
+				stroke: var(--text-color)
+				stroke-width: 3px
+				object-fit: cover
+				transition: fill var(--trt-1), stroke var(--trt-1)
+			&:is(:hover, :focus)
+				svg
+					stroke: var(--accent)
+			&:active, &.active
+				svg
+					fill: var(--accent)
+					stroke: none
 	&-star
-		display: inline-block
 		width: 1rem
 		height: .8rem
 		margin-inline: .3rem
 		cursor: pointer
 		svg
-			display: block
-			width: 100%
-			height: 100%
 			fill: var(--text-color)
-			object-fit: cover
 		&.active
 			svg
 				fill: var(--accent)
 	&-watched
-		display: inline-block
 		width: 1.5rem
 		height: 1.8rem
 		cursor: pointer
 		svg
-			display: block
-			width: 100%
-			height: 100%
-			fill: var(--accent)
-			object-fit: cover
 			transform: scale(.75) rotate(180deg)
+	&-bag
+		width: 1.25rem
+		height: 1.25rem
+		cursor: pointer
+	&-order
+		width: 1.25rem
+		height: 1.25rem
+		cursor: pointer
+	&-gears
+		width: 1.25rem
+		height: 1.25rem
+		cursor: pointer
+	&-account
+		width: 1.25rem
+		height: 1.25rem
+		cursor: pointer
+	&-usa
+		width: 1.1rem
+		height: 1.1rem
+		cursor: pointer
+		svg
+			fill: var(--text-color)
 
 .card-event
 	display: flex
@@ -308,3 +326,4 @@
 .swiper-container
 	width: 80%
 	margin-inline: auto
+	padding-inline: 1rem
