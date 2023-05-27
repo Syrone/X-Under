@@ -82,6 +82,19 @@
 			.form-control
 				max-width: 100%
 
+	.gift
+		&-card
+			width: 200px
+			height: 120px
+			&-50
+				transform: translate(-75px, -30px)
+			&-100
+				top: -80px
+				left: 77px
+			&-150
+				left: 30px
+				bottom: -50px
+
 @include media-breakpoint-down(md)
 	:root
 		--clock-fs: calc(.1rem + 4vw)
@@ -271,3 +284,16 @@
 		.btn
 			display: block
 			max-width: unset
+
+	.gift
+		&-card
+			width: 150px
+			height: 100px
+			&-50
+				transform: translate(-50px, -30px)
+			&-100
+				top: -70px
+				left: 50px
+			&-150
+				left: 20px
+				bottom: -40px

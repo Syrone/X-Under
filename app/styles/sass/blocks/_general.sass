@@ -26,6 +26,8 @@
 
 .tiny
 	font-size: .7rem
+	&-little
+		font-size: .4rem
 
 .btn-accent
 	background: var(--gradient-accent)
@@ -63,6 +65,15 @@
 		height: 100%
 		object-fit: cover
 		stroke: var(--body-color)
+
+.btn-arrow
+	display: flex
+	align-items: center
+	gap: 1rem
+	&:hover
+		svg
+			transition: var(--trt-1)
+			transform: translateX(.25rem)
 
 .brackets
 	&::before
@@ -137,6 +148,15 @@
 		cursor: pointer
 		svg
 			fill: var(--text-color)
+	&-arrow
+		&-right
+			height: .75rem
+			svg
+				fill: var(--body-color)
+	&-balance
+		width: 3.5rem
+		svg
+			fill: var(--item-color)
 
 .card-event
 	display: flex
@@ -154,6 +174,13 @@
 		position: absolute
 		bottom: -.425rem
 		z-index: -1
+
+.breadcrumb-container
+	background: var(--body-color-op50)
+
+.vertical-text
+	writing-mode: vertical-rl
+	transform: rotate(180deg) translateX(10px)
 //END NEW CLASS ITEM
 
 .popover
@@ -282,6 +309,12 @@
 	--bs-list-group-action-hover-color: var(--text-color)
 	--bs-list-group-action-active-color: var(--item-color-light)
 	--bs-list-group-item-padding-x: 0
+
+.breadcrumb
+	--bs-breadcrumb-bg: var(--transparent)
+	--bs-breadcrumb-padding-x: 0
+	--bs-breadcrumb-padding-y: 1rem
+	--bs-breadcrumb-margin-bottom: 0
 //END Reassigning Variables
 
 //Reassigning Variables SWIPER.JS
