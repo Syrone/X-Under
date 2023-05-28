@@ -1,0 +1,25 @@
+.sortby-offcanvas
+	.list-group
+		--bs-list-group-color: var(--text-color-light)
+		--bs-list-group-bg: var(--transparent)
+		--bs-list-group-border-color: var(--item-color-light)
+		--bs-list-group-border-radius: 0
+		--bs-list-group-item-padding-x: 0
+		--bs-list-group-item-padding-y: 0.75rem
+		--bs-list-group-active-bg: var(--accent)
+		--bs-list-group-active-border-color: var(--accent)
+		&-item
+			border: 0
+			border-bottom: var(--bs-list-group-border-width) solid var(--bs-list-group-border-color)
+		.form-check-input
+			background-color: var(--transparent)
+			border: 1px solid var(--text-color-light)
+			border-radius: var(--bs-list-group-border-radius)
+			transition: border var(--trt-1), border-radius var(--trt-1)
+			&:focus
+				border-color: var(--accent)
+				box-shadow: var(--box-shadow-3)
+				border-radius: var(--border-radius)
+			&:checked
+				background-color: var(--transparent)
+				border-color: var(--accent)

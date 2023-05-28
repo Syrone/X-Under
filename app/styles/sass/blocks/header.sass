@@ -72,3 +72,36 @@
 
 	.list-group-item
 		padding: 0
+
+	&-bottom
+		background: var(--body-color-op50)
+		transition: background var(--trt-1)
+		.name-items, .btn-back
+			color: white
+			transition: color var(--trt-1)
+		.btn-back:is(:hover, :active)
+			color: var(--body-color)
+		.btn-custom
+			background: var(--transparent)
+			.icon-arrow-down
+				transform: rotate(180deg)
+				svg
+					stroke: white
+			&.collapsed
+				.icon-arrow-down
+					transform: rotate(0)
+		&.active
+			background: var(--body-color-op85)
+			.name-items, .btn-back
+				color: var(--text-color)
+			.btn-back:is(:hover, :active)
+				color: white
+		.list-group
+			--bs-list-group-bg: var(--transparent)
+			--bs-list-group-action-hover-bg: var(--transparent)
+			--bs-list-group-action-active-bg: var(--transparent)
+			--bs-list-group-action-color: white
+			&-item
+				color: var(--text-color)
+				&:is(:hover, :active)
+					color: var(--bs-list-group-action-color)

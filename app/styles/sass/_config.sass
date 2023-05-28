@@ -35,9 +35,11 @@ $gutter: $grid-gutter-width
 
 	--accent: rgb(0, 255, 255)
 	--accent-active: rgb(25, 191, 191)
+	--accent-25: rgba(0, 255, 255, 0.25)
 	--gradient-accent: linear-gradient(90deg, var(--accent) 0%, rgb(37, 204, 251) 100%)
 	--body-color: rgb(26, 26, 26)
 	--body-color-op50: rgba(26, 26, 26, 0.5)
+	--body-color-op85: rgba(26, 26, 26, 0.85)
 	--item-color: #333
 	--item-color-light: #4d4d4d
 	--text-color: #808080
@@ -49,6 +51,7 @@ $gutter: $grid-gutter-width
 	--box-shadow: 0 0 0 0.25rem rgba(0, 255, 255,.25)
 	--box-shadow-1: 0 0 2px 1px rgba(255, 255, 255, 0.1)
 	--box-shadow-2: 0px 0px 20px 5px rgba(0, 0, 0, 0.4)
+	--box-shadow-3: 0 0 0 0.25rem var(--accent-25)
 
 	--clock-fs: calc( 1rem + 3vw )
 	--clock-w: calc( var(--clock-fs) / 1.4 )
@@ -67,6 +70,8 @@ $gutter: $grid-gutter-width
 	--border-radius-r: 0 .3rem .3rem 0
 	--border-radius-l: .3rem 0 0 .3rem
 
+	--border-color: #e6e6e6
+
 	--rotate-icon: rotate(-45deg)
 
 	--trt-1: 300ms ease-in-out
@@ -76,9 +81,14 @@ $gutter: $grid-gutter-width
 body.female, .female
 	--accent: rgb(230, 0, 148)
 	--accent-active: rgb(200, 31, 141)
+	--accent-25: rgba(230, 0, 148, 0.25)
+
 	--gradient-accent: linear-gradient(90deg, var(--accent) 0%, rgb(242, 1, 94) 100%)
-	--box-shadow: 0 0 0 0.25rem rgba(230, 0, 148,.25)
+
 	--bs-link-hover-color: var(--accent)
+	
+	--box-shadow: 0 0 0 0.25rem rgba(230, 0, 148,.25)
+	--box-shadow-3: 0 0 0 0.25rem var(--accent-25)
 
 ::placeholder
 	color: #666
@@ -107,7 +117,6 @@ body
 	position: relative
 
 a
-	display: block
 	font: inherit
 	color: inherit
 	text-decoration: none

@@ -37,6 +37,9 @@
 		border: 2px solid var(--accent)
 		box-shadow: var(--box-shadow)
 
+.btn-custom
+	background: var(--transparent)
+
 .btn-close-custom
 	background: var(--transparent)
 	svg
@@ -153,10 +156,61 @@
 			height: .75rem
 			svg
 				fill: var(--body-color)
+		&-down
+			height: 1.25rem
+			svg
+				stroke: var(--item-color)
 	&-balance
 		width: 3.5rem
 		svg
 			fill: var(--item-color)
+
+.svg-img
+	display: inline-block
+	object-fit: contain
+	object-position: center
+
+.standart-card
+	width: 100%
+	height: 100%
+	padding: var(--bs-card-img-overlay-padding)
+	user-select: none
+	&-img
+		height: 100%
+		overflow: hidden
+		border-top-left-radius: var(--bs-card-inner-border-radius)
+		border-top-right-radius: var(--bs-card-inner-border-radius)
+		border-bottom-left-radius: var(--bs-card-inner-border-radius)
+		border-bottom-right-radius: var(--bs-card-inner-border-radius)
+		img
+			width: 100%
+			height: auto
+			object-fit: cover
+			object-position: top
+	.card
+		&-body
+			padding: 1rem 0 0
+		&-img-overlay
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: flex-end
+		&-favorite
+			position: absolute
+			z-index: 1
+			top: 1rem
+			right: 1rem
+		&-watched
+			display: flex
+			align-items: center
+			justify-content: center
+		&-reviews
+			margin-bottom: .4rem
+		&-stars
+			display: flex
+			align-items: center
+			justify-content: center
+			margin-bottom: .25rem
 
 .card-event
 	display: flex
@@ -174,9 +228,6 @@
 		position: absolute
 		bottom: -.425rem
 		z-index: -1
-
-.breadcrumb-container
-	background: var(--body-color-op50)
 
 .vertical-text
 	writing-mode: vertical-rl
@@ -303,6 +354,7 @@
 	--bs-accordion-btn-icon: url('../images/dist/icons/close.svg')
 	--bs-accordion-btn-active-icon: url('../images/dist/icons/close.svg')
 	--bs-accordion-btn-icon-width: 0.85rem
+	--bs-accordion-border-width: 0
 
 .list-group
 	--bs-list-group-color: var(--text-color-light)
@@ -315,6 +367,12 @@
 	--bs-breadcrumb-padding-x: 0
 	--bs-breadcrumb-padding-y: 1rem
 	--bs-breadcrumb-margin-bottom: 0
+	--bs-breadcrumb-item-active-color: var(--item-color)
+
+.progress
+	--bs-progress-height: .25rem
+	--bs-progress-bg: var(--item-color)
+	--bs-progress-bar-bg: var(--accent)
 //END Reassigning Variables
 
 //Reassigning Variables SWIPER.JS

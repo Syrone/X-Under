@@ -1,6 +1,7 @@
 import Swiper from 'swiper/bundle'
 
 document.addEventListener('DOMContentLoaded', () => {
+
 	//COLOR SELECTION
 	const versionBtns = document.querySelectorAll('.version-button');
 	const welcomePage = document.querySelector('.welcome');
@@ -213,6 +214,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const alertSwiper = new Swiper('.alert-swiper', {
 
+		spaceBetween: 50,
+
 		pagination: {
 			el: '.alert-pagination',
 			clickable: true,
@@ -332,6 +335,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			},
 			992: {
 				slidesPerGroup: 3,
+				slidesPerGroup: 1,
+				spaceBetween: 50
+			},
+			1400: {
+				slidesPerView: 3,
 				slidesPerGroup: 1,
 				spaceBetween: 50
 			}
@@ -472,6 +480,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 		runClock()
 	}
+
 	//WRAPPING IN SPAN
 	// const bannerTitles = document.querySelectorAll('.banner-title');
 	// bannerTitles.forEach(bannerTitle => {
@@ -572,21 +581,40 @@ document.addEventListener('DOMContentLoaded', () => {
 		addEditFunctionality(paymentForm, paymentBtn);
 	}
 
+	//BG CHANGE headerBottom
+	const browserBtn = document.querySelector('.btn-browser');
+	const headerBottom = document.querySelector('.header-bottom');
 
+	if (browserBtn && headerBottom) {
+		browserBtn.addEventListener('click', function () {
+			if (this.classList.contains('collapsed')) {
+				headerBottom.classList.remove('active');
+			} else {
+				headerBottom.classList.add('active');
+			}
+		});
+	}
 
+	//BTN GO BACK
+	function goBack() {
+		window.history.back();
+	}
 
+	const btnBack = document.querySelector('.btn-back')
+	if (btnBack) {
+		btnBack.addEventListener('click', goBack);
+	}
 
+	//BTN SHOW MORE
+	const showMoreButton = document.querySelector('#show-more');
 
-
-
-
-
-
-
-
-
-
-
+	if (showMoreButton) {
+		showMoreButton.addEventListener('click', () => {
+			const hiddenCards = document.querySelectorAll('.category-card-none.d-none');
+			hiddenCards.forEach(card => card.classList.remove('d-none'));
+			showMoreButton.classList.add('d-none');
+		});
+	}
 
 
 

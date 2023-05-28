@@ -1,0 +1,68 @@
+.category
+	.svg-img
+		width: 1.5rem
+		height: 1.3rem
+		left: 0
+	.accordion
+		--custom-accordion-btn-padding-x: 2rem
+	.list-group
+		--custom-accordion-btn-padding-x: 2rem
+		--custom-accordion-btn-padding-y: .75rem
+	&-sort
+		.nav
+			--bs-nav-link-padding-x: 0
+			--bs-nav-link-padding-y: 0.75rem
+			--bs-nav-link-color: var(--item-color)
+			--bs-nav-link-hover-color: var(--text-color)
+			--bs-nav-link-disabled-color: var(--text-color-light)
+		.nav-pills
+			--bs-nav-pills-border-radius: 0.375rem
+			--bs-nav-pills-link-active-color: var(--accent)
+			--bs-nav-pills-link-active-bg: var(--transparent)
+		.nav-link, .accordion-item
+			border-bottom: 1px solid var(--border-color)
+
+		.accordion-button
+			&:focus
+				border-color: none
+				box-shadow: none
+			&:not(.collapsed)
+				background-color: var(--transparent)
+				color: var(--item-color)
+
+		.list-group
+			--bs-list-group-bg: var(--transparent)
+			--bs-list-group-action-hover-bg: var(--transparent)
+			--bs-list-group-action-active-bg: var(--transparent)
+			--bs-list-group-color: var(--item-color)
+			--bs-list-group-action-color: var(--item-color)
+			--bs-list-group-action-hover-color: var(--text-color)
+			--bs-list-group-action-active-color: var(--item-color)
+			--bs-list-group-active-color: var(--item-color)
+			--bs-list-group-active-bg: var(--transparent)
+			--bs-list-group-active-border-color: var(--transparent)
+			--bs-list-group-border-color: var(--border-color)
+		.list-group-item
+			&-action
+				&:focus
+					color: var(--item-color)
+				&:active, &.active
+					font-weight: 700
+
+	&-accordion
+		.list-group-item
+			border: none
+			padding: 0 0 0 var(--custom-accordion-btn-padding-x)
+		.accordion-button
+			padding: var(--bs-accordion-btn-padding-y) 0 var(--bs-accordion-btn-padding-y) var(--custom-accordion-btn-padding-x)
+
+	&-list
+		.list-group-item
+			border: none
+			border-bottom: var(--bs-list-group-border-width) solid var(--border-color)
+			padding: var(--custom-accordion-btn-padding-y) 0 var(--custom-accordion-btn-padding-y) var(--custom-accordion-btn-padding-x)
+			&-action
+				&:focus
+					color: var(--item-color)
+				&:active, &.active
+					font-weight: initial

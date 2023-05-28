@@ -30,6 +30,10 @@
 	:root
 		--clock-fs: 2rem
 
+	.tiny-little
+		font-size: calc( .25rem + .2vw )
+		transform: rotate(180deg) translateX(calc( 7px - .1vw ))
+
 	.featured
 		.card-title
 			font-size: calc( 1rem + .65vw )
@@ -48,6 +52,15 @@
 				&-title
 					font-size: var(--clock-fs)
 					margin-bottom: 0.5rem
+
+	.gift-card
+		&-50
+			left: 0
+			right: auto
+		&-150
+			right: auto
+			left: 120px
+			bottom: -110px
 
 @include media-breakpoint-down(lg)
 	:root
