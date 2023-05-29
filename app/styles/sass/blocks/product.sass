@@ -1,0 +1,138 @@
+.product
+	.container
+		border-bottom: 1px solid var(--table-body)
+	.swiper-container
+		width: 65%
+		padding-inline: 0
+	.img-thumbnail
+		display: block
+		max-height: 460px
+		margin-inline: auto
+		padding: 0
+
+	.icon-star
+		width: 1.25rem
+		margin-inline: .1rem
+
+	.form-select
+		color: var(--item-color)
+		border: 3px solid var(--item-color)
+		&:focus
+			border-color: var(--accent)
+			box-shadow: var(--box-shadow-3)
+	.form-control
+		font-size: 1.5rem
+		border: 3px solid var(--item-color)
+		padding: 0
+		&:focus
+			border-color: var(--item-color)
+			box-shadow: none
+
+	.input-group, .input-group .btn
+		--bs-btn-border-radius: 0.3rem
+	.input-group
+		&:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
+		&:not(.has-validation)>:not(:first-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating)
+			border-radius: var(--bs-btn-border-radius)
+		.btn
+			width: 45px
+			height: 45px
+			border-radius: var(--bs-btn-border-radius)
+			--bs-btn-font-size: 1.5rem
+			--bs-btn-padding-x: 0
+			--bs-btn-padding-y: 0
+			--bs-btn-border-width: 3px
+			&-outline-secondary
+				--bs-btn-color: var(--item-color)
+				--bs-btn-border-color: var(--item-color)
+				--bs-btn-hover-bg: var(--item-color)
+				--bs-btn-hover-border-color: var(--item-color)
+				--bs-btn-active-bg: var(--item-color)
+				--bs-btn-active-border-color: var(--item-color)
+				--bs-btn-disabled-color: var(--item-color)
+				--bs-btn-disabled-border-color: var(--item-color)
+
+	&-support
+		.icon
+			svg
+				fill: var(--item-color)
+			&-watched
+				width: .5rem
+				margin-left: 0
+		.btn
+			transition: color var(--trt-1)
+			&:hover
+				color: var(--accent)
+			&:active
+				color: var(--text-color-light)
+		a:hover, .btn:hover
+			svg
+				fill: var(--accent)
+
+	&-nav
+		.product-button-prev, .product-button-next,
+		.product-tumb-button-prev, .product-tumb-button-next
+			padding: .25rem
+			margin-top: 0
+			background: var(--transparent)
+			&::after
+				font-size: 1rem
+				color: var(--item-color)
+		.product-button-prev, .product-button-next
+			position: relative
+			inset: auto
+			transform: none
+		.product-tumb-button-prev, .product-tumb-button-next
+			top: -2.5rem
+		.product-tumb-button-prev
+			right: 2.5rem
+			left: auto
+
+	&-accordion
+		.accordion
+			--bs-accordion-color: var(--item-color)
+			--bs-accordion-bg: var(--transparent)
+			--bs-accordion-border-color: var(--transparent)
+			--bs-accordion-border-width: 0
+			--bs-accordion-btn-color: var(--item-color)
+			--bs-accordion-btn-bg: var(--transparent)
+			--bs-accordion-btn-focus-border-color: var(--item-color)
+			--bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem var(--transparent)
+			--bs-accordion-active-color: var(--item-color)
+			--bs-accordion-active-bg: var(--transparent)
+			&-item
+				border-bottom: 1px solid var(--table-body)
+		.icon-star
+			width: 1.75rem
+			margin-inline: .1rem
+		.btn-arrow:hover
+			.icon-arrow-right svg
+				fill: var(--accent)
+
+		.nav
+			--bs-nav-link-padding-x: 0
+			--bs-nav-link-padding-y: 0.5rem
+			--bs-nav-link-color: var(--text-color-light)
+			--bs-nav-link-hover-color: var(--text-color)
+			--bs-nav-link-disabled-color: var(--table-body)
+			&-tabs
+				--bs-nav-tabs-border-width: 0
+				--bs-nav-tabs-border-color: var(--transparent)
+				--bs-nav-tabs-link-hover-border-color: var(--transparent)
+				--bs-nav-tabs-link-active-color: var(--item-color)
+				--bs-nav-tabs-link-active-bg: var(--transparent)
+				--bs-nav-tabs-link-active-border-color: var(--transparent)
+				gap: 1.5rem
+
+		.btn-custom
+			border: none
+			&:hover, .active
+				color: var(--accent)
+				transition: color var(--trt-1)
+				.icon svg
+					fill: var(--accent)
+
+		.product-review
+			.card-reviews
+				.icon-star
+					width: 1rem

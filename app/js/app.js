@@ -334,7 +334,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				spaceBetween: 20
 			},
 			992: {
-				slidesPerGroup: 3,
+				slidesPerView: 3,
 				slidesPerGroup: 1,
 				spaceBetween: 50
 			},
@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 	//CLOCK
-	if (document.querySelectorAll("clock")) {
+	if (document.querySelectorAll(".clock")) {
 		const els = {
 			s: initElements('s'),
 			m: initElements('m')
@@ -393,7 +393,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 
 		function runClock() {
-			const endTime = new Date("May 30, 2023 00:00:00").getTime(),
+			const endTime = new Date("May 31, 2023 00:00:00").getTime(),
 				nowTime = new Date().getTime(),
 				distanceTime = endTime - nowTime,
 				now = {
@@ -480,24 +480,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 		runClock()
 	}
-
-	//WRAPPING IN SPAN
-	// const bannerTitles = document.querySelectorAll('.banner-title');
-	// bannerTitles.forEach(bannerTitle => {
-	// 	const words = bannerTitle.textContent.split(' ');
-	// 	bannerTitle.textContent = '';
-	// 	words.forEach(word => {
-	// 		let newWord = '';
-	// 		for (let i = 0; i < word.length; i++) {
-	// 			if (word[i].toLowerCase() === 'o') {
-	// 				newWord += '<span>' + word[i] + '</span>';
-	// 			} else {
-	// 				newWord += word[i];
-	// 			}
-	// 		}
-	// 		bannerTitle.innerHTML += newWord + ' ';
-	// 	});
-	// });
 
 	//COOKIES
 	const cookieAlert = document.querySelector('.cookie-alert');
@@ -615,6 +597,82 @@ document.addEventListener('DOMContentLoaded', () => {
 			showMoreButton.classList.add('d-none');
 		});
 	}
+
+	//PRODUCT SWIPER
+	const productSlider = new Swiper('.product-slider', {
+		slidesPerView: 1,
+		slidesPerGroup: 1,
+		spaceBetween: 10,
+
+		navigation: {
+			nextEl: '.product-button-next',
+			prevEl: '.product-button-prev',
+			appendNavigation: '.product-slider',
+		},
+	});
+	const currentSlideElement = document.querySelector('.swiper-current-slide');
+	const totalSlidesElement = document.querySelector('.swiper-total-slides');
+
+	if (currentSlideElement && totalSlidesElement) {
+		currentSlideElement.textContent = productSlider.realIndex + 1;
+		totalSlidesElement.textContent = productSlider.slides.length;
+
+		productSlider.on('slideChange', () => {
+			currentSlideElement.textContent = productSlider.realIndex + 1;
+		});
+	}
+
+	const productThumbsSlider = new Swiper('.product-slider-thumbs', {
+		spaceBetween: 10,
+		slidesPerView: 2,
+		slidesPerGroup: 1,
+		slideToClickedSlide: true,
+
+		navigation: {
+			nextEl: '.product-tumb-button-next',
+			prevEl: '.product-tumb-button-prev',
+			appendNavigation: '.product-slider-thumbs',
+		},
+	});
+
+	productSlider.controller.control = productThumbsSlider;
+	productThumbsSlider.controller.control = productSlider;
+
+	//PRODUCT QUANTITY
+	const buttonDecrement = document.getElementById('button-decrement');
+	const buttonIncrement = document.getElementById('button-increment');
+	const productQuantity = document.getElementById('product-quantity');
+
+	if (buttonDecrement && buttonIncrement && productQuantity) {
+		buttonDecrement.addEventListener('click', () => {
+			let currentValue = parseInt(productQuantity.value);
+			if (currentValue > 1) {
+				productQuantity.value = currentValue - 1;
+			}
+		});
+
+		buttonIncrement.addEventListener('click', () => {
+			let currentValue = parseInt(productQuantity.value);
+			productQuantity.value = currentValue + 1;
+		});
+	}
+
+	//PRODUCT REVIEW QUESTIONS
+	document.body.addEventListener('click', function (event) {
+		if (event.target.closest('.user-review-question') && event.target.matches('button')) {
+			const userReview = event.target.closest('.product-review');
+			const userReviewText = userReview.querySelector('.user-review');
+			const userQuestion = userReview.querySelector('.user-review-question');
+
+			// Удаляем блок с вопросом
+			userQuestion.remove();
+
+			// Изменяем размер блока с отзывом пользователя
+			userReviewText.classList.remove('col-9');
+			userReviewText.classList.add('col-12');
+		}
+	});
+
 
 
 
