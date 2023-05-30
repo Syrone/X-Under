@@ -1,0 +1,29 @@
+.recent
+	.swiper-container
+		width: 90%
+		padding-inline: 0
+	.btn
+		max-width: 170px
+	.card
+		--bs-card-border-color: var(--table-body)
+		--bs-card-inner-border-radius: 0.375rem
+		padding: 0 var(--bs-card-img-overlay-padding) 0 var(--bs-card-img-overlay-padding)
+		border: none
+		&-img-top
+			border: var(--bs-card-border-width) solid var(--bs-card-border-color)
+		&-body
+			padding: calc( var(--bs-card-spacer-y) * 2 ) 0 var(--bs-card-spacer-y)
+		&-event
+			position: static
+			top: auto
+			left: auto
+			align-items: center
+			&::after
+				all: unset
+		&-title
+			max-width: 160px
+			margin-inline: auto
+
+	.recent-button-next, .recent-button-prev
+		background: var(--transparent)
+		color: var(--item-color)

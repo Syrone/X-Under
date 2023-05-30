@@ -658,18 +658,68 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	//PRODUCT REVIEW QUESTIONS
-	document.body.addEventListener('click', function (event) {
-		if (event.target.closest('.user-review-question') && event.target.matches('button')) {
-			const userReview = event.target.closest('.product-review');
-			const userReviewText = userReview.querySelector('.user-review');
-			const userQuestion = userReview.querySelector('.user-review-question');
+	const userReviewQuestionExists = document.querySelector('.user-review-question');
+	const productReviewExists = document.querySelector('.product-review');
 
-			userQuestion.remove();
+	if (userReviewQuestionExists && productReviewExists) {
+		document.body.addEventListener('click', function (event) {
+			if (event.target.closest('.user-review-question') && event.target.matches('button')) {
+				const userReview = event.target.closest('.product-review');
+				const userReviewText = userReview.querySelector('.user-review');
+				const userQuestion = userReview.querySelector('.user-review-question');
 
-			userReviewText.classList.remove('col-md-9');
-			userReviewText.classList.add('col-12');
-		}
-	});
+				userQuestion.remove();
+
+				userReviewText.classList.remove('col-md-9');
+				userReviewText.classList.add('col-12');
+			}
+		});
+	}
+
+	//RECENT SWIPER
+	const recentSwiper = new Swiper('.recent-swiper', {
+		slidesPerView: 5,
+		slidesPerGroup: 1,
+		spaceBetween: 50,
+		breakpoints: {
+			280: {
+				slidesPerView: 1,
+				slidesPerGroup: 1,
+				spaceBetween: 100
+			},
+			576: {
+				slidesPerView: 2,
+				slidesPerGroup: 2,
+				spaceBetween: 15
+			},
+			768: {
+				slidesPerView: 3,
+				slidesPerGroup: 3,
+				spaceBetween: 15
+			},
+			1200: {
+				slidesPerView: 4,
+				slidesPerGroup: 2,
+				spaceBetween: 15
+			},
+			1400: {
+				slidesPerView: 5,
+				slidesPerGroup: 1,
+				spaceBetween: 15
+			}
+		},
+
+		navigation: {
+			nextEl: '.recent-button-next',
+			prevEl: '.recent-button-prev',
+			appendNavigation: '.recent-swiper',
+		},
+
+		pagination: {
+			el: '.recent-pagination',
+			clickable: true,
+		},
+	})
 
 
 

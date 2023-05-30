@@ -108,8 +108,23 @@
 			--bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem var(--transparent)
 			--bs-accordion-active-color: var(--item-color)
 			--bs-accordion-active-bg: var(--transparent)
+			--bs-accordion-btn-icon-width: 1.25rem
 			&-item
 				border-bottom: 1px solid var(--table-body)
+			&-button
+				&::before
+					content: 'Hide'
+					font-size: .85rem
+					text-transform: capitalize
+					position: absolute
+					top: 49%
+					transform: translate(0, -50%)
+					right: 1.5rem
+					opacity: 1
+					transition: opacity var(--trt-1), transform var(--trt-1)
+				&.collapsed::before
+					transform: translate(1.8rem, -50%)
+					opacity: 0
 		.progress
 			--bs-progress-height: .6rem
 			--bs-progress-border-radius: .15rem
