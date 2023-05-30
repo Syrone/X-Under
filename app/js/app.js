@@ -664,11 +664,9 @@ document.addEventListener('DOMContentLoaded', () => {
 			const userReviewText = userReview.querySelector('.user-review');
 			const userQuestion = userReview.querySelector('.user-review-question');
 
-			// Удаляем блок с вопросом
 			userQuestion.remove();
 
-			// Изменяем размер блока с отзывом пользователя
-			userReviewText.classList.remove('col-9');
+			userReviewText.classList.remove('col-md-9');
 			userReviewText.classList.add('col-12');
 		}
 	});
