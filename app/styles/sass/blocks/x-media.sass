@@ -111,6 +111,10 @@
 	.product-accordion .icon-star
 		width: 1.45rem
 
+	.modal-installments .modal-footer-img
+		border-right: none
+		border-bottom: 3px solid var(--item-color)
+
 @include media-breakpoint-down(md)
 	:root
 		--clock-fs: calc(.1rem + 4vw)
@@ -196,6 +200,16 @@
 	.advantages
 		.swiper-container
 			width: 60%
+
+	.modal-zoom
+		.swiper-container
+			width: 75%
+		&-img
+			max-width: 600px
+		.zoom-button-next, .swiper-rtl .zoom-button-prev
+			right: 1rem
+		.zoom-button-prev, .swiper-rtl .zoom-button-next
+			left: 1rem
 
 @include media-breakpoint-down(sm)
 	.section
@@ -313,3 +327,7 @@
 			&-150
 				left: 20px
 				bottom: -40px
+
+	.modal-zoom, .modal-installments
+		.btn-close
+			width: 10px

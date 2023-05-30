@@ -393,7 +393,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 
 		function runClock() {
-			const endTime = new Date("May 31, 2023 00:00:00").getTime(),
+			const endTime = new Date("May 31, 2023 23:59:59").getTime(),
 				nowTime = new Date().getTime(),
 				distanceTime = endTime - nowTime,
 				now = {
@@ -428,7 +428,6 @@ document.addEventListener('DOMContentLoaded', () => {
 					const el = els[t][i]
 
 					if (distanceTime <= 0) {
-						// reset all digit values to 0
 						els.m.forEach(minutes => {
 							minutes.digit.dataset.digitBefore = '0';
 							minutes.flipFaceA.textContent = '0';
@@ -670,7 +669,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 				userQuestion.remove();
 
-				userReviewText.classList.remove('col-md-9');
+				userReviewText.classList.remove('col-lg-9');
 				userReviewText.classList.add('col-12');
 			}
 		});
@@ -721,8 +720,23 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 	})
 
+	//ZOOM PRODUCT ITEM
+	const modalZoomSwiper = new Swiper('.modal-zoom-swiper', {
+		slidesPerView: 1,
+		slidesPerGroup: 1,
+		spaceBetween: 50,
 
+		navigation: {
+			nextEl: '.zoom-button-next',
+			prevEl: '.zoom-button-prev',
+			appendNavigation: '.modal-zoom-swiper',
+		},
 
+		pagination: {
+			el: '.zoom-pagination',
+			clickable: true,
+		},
+	})
 
 
 });

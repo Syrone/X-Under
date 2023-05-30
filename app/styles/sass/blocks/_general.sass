@@ -1,5 +1,8 @@
 // GENERAL PROJECT STYLES
 
+body, .modal
+	padding-right: 0!important
+
 .wrapper
 	margin-top: 3.75rem
 
@@ -194,6 +197,15 @@
 		svg
 			fill: var(--item-color)
 			transition: fill var(--trt-1)
+	&-zoom
+		width: 1.5rem
+		transition: transform var(--trt-1)
+		svg
+			fill: var(--table-body)
+	&-select
+		width: 1.5rem
+	&-complete
+		width: 1.5rem
 
 .svg-img
 	display: inline-block
@@ -460,3 +472,52 @@
 	width: 80%
 	margin-inline: auto
 	padding-inline: 1rem
+
+.modal-zoom
+	background: var(--body-backdrop)
+	&-img
+		max-width: 450px
+		margin-inline: auto
+		border-radius: var(--border-radius)
+		img
+			border-radius: var(--border-radius)
+
+	&.modal
+		--bs-modal-bg: var(--transparent)
+		--bs-modal-border-width: 0
+		--bs-modal-header-border-width: 0
+		--bs-modal-footer-border-width: 0
+
+	.btn-close
+		right: 2rem
+		top: 2rem
+
+	.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction
+		bottom: 1rem
+
+	.zoom-button-next, .swiper-rtl .zoom-button-prev
+		right: 4rem
+	.zoom-button-prev, .swiper-rtl .zoom-button-next
+		left: 4rem
+
+.modal-installments
+	background: var(--body-backdrop)
+	&.modal
+		--bs-modal-padding: 1rem
+		--bs-modal-margin: 0.5rem
+		--bs-modal-bg: var(--body-color)
+		--bs-modal-border-width: 0
+		--bs-modal-header-border-width: 0
+		--bs-modal-footer-border-width: 0
+		--bs-modal-header-padding-x: 1rem
+		--bs-modal-header-padding-y: 1rem
+		--bs-modal-header-padding: 1rem 1rem
+		--bs-modal-footer-gap: 0.5rem
+	.modal-content
+		color: var(--text-color)
+	.icon-bag, .icon-select, .icon-complete
+		width: auto
+		height: 3.5rem
+		cursor: default
+	.modal-footer-img
+		border-right: 3px solid var(--item-color)

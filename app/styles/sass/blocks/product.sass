@@ -1,9 +1,21 @@
 .product
 	.container
 		border-bottom: 1px solid var(--table-body)
+
 	.swiper-container
 		width: 65%
 		padding-inline: 0
+
+	.wrapper-product
+		max-width: max-content
+		margin-inline: auto
+		padding: 0
+		.icon-zoom
+			bottom: .5rem
+			right: .5rem
+		&:hover
+			.icon-zoom
+				transform: scale(1.25)
 	.img-thumbnail
 		display: block
 		max-height: 460px
@@ -162,3 +174,5 @@
 			.card-reviews
 				.icon-star
 					width: 1rem
+
+	
