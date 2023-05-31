@@ -473,10 +473,17 @@ body, .modal
 	margin-inline: auto
 	padding-inline: 1rem
 
-.modal-zoom
+.modal
+	--bs-modal-bg: var(--body-color)
+	--bs-modal-border-width: 0
+	--bs-modal-header-border-width: 0
+	--bs-modal-footer-border-width: 0
+
+.modal-zoom, .modal-installments, .modal-guide, .modal-notific, .modal-video
 	background: var(--body-backdrop)
+
+.modal-zoom
 	&-img
-		max-width: 450px
 		margin-inline: auto
 		border-radius: var(--border-radius)
 		img
@@ -501,14 +508,9 @@ body, .modal
 		left: 4rem
 
 .modal-installments
-	background: var(--body-backdrop)
 	&.modal
 		--bs-modal-padding: 1rem
 		--bs-modal-margin: 0.5rem
-		--bs-modal-bg: var(--body-color)
-		--bs-modal-border-width: 0
-		--bs-modal-header-border-width: 0
-		--bs-modal-footer-border-width: 0
 		--bs-modal-header-padding-x: 1rem
 		--bs-modal-header-padding-y: 1rem
 		--bs-modal-header-padding: 1rem 1rem
@@ -521,3 +523,49 @@ body, .modal
 		cursor: default
 	.modal-footer-img
 		border-right: 3px solid var(--item-color)
+
+.modal-guide
+	.list-group
+		--bs-list-group-bg: var(--transparent)
+		--bs-list-group-item-padding-y: 0.1rem
+		--bs-list-group-active-color: var(--accent)
+		--bs-list-group-active-bg: var(--item-color)
+		--bs-list-group-active-border-color: var(--transparent)
+		--bs-list-group-border-color: var(--item-color)
+		--bs-list-group-border-radius: 0
+		&-item
+			border: none
+			border-bottom: var(--bs-list-group-border-width) solid var(--bs-list-group-border-color)
+			div
+				min-width: 60px
+				text-align: center
+
+.modal-notific
+	.form-control
+		background-color: var(--transparent)
+		border: 1px solid var(--text-color)
+		color: var(--text-color)
+		font-size: 1.25rem
+
+.modal-video
+	video
+		width: 100%
+
+	.list-group
+		--bs-list-group-bg: var(--transparent)
+		--bs-list-group-active-bg: var(--transparent)
+		--bs-list-group-action-hover-bg: var(--transparent)
+		--bs-list-group-action-active-bg: var(--transparent)
+		--bs-list-group-disabled-bg: var(--transparent)
+		--bs-list-group-border-width: 0
+		--bs-list-group-border-color: var(--transparent)
+
+	.btn
+		--bs-btn-padding-x: 0.25rem
+		--bs-btn-padding-y: 0.25rem
+		--bs-btn-font-size: 1rem
+		--bs-btn-color: var(--text-color)
+		--bs-btn-bg: var(--transparent)
+		--bs-btn-border-width: 0
+		--bs-btn-border-color: var(--transparent)
+		--bs-btn-hover-border-color: var(--transparent)
