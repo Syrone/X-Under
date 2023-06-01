@@ -34,6 +34,11 @@
 		font-size: calc( .25rem + .2vw )
 		transform: rotate(180deg) translateX(calc( 7px - .1vw ))
 
+	.modal-addtobag, .modal-qview
+		.btn-close-word
+			width: 1.5rem
+			background-position: center
+
 	.featured
 		.card-title
 			font-size: calc( 1rem + .65vw )
@@ -83,6 +88,9 @@
 		.swiper-container
 			width: 75%
 
+	.modal-qview .modal-qview-slider
+		width: 100%
+
 	.banner
 		&-img-overlay
 			max-width: 160px
@@ -129,9 +137,6 @@
 				width: 45% !important
 				.w-100
 					width: 100% !important
-		.card-bag
-			.card-quantity
-				margin-top: -1.5rem
 
 @include media-breakpoint-down(md)
 	:root
@@ -254,6 +259,14 @@
 	.swiper-button-prev:after
 		margin-left: -.2rem
 
+	.btn-close-word
+		background-position: center
+		width: 1.5rem
+
+	.modal-addtobag
+		.frequently-card
+			width: 100%
+
 	.pay-protection
 		img:nth-child(1)
 			width: 30vw
@@ -365,6 +378,10 @@
 					width: 100% !important
 		.card-bag .ratio
 			margin-inline: auto
+		&.step-1
+			.card-bag-wrapper
+				width: auto
+				flex-direction: column
 		&.step-2
 			.pay-protection
 				img

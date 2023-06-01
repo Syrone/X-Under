@@ -97,6 +97,79 @@ body, .modal
 			transition: var(--trt-1)
 			transform: translateX(.25rem)
 
+.btn.btn-applepay
+	color: var(--text-applepay)
+	background-color: var(--body-applepay)
+	&:focus
+		background-color: var(--body-applepay)
+	&:hover
+		color: var(--text-applepay)
+		background-color: var(--body-applepay)
+		opacity: .75
+	&:active, .active
+		color: var(--text-applepay)
+		background-color: var(--body-applepay)
+		opacity: 0.5
+		transition: none
+	.icon-applepay
+		margin-top: .15rem
+.btn.btn-paypal
+	background-color: var(--body-paypal)
+	&:focus
+		background-color: var(--body-paypal)
+	&:hover
+		background-color: var(--body-paypal)
+		opacity: .75
+	&:active, .active
+		background-color: var(--body-paypal)
+		opacity: 0.5
+		transition: none
+.btn.btn-amazonpay
+	background-color: var(--body-amazonpay)
+	&:focus
+		background-color: var(--body-amazonpay)
+	&:hover
+		background-color: var(--body-amazonpay)
+		opacity: .75
+	&:active, .active
+		background-color: var(--body-amazonpay)
+		opacity: 0.5
+		transition: none
+.btn.btn-afterpay
+	background-color: var(--body-afterpay)
+	&:focus
+		background-color: var(--body-afterpay)
+	&:hover
+		background-color: var(--body-afterpay)
+		opacity: .75
+	&:active, .active
+		background-color: var(--body-afterpay)
+		opacity: 0.5
+		transition: none
+.btn.btn-klarma
+	background-color: var(--body-klarma)
+	&:focus
+		background-color: var(--body-klarma)
+	&:hover
+		background-color: var(--body-klarma)
+		opacity: .75
+	&:active, .active
+		background-color: var(--body-klarma)
+		opacity: 0.5
+		transition: none
+
+.btn-applepay, .btn-paypal, .btn-amazonpay, .btn-afterpay, .btn-klarma
+	display: flex
+	align-items: center
+	justify-content: center
+	font-size: 1.25rem
+	font-weight: 300
+	gap: .5rem
+	height: 3rem
+	border: none
+	opacity: 1
+	transition: opacity var(--trt-1)
+
 .brackets
 	&::before
 		content: '('
@@ -270,7 +343,7 @@ body, .modal
 	object-fit: contain
 	object-position: center
 
-.standart-card, .recently-card, .advantages-card
+.standart-card, .recently-card, .advantages-card, .frequently-card
 	transition: box-shadow var(--trt-1), transform var(--trt-1)
 	&:hover
 		box-shadow: var(--box-shadow-card)
@@ -318,6 +391,28 @@ body, .modal
 			align-items: center
 			justify-content: center
 			margin-bottom: .25rem
+
+.frequently-card
+	--bs-card-spacer-y: .5rem
+	--bs-card-spacer-x: .3rem
+	--bs-card-title-spacer-y: 0.5rem
+	--bs-card-border-width: 0
+	--bs-card-border-color: var(--transparent)
+	--bs-card-cap-padding-y: 0.5rem
+	--bs-card-cap-padding-x: 1rem
+	--bs-card-cap-bg: var(--body-color)
+	--bs-card-cap-color: var(--accent)
+	--bs-card-color: var(--accent)
+	--bs-card-bg: var(--body-color)
+	--bs-card-group-margin: 15px
+	width: 9.4rem
+	padding: calc( var(--bs-card-spacer-x) * 2 ) calc( var(--bs-card-spacer-x) * 2 ) 0
+	.card-img, .card-img-top
+		border-radius: var(--bs-card-border-radius)
+	.card-price, .card-title
+		padding-inline: var(--bs-card-spacer-x)
+	.card-body
+		padding: var(--bs-card-spacer-y) 0
 
 .card-event
 	display: flex
@@ -519,6 +614,45 @@ body, .modal
 		border-color: var(--accent)
 		-webkit-box-shadow: 0 0 0 0.25rem var(--accent-25)
 		box-shadow: 0 0 0 0.25rem var(--accent-25)
+
+.input-group, .input-group .btn
+	--bs-btn-border-radius: 0.3rem
+.input-group
+	&:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
+	&:not(.has-validation)>:not(:first-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
+	&>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback)
+		border-radius: var(--bs-btn-border-radius)
+	.form-control
+		max-width: 49px
+		max-height: 49px
+		min-width: 49px
+		min-height: 49px
+		font-size: 1.5rem
+		color: var(--item-color)
+		background-color: var(--transparent)
+		border: 2px solid var(--item-color)
+		padding: 0
+		&:focus
+			background-color: var(--transparent)
+			border-color: var(--item-color)
+			box-shadow: none
+	.btn
+		width: 49px
+		height: 49px
+		border-radius: var(--bs-btn-border-radius)
+		--bs-btn-font-size: 1.5rem
+		--bs-btn-padding-x: 0
+		--bs-btn-padding-y: 0
+		--bs-btn-border-width: 2px
+		&-outline-secondary
+			--bs-btn-color: var(--item-color)
+			--bs-btn-border-color: var(--item-color)
+			--bs-btn-hover-bg: var(--item-color)
+			--bs-btn-hover-border-color: var(--item-color)
+			--bs-btn-active-bg: var(--item-color)
+			--bs-btn-active-border-color: var(--item-color)
+			--bs-btn-disabled-color: var(--item-color)
+			--bs-btn-disabled-border-color: var(--item-color)
 //END Reassigning Variables
 
 //Reassigning Variables SWIPER.JS
@@ -581,9 +715,9 @@ body, .modal
 		&:active, .active
 			opacity: 0.5
 		&:nth-child(1)
-			width: 20px
+			width: 1.25rem
 		&:nth-child(2)
-			width: 30px
+			width: 1.8rem
 
 .accordion-button
 	line-height: initial
@@ -606,7 +740,7 @@ body, .modal
 			display: flex
 			align-items: center
 
-.modal-search, .modal-zoom, .modal-installments, .modal-guide, .modal-notific, .modal-video
+.modal-search, .modal-zoom, .modal-installments, .modal-guide, .modal-notific, .modal-video, .modal-qview, .modal-addtobag
 	background: var(--body-backdrop)
 
 .modal-search
@@ -692,3 +826,45 @@ body, .modal
 	video
 		width: 100%
 		border-radius: var(--border-radius)
+
+.modal-qview
+	.card-reviews
+		.icon-star
+			margin-inline: .1rem
+	.btn-link
+		--item-color: var(--text-color)
+	.form-select
+		--item-color: var(--text-color)
+	.input-group
+		.form-control,
+		.btn-outline-secondary
+			--item-color: var(--text-color)
+	.modal-qview-slider, .modal-qview-slider-thumbs
+		img
+			border-radius: 0.5rem
+		.img-thumbnail
+			border-color: var(--item-color)
+			background-color: var(--item-color)
+	.modal-qview-slider
+		width: 90%
+		margin-inline: auto
+	.modal-qview-slider-thumbs
+		width: 55%
+	.modal-qview-tumb-button-prev, .modal-qview-tumb-button-next
+		top: var(--swiper-navigation-top-offset,45%)
+		color: var(--item-color)
+		background-color: var(--transparent)
+
+.modal-addtobag, .modal-qview
+	.modal-body
+		padding: calc( var(--bs-modal-padding) * 2 ) var(--bs-modal-padding)
+	.btn
+		--bs-btn-padding-x: 0.5rem
+	.wrapper-img-thumbnail
+		border-radius: .5rem
+		padding: .5rem
+		background-color: var(--item-color)
+		.img-thumbnail
+			border-radius: 0.5rem
+			padding: 0
+			border-color: var(--item-color)

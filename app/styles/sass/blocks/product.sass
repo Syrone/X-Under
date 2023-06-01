@@ -3,6 +3,10 @@
 		width: 65%
 		padding-inline: 0
 
+	.card-reviews
+		.btn-link
+			--item-color: var(--text-color)
+
 	.pagination
 		--bs-pagination-padding-x: 0.4rem
 		--bs-pagination-padding-y: 0.3rem
@@ -69,37 +73,6 @@
 		&:focus
 			border-color: var(--accent)
 			box-shadow: var(--box-shadow-3)
-	.form-control
-		font-size: 1.5rem
-		border: 2px solid var(--item-color)
-		padding: 0
-		&:focus
-			border-color: var(--item-color)
-			box-shadow: none
-
-	.input-group, .input-group .btn
-		--bs-btn-border-radius: 0.3rem
-	.input-group
-		&:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
-		&:not(.has-validation)>:not(:first-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating)
-			border-radius: var(--bs-btn-border-radius)
-		.btn
-			width: 45px
-			height: 45px
-			border-radius: var(--bs-btn-border-radius)
-			--bs-btn-font-size: 1.5rem
-			--bs-btn-padding-x: 0
-			--bs-btn-padding-y: 0
-			--bs-btn-border-width: 2px
-			&-outline-secondary
-				--bs-btn-color: var(--item-color)
-				--bs-btn-border-color: var(--item-color)
-				--bs-btn-hover-bg: var(--item-color)
-				--bs-btn-hover-border-color: var(--item-color)
-				--bs-btn-active-bg: var(--item-color)
-				--bs-btn-active-border-color: var(--item-color)
-				--bs-btn-disabled-color: var(--item-color)
-				--bs-btn-disabled-border-color: var(--item-color)
 
 	&-support
 		.icon
@@ -150,6 +123,8 @@
 			--bs-accordion-active-color: var(--item-color)
 			--bs-accordion-active-bg: var(--transparent)
 			--bs-accordion-btn-icon-width: 1.25rem
+			--bs-accordion-border-radius: 0
+			--bs-accordion-inner-border-radius: 0
 			&-item
 				border-bottom: 1px solid var(--table-body)
 				&:first-child

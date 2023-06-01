@@ -656,6 +656,29 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 	})
 
+	//VIEW QUICK MODAL SWIPER
+	const qViewSwiper = new Swiper('.modal-qview-slider', {
+		slidesPerView: 1,
+		slidesPerGroup: 1,
+		spaceBetween: 15,
+	})
+
+	const qViewThumbsSlider = new Swiper('.modal-qview-slider-thumbs', {
+		spaceBetween: 30,
+		slidesPerView: 1,
+		slidesPerGroup: 1,
+		slideToClickedSlide: true,
+
+		navigation: {
+			nextEl: '.modal-qview-tumb-button-next',
+			prevEl: '.modal-qview-tumb-button-prev',
+			appendNavigation: '.modal-qview-slider-thumbs',
+		},
+	});
+
+	qViewSwiper.controller.control = qViewThumbsSlider;
+	qViewThumbsSlider.controller.control = qViewSwiper;
+
 	const bagCtas = document.querySelectorAll('.bag-cta');
 	const orderButtons = document.querySelectorAll('.btn-bag-order');
 
