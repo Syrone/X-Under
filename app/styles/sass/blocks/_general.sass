@@ -43,7 +43,9 @@ body, .modal
 .btn-link
 	--bs-btn-active-color: var(--text-color)
 	display: inline-block
-	padding-block: 0
+	font-weight: 300
+	padding: 0
+	border: 0
 	margin: 0
 	color: var(--item-color)
 	background-color: var(--transparent)
@@ -170,6 +172,12 @@ body, .modal
 			svg
 				fill: var(--body-color)
 				transition: fill var(--trt-1)
+		&-left
+			height: .75rem
+			transform: rotate(180deg)
+			svg
+				fill: var(--body-color)
+				transition: fill var(--trt-1)
 		&-down
 			height: 1.25rem
 			svg
@@ -261,6 +269,12 @@ body, .modal
 	display: inline-block
 	object-fit: contain
 	object-position: center
+
+.standart-card, .recently-card, .advantages-card
+	transition: box-shadow var(--trt-1), transform var(--trt-1)
+	&:hover
+		box-shadow: var(--box-shadow-card)
+		transform: scale(1.01)
 
 .standart-card, .recently-card
 	width: 100%
@@ -416,6 +430,9 @@ body, .modal
 	--bs-btn-disabled-color: var(--text-color)
 	--bs-btn-disabled-border-color: var(--text-color)
 
+.btn-outline-light
+	--bs-btn-border-width: 2px
+
 .bg-dark
 	background-color: var(--body-color)!important
 
@@ -508,6 +525,14 @@ body, .modal
 .swiper-wrapper
 	cursor: grab
 
+.swiper-container
+	width: 80%
+	margin-inline: auto
+	padding-inline: 1rem
+
+.featured-swiper, .recent-swiper, .advantages-swiper
+	padding-block: 3rem
+
 .swiper-pagination-bullet
 	width: 3.125rem
 	height: .25rem
@@ -528,7 +553,7 @@ body, .modal
 .swiper-button-prev:after
 	margin-left: -.5rem
 
-.featured, .banner, .advantages
+.banner
 	.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction
 		bottom: -4rem
 
@@ -569,19 +594,29 @@ body, .modal
 .accordion-link:after
 	display: none
 
-.swiper-container
-	width: 80%
-	margin-inline: auto
-	padding-inline: 1rem
-
 .modal
 	--bs-modal-bg: var(--body-color)
 	--bs-modal-border-width: 0
 	--bs-modal-header-border-width: 0
 	--bs-modal-footer-border-width: 0
+	&-xl
+		.modal-content
+			min-height: 580px
+		.modal-body
+			display: flex
+			align-items: center
 
-.modal-zoom, .modal-installments, .modal-guide, .modal-notific, .modal-video
+.modal-search, .modal-zoom, .modal-installments, .modal-guide, .modal-notific, .modal-video
 	background: var(--body-backdrop)
+
+.modal-search
+	&.modal
+		--bs-modal-bg: var(--transparent)
+		--bs-modal-border-width: 0
+		--bs-modal-header-border-width: 0
+		--bs-modal-footer-border-width: 0
+	.icon-search
+		left: 2rem
 
 .modal-zoom
 	&-img
@@ -649,6 +684,9 @@ body, .modal
 		font-size: 1.25rem
 
 .modal-video
+	.btn-close
+		right: 2rem
+		top: 2rem
 	&.modal
 		--bs-modal-bg: var(--transparent)
 	video

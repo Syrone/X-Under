@@ -1,10 +1,39 @@
 .product
-	.container
-		border-bottom: 1px solid var(--table-body)
-
 	.swiper-container
 		width: 65%
 		padding-inline: 0
+
+	.pagination
+		--bs-pagination-padding-x: 0.4rem
+		--bs-pagination-padding-y: 0.3rem
+		--bs-pagination-font-size: 1.5rem
+		--bs-pagination-color: var(--item-color)
+		--bs-pagination-bg: var(--transparent)
+		--bs-pagination-border-width: 0
+		--bs-pagination-border-color: var(--transparent)
+		--bs-pagination-hover-color: var(--text-color)
+		--bs-pagination-hover-bg: var(--transparent)
+		--bs-pagination-hover-border-color: var(--transparent)
+		--bs-pagination-focus-color: var(--text-color)
+		--bs-pagination-focus-bg: var(--transparent)
+		--bs-pagination-focus-box-shadow: none
+		--bs-pagination-active-color: var(--accent)
+		--bs-pagination-active-bg: var(--transparent)
+		--bs-pagination-active-border-color: var(--transparent)
+		--bs-pagination-disabled-bg: var(--transparent)
+		--bs-pagination-disabled-border-color: var(--transparent)
+		align-items: center
+	.page-link
+		display: flex
+		align-items: center
+		line-height: 1
+		&:hover
+			svg
+				fill: var(--text-color)
+		&:active
+			svg
+				fill: var(--accent)
+				transition: none
 
 	.wrapper-product
 		max-width: max-content
@@ -36,13 +65,13 @@
 
 	.form-select
 		color: var(--item-color)
-		border: 3px solid var(--item-color)
+		border: 2px solid var(--item-color)
 		&:focus
 			border-color: var(--accent)
 			box-shadow: var(--box-shadow-3)
 	.form-control
 		font-size: 1.5rem
-		border: 3px solid var(--item-color)
+		border: 2px solid var(--item-color)
 		padding: 0
 		&:focus
 			border-color: var(--item-color)
@@ -61,7 +90,7 @@
 			--bs-btn-font-size: 1.5rem
 			--bs-btn-padding-x: 0
 			--bs-btn-padding-y: 0
-			--bs-btn-border-width: 3px
+			--bs-btn-border-width: 2px
 			&-outline-secondary
 				--bs-btn-color: var(--item-color)
 				--bs-btn-border-color: var(--item-color)
@@ -123,6 +152,8 @@
 			--bs-accordion-btn-icon-width: 1.25rem
 			&-item
 				border-bottom: 1px solid var(--table-body)
+				&:first-child
+					border-top: 1px solid var(--table-body)
 			&-button
 				&::before
 					content: 'Hide'
@@ -174,5 +205,3 @@
 			.card-reviews
 				.icon-star
 					width: 1rem
-
-	

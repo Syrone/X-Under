@@ -1,14 +1,23 @@
-.alert-container
-	background: black
-.alert-info
-	background: var(--transparent)
-	.swiper-container
-		width: 50%
-	.btn-close-word
-		padding-block: .5rem
-		top: 50%
-		transform: translateY(-50%)
-
+.alert
+	--bs-alert-bg: var(--transparent)
+	--bs-alert-margin-bottom: 0
+	--bs-alert-border-color: var(--transparent)
+	--bs-alert-border: 0
+	&-container
+		width: 100%
+		background-color: black
+		&.accent
+			background-color: var(--accent)
+	&-swiper-slide
+		height: auto
+	&-info
+		background: var(--transparent)
+		.swiper-container
+			width: 50%
+		.btn-close-word
+			padding-block: .5rem
+			top: 50%
+			transform: translateY(-50%)
 
 .alert-button-next, .alert-button-prev
 	padding: 1rem
