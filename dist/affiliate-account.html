@@ -182,7 +182,7 @@
 							</div>
 							<ul class="list-group text-uppercase text-primary">
 								<li>
-									<a href="#"
+									<a href="./bag.html"
 										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
 										<span class="icon icon-bag">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 9.333">
@@ -196,7 +196,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="#"
+									<a href="./favorite.html"
 										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
 										<span class="icon icon-favorite">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 9.333 9.333">
@@ -209,7 +209,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="#"
+									<a href="./orders.html"
 										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
 										<span class="icon icon-order">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 8 9.333">
@@ -222,7 +222,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="#"
+									<a href="./account.html"
 										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
 										<span class="icon icon-gears">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 8 8">
@@ -235,7 +235,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="#" class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0">
+									<a href="./signup.html" class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0">
 										<span class="icon icon-account">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 8 9.333">
 												<path
@@ -505,9 +505,9 @@
 		<div class="container account-info border border-1 border-start-0 border-top-0 border-end-0">
 			<div class="d-flex align-items-center justify-content-between mb-5">
 				<div>
-					<h1 class="h3 mb-0 text-item text-uppercase">
+					<h2 class="h3 mb-0 text-item text-uppercase">
 						Account
-					</h1>
+					</h2>
 					<div class="fs-4">
 						Hi, <span class="nickname">Dxxxx</span>
 					</div>
@@ -600,69 +600,65 @@
 
 	<section>
 		<div class="container account-settings">
-			<h2 class="mb-4 mb-lg-0 text-uppercase text-center text-sm-start">Account Settings</h2>
+			<h2 class="mb-4 mb-lg-3 text-uppercase text-center text-sm-start">Account Settings</h2>
 
 			<div class="row justify-content-between mb-5 mb-sm-4">
 				<h3 class="col-sm-6 col-lg-3 text-center text-sm-start text-capitalize">Shipping</h3>
 
 				<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0 text-center text-sm-start">
-					<form class="d-flex flex-column justify-content-between h-100" id="shipping-form">
-						<div class="d-flex flex-column align-items-center align-items-sm-start">
-							<h4>Shipping address</h4>
+					<div class="d-flex flex-column justify-content-between h-100 gap-3">
+						<div class="d-flex flex-column align-items-center align-items-sm-start gap-1">
+							<h4 class="h5 mb-0">Shipping address</h4>
 
-							<input type="text" class="border border-0 lh-1 text-center text-sm-start" id="shipping-name"
-								value="Dxxxx Dxxxxx" readonly>
-							<input type="text" class="border border-0 lh-1 text-center text-sm-start" id="shipping-street"
-								value="XXX W XXX St., Apt XX," readonly>
-							<input type="text" class="border border-0 lh-1 text-center text-sm-start" id="shipping-town"
-								value="New York, NY XXXXX" readonly>
-							<input type="text" class="border border-0 lh-1 text-center text-sm-start" id="shipping-country"
-								value="United States" readonly>
-							<input type="tel" class="border border-0 lh-1 text-center text-sm-start" id="shipping-number"
-								value="(XXX) XXX-XXXX" readonly>
+							<div class="lh-1 text-center text-sm-start">Dxxxx Dxxxxx</div>
+							<div class="lh-1 text-center text-sm-start">XXX W XXX St., Apt
+								XX,</div>
+							<div class="lh-1 text-center text-sm-start">New
+								York, NY XXXXX</div>
+							<div class="lh-1 text-center text-sm-start">
+								United States</div>
+							<div class="lh-1 text-center text-sm-start">(XXX)
+								XXX-XXXX</div>
 						</div>
 						<div class="mt-auto">
-							<button type="button" id="shipping-btn"
-								class="btn fs-5 p-0 text-item text-decoration-underline mt-1">Edit</button>
+							<button type="button"
+								class="btn btn-custom fs-5 p-0 text-item text-decoration-underline">Edit</button>
 						</div>
-					</form>
+					</div>
 				</div>
 
 				<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0 text-center text-sm-start">
-					<form class="d-flex flex-column justify-content-between h-100" id="contact-form">
-						<div class="d-flex flex-column align-items-center align-items-sm-start">
-							<h4 class="">Contact information</h4>
+					<div class="d-flex flex-column justify-content-between h-100 gap-3">
+						<div class="d-flex flex-column align-items-center align-items-sm-start gap-1">
+							<h4 class="mb-0">Contact information</h4>
 
-							<input type="email" class="border border-0 lh-1 text-center text-sm-start" id="contact-mail"
-								value="xxxxx@gmail.com" readonly>
-							<input type="text" class="border border-0 lh-1 text-center text-sm-start" id="contact-number"
-								value="(XXX) XXX-XXXX" readonly>
-							<label for="contact-link" class="text-center text-sm-start">
+							<div class="lh-1 text-center text-sm-start">xxxxx@gmail.com</div>
+							<div class="lh-1 text-center text-sm-start">(XXX) XXX-XXXX
+							</div>
+							<div class="text-center text-sm-start lh-1">
 								Link:
-								<input type="text" class="border border-0 lh-1" id="contact-link"
-									value="https://www.instagram.com/xxxxxxxxx" readonly>
-							</label>
+								<span>https://www.instagram.com/xxxxxxxxx</span>
+							</div>
 						</div>
 						<div class="mt-auto">
-							<button type="button" id="contact-btn"
-								class="btn fs-5 p-0 text-item text-decoration-underline mt-1">Edit</button>
+							<button type="button"
+								class="btn btn-custom fs-5 p-0 text-item text-decoration-underline">Edit</button>
 						</div>
-					</form>
+					</div>
 				</div>
 
 				<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0 text-center text-sm-start">
-					<form class="d-flex flex-column justify-content-between h-100" id="promo-form">
-						<div class="d-flex flex-column align-items-center align-items-sm-start">
-							<h4 class="">Your promo code</h4>
+					<div class="d-flex flex-column justify-content-between h-100 gap-3">
+						<div class="d-flex flex-column align-items-center align-items-sm-start gap-1">
+							<h4 class="mb-0">Your promo code</h4>
 
-							<input type="text" class="border border-0 lh-1 text-center text-sm-start" id="promo-code"
-								value="XXXXX" readonly>
+							<div class="lh-1 text-center text-sm-start">XXXXX</div>
 						</div>
 						<div class="mt-auto">
-							<button type="button" id="promo-btn"
-								class="btn fs-5 p-0 text-item text-decoration-underline mt-1">Edit</button>
+							<button type="button"
+								class="btn btn-custom fs-5 p-0 text-item text-decoration-underline">Edit</button>
 						</div>
-					</form>
+					</div>
 				</div>
 			</div>
 
@@ -670,68 +666,58 @@
 				<h3 class="col-sm-6 col-lg-3 text-capitalize text-center text-sm-start">Payment</h3>
 
 				<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0 text-center text-sm-start">
-					<form class="d-flex flex-column justify-content-between h-100" id="billing-form">
-						<div class="d-flex flex-column align-items-center align-items-sm-start">
-							<h4 class="">Billing address</h4>
+					<div class="d-flex flex-column justify-content-between h-100 gap-3">
+						<div class="d-flex flex-column align-items-center align-items-sm-start gap-1">
+							<h4 class="mb-0">Billing address</h4>
 
-							<input type="text" class="border border-0 lh-1 text-center text-sm-start" id="billing-street"
-								value="XXX W XXX St., Apt XX," readonly>
-							<input type="text" class="border border-0 lh-1 text-center text-sm-start" id="billing-town"
-								value="New York, NY XXXXX" readonly>
-							<input type="text" class="border border-0 lh-1 text-center text-sm-start" id="billing-country"
-								value="United States" readonly>
-							<input type="tel" class="border border-0 lh-1 text-center text-sm-start" id="billing-number"
-								value="(XXX) XXX-XXXX" readonly>
+							<div class="lh-1 text-center text-sm-start">XXX W XXX St., Apt XX,</div>
+							<div class="lh-1 text-center text-sm-start">New York, NY XXXXX</div>
+							<div class="lh-1 text-center text-sm-start">United States</div>
+							<div class="lh-1 text-center text-sm-start">(XXX) XXX-XXXX</div>
 						</div>
 						<div>
-							<button type="button" id="billing-btn"
-								class="btn fs-5 p-0 text-item text-decoration-underline mt-1">Edit</button>
+							<button type="button"
+								class="btn btn-custom fs-5 p-0 text-item text-decoration-underline">Edit</button>
 						</div>
-					</form>
+					</div>
 				</div>
 
 				<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0 text-center text-sm-start">
-					<form class="d-flex flex-column justify-content-between h-100" id="billing-contact-form">
-						<div class="d-flex flex-column align-items-center align-items-sm-start">
-							<h4 class="">Billing contact</h4>
+					<div class="d-flex flex-column justify-content-between h-100 gap-3">
+						<div class="d-flex flex-column align-items-center align-items-sm-start gap-1">
+							<h4 class="mb-0">Billing contact</h4>
 
-							<input type="text" class="border border-0 lh-1 text-center text-sm-start" id="billing-contact-name"
-								value="Dxxxx Dxxxxx" readonly>
-							<input type="email" class="border border-0 lh-1 text-center text-sm-start"
-								id="billing-contact-mail" value="xxxxx@gmail.com" readonly>
-							<input type="tel" class="border border-0 lh-1 text-center text-sm-start"
-								id="billing-contact-number" value="(XXX) XXX-XXXX" readonly>
+							<div class="lh-1 text-center text-sm-start">Dxxxx Dxxxxx</div>
+							<div class="lh-1 text-center text-sm-start">xxxxx@gmail.com</div>
+							<div class="lh-1 text-center text-sm-start">(XXX) XXX-XXXX</div>
 						</div>
 						<div>
-							<button type="button" id="billing-btn1"
-								class="btn fs-5 p-0 text-item text-decoration-underline mt-1">Edit</button>
+							<button type="button"
+								class="btn btn-custom fs-5 p-0 text-item text-decoration-underline">Edit</button>
 						</div>
-					</form>
+					</div>
 				</div>
 
 				<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0 text-center text-sm-start">
-					<form class="d-flex flex-column justify-content-between h-100" id="payment-method-form">
-						<div class="d-flex flex-column align-items-center align-items-sm-start">
-							<h4 class="">Payment method</h4>
+					<div class="d-flex flex-column justify-content-between h-100 gap-3">
+						<div class="d-flex flex-column align-items-center align-items-sm-start gap-1">
+							<h4 class="mb-0">Payment method</h4>
 
-							<input type="email" class="border border-0 lh-1 text-center text-sm-start" id="payment-bank"
-								value="Bank of America" readonly>
-							<label for="payment-routing" class="text-center text-sm-start">
+							<div class="lh-1 text-center text-sm-start">Bank of America</div>
+							<div class="lh-1 text-center text-sm-start">
 								Routing number:
-								<input type="text" class="border border-0 lh-1 text-center text-sm-start" id="payment-routing"
-									value="*******XXXX" readonly>
-							</label>
-							<label for="payment-account" class="text-center text-sm-start">
+								<span type="text" class="text-center text-sm-start">*******XXXX</span>
+							</div>
+							<div class="lh-1 text-center text-sm-start">
 								Account number:
-								<input type="text" class="border border-0 lh-1 text-center text-sm-start" id="payment-account"
-									value="*******XXXX" readonly>
-							</label>
+								<span type="text" class="text-center text-sm-start">*******XXXX</span>
+							</div>
 						</div>
 						<div>
-							<button type="button" id="payment-btn"
-								class="btn fs-5 p-0 text-item text-decoration-underline mt-1">Edit</button>
+							<button type="button"
+								class="btn btn-custom fs-5 p-0 text-item text-decoration-underline">Edit</button>
 						</div>
-					</form>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -866,13 +852,13 @@
 			<img src="./images/dist/icons/pay_logo.svg" loading="lazy" alt="Payment methods" class="footer-top-pay">
 
 			<div class="footer-top-items d-flex gap-0 gap-sm-5 justify-content-between align-items-center">
-				<div class="footer-top-protection d-flex align-items-center gap-3">
+				<div class="pay-protection d-flex align-items-center gap-3">
 					<img src="./images/dist/icons/pay_secure.svg" loading="lazy" alt="Secure Methods">
 					<img src="./images/dist/icons/msfee.svg" loading="lazy" alt="McAfee">
 					<img src="./images/dist/icons/norton.svg" loading="lazy" alt="Northon">
 				</div>
 
-				<div class="footer-top-socials d-flex align-items-center gap-3">
+				<div class="block-socials d-flex align-items-center gap-3">
 					<a href="#">
 						<img src="./images/dist/icons/facebook.svg" loading="lazy" alt="Facebook">
 					</a>

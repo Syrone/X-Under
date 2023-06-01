@@ -40,8 +40,21 @@ body, .modal
 		border: 2px solid var(--accent)
 		box-shadow: var(--box-shadow)
 
+.btn-link
+	--bs-btn-active-color: var(--text-color)
+	display: inline-block
+	padding-block: 0
+	margin: 0
+	color: var(--item-color)
+	background-color: var(--transparent)
+	transition: color var(--trt-1)
+	&:hover
+		color: var(--accent)
+	&:active, .active
+		color: var(--bs-btn-active-color)
+
 .btn-custom
-	background: var(--transparent)
+	background-color: var(--transparent)
 
 .btn-close-custom
 	background: var(--transparent)
@@ -206,6 +219,43 @@ body, .modal
 		width: 1.5rem
 	&-complete
 		width: 1.5rem
+	&-applepay
+		width: 3.75rem
+		svg
+			fill: white
+	&-paypal
+		width: 6rem
+		svg
+			fill: var(--icon-paypal)
+			fill-opacity: 1
+			fill-rule: nonzero
+			stroke: none
+	&-amazonpay
+		width: 9rem
+	&-afterpay
+		width: 7rem
+	&-klarma
+		width: 7rem
+		svg
+			fill: #000
+	&-billing
+		width: 1rem
+		svg
+			.str0
+				stroke: var(--item-color)
+				stroke-width: 2px
+			.fil0
+				fill: none
+			.fil1
+				fill: var(--item-color)
+	&-info
+		width: 1rem
+		svg
+			fill: var(--item-color)
+	&-check
+		width: 1rem
+		svg
+			fill: var(--item-color)
 
 .svg-img
 	display: inline-block
@@ -375,6 +425,9 @@ body, .modal
 .bg-primary
 	background-color: var(--accent)!important
 
+.border-secondary
+	--bs-secondary-rgb: var(--item-color)
+
 .border-dark
 	border-color: var(--item-color-light)!important
 
@@ -427,6 +480,28 @@ body, .modal
 	--bs-progress-height: .25rem
 	--bs-progress-bg: var(--item-color)
 	--bs-progress-bar-bg: var(--accent)
+
+.form-check-input
+	background-color: var(--transparent)
+	border: 1px solid var(--text-color-light)
+	border-radius: var(--bs-list-group-border-radius)
+	transition: border var(--trt-1), border-radius var(--trt-1)
+	&:focus
+		border-color: var(--accent)
+		box-shadow: var(--box-shadow-3)
+		border-radius: var(--border-radius)
+	&:checked
+		background-color: var(--transparent)
+		border-color: var(--accent)
+
+.form-select
+	background-color: var(--transparent)
+	border: 1px solid var(--item-color)
+	color: var(--item-color)
+	&:focus
+		border-color: var(--accent)
+		-webkit-box-shadow: 0 0 0 0.25rem var(--accent-25)
+		box-shadow: 0 0 0 0.25rem var(--accent-25)
 //END Reassigning Variables
 
 //Reassigning Variables SWIPER.JS
@@ -458,6 +533,32 @@ body, .modal
 		bottom: -4rem
 
 //END Reassigning Variables SWIPER.JS
+
+.pay-protection
+	img:nth-child(1)
+		width: 230px
+		flex-shrink: 0
+	img:nth-child(2)
+		width: 90px
+		flex-shrink: 0
+	img:nth-child(3)
+		width: 75px
+		margin-top: -.5rem
+		flex-shrink: 0
+
+.block-socials
+	img
+		width: 100%
+	a
+		flex-shrink: 0
+		&:hover
+			opacity: 0.75
+		&:active, .active
+			opacity: 0.5
+		&:nth-child(1)
+			width: 20px
+		&:nth-child(2)
+			width: 30px
 
 .accordion-button
 	line-height: initial
@@ -548,24 +649,8 @@ body, .modal
 		font-size: 1.25rem
 
 .modal-video
+	&.modal
+		--bs-modal-bg: var(--transparent)
 	video
 		width: 100%
-
-	.list-group
-		--bs-list-group-bg: var(--transparent)
-		--bs-list-group-active-bg: var(--transparent)
-		--bs-list-group-action-hover-bg: var(--transparent)
-		--bs-list-group-action-active-bg: var(--transparent)
-		--bs-list-group-disabled-bg: var(--transparent)
-		--bs-list-group-border-width: 0
-		--bs-list-group-border-color: var(--transparent)
-
-	.btn
-		--bs-btn-padding-x: 0.25rem
-		--bs-btn-padding-y: 0.25rem
-		--bs-btn-font-size: 1rem
-		--bs-btn-color: var(--text-color)
-		--bs-btn-bg: var(--transparent)
-		--bs-btn-border-width: 0
-		--bs-btn-border-color: var(--transparent)
-		--bs-btn-hover-border-color: var(--transparent)
+		border-radius: var(--border-radius)

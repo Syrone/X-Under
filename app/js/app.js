@@ -393,7 +393,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 
 		function runClock() {
-			const endTime = new Date("May 31, 2023 23:59:59").getTime(),
+			const endTime = new Date("June 10, 2023 23:59:59").getTime(),
 				nowTime = new Date().getTime(),
 				distanceTime = endTime - nowTime,
 				now = {
@@ -495,73 +495,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-	//ACCOUNT INFO
-	function addEditFunctionality(form, button) {
-		const inputs = form.querySelectorAll('input');
-
-		button.addEventListener('click', () => {
-			const isEditing = button.textContent === 'Edit';
-
-			inputs.forEach(input => {
-				input.readOnly = !isEditing;
-			});
-
-			if (isEditing) {
-				setTimeout(() => {
-					button.type = 'submit';
-				}, 100);
-			} else {
-				setTimeout(() => {
-					button.type = 'button';
-				}, 100);
-			}
-
-			button.textContent = isEditing ? 'Save' : 'Edit';
-		});
-	}
-
-	// Shipping form
-	const shippingForm = document.querySelector('#shipping-form');
-	const shippingBtn = document.querySelector('#shipping-btn');
-	if (shippingForm && shippingBtn) {
-		addEditFunctionality(shippingForm, shippingBtn);
-	}
-
-	// Contact form
-	const contactForm = document.querySelector('#contact-form');
-	const contactBtn = document.querySelector('#contact-btn');
-	if (contactForm && contactBtn) {
-		addEditFunctionality(contactForm, contactBtn);
-	}
-
-	// Promo form
-	const promoForm = document.querySelector('#promo-form');
-	const promoBtn = document.querySelector('#promo-btn');
-	if (promoForm && promoBtn) {
-		addEditFunctionality(promoForm, promoBtn);
-	}
-
-	// Billing form
-	const billingForm = document.querySelector('#billing-form');
-	const billingBtn = document.querySelector('#billing-btn');
-	if (billingForm && billingBtn) {
-		addEditFunctionality(billingForm, billingBtn);
-	}
-
-	// Billing contact form
-	const billingContactForm = document.querySelector('#billing-contact-form');
-	const billingBtn1 = document.querySelector('#billing-btn1');
-	if (billingContactForm && billingBtn1) {
-		addEditFunctionality(billingContactForm, billingBtn1);
-	}
-
-	// Payment method form
-	const paymentForm = document.querySelector('#payment-method-form');
-	const paymentBtn = document.querySelector('#payment-btn');
-	if (paymentForm && paymentBtn) {
-		addEditFunctionality(paymentForm, paymentBtn);
-	}
-
 	//BG CHANGE headerBottom
 	const browserBtn = document.querySelector('.btn-browser');
 	const headerBottom = document.querySelector('.header-bottom');
@@ -576,14 +509,16 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-	//BTN GO BACK
+	// BTN GO BACK
 	function goBack() {
 		window.history.back();
 	}
 
-	const btnBack = document.querySelector('.btn-back')
+	const btnBack = document.querySelectorAll('.btn-back');
 	if (btnBack) {
-		btnBack.addEventListener('click', goBack);
+		btnBack.forEach(function (btn) {
+			btn.addEventListener('click', goBack);
+		});
 	}
 
 	//BTN SHOW MORE
@@ -737,6 +672,19 @@ document.addEventListener('DOMContentLoaded', () => {
 			clickable: true,
 		},
 	})
+
+	const bagCtas = document.querySelectorAll('.bag-cta');
+	const orderButtons = document.querySelectorAll('.btn-bag-order');
+
+	orderButtons.forEach((button, index) => {
+		button.addEventListener('click', () => {
+			bagCtas[index].classList.add('d-none');
+
+			if (index < bagCtas.length - 1) {
+				bagCtas[index + 1].classList.remove('d-none');
+			}
+		});
+	});
 
 
 });

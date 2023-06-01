@@ -1,0 +1,173 @@
+.bag
+	min-height: 100vh
+	&--empty
+		.icon-bag
+			width: 4rem
+			height: auto
+			svg
+				fill: var(--item-color)
+		.btn
+			--bs-btn-padding-x: .5rem
+			max-width: 240px
+	&-cta
+		.icon-bag
+			width: 1.1rem
+			height: auto
+			cursor: default
+			svg
+				fill: var(--item-color)
+		.cta-step
+			max-width: max-content
+			opacity: .25
+			& + .cta-step
+				margin-left: .5rem
+			&:last-child:after
+				display: none
+			&:after
+				content: ''
+				width: 1.5rem
+				height: auto
+				border-bottom: 1px dashed var(--item-color)
+			&.active
+				opacity: 1
+			.icon-info
+				width: 1.5rem
+			.icon-check
+				width: 1.5rem
+
+		&-bottom
+			.icon-info
+				width: 0.75rem
+
+		&.step-1
+
+			.card-bag
+				--bs-card-border-width: 0
+				--bs-card-border-color: var(--transparent)
+				--bs-card-cap-padding-y: 0.5rem
+				--bs-card-cap-padding-x: 1rem
+				--bs-card-spacer-y: 0rem
+				.btn-custom
+					--bs-btn-padding-x: 0
+					border: none
+					transition: color var(--trt-1)
+					&:hover
+						color: var(--accent)
+					&:active
+						color: var(--text-color)
+				.card-quantity
+					.btn-custom
+						--bs-btn-padding-y: 0
+						--bs-btn-padding-x: 0
+						display: inline-flex
+						justify-content: center
+						align-items: center
+						width: 1.25rem
+						height: 1.25rem
+						transition: background-color var(--trt-1), color var(--trt-1)
+						&:is(:hover, :custom)
+							color: white
+							background-color: var(--body-color)
+				.ratio
+					max-width: 230px
+				.img-thumbnail
+					padding: 0
+				#product-quantity
+					width: auto
+					max-width: 2.5rem
+					text-align: center
+					margin: 0
+					padding: 0
+					border: none
+				.btn-remove
+					display: block
+					font-size: .85rem
+					margin-left: auto
+
+		&.step-2
+			.btn-custom
+				display: flex
+				align-items: center
+				justify-content: center
+				font-size: 1.25rem
+				font-weight: 300
+				gap: .5rem
+				height: 3rem
+				border: none
+				opacity: 1
+				transition: opacity var(--trt-1)
+				&:hover
+					opacity: .75
+				&:active, .active
+					opacity: 0.5
+					transition: none
+			.btn-applepay
+				color: var(--text-applepay)
+				background-color: var(--body-applepay)
+				.icon-applepay
+					margin-top: .15rem
+			.btn-paypal
+				background-color: var(--body-paypal)
+			.btn-amazonpay
+				background-color: var(--body-amazonpay)
+			.btn-afterpay
+				background-color: var(--body-afterpay)
+			.btn-klarma
+				background-color: var(--body-klarma)
+
+			.checkout-form
+				.form-control
+					background-color: var(--transparent)
+					border: 1px solid var(--item-color)
+					border-radius: 0.375rem
+					color: var(--item-color)
+					&:focus
+						background-color: var(--transparent)
+						border-color: var(--accent)
+						-webkit-box-shadow: 0 0 0 0.25rem var(--accent-25)
+						box-shadow: 0 0 0 0.25rem var(--accent-25)
+						color: var(--item-color)
+
+				.form-check-input:checked
+					background-color: var(--body-color)
+					border-color: var(--body-color)
+					-webkit-box-shadow: 0 0 0 0.25rem var(--body-color-op25)
+					box-shadow: 0 0 0 0.25rem var(--body-color-op25)
+
+				.form-check .form-check-input
+					margin-top: .4rem
+
+			.bag-card--small
+				--bs-card-border-width: 0
+				--bs-card-border-color: var(--transparent)
+				&:first-child
+					padding-top: 0!important
+				.img-thumbnail
+					padding: 0
+					max-width: 6.8rem
+				.btn-close
+					svg
+						fill: var(--item-color)
+					&:focus
+						-webkit-box-shadow: 0 0 0 0.25rem var(--accent-25)
+						box-shadow: 0 0 0 0.25rem var(--accent-25)
+						svg
+							fill: var(--accent)
+
+		&.step-3
+			.btn-link
+				margin-top: -.3rem
+
+		&--express
+			display: flex
+			align-items: center
+			gap: .75rem
+			margin-bottom: 0
+			color: var(--table-body)
+			white-space: nowrap
+			&::after, &::before
+				display: inline-block
+				content: ''
+				width: 100%
+				height: 1px
+				background: var(--table-body)

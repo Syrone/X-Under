@@ -62,6 +62,9 @@
 			left: 120px
 			bottom: -110px
 
+	.bag .step-2 .btn-custom
+		--bs-btn-padding-x: 0.45rem
+
 @include media-breakpoint-down(lg)
 	:root
 		--clock-fs: 1.5rem
@@ -114,6 +117,16 @@
 	.modal-installments .modal-footer-img
 		border-right: none
 		border-bottom: 3px solid var(--item-color)
+
+	.bag-cta
+		.shipping-speed
+			.w-100
+				width: 45% !important
+				.w-100
+					width: 100% !important
+		.card-bag
+			.card-quantity
+				margin-top: -1.5rem
 
 @include media-breakpoint-down(md)
 	:root
@@ -211,6 +224,14 @@
 		.zoom-button-prev, .swiper-rtl .zoom-button-next
 			left: 1rem
 
+	.bag-cta
+		.card-bag
+			.card-quantity
+				margin-top: unset
+			.btn-remove
+				--bs-btn-padding-x: .5rem
+				margin-left: unset
+
 @include media-breakpoint-down(sm)
 	.section
 		padding-top: 3.5rem
@@ -227,6 +248,18 @@
 		margin-right: -.2rem
 	.swiper-button-prev:after
 		margin-left: -.2rem
+
+	.pay-protection
+		img:nth-child(1)
+			width: 30vw
+		img:nth-child(2)
+			width: 14vw
+		img:nth-child(3)
+			width: 14vw
+
+	.modal-zoom, .modal-installments
+		.btn-close
+			width: 10px
 
 	.welcome
 		&__item
@@ -301,15 +334,6 @@
 		.btn
 			width: 100%
 
-	.footer-top
-		&-protection
-			img:nth-child(1)
-				width: 30vw
-			img:nth-child(2)
-				width: 14vw
-			img:nth-child(3)
-				width: 14vw
-
 	.cookie-alert
 		.btn
 			display: block
@@ -328,6 +352,15 @@
 				left: 20px
 				bottom: -40px
 
-	.modal-zoom, .modal-installments
-		.btn-close
-			width: 10px
+	.bag-cta
+		.shipping-speed
+			.w-100
+				width: 82% !important
+				.w-100
+					width: 100% !important
+		.card-bag .ratio
+			margin-inline: auto
+		&.step-2
+			.pay-protection
+				img
+					width: 8rem
