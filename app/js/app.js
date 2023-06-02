@@ -2,7 +2,7 @@ import Swiper from 'swiper/bundle'
 
 document.addEventListener('DOMContentLoaded', () => {
 
-	//COLOR SELECTION
+	//COOKIE
 	const versionBtns = document.querySelectorAll('.version-button');
 	const welcomePage = document.querySelector('.welcome');
 	const currentPath = window.location.pathname;
@@ -86,6 +86,61 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		}
 	});
+
+
+	function setCookie(name, value, days) {
+		const date = new Date();
+		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+		const expires = `expires=${date.toUTCString()}`;
+		document.cookie = `${name}=${value};${expires};path=/`;
+	}
+
+	function getCookie(name) {
+		const nameWithEquals = `${name}=`;
+		const decodedCookie = decodeURIComponent(document.cookie);
+		const cookieArray = decodedCookie.split(';');
+		for (let i = 0; i < cookieArray.length; i++) {
+			let cookie = cookieArray[i].trim();
+			if (cookie.indexOf(nameWithEquals) === 0) {
+				return cookie.substring(nameWithEquals.length, cookie.length);
+			}
+		}
+		return '';
+	}
+
+	// Modal hearXUnderModal
+	const formSubmittedKey = 'formSubmitted';
+	const showModal = () => {
+		const myModal = new bootstrap.Modal(document.getElementById('hearXUnderModal'));
+		myModal.show();
+	};
+
+	const showModalWithDelay = (delay) => {
+		setTimeout(() => {
+			if (!getCookie(formSubmittedKey)) {
+				showModal();
+			}
+		}, delay);
+	};
+
+	if (!getCookie(formSubmittedKey)) {
+		showModalWithDelay(300000); // Показать через 5 минут = 300000
+	}
+
+	document.getElementById('hearXUnderModal').addEventListener('hidden.bs.modal', () => {
+		if (!getCookie(formSubmittedKey)) {
+			showModalWithDelay(600000); // Показать снова через 10 минут = 600000
+		}
+	});
+
+	document.getElementById('hearXUnderForm').addEventListener('submit', (event) => {
+		event.preventDefault();
+		setCookie(formSubmittedKey, 'true', 365); // Сохранить cookie на 1 год
+		const myModal = bootstrap.Modal.getInstance(document.getElementById('hearXUnderModal'));
+		myModal.hide();
+	});
+
+	//END COOKIE
 
 	//TOP INDENT .wrapper
 	const navbar = document.querySelector('.navbar');
@@ -691,6 +746,60 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		});
 	});
+
+	//Making rating choices and mandatory
+	if (document.querySelector('.review')) {
+		const ratingForm = document.querySelector('.review-form');
+		const cardStars = document.querySelector('.card-stars');
+		const iconStars = cardStars.querySelectorAll('.icon-star');
+		const ratingInput = document.getElementById('rating-input');
+
+		cardStars.addEventListener('click', (event) => {
+			const target = event.target.closest('.icon-star');
+			if (!target) return;
+
+			const index = [...iconStars].indexOf(target);
+
+			iconStars.forEach((iconStar, i) => {
+				if (i <= index) {
+					iconStar.classList.add('active');
+				} else {
+					iconStar.classList.remove('active');
+				}
+			});
+
+			ratingInput.value = index + 1;
+		});
+
+		ratingForm.addEventListener('submit', (event) => {
+			if (!ratingInput.value) {
+				event.preventDefault();
+				alert('Пожалуйста, выберите рейтинг');
+			} else {
+				event.preventDefault();
+				const ratingValue = ratingInput.value;
+				window.location.href = `review-thx.html?rating=${ratingValue}`
+			}
+		});
+	}
+
+	if (document.querySelector('.review-thx')) {
+		const urlParams = new URLSearchParams(window.location.search);
+		const ratingValue = urlParams.get('rating');
+
+		if (ratingValue) {
+			const cardStars = document.querySelector('.card-stars');
+			const iconStars = cardStars.querySelectorAll('.icon-star');
+
+			iconStars.forEach((iconStar, i) => {
+				if (i < ratingValue) {
+					iconStar.classList.add('active');
+				} else {
+					iconStar.classList.remove('active');
+				}
+			});
+		}
+	}
 
 
 });

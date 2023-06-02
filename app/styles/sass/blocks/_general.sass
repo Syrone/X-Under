@@ -337,6 +337,10 @@ body, .modal
 		width: 1rem
 		svg
 			fill: var(--item-color)
+	&-review
+		width: 4rem
+		svg
+			fill: var(--item-color)
 
 .svg-img
 	display: inline-block
@@ -745,8 +749,11 @@ body, .modal
 			display: flex
 			align-items: center
 
-.modal-search, .modal-zoom, .modal-installments, .modal-guide, .modal-notific, .modal-video, .modal-qview, .modal-addtobag
+.modal-search, .modal-zoom, .modal-video
 	background: var(--body-backdrop)
+
+.modal-qview, .modal-addtobag, .modal-installments, .modal-guide, .modal-notific
+	background-color: var(--body-backdrop-50)
 
 .modal-search
 	&.modal
@@ -873,3 +880,30 @@ body, .modal
 			border-radius: 0.5rem
 			padding: 0
 			border-color: var(--item-color)
+
+.modal-hear-xunder
+	.modal-body
+		display: block
+		padding-inline: 0
+	.list-group
+		--bs-list-group-bg: var(--transparent)
+		--bs-list-group-color: var(--text-color)
+		--bs-list-group-border-color: var(--transparent)
+		--bs-list-group-border-width: 0
+		--bs-list-group-border-radius: 0
+		--bs-list-group-action-color: var(--transparent)
+		--bs-list-group-action-hover-color: var(--transparent)
+		--bs-list-group-action-hover-bg: var(--transparent)
+		--bs-list-group-action-active-color: var(--transparent)
+		--bs-list-group-action-active-bg: var(--transparent)
+		--bs-list-group-disabled-color: var(--transparent)
+		--bs-list-group-disabled-bg: var(--transparent)
+		--bs-list-group-active-color: var(--transparent)
+		--bs-list-group-active-bg: var(--transparent)
+		--bs-list-group-active-border-color: var(--transparent)
+		.list-group-item, .form-check-label
+			white-space: nowrap
+		.form-check-input
+			--text-color-light: var(--text-color)
+		.form-check-label
+			padding-left: .3rem
