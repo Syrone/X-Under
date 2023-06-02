@@ -9,6 +9,10 @@
 			fill: var(--accent)
 	&-dropdown
 		max-height: 310px
+		.btn-close-custom
+			border: none
+			box-shadow: none
+			padding: 0
 	&-dropdown, .offcanvas-body
 		/* Стилизация скроллбара */
 		/* Толщина скроллбара */
@@ -28,8 +32,24 @@
 		&::-webkit-scrollbar-thumb:hover
 			background-color: var(--text-color)
 	.dropdown-menu
+		--bs-dropdown-border-color: var(--transparent)
+		--bs-dropdown-border-width: 0
 		min-width: 380px
 		top: 150%
+		.list-group
+			--bs-list-group-bg: var(--transparent)
+			--bs-list-group-border-color: var(--item-color-light)
+			--bs-list-group-border-radius: 0
+			&-item
+				border: none
+				border-bottom: var(--bs-list-group-border-width) solid var(--bs-list-group-border-color)
+				&:last-child
+					border: none
+			.dropdown-item
+				--bs-dropdown-item-padding-x: 0rem
+				--bs-dropdown-item-padding-y: .5rem
+				--bs-dropdown-link-hover-bg: var(--text-color)
+				--bs-dropdown-link-active-bg: var(--item-color-light)
 		.dropdown-arrow
 			width: 0
 			height: 0
@@ -43,11 +63,6 @@
 	.dropdown-overflow
 		&::-webkit-scrollbar
 			display: none
-	.dropdown-item
-		&:is(:focus, :active)
-			background: var(--item-color-light)
-		&:hover
-			background: var(--text-color)
 	.dropdown-card
 		&:first-child
 			padding-top: 0!important
@@ -103,6 +118,7 @@
 			--bs-list-group-action-active-bg: var(--transparent)
 			--bs-list-group-action-color: white
 			&-item
+				background-color: var(--transparent)
 				color: var(--text-color)
 				&:is(:hover, :active)
 					color: var(--bs-list-group-action-color)

@@ -10,7 +10,7 @@
 			background-color: var(--accent)
 			.alert
 				--bs-alert-padding-y: 0.5rem
-				--bs-alert-color: var(--item-color-light)
+				--bs-alert-color: var(--item-color)
 	&-swiper-slide
 		height: auto
 	&-info
@@ -29,6 +29,11 @@
 	&::after
 		font-size: 1.5rem
 		margin: 0
+
+.alert-button-prev, .swiper-rtl .swiper-button-next
+	left: var(--swiper-navigation-sides-offset,-10px)
+.alert-button-next, .swiper-rtl .swiper-button-prev
+	right: var(--swiper-navigation-sides-offset,-10px)
 
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction
 	bottom: -1rem
