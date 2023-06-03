@@ -114,10 +114,12 @@ body, .modal
 	display: flex
 	align-items: center
 	gap: 1rem
+	color: var(--text-color)
 	transition: color var(--trt-1)
 	&:hover
 		svg
-			transition: var(--trt-1)
+			transition: transform var(--trt-1), stroke var(--trt-1)
+			stroke: var(--accent)
 			transform: translateX(.25rem)
 
 .btn.btn-applepay
@@ -361,6 +363,10 @@ body, .modal
 		svg
 			fill: var(--item-color)
 	&-review
+		width: 4rem
+		svg
+			fill: var(--item-color)
+	&-contact
 		width: 4rem
 		svg
 			fill: var(--item-color)
@@ -688,6 +694,12 @@ textarea.form-control
 		&:checked
 			background-color: var(--transparent)
 			border-color: var(--accent)
+	&-light
+		.form-check-input
+			border: 1px solid var(--item-color)
+			&:checked
+				background-color: var(--body-color)
+				border-color: var(--body-color)
 	&-dark, &-dark.form-check-lg
 		.form-check-input
 			background-color: var(--body-color)
