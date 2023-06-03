@@ -95,6 +95,18 @@
 	.modal-qview .modal-qview-slider
 		width: 100%
 
+	.form-check-lg
+		.form-check-input
+			width: 1.25rem
+			height: 1.25rem
+			margin-left: -1.75em
+			&:checked[type=radio]
+				background-size: 1.75rem
+		.form-check-label
+			font-size: 1rem
+			a
+				font-size: 1rem
+
 	.banner
 		&-img-overlay
 			max-width: 160px
@@ -144,25 +156,10 @@
 
 	.affiliate-form
 		padding-top: 3rem
-		.form-check-custom
-			.form-check
-				&-input
-					width: 1.25rem
-					height: 1.25rem
-					margin-left: -1.75em
-					&:checked[type=radio]
-						background-size: 1.75rem
-				&-label
-					font-size: 1rem
-		.form-check
-			&-input
-				width: 1.25rem
-				height: 1.25rem
-				margin-left: -1.75rem
-			&-label
-				font-size: 1rem
-				a
-					font-size: 1rem
+
+	.gift-accordion
+		.accordion
+			--bs-accordion-btn-padding-y: 2rem
 
 @include media-breakpoint-down(md)
 	:root
@@ -269,6 +266,14 @@
 			.btn-remove
 				--bs-btn-padding-x: .5rem
 				margin-left: unset
+
+	.account-affiliate-payment
+		.btn-icon
+			right: -6rem
+
+	.gift-accordion
+		.accordion
+			--bs-accordion-btn-padding-y: 1rem
 
 @include media-breakpoint-down(sm)
 	.section
@@ -419,3 +424,10 @@
 		.form-check
 			margin-inline: auto
 			max-width: 220px
+
+	.account-affiliate-payment
+		.btn-icon
+			right: auto
+			left: 50%
+			transform: translateX(-50%)
+			top: -2rem

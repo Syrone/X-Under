@@ -2,6 +2,7 @@
 	&-info
 		padding-top: 4rem
 		padding-bottom: 3rem
+		border-bottom: 1px solid var(--table-body)
 	&-table
 		background: var(--table-body)
 		border-color: var(--text-color-light)
@@ -31,3 +32,21 @@
 			--bs-btn-active-bg: var(--transparent)
 			--bs-btn-active-border-color: var(--transparent)
 			--bs-btn-active-color: var(--text-color)
+
+	&-affiliate
+		&-payment
+			padding-block: 4rem
+			background: var(--body-color)
+			.btn-icon
+				right: -7rem
+				top: 50%
+				transform: translateY(-50%)
+				position: absolute
+				.icon-info
+					width: 1.5rem
+					svg
+						--item-color: var(--text-color)
+		&-modal
+			top: 0
+			height: 100%
+			background-color: var(--body-color)

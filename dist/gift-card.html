@@ -21,23 +21,55 @@
 <body>
 <header class="header">
 	<nav class="navbar navbar-dark bg-dark fixed-top p-0">
-		<a href="#" class="alert-container accent">
+		<div class="alert-container">
 			<div class="container">
-				<div class="alert alert-info alert-dismissible w-100 fade show" role="alert">
-					<div class="fs-5 text-uppercase text-center">
-						Free Shipping on orders of $150+
+				<div class="alert alert-info alert-dismissible fs-5 w-100 fade show" role="alert">
+					<div class="position-relative">
+						<div class="swiper swiper-container alert-swiper">
+							<!-- Additional required wrapper -->
+							<div class="swiper-wrapper">
+								<!-- Slides -->
+								<div class="swiper-slide alert-swiper-slide">
+									<div class="d-flex justify-content-center align-items-center h-100">
+										<div class="text-black text-center">
+											<span class="sale">20% OFF</span> $150+ Use Code: <span class="promocode">WOW20</span>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide alert-swiper-slide">
+									<div class="d-flex justify-content-center align-items-center h-100">
+										<div class="text-black text-center text-uppercase">
+											Free shipping on orders of $150+
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide alert-swiper-slide">
+									<div class="d-flex justify-content-center align-items-center h-100">
+										<div class="text-black text-center text-uppercase">
+											<span class="sale">5% OFF</span> + Free shipping on your first order!
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- If we need navigation buttons -->
+							<div class="swiper-button-prev alert-button-prev d-none d-sm-flex"></div>
+							<div class="swiper-button-next alert-button-next d-none d-sm-flex"></div>
+						</div>
+
+						<!-- If we need pagination -->
+						<div class="swiper-pagination alert-pagination"></div>
+
 					</div>
-					
-					<!-- <button type="button"
+					<button type="button"
 						class="btn-close btn-close-white btn-close-word d-flex align-items-center opacity-75 h5 m-0"
 						data-bs-dismiss="alert" aria-label="Close">
 						<span class="d-none d-lg-block">
 							Close
 						</span>
-					</button> -->
+					</button>
 				</div>
 			</div>
-		</a>
+		</div>
 		<div class="container pt-2 pb-2">
 			<div class="d-flex align-items-center gap-3">
 				<button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas"
@@ -105,11 +137,11 @@
 						<span
 							class="header-current current-bag position-absolute top-50 start-50 badge rounded-pill bg-primary text-black"></span>
 					</button>
-					<div class="dropdown-menu dropdown-cards dropdown-menu-end bg-dark w-100 p-2 p-sm-4"
+					<div class="dropdown-menu dropdown-cards dropdown-menu-end bg-dark p-0 w-100"
 						aria-labelledby="dropdownMenuClickableInside">
 						<div class="dropdown-arrow"></div>
-						<div class="dropdown-overflow overflow-auto">
-							<div class="header-dropdown overflow-auto pe-2">
+						<div class="dropdown-overflow overflow-auto p-2 p-sm-4">
+							<div class="header-dropdown overflow-auto">
 								<div
 									class="card dropdown-card bg-dark pt-3 pb-3 pt-sm-4 pb-sm-4 border border-2 border-start-0 border-end-0 border-top-0 border-dark rounded-0">
 									<div class="row g-0 justify-content-between align-items-center bg-dark text-primary">
@@ -151,9 +183,9 @@
 								</p>
 							</div>
 							<ul class="list-group text-uppercase text-primary">
-								<li>
+								<li class="list-group-item">
 									<a href="./bag.html"
-										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
+										class="dropdown-item d-flex align-items-center gap-2 text-primary">
 										<span class="icon icon-bag">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 9.333">
 												<path
@@ -165,9 +197,9 @@
 										<span class="current-bag brackets"></span>
 									</a>
 								</li>
-								<li>
+								<li class="list-group-item">
 									<a href="./favorite.html"
-										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
+										class="dropdown-item d-flex align-items-center gap-2 text-primary">
 										<span class="icon icon-favorite">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 9.333 9.333">
 												<path
@@ -178,9 +210,9 @@
 										Favorites
 									</a>
 								</li>
-								<li>
+								<li class="list-group-item">
 									<a href="./orders.html"
-										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
+										class="dropdown-item d-flex align-items-center gap-2 text-primary">
 										<span class="icon icon-order">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 8 9.333">
 												<path
@@ -191,9 +223,9 @@
 										Orders
 									</a>
 								</li>
-								<li>
+								<li class="list-group-item">
 									<a href="./account.html"
-										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
+										class="dropdown-item d-flex align-items-center gap-2 text-primary">
 										<span class="icon icon-gears">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 8 8">
 												<path
@@ -204,7 +236,7 @@
 										Account
 									</a>
 								</li>
-								<li>
+								<li class="list-group-item">
 									<a href="./signup.html"
 										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0">
 										<span class="icon icon-account">
@@ -462,11 +494,11 @@
 	</nav>
 </header>
 
-<main class="wrapper bg-white text-item">
+<main class="wrapper bg-white">
 	<nav class="header-bottom">
 		<div class="container d-flex justify-content-between align-items-center">
 			<h1 class="fs-5 mb-0 text-primary text-uppercase">
-				Underwear
+				E-Gift Card
 			</h1>
 
 			<div class="d-flex align-items-center gap-2">
@@ -508,361 +540,212 @@
 		</div>
 	</nav>
 
-	<section class="product">
-		<div class="container py-5">
-			<div class="row">
-				<div class="col-md-6 col-12 order-1 order-md-0 mt-md-0 mt-3 text-center text-md-start">
-					<div class="mb-xxl-4 mb-2">
-						<h2 class="mb-0 text-item text-uppercase">
-							<span class="d-block text-primary fs-5">Sale</span>
-							C-IN2 Core Low Rise Brief
-						</h2>
-					</div>
+	<section class="gift-form py-5">
+		<div class="container text-item">
+			<div class="row justify-content-between py-5">
+				<div class="col-12 mb-md-0 mb-4">
+					<div class="col-md-4 col-12">
+						<h2 class="text-uppercase mb-3 text-md-start text-center">E-Gift Card</h2>
 
-					<div
-						class="card-reviews d-flex align-items-center gap-3 justify-content-md-start justify-content-center">
-						<div class="card-stars">
-							<span class="icon icon-star active">
-								<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
-									<path
-										d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-										transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-								</svg>
-							</span>
-							<span class="icon icon-star active">
-								<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
-									<path
-										d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-										transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-								</svg>
-							</span>
-							<span class="icon icon-star active">
-								<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
-									<path
-										d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-										transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-								</svg>
-							</span>
-							<span class="icon icon-star active">
-								<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
-									<path
-										d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-										transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-								</svg>
-							</span>
-							<span class="icon icon-star active">
-								<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
-									<path
-										d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-										transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-								</svg>
-							</span>
-						</div>
-						<a href="#" class="btn btn-link text-decoration-underline tiny">12 Reviews</a>
-					</div>
-
-					<div
-						class="product-price d-flex align-items-center gap-2 justify-content-md-start justify-content-center fs-4">
-						$75.00
-						<span class="text-decoration-line-through text-dark">$85.00</span>
-						<span class="badge tiny text-bg-primary px-2 py-2">You save 11%</span>
-					</div>
-
-					<div
-						class="d-flex flex-wrap align-items-center gap-1 justify-content-md-start justify-content-center mb-2">
-						Or 4 <button class="btn btn-link text-decoration-underline" data-bs-toggle="modal"
-							data-bs-target="#installmentsModal">installments</button> of
-						<span>$XX.XX</span> by <img class="d-inline-block" width="100" src="./images/dist/icons/afterpay.svg"
-							alt="AfterPay">
-					</div>
-
-					<div class="lh-sm mb-2">
-						<div>90% cotton & 10% spandex</div>
-						<div>Heat molded grament to give shpape, form and smoothness</div>
-						<div>SKU: <span>XXXXX</span></div>
-					</div>
-
-					<div class="fs-5 mb-3">
-						<div class="mb-1">
-							Category: <a class="text-decoration-underline" href="#">Brief</a>
-						</div>
-
-						<div class="row justify-content-center justify-content-md-start mb-3">
-							<div class="col-xl-4 col-md-6 col-sm-4 col-6">
-								<select class="form-select form-select-lg" aria-label="Select Color">
-									<option selected>Color *</option>
-									<option value="1">Color1</option>
-									<option value="2">Color2</option>
-									<option value="3">Color3</option>
-								</select>
+						<div
+							class="card-reviews mb-2 d-flex flex-md-row flex-column align-items-center gap-md-3 justify-content-md-start justify-content-center">
+							<div class="card-stars">
+								<span class="icon icon-star active">
+									<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
+										<path
+											d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+											transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+									</svg>
+								</span>
+								<span class="icon icon-star active">
+									<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
+										<path
+											d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+											transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+									</svg>
+								</span>
+								<span class="icon icon-star active">
+									<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
+										<path
+											d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+											transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+									</svg>
+								</span>
+								<span class="icon icon-star active">
+									<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
+										<path
+											d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+											transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+									</svg>
+								</span>
+								<span class="icon icon-star">
+									<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
+										<path
+											d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+											transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+									</svg>
+								</span>
 							</div>
-							<div class="col-xl-4 col-md-6 col-sm-4 col-6">
-								<select class="form-select form-select-lg" aria-label="Select Size">
-									<option selected>Size *</option>
-									<option value="1">Size1</option>
-									<option value="2">Size2</option>
-									<option value="3">Size3</option>
-								</select>
-							</div>
-						</div>
-						<div class="row justify-content-md-start justify-content-center">
-							<div class="col-12">
-								<div class="input-group justify-content-md-start justify-content-center gap-1">
-									<button class="btn btn-outline-secondary fw-bold" type="button"
-										id="button-decrement">–</button>
-									<input type="text" class="form-control text-center" id="product-quantity" value="1" readonly>
-									<button class="btn btn-outline-secondary" type="button" id="button-increment">+</button>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="mb-5">
-						<div class="row flex-md-row flex-column-reverse align-items-md-start align-items-center">
-							<div class="col-xxl-4 col-lg-6 col-sm-8 col-12 mt-2 mt-md-0">
-								<button class="btn btn-dark btn-lg w-100 text-uppercase">Add to Bag</button>
-							</div>
-							<div class="col-2 d-flex justify-content-center">
-								<div class="card-favorite">
-									<div class="icon icon-favorite--outline ">
-										<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="9.333" height="8">
-											<path
-												d="M69.566 37.547c0 9.09-7.367 16.457-16.46 16.457-5.938 0-11.122-3.152-14.016-7.863-2.899 4.71-8.082 7.863-14.02 7.863-9.09 0-16.46-7.367-16.46-16.457 0-4.953 2.195-9.379 5.652-12.395L37.586 1.824a2.146 2.146 0 0 1 1.504-.62 2.14 2.14 0 0 1 1.5.62l23.324 23.328c3.461 3.016 5.652 7.442 5.652 12.395"
-												transform="matrix(.53333 0 0 -.53333 0 36)" />
-										</svg>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="product-support row fs-5">
-						<div class="col-xxl-5 col-lg-6 col-12 mb-3 mb-lg-0 lh-sm">
-							<div class="mb-1 mb-lg-4">
-								<h4 class="h5 mb-0"><b>Shipping:</b></h4>
-								<div class="lh-sm">Standrat / 5-10 Business days</div>
-								<div class="lh-sm">Priority / 3-5 Business days</div>
-								<div class="lh-sm">Express / 2-3 Business days</div>
-							</div>
-
-							<div>
-								<div class="mb-2">
-									Share your impressions
-								</div>
-								<div
-									class="d-flex align-items-center gap-xl-4 gap-md-1 gap-3 justify-content-md-start justify-content-center">
-									<a class="d-flex align-items-center gap-2 fs-6" href="#">
-										<span class="icon icon-facebook">
-											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-												viewBox="0 0 6.667 10.667">
-												<path
-													d="M36.86 75.879c-10.137 0-16.083-5.352-16.083-17.55V47.593H7.922V34.738h12.855V3.883h12.86v30.855h10.285l2.57 12.856H33.637v8.558c0 4.594 1.496 6.871 5.812 6.871h7.043v12.329c-1.219.164-4.77.527-9.633.527"
-													style="fill-opacity:1;fill-rule:nonzero;stroke:none"
-													transform="matrix(.13333 0 0 -.13333 0 10.667)" />
-											</svg>
-										</span>
-										Share
-									</a>
-
-									<a class="d-flex align-items-center gap-2 fs-6" href="#">
-										<span class="icon icon-twitter">
-											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-												style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd"
-												viewBox="0 0 42645 34651">
-												<path
-													d="M42645 4103c-1569 697-3255 1162-5026 1376 1806-1089 3197-2798 3848-4843-1689 1000-3565 1736-5556 2127C34315 1062 32040 0 29526 0c-4836 0-8749 3917-8749 8749 0 678 81 1348 229 1995-7269-368-13720-3851-18037-9144-752 1294-1178 2790-1178 4402 0 3034 1538 5707 3890 7277-1438-50-2786-442-3964-1097v108c0 4243 3018 7773 7013 8582-732 198-1503 302-2305 302-562 0-1112-46-1643-147 1112 3468 4344 6002 8168 6068-2991 2348-6761 3747-10857 3747-713 0-1407-35-2092-116 3875 2476 8470 3925 13418 3925 16088 0 24887-13329 24887-24891 0-376-8-759-27-1135 1713-1224 3189-2770 4367-4522z" />
-											</svg>
-										</span>
-										Tweet
-									</a>
-
-									<a class="d-flex align-items-center gap-2 fs-6" href="#">
-										<span class="icon icon-pin">
-											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-												style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd"
-												viewBox="0 0 5966 7707">
-												<path
-													d="M5966 2536c0 1736-965 3033-2388 3033-478-1-928-258-1082-552 0 0-257 1020-312 1217-191 695-755 1391-798 1449-31 39-99 27-106-26-12-88-155-966 13-1683 85-359 569-2413 569-2413s-141-281-141-699c0-656 381-1146 854-1146 403 0 597 302 597 664 0 405-258 1010-391 1572-111 468 236 852 699 852 839 0 1403-1078 1403-2354 0-970-653-1696-1842-1696-1342 0-2179 1001-2179 2120 0 385 113 657 292 868 81 97 93 136 64 247-22 82-70 278-91 355-29 112-120 153-221 111C288 4202-1 3525-1 2764-1 1506 1060-1 3163-1c1690 0 2802 1223 2802 2536z" />
-											</svg>
-										</span>
-										Pin
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-xxl-5 col-lg-6 col-12 lh-sm">
-							<div class="mb-1 mb-lg-4">
-								<h4 class="h5 mb-0"><b>Help:</b></h4>
-								<button class="btn fs-5 lh-sm btn-link text-decoration-underline" data-bs-toggle="modal"
-									data-bs-target="#sizeGuideModal">
-									Size guide
-								</button>
-								<div class="lh-sm">
-									Availability:
-									<button class="btn fs-5 lh-sm btn-link text-decoration-underline text-capitalize align-top"
-										data-bs-toggle="modal" data-bs-target="#itemNotificModal">
-										Out Stock
-									</button>
-								</div>
-								<div class="lh-sm">
-									100% Discreet Shipping & Billing
-								</div>
-							</div>
-
-							<div class="d-md-block d-flex flex-column align-items-md-start align-items-center">
-								<button class="btn btn-link d-flex align-items-center gap-2 fs-5 lh-sm mb-2"
-									data-bs-toggle="modal" data-bs-target="#itemVideoModal">
-									<span class="text-decoration-underline">
-										Watch the film
-									</span>
-									<span class="icon icon-play">
-										<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-											style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd"
-											viewBox="0 0 901 901">
-											<path
-												d="M450 0C201 0 0 202 0 451s202 451 450 451c249 0 450-202 450-451S698 0 450 0zm216 487L397 672c-7 5-16 8-25 8-7 0-14-2-20-5-14-8-23-23-23-39V266c0-16 9-31 23-39s32-7 45 3l269 185c12 8 19 22 19 36s-7 28-19 36z" />
-										</svg>
-									</span>
-								</button>
-								<div class="d-flex align-items-center">
-									<span class="icon icon-watched">
-										<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 2.667 4">
-											<path
-												d="M19.82 12.672c-.105 1.113-.43 2.273-.926 3.355a12.957 12.957 0 0 1-1.753 2.805 13.72 13.72 0 0 1-.512.594l-.242.265c-.063.067-.114.122-.16.168l-.075.075c-.078.082-.16.164-.23.246 0 .008-.008.011-.012.02l-.113.113c-.05.054-.11.109-.16.175-.004.008-.016.016-.02.024-.37.406-.683.777-.953 1.129a7.82 7.82 0 0 0-.723 1.12 5.115 5.115 0 0 0-.48 1.356 8.23 8.23 0 0 0-.164 1.52c-.016.5.015.98.047 1.382.023.27.047.504.074.715a.495.495 0 0 1-.617.535 5.394 5.394 0 0 1-.723-.238c-.504-.207-1-.496-1.476-.851a7.063 7.063 0 0 1-1.575-1.688 7.398 7.398 0 0 1-1.105-2.738c-.211-1.078-.184-2.3.062-3.434.239-1.097.7-2.218 1.332-3.242a12 12 0 0 1 .973-1.355c.098-.118.36-.422.363-.426l.102-.121c.074-.082.125-.145.176-.207.05-.059.093-.106.136-.153l.008-.011a31.72 31.72 0 0 0 1.137-1.414c.316-.426.598-.836.855-1.254.274-.453.47-.844.618-1.239.164-.445.273-.93.324-1.441.043-.45.047-.957 0-1.539a14.28 14.28 0 0 0-.195-1.367 26.024 26.024 0 0 0-.137-.656.502.502 0 0 1 .125-.457.505.505 0 0 1 .453-.141c.23.043.457.105.68.18a6.68 6.68 0 0 1 1.52.73c.632.398 1.202.91 1.698 1.523a7.642 7.642 0 0 1 1.352 2.57 8.588 8.588 0 0 1 .316 3.372zm-9.726-3.035a5.932 5.932 0 0 1-1.031 1.543l-.114.125c-.031.035-.05.058-.074.082l-.031.031a2.733 2.733 0 0 0-.106.11c-.004.003-.008.015-.015.019l-.043.047c-.024.023-.047.05-.07.074a3.478 3.478 0 0 0-.777 1.043c-.099.184-.173.39-.22.617-.043.203-.07.434-.074.695-.008.211.004.415.012.547a.487.487 0 0 1-.211.446.495.495 0 0 1-.492.039c-.188-.09-.368-.2-.54-.332a3.131 3.131 0 0 1-.718-.766 3.331 3.331 0 0 1-.504-1.246 3.944 3.944 0 0 1 .027-1.57 4.81 4.81 0 0 1 .61-1.485c.156-.242.3-.449.441-.613.04-.05.129-.156.168-.2V8.84l.047-.047c.035-.04.059-.074.082-.102l.055-.062.007-.008c.153-.184.352-.422.52-.644.144-.196.273-.383.39-.579.126-.203.215-.382.282-.558a2.8 2.8 0 0 0 .148-.66 4.21 4.21 0 0 0 0-.703 5.446 5.446 0 0 0-.066-.504.509.509 0 0 1 .176-.47.524.524 0 0 1 .312-.108.53.53 0 0 1 .188.035c.172.07.343.16.504.261.289.188.55.418.777.7.277.34.488.746.617 1.171a4.05 4.05 0 0 1 .145 1.54 4.822 4.822 0 0 1-.422 1.535"
-												transform="matrix(.13333 0 0 -.13333 0 4)" />
-										</svg>
-									</span>
-									<span class="tiny">X people recently viewed</span>
-								</div>
-							</div>
+							<a href="#" class="btn btn-link text-decoration-underline align-baseline tiny">12 Reviews</a>
 						</div>
 					</div>
 				</div>
+				<div class="col-xl-4 col-lg-5 col-md-6 col-12 order-md-0 order-1">
+					<p class="fs-5 mb-5 text-md-start text-center">
+						Personalize your E-Gift card and we'll deliver it straight to your recipient's inbox within 24 hours.
+					</p>
+
+					<form action="#" class="pt-xl-5 pt-lg-3 pt-0">
+						<select class="form-select form-select-light form-select-lg mb-3" aria-label="Card value" required>
+							<option value="" selected>Card value *</option>
+							<option value="1">One</option>
+							<option value="2">Two</option>
+							<option value="3">Three</option>
+						</select>
+
+						<input class="form-control form-control-light form-control-lg mb-3" type="text"
+							placeholder="To (Name) *" aria-label="" required>
+
+						<input class="form-control form-control-light form-control-lg mb-3" type="text"
+							placeholder="From (Name) *" aria-label="" required>
+
+						<div class="position-relative">
+							<textarea class="form-control form-control-light form-control-lg mb-5" placeholder="Message"
+								rows="3"></textarea>
+						</div>
+
+						<input type="email" class="form-control form-control-light form-control-lg mb-3"
+							placeholder="Recipient's email *" required>
+						<input type="email" class="form-control form-control-light form-control-lg mb-5"
+							placeholder="Confirm email *" required>
+
+						<button class="btn btn-dark btn-lg w-100 text-uppercase">
+							Add to bag
+						</button>
+					</form>
+				</div>
 
 				<div class="col-md-6 col-12">
-					<div class="row">
-						<div class="col-lg-10 col-12">
-							<div class="swiper product-slider mb-5">
+					<div class="row justify-content-center">
+						<div class="col-lg-7 col-8">
+							<div class="swiper gift-card-slider mb-5">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
-										<button class="btn position-relative wrapper-product d-block" data-bs-toggle="modal"
-											data-bs-target="#zoomItemModal">
-											<span class="icon icon-zoom position-absolute">
-												<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-													viewBox="0 0 954.66 954.66">
-													<path class="fil0"
-														d="M55.82 611.51c10.42-3.57 21.96-.86 29.74 6.92l48.07 48.04 176.44-176.44c11.27-11.24 29.54-11.24 40.78 0l113.77 113.78c11.24 11.24 11.24 29.51 0 40.78L288.19 821.03l48.04 48.07c7.78 7.78 10.48 19.32 6.91 29.73a28.868 28.868 0 0 1-23.68 19.28L32.48 954.42a28.725 28.725 0 0 1-24.02-8.23C2.15 939.92-.9 931.04.23 922.17l36.31-286.98a28.882 28.882 0 0 1 19.28-23.68zm843.01-268.37c-10.41 3.57-21.95.87-29.73-6.91l-48.07-48.04-176.44 176.43c-11.27 11.24-29.54 11.24-40.78 0L490.03 350.85c-11.24-11.24-11.24-29.51 0-40.78l176.44-176.44-48.04-48.07c-7.78-7.78-10.49-19.32-6.92-29.74a28.882 28.882 0 0 1 23.68-19.28L922.17.23c8.87-1.13 17.75 1.92 24.02 8.23a28.725 28.725 0 0 1 8.23 24.02l-36.31 286.98a28.868 28.868 0 0 1-19.28 23.68z" />
-												</svg>
-											</span>
-											<img class="img-fluid img-thumbnail" src="./images/dist/items/item-male-2.jpg"
-												alt="Item">
-										</button>
+										<img src="./images/dist/icons/gift-card-icon.svg" alt="E-Gift Card">
 									</div>
 									<div class="swiper-slide">
-										<button class="btn position-relative wrapper-product d-block" data-bs-toggle="modal"
-											data-bs-target="#zoomItemModal">
-											<span class="icon icon-zoom position-absolute">
-												<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-													viewBox="0 0 954.66 954.66">
-													<path class="fil0"
-														d="M55.82 611.51c10.42-3.57 21.96-.86 29.74 6.92l48.07 48.04 176.44-176.44c11.27-11.24 29.54-11.24 40.78 0l113.77 113.78c11.24 11.24 11.24 29.51 0 40.78L288.19 821.03l48.04 48.07c7.78 7.78 10.48 19.32 6.91 29.73a28.868 28.868 0 0 1-23.68 19.28L32.48 954.42a28.725 28.725 0 0 1-24.02-8.23C2.15 939.92-.9 931.04.23 922.17l36.31-286.98a28.882 28.882 0 0 1 19.28-23.68zm843.01-268.37c-10.41 3.57-21.95.87-29.73-6.91l-48.07-48.04-176.44 176.43c-11.27 11.24-29.54 11.24-40.78 0L490.03 350.85c-11.24-11.24-11.24-29.51 0-40.78l176.44-176.44-48.04-48.07c-7.78-7.78-10.49-19.32-6.92-29.74a28.882 28.882 0 0 1 23.68-19.28L922.17.23c8.87-1.13 17.75 1.92 24.02 8.23a28.725 28.725 0 0 1 8.23 24.02l-36.31 286.98a28.868 28.868 0 0 1-19.28 23.68z" />
-												</svg>
-											</span>
-											<img class="img-fluid img-thumbnail" loading="lazy"
-												src="./images/dist/items/item-man-1.jpg" alt="Item">
-										</button>
+										<img src="./images/dist/icons/gift-card-icon.svg" alt="E-Gift Card">
 									</div>
 									<div class="swiper-slide">
-										<button class="btn position-relative wrapper-product d-block" data-bs-toggle="modal"
-											data-bs-target="#zoomItemModal">
-											<span class="icon icon-zoom position-absolute">
-												<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-													viewBox="0 0 954.66 954.66">
-													<path class="fil0"
-														d="M55.82 611.51c10.42-3.57 21.96-.86 29.74 6.92l48.07 48.04 176.44-176.44c11.27-11.24 29.54-11.24 40.78 0l113.77 113.78c11.24 11.24 11.24 29.51 0 40.78L288.19 821.03l48.04 48.07c7.78 7.78 10.48 19.32 6.91 29.73a28.868 28.868 0 0 1-23.68 19.28L32.48 954.42a28.725 28.725 0 0 1-24.02-8.23C2.15 939.92-.9 931.04.23 922.17l36.31-286.98a28.882 28.882 0 0 1 19.28-23.68zm843.01-268.37c-10.41 3.57-21.95.87-29.73-6.91l-48.07-48.04-176.44 176.43c-11.27 11.24-29.54 11.24-40.78 0L490.03 350.85c-11.24-11.24-11.24-29.51 0-40.78l176.44-176.44-48.04-48.07c-7.78-7.78-10.49-19.32-6.92-29.74a28.882 28.882 0 0 1 23.68-19.28L922.17.23c8.87-1.13 17.75 1.92 24.02 8.23a28.725 28.725 0 0 1 8.23 24.02l-36.31 286.98a28.868 28.868 0 0 1-19.28 23.68z" />
-												</svg>
-											</span>
-											<img class="img-fluid img-thumbnail" loading="lazy"
-												src="./images/dist/items/item-man-1.jpg" alt="Item">
-										</button>
+										<img src="./images/dist/icons/gift-card-icon.svg" alt="E-Gift Card">
 									</div>
 									<div class="swiper-slide">
-										<button class="btn position-relative wrapper-product d-block" data-bs-toggle="modal"
-											data-bs-target="#zoomItemModal">
-											<span class="icon icon-zoom position-absolute">
-												<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-													viewBox="0 0 954.66 954.66">
-													<path class="fil0"
-														d="M55.82 611.51c10.42-3.57 21.96-.86 29.74 6.92l48.07 48.04 176.44-176.44c11.27-11.24 29.54-11.24 40.78 0l113.77 113.78c11.24 11.24 11.24 29.51 0 40.78L288.19 821.03l48.04 48.07c7.78 7.78 10.48 19.32 6.91 29.73a28.868 28.868 0 0 1-23.68 19.28L32.48 954.42a28.725 28.725 0 0 1-24.02-8.23C2.15 939.92-.9 931.04.23 922.17l36.31-286.98a28.882 28.882 0 0 1 19.28-23.68zm843.01-268.37c-10.41 3.57-21.95.87-29.73-6.91l-48.07-48.04-176.44 176.43c-11.27 11.24-29.54 11.24-40.78 0L490.03 350.85c-11.24-11.24-11.24-29.51 0-40.78l176.44-176.44-48.04-48.07c-7.78-7.78-10.49-19.32-6.92-29.74a28.882 28.882 0 0 1 23.68-19.28L922.17.23c8.87-1.13 17.75 1.92 24.02 8.23a28.725 28.725 0 0 1 8.23 24.02l-36.31 286.98a28.868 28.868 0 0 1-19.28 23.68z" />
-												</svg>
-											</span>
-											<img class="img-fluid img-thumbnail" loading="lazy"
-												src="./images/dist/items/item-man-1.jpg" alt="Item">
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-2 ps-0 d-none d-lg-block position-relative">
-							<nav aria-label="Navigating product card pages">
-								<ul class="pagination flex-xxl-nowrap flex-wrap justify-content-center">
-									<li class="page-item order-xxl-0 order-2">
-										<a class="page-link" href="#" aria-label="Previous">
-											<span class="icon icon-arrow-left" aria-hidden="true">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.91 122.88"
-													style="enable-background:new 0 0 66.91 122.88" xml:space="preserve">
-													<path
-														d="M1.95 111.2a6.875 6.875 0 0 0 .14 9.73 6.875 6.875 0 0 0 9.73-.14L64.94 66l-4.93-4.79 4.95 4.8c2.65-2.74 2.59-7.11-.15-9.76-.08-.08-.16-.15-.24-.22L11.81 2.09c-2.65-2.73-7-2.79-9.73-.14-2.72 2.65-2.78 7-.13 9.73l48.46 49.55L1.95 111.2z" />
-												</svg>
-											</span>
-										</a>
-									</li>
-									<div class="order-xxl-0 order-1">
-										<span>XX</span>
-										of
-										<span>XX</span>
-									</div>
-									<li class="page-item order-xxl-0 order-2">
-										<a class="page-link" href="#" aria-label="Next">
-											<span class="icon icon-arrow-right" aria-hidden="true">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.91 122.88"
-													style="enable-background:new 0 0 66.91 122.88" xml:space="preserve">
-													<path
-														d="M1.95 111.2a6.875 6.875 0 0 0 .14 9.73 6.875 6.875 0 0 0 9.73-.14L64.94 66l-4.93-4.79 4.95 4.8c2.65-2.74 2.59-7.11-.15-9.76-.08-.08-.16-.15-.24-.22L11.81 2.09c-2.65-2.73-7-2.79-9.73-.14-2.72 2.65-2.78 7-.13 9.73l48.46 49.55L1.95 111.2z" />
-												</svg>
-											</span>
-										</a>
-									</li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col-lg-10 col-12">
-							<div thumbSlide="" class="swiper swiper-container product-slider-thumbs">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<img class="img-thumbnail" src="./images/dist/items/item-male-2.jpg" alt="">
+										<img src="./images/dist/icons/gift-card-icon.svg" alt="E-Gift Card">
 									</div>
 									<div class="swiper-slide">
-										<img class="img-thumbnail" src="./images/dist/items/item-man-1.jpg" alt="">
+										<img src="./images/dist/icons/gift-card-icon.svg" alt="E-Gift Card">
 									</div>
 									<div class="swiper-slide">
-										<img class="img-thumbnail" loading="lazy" src="./images/dist/items/item-man-1.jpg" alt="">
+										<img src="./images/dist/icons/gift-card-icon.svg" alt="E-Gift Card">
 									</div>
 									<div class="swiper-slide">
-										<img class="img-thumbnail" loading="lazy" src="./images/dist/items/item-man-1.jpg" alt="">
+										<img src="./images/dist/icons/gift-card-icon.svg" alt="E-Gift Card">
+									</div>
+									<div class="swiper-slide">
+										<img src="./images/dist/icons/gift-card-icon.svg" alt="E-Gift Card">
 									</div>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-lg-2 ps-0 d-none d-lg-block position-relative">
-							<div class="product-nav fs-5">
+						<div class="col-12">
+							<div>
+								<div class="fs-5 mb-3 position-relative">
+									<span>Choose design</span>
+									<div>
+										<div class="swiper-button-prev gift-card-tumb-button-prev"></div>
+										<div class="swiper-button-next gift-card-tumb-button-next"></div>
+									</div>
+								</div>
+								<div thumbSlide="" class="swiper gift-card-slider-thumbs">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img class="img-thumbnail" src="./images/dist/icons/gift-card-icon.svg"
+												alt="E-Gift Card">
+										</div>
+										<div class="swiper-slide">
+											<img class="img-thumbnail" src="./images/dist/icons/gift-card-icon.svg"
+												alt="E-Gift Card">
+										</div>
+										<div class="swiper-slide">
+											<img class="img-thumbnail" loading="lazy" src="./images/dist/icons/gift-card-icon.svg"
+												alt="E-Gift Card">
+										</div>
+										<div class="swiper-slide">
+											<img class="img-thumbnail" loading="lazy" src="./images/dist/icons/gift-card-icon.svg"
+												alt="E-Gift Card">
+										</div>
+										<div class="swiper-slide">
+											<img class="img-thumbnail" src="./images/dist/icons/gift-card-icon.svg"
+												alt="E-Gift Card">
+										</div>
+										<div class="swiper-slide">
+											<img class="img-thumbnail" src="./images/dist/icons/gift-card-icon.svg"
+												alt="E-Gift Card">
+										</div>
+										<div class="swiper-slide">
+											<img class="img-thumbnail" loading="lazy" src="./images/dist/icons/gift-card-icon.svg"
+												alt="E-Gift Card">
+										</div>
+										<div class="swiper-slide">
+											<img class="img-thumbnail" loading="lazy" src="./images/dist/icons/gift-card-icon.svg"
+												alt="E-Gift Card">
+										</div>
+									</div>
+								</div>
 								<div>
-									<div class="swiper-button-prev product-tumb-button-prev"></div>
-									<div class="swiper-button-next product-tumb-button-next"></div>
+									<div class="mt-4 fs-5 text-md-start text-center">
+										Share your impressions
+									</div>
+									<div
+										class="d-flex align-items-center gap-xl-4 gap-3 justify-content-md-start justify-content-center">
+										<a class="d-flex align-items-center gap-2 fs-6" href="#">
+											<span class="icon icon-facebook">
+												<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+													viewBox="0 0 6.667 10.667">
+													<path
+														d="M36.86 75.879c-10.137 0-16.083-5.352-16.083-17.55V47.593H7.922V34.738h12.855V3.883h12.86v30.855h10.285l2.57 12.856H33.637v8.558c0 4.594 1.496 6.871 5.812 6.871h7.043v12.329c-1.219.164-4.77.527-9.633.527"
+														style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+														transform="matrix(.13333 0 0 -.13333 0 10.667)" />
+												</svg>
+											</span>
+											Share
+										</a>
+
+										<a class="d-flex align-items-center gap-2 fs-6" href="#">
+											<span class="icon icon-twitter">
+												<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+													style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd"
+													viewBox="0 0 42645 34651">
+													<path
+														d="M42645 4103c-1569 697-3255 1162-5026 1376 1806-1089 3197-2798 3848-4843-1689 1000-3565 1736-5556 2127C34315 1062 32040 0 29526 0c-4836 0-8749 3917-8749 8749 0 678 81 1348 229 1995-7269-368-13720-3851-18037-9144-752 1294-1178 2790-1178 4402 0 3034 1538 5707 3890 7277-1438-50-2786-442-3964-1097v108c0 4243 3018 7773 7013 8582-732 198-1503 302-2305 302-562 0-1112-46-1643-147 1112 3468 4344 6002 8168 6068-2991 2348-6761 3747-10857 3747-713 0-1407-35-2092-116 3875 2476 8470 3925 13418 3925 16088 0 24887-13329 24887-24891 0-376-8-759-27-1135 1713-1224 3189-2770 4367-4522z" />
+												</svg>
+											</span>
+											Tweet
+										</a>
+
+										<a class="d-flex align-items-center gap-2 fs-6" href="#">
+											<span class="icon icon-pin">
+												<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+													style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd"
+													viewBox="0 0 5966 7707">
+													<path
+														d="M5966 2536c0 1736-965 3033-2388 3033-478-1-928-258-1082-552 0 0-257 1020-312 1217-191 695-755 1391-798 1449-31 39-99 27-106-26-12-88-155-966 13-1683 85-359 569-2413 569-2413s-141-281-141-699c0-656 381-1146 854-1146 403 0 597 302 597 664 0 405-258 1010-391 1572-111 468 236 852 699 852 839 0 1403-1078 1403-2354 0-970-653-1696-1842-1696-1342 0-2179 1001-2179 2120 0 385 113 657 292 868 81 97 93 136 64 247-22 82-70 278-91 355-29 112-120 153-221 111C288 4202-1 3525-1 2764-1 1506 1060-1 3163-1c1690 0 2802 1223 2802 2536z" />
+												</svg>
+											</span>
+											Pin
+										</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -872,53 +755,18 @@
 		</div>
 	</section>
 
-	<section class="product-accordion">
+	<section class="gift-accordion product-accordion">
 		<div class="container pt-2 pb-5">
-			<div class="accordion mb-5" id="accordionPanelsStayOpenExample">
-				<div class="accordion-item">
-					<h2 class="accordion-header" id="panelsStayOpen-headingProductInfo">
-						<button class="accordion-button fs-4 text-uppercase" type="button" data-bs-toggle="collapse"
-							data-bs-target="#panelsStayOpen-collapseProductInfo" aria-expanded="true"
-							aria-controls="panelsStayOpen-collapseProductInfo">
-							Product Information
-						</button>
-					</h2>
-					<div id="panelsStayOpen-collapseProductInfo" class="accordion-collapse collapse show"
-						aria-labelledby="panelsStayOpen-headingProductInfo">
-						<div class="accordion-body">
-							<div class="row mb-4">
-								<div class="col-sm-3 col-12">
-									<h5>Overview</h5>
-								</div>
-
-								<div class="col-sm-9 col-12">
-									Super-soft cotton and a relaxed V-neckline make T-shirt from Club Room an ideal choice for
-									casual style and comfort. Superfine liquid cotton fabrication gives life to this tee. Its
-									breathable materil allows it to be worm year-round for a multitude of occasions.
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="col-sm-3 col-12">
-									<h5>Care Instructions</h5>
-								</div>
-
-								<div class="col-sm-9 col-12">
-									<img src="./images/dist/icons/care.svg" width="200" loading="lazy" alt="icon">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+			<div class="accordion mb-5">
 				<div class="accordion-item">
 					<h2 class="accordion-header" id="panelsStayOpen-headingReviews">
-						<button class="accordion-button fs-4 text-uppercase" type="button" data-bs-toggle="collapse"
-							data-bs-target="#panelsStayOpen-collapseReviews" aria-expanded="true"
+						<button class="accordion-button collapsed fs-2 text-uppercase" type="button" data-bs-toggle="collapse"
+							data-bs-target="#panelsStayOpen-collapseReviews" aria-expanded="false"
 							aria-controls="panelsStayOpen-collapseReviews">
 							Ratings & Reviews
 						</button>
 					</h2>
-					<div id="panelsStayOpen-collapseReviews" class="accordion-collapse collapse show"
+					<div id="panelsStayOpen-collapseReviews" class="accordion-collapse collapse"
 						aria-labelledby="panelsStayOpen-headingReviews">
 						<div class="accordion-body">
 							<div class="row">
@@ -1433,176 +1281,6 @@
 						</div>
 					</div>
 				</div>
-				<div class="accordion-item">
-					<h2 class="accordion-header" id="panelsStayOpen-headingReturn">
-						<button class="accordion-button fs-4 text-uppercase" type="button" data-bs-toggle="collapse"
-							data-bs-target="#panelsStayOpen-collapseReturn" aria-expanded="true"
-							aria-controls="panelsStayOpen-collapseReturn">
-							Delivery & Return
-						</button>
-					</h2>
-					<div id="panelsStayOpen-collapseReturn" class="accordion-collapse collapse show"
-						aria-labelledby="panelsStayOpen-headingReturn">
-						<div class="accordion-body">
-							<div class="row mb-4">
-								<div class="col-sm-3 col-12">
-									<h5 class="text-capitalize">Return Announcement</h5>
-								</div>
-
-								<div class="col-sm-9 col-12">
-									We hope you love your X-Under product. But if not, we accept returns and offer free size
-									exchanges within 30 days from your date of purchase.
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="col-sm-3 col-12">
-									<h5 class="text-capitalize">Delivery</h5>
-								</div>
-
-								<div class="col-sm-9 col-12">
-									We offer different international shipping methods. You can choose your preferred method on
-									the on the checkout page. The cost if shipping varies based on the shipping method selected.
-									Total delivery time = Proccessing time + Shipping time.
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="recent pb-5 mb-5">
-		<div class="container">
-			<h2 class="text-uppercase text-center">Recently viewed</h2>
-
-			<div class="position-relative">
-				<div class="swiper swiper-container recent-swiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide custom-swiper-slide">
-							<div class="card recently-card">
-	<div class="recently-card-img ratio ratio-1x1">
-		<img src="./images/dist/items/item-male-2.jpg" class="card-img-top" alt="Item">
-	</div>
-	<a href="./card.html" class="card-body text-center">
-		<h3 class="card-title h5 text-uppercase fw-bold">Basic V-Neck T-Shirt</h3>
-		<div class="card-price fs-5 mb-2">
-			$75.00
-		</div>
-		<button href="#" class="btn btn-dark w-100 text-uppercase">Add to Bag</button>
-	</a>
-</div>
-						</div>
-						<div class="swiper-slide custom-swiper-slide">
-							<div class="card recently-card">
-	<div class="recently-card-img ratio ratio-1x1">
-		<img src="./images/dist/items/item-man-1.jpg" class="card-img-top" alt="Item">
-	</div>
-	<a href="./card.html" class="card-body text-center">
-		<h3 class="card-title h5 text-uppercase fw-bold">Basic V-Neck T-Shirt</h3>
-		<div class="card-price fs-5 mb-2">
-			$75.00
-		</div>
-		<button href="#" class="btn btn-dark w-100 text-uppercase">Add to Bag</button>
-	</a>
-</div>
-						</div>
-						<div class="swiper-slide custom-swiper-slide">
-							<div class="card recently-card">
-	<div class="recently-card-img ratio ratio-1x1">
-		<img src="./images/dist/items/item-male-2.jpg" class="card-img-top" alt="Item">
-	</div>
-	<a href="./card.html" class="card-body text-center">
-		<div class="card-event text-primary text-uppercase mb-1">
-			Sale
-		</div>
-		<h3 class="card-title h5 text-uppercase fw-bold">Basic V-Neck T-Shirt</h3>
-		<div class="card-price fs-5 mb-2">
-			$75.00
-		</div>
-		<button href="#" class="btn btn-dark w-100 text-uppercase">Add to Bag</button>
-	</a>
-</div>
-						</div>
-						<div class="swiper-slide custom-swiper-slide">
-							<div class="card recently-card">
-	<div class="recently-card-img ratio ratio-1x1">
-		<img src="./images/dist/items/item-male-2.jpg" class="card-img-top" alt="Item">
-	</div>
-	<a href="./card.html" class="card-body text-center">
-		<div class="card-event text-primary text-uppercase mb-1">
-			New
-		</div>
-		<h3 class="card-title h5 text-uppercase fw-bold">Basic V-Neck T-Shirt</h3>
-		<div class="card-price fs-5 mb-2">
-			$75.00
-		</div>
-		<button href="#" class="btn btn-dark w-100 text-uppercase">Add to Bag</button>
-	</a>
-</div>
-						</div>
-						<div class="swiper-slide custom-swiper-slide">
-							<div class="card recently-card">
-	<div class="recently-card-img ratio ratio-1x1">
-		<img src="./images/dist/items/item-man-1.jpg" class="card-img-top" alt="Item">
-	</div>
-	<a href="./card.html" class="card-body text-center">
-		<div class="card-event text-primary text-uppercase mb-1">
-			New
-		</div>
-		<h3 class="card-title h5 text-uppercase fw-bold">Basic V-Neck T-Shirt</h3>
-		<div class="card-price fs-5 mb-2">
-			$75.00
-		</div>
-		<button href="#" class="btn btn-dark w-100 text-uppercase">Add to Bag</button>
-	</a>
-</div>
-						</div>
-						<div class="swiper-slide custom-swiper-slide">
-							<div class="card recently-card">
-	<div class="recently-card-img ratio ratio-1x1">
-		<img src="./images/dist/items/item-man-1.jpg" class="card-img-top" alt="Item">
-	</div>
-	<a href="./card.html" class="card-body text-center">
-		<div class="card-event text-primary text-uppercase mb-1">
-			Sale
-		</div>
-		<h3 class="card-title h5 text-uppercase fw-bold">Basic V-Neck T-Shirt</h3>
-		<div class="card-price fs-5 mb-2">
-			$75.00
-		</div>
-		<button href="#" class="btn btn-dark w-100 text-uppercase">Add to Bag</button>
-	</a>
-</div>
-						</div>
-						<div class="swiper-slide custom-swiper-slide">
-							<div class="card recently-card">
-	<div class="recently-card-img ratio ratio-1x1">
-		<img src="./images/dist/items/item-man-1.jpg" class="card-img-top" alt="Item">
-	</div>
-	<a href="./card.html" class="card-body text-center">
-		<div class="card-event text-primary text-uppercase mb-1">
-			New
-		</div>
-		<h3 class="card-title h5 text-uppercase fw-bold">Basic V-Neck T-Shirt</h3>
-		<div class="card-price fs-5 mb-2">
-			$75.00
-		</div>
-		<button href="#" class="btn btn-dark w-100 text-uppercase">Add to Bag</button>
-	</a>
-</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- If we need navigation buttons -->
-				<div class="swiper-button-prev recent-button-prev"></div>
-				<div class="swiper-button-next recent-button-next"></div>
-
-				<!-- If we need pagination -->
-				<div class="swiper-pagination recent-pagination"></div>
-
 			</div>
 		</div>
 	</section>
@@ -1719,261 +1397,6 @@
 			<div class="modal-footer justify-content-center">
 				<a href="#" type="button" class="btn text-dark text-decoration-underline">Site Map</a>
 				<button type="button" class="btn text-dark text-decoration-underline" data-bs-dismiss="modal">Close</button>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="modal modal-zoom fade" id="zoomItemModal" tabindex="-1" aria-labelledby="zoomItemModalLabel"
-	aria-hidden="true">
-	<button type="button"
-		class="btn-close btn-close-white btn-close-word position-absolute d-flex align-items-center fs-5"
-		data-bs-dismiss="modal" aria-label="Close">
-		<span class="d-sm-inline-block d-none">Close</span>
-	</button>
-	<div class="modal-dialog modal-dialog-centered modal-lg">
-		<div class="modal-content">
-			<div class="swiper swiper-container modal-zoom-swiper">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<div class="modal-zoom-img ratio ratio-1x1">
-							<img src="./images/dist/items/item-male-2.jpg" alt="Item">
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="modal-zoom-img ratio ratio-1x1">
-							<img src="./images/dist/items/item-man-1.jpg" alt="Item">
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="modal-zoom-img ratio ratio-1x1">
-							<img src="./images/dist/items/item-male-2.jpg" alt="Item">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="swiper-button-prev zoom-button-prev"></div>
-	<div class="swiper-button-next zoom-button-next"></div>
-
-	<div class="swiper-pagination zoom-pagination"></div>
-</div>
-
-<div class="modal modal-installments fade" id="installmentsModal" tabindex="-1" aria-labelledby="installmentsModalLabel"
-	aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered modal-xl">
-		<div class="modal-content">
-			<div class="modal-header pt-4 pt-lg-5 flex-wrap-reverse gap-3 mb-5">
-				<h2 class="modal-title w-100 text-primary text-center text-uppercase h4" id="installmentsModalLabel">How it
-					works
-				</h2>
-				<button type="button"
-					class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5 me-2 me-sm-0"
-					data-bs-dismiss="modal" aria-label="Close">
-					<span class="d-sm-inline-block d-none">Close</span>
-				</button>
-			</div>
-			<div class="modal-body mb-3">
-				<div class="container">
-					<div class="row justify-content-around g-lg-0 g-5">
-						<div class="col-lg-4 col-12 text-center">
-							<span class="icon icon-select">
-								<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-									style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd"
-									viewBox="0 0 1845.42 3283.67">
-									<path
-										d="M639.67 0c316.49 0 573.07 256.58 573.07 573.07 0 244.67-153.33 453.47-369.15 535.66v263.69c35.64-47.67 88.57-77.98 147.67-77.98 73.91 0 138.17 47.14 170.98 116.56 32.82-69.42 97.05-116.56 170.96-116.56 107.29 0 194.25 99.34 194.25 221.91v8.92c29.34-58.52 84.43-98.04 147.67-98.04 94.03 0 170.22 87.04 170.3 194.43v1236.63c0 234.87-160.88 425.38-359.19 425.38H811.82c-114.96 0-197.78-69.62-264.96-168.14C476.99 3013.02 24 2061.99 24 2061.99c-51.63-107.48-17.14-242.3 76.88-301.28 29.64-18.51 61.7-27.35 93.27-27.35 68.65 0 135.17 41.76 170.45 115.36l90.52 188.64v-921.6C229.17 1038.93 66.6 825 66.6 573.07 66.6 256.58 323.17 0 639.67 0zm203.92 923.29V684.14c0-122.57-86.96-221.91-194.25-221.91-107.28 0-194.22 99.36-194.22 221.91v249.77c-131.01-67.13-220.66-203.52-220.66-360.84 0-223.79 181.42-405.24 405.21-405.24 223.78 0 405.23 181.45 405.23 405.24 0 149.45-80.92 279.97-201.31 350.22z" />
-								</svg>
-							</span>
-							<h3 class="fs-5 text-primary text-uppercase mt-lg-5 mt-3">Select afterpay as your payment method at
-								checkout
-							</h3>
-							<p class="mx-auto" style="max-width: 220px;">Register or log in to your Afterpay account and
-								provide your payment detalis.</p>
-						</div>
-						<div class="col-lg-4 col-12 text-center">
-							<span class="icon icon-complete">
-								<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 538.96 859.54">
-									<path class="fil0"
-										d="M73.51 310.72c0 55.62 38.95 102.12 91.06 113.87a83.35 83.35 0 0 1 5.09-8.42c17.2-25.09 40.53-29.65 48.43-30.35 3.15-.35 6.31-.53 9.47-.53 11.23 0 26.49 2.11 42.28 10.53 22.63-21.23 36.85-51.59 36.85-85.1 0-64.39-52.29-116.67-116.68-116.67-64.39 0-116.5 52.28-116.5 116.67zm444.25 167.56c-9.65-7.54-110.36-119.31-137.56-135.1V53.16C380.2 23.69 356.34 0 327.04 0H53.16C23.69 0 0 23.86 0 53.16v507.76c0 29.47 23.86 53.16 53.16 53.16h119.31l-4.91-41.76c-1.58-1.4-2.63-2.28-4.21-3.68h-52.64c1.75-7.02 2.28-14.74.88-22.63-3.86-21.94-21.23-39.66-43.16-43.69-8.08-1.58-15.97-1.06-23.16.7V107.73c3.16.52 6.49.87 9.82.87 29.83 0 53.86-24.21 53.86-53.86 0-3.16-.35-6.31-.87-9.47H271.6c-.53 3.16-.88 6.31-.88 9.47 0 29.83 24.04 53.86 53.87 53.86 3.33 0 6.66-.35 9.82-.87v496.7c-18.6-13.69-39.3-56.5-39.3-56.5s-10.18-113.86-67.9-113.86c-1.58 0-2.98 0-4.56.17 0 0-43.69 3.69-7.55 128.61l16.15 138.78s18.07 75.27 67.89 127.38v15.44c0 8.24 6.67 15.09 15.09 15.09h162.29c7.72 0 14.04-5.79 14.92-13.34 5.79-54.04 28.24-254.93 41.4-285.46 2.11-4.91 3.86-9.82 4.56-15.09 2.99-17.19 4.04-48.77-19.64-67.37zm-289.5-337.39c0-17.83-14.45-32.28-32.28-32.28-17.83 0-32.28 14.45-32.28 32.28 0 17.83 14.45 32.28 32.28 32.28 17.83 0 32.28-14.45 32.28-32.28zM120.18 300.37c7.02 0 7.2 0 8.25-7.01.88-5.45 2.46-10.53 4.56-15.62 1.23-2.81 3.16-3.86 5.97-2.98 4.38 1.23 8.59 2.45 12.98 3.86 4.04 1.23 4.56 2.63 2.81 6.49-3.86 7.89-5.44 15.97-4.92 24.74.18 2.28.35 4.56 1.41 6.49 3.33 7.54 11.58 8.59 16.67 2.28 2.63-3.16 4.38-6.84 5.96-10.7 2.81-6.67 5.44-13.34 8.77-19.48 11.06-20 36.15-25.44 53.34-11.23 6.14 5.09 10.35 11.76 12.46 19.48.88 3.33 2.63 4.91 6.14 4.73 3.51-.17 6.84 0 10.35 0 3.16 0 4.74 1.58 4.74 4.57.17 3.68.17 7.37 0 11.05 0 3.33-1.93 4.74-5.09 4.74h-7.54c-5.62 0-5.8.17-6.67 5.61-1.05 6.84-2.63 13.51-5.61 19.83-2.46 4.91-3.69 5.44-8.78 4.03-3.86-1.05-7.72-2.1-11.4-3.33-4.39-1.41-4.91-2.63-2.81-6.67 3.68-6.84 5.62-14.21 6.67-21.93.7-4.91.17-9.82-1.93-14.39-3.69-8.59-13.69-10-19.65-2.63-2.11 2.46-3.51 5.26-4.74 8.25-3.33 7.54-5.79 15.44-10 22.46-6.84 11.58-16.32 18.77-30.35 17.89-15.79-.88-25.79-10-31.06-24.39-2.1-5.96-2.1-5.96-8.42-6.14h-6.32c-4.73-.17-5.61-.87-5.61-5.61v-4.39c-.18-9.82-.18-9.82 9.82-10z" />
-								</svg>
-							</span>
-							<h3 class="fs-5 text-primary text-uppercase mt-lg-5 mt-3 mx-auto" style="max-width: 260px;">
-								Complete your checkout</h3>
-							<p class="mx-auto" style="max-width: 220px;">Get an instant approval decision online.</p>
-						</div>
-						<div class="col-lg-4 col-12 text-center">
-							<span class="icon icon-bag">
-								<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 9.333">
-									<path
-										d="M26.027 60.176c6.664 0 12.067-4.582 12.079-10.235h4.105c2.836 0 5.156-2.32 5.156-5.16V12.535c0-2.84-2.32-5.16-5.156-5.16H9.844c-2.836 0-5.156 2.32-5.156 5.16v32.246c0 2.84 2.32 5.16 5.156 5.16h4.105c.016 5.653 5.418 10.235 12.078 10.235zM16.773 49.94h18.508c-.011 4.328-4.152 7.832-9.254 7.832-5.101 0-9.242-3.504-9.254-7.832"
-										transform="matrix(.13333 0 0 -.13333 0 9.333)" />
-								</svg>
-							</span>
-							<h3 class="fs-5 text-primary text-uppercase mt-lg-5 mt-3 mx-auto" style="max-width: 180px;">Pay
-								over 4 equal payments</h3>
-							<p class="mx-auto" style="max-width: 260px;">Enjoy your purchase right away! Pay every two weeks
-								with 0 interest and no fees when you pay on
-								time.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="modal-footer flex-column justify-content-center pb-4 pb-lg-5">
-				<div class="fs-5">Installments by</div>
-				<div class="d-flex flex-lg-row flex-column align-items-center">
-					<div class="pe-lg-5 pe-0 pb-lg-0 pb-3 modal-footer-img">
-						<img src="./images/dist/icons/afterpay2.svg" width="200" loading="lazy" alt="afterpay">
-					</div>
-
-					<div class="ps-lg-5 ps-0 pt-lg-0 pt-3">
-						<img src="./images/dist/icons/klarna.svg" width="200" loading="lazy" alt="klarna">
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="modal modal-guide fade" id="sizeGuideModal" tabindex="-1" aria-labelledby="sizeGuideModalLabel"
-	aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered modal-xl">
-		<div class="modal-content py-5">
-			<div class="modal-header">
-				<button type="button"
-					class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5 me-2 me-sm-0"
-					data-bs-dismiss="modal" aria-label="Close">
-					<span class="d-sm-inline-block d-none">Close</span>
-				</button>
-			</div>
-			<div class="modal-body">
-				<div class="container">
-					<div class="row justify-content-around g-lg-0 g-5">
-						<div class="col-lg-5 col-12 d-flex align-items-end order-lg-0 order-1">
-							<img src="./images/dist/items/sizeguide.png" loading="lazy" alt="Size Guide" class="img-fluid">
-						</div>
-						<div class="col-lg-5 col-12">
-							<h2 class="modal-title h4 text-primary text-center text-uppercase mb-4" id="sizeGuideModalLabel">
-								Underwaer</h2>
-
-							<ul class="list-group">
-								<li class="list-group-item d-flex align-items-center justify-content-around active text-uppercase"
-									aria-current="true">
-									<div class="text-start">size</div>
-									<div>inches</div>
-									<div>cm</div>
-								</li>
-								<li class="list-group-item d-flex align-items-center justify-content-around text-uppercase">
-									<div class="text-start">XS</div>
-									<div>26-27</div>
-									<div>65-70</div>
-								</li>
-								<li class="list-group-item d-flex align-items-center justify-content-around  text-uppercase">
-									<div class="text-start">S</div>
-									<div>28-29</div>
-									<div>70-75</div>
-								</li>
-								<li class="list-group-item d-flex align-items-center justify-content-around  text-uppercase">
-									<div class="text-start">M</div>
-									<div>30-31</div>
-									<div>75-80</div>
-								</li>
-								<li class="list-group-item d-flex align-items-center justify-content-around  text-uppercase">
-									<div class="text-start">L</div>
-									<div>32-33</div>
-									<div>80-85</div>
-								</li>
-								<li class="list-group-item d-flex align-items-center justify-content-around  text-uppercase">
-									<div class="text-start">XL</div>
-									<div>34-35</div>
-									<div>85-90</div>
-								</li>
-								<li class="list-group-item d-flex align-items-center justify-content-around  text-uppercase">
-									<div class="text-start">XXL</div>
-									<div>36-37</div>
-									<div>90-95</div>
-								</li>
-								<li class="list-group-item d-flex align-items-center justify-content-around  text-uppercase">
-									<div class="text-start">XXXL</div>
-									<div>38-39</div>
-									<div>95-100</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="modal modal-notific fade" id="itemNotificModal" tabindex="-1" aria-labelledby="itemNotificModalLabel"
-	aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered modal-xl">
-		<div class="modal-content py-5">
-			<div class="modal-header">
-				<button type="button"
-					class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5 me-2 me-sm-0"
-					data-bs-dismiss="modal" aria-label="Close">
-					<span class="d-sm-inline-block d-none">Close</span>
-				</button>
-			</div>
-			<div class="modal-body">
-				<div class="container">
-					<div class="row justify-content-center">
-						<h2 class="modal-title h4 text-primary text-center" id="itemNotificModalLabel">
-							<span class="d-block text-uppercase">Be the first to know when is available</span>
-							Please notify me via email and push notification.
-						</h2>
-
-						<div class="col-xxl-4 col-xl-5 col-lg-6 col-sm-10 col-12 my-3">
-							<form action="#">
-								<input type="email" class="form-control text-center mb-3" id="emailItemNotific"
-									placeholder="Email*">
-								<div class="d-flex flex-sm-row flex-column justify-content-between align-items-center gap-3">
-									<button type="submit"
-										class="btn btn-accent btn-lg w-100 border border-primary border-1 text-uppercase">Join
-										now</button>
-									<button type="button" class="btn btn-outline-secondary btn-lg w-100 text-uppercase"
-										data-bs-dismiss="modal">No thanks</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="modal-footer justify-content-center">
-				<div class="text-center tiny">
-					*We will send email, where available, when there's news about the realese.
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="modal modal-video fade" id="itemVideoModal" tabindex="-1" aria-labelledby="itemVideoModalLabel"
-	aria-hidden="true">
-	<button type="button"
-		class="btn-close btn-close-white btn-close-word position-absolute d-flex align-items-center fs-5"
-		data-bs-dismiss="modal" aria-label="Close">
-		<span class="d-sm-inline-block d-none">Close</span>
-	</button>
-	<div class="modal-dialog modal-dialog-centered modal-xl">
-		<div class="modal-content">
-			<div class="modal-body">
-				<div class="container">
-					<div class="row">
-						<div class="col-12">
-							<video id="myVideo" controls>
-								<source src="./video/video.mp4" type="video/mp4">
-								<source src="./video/video.webm" type="video/webm">
-								<img src="./images/dist/items/item-male-2.jpg" alt="Video">
-							</video>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>

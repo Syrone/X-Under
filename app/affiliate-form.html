@@ -57,7 +57,12 @@
 
 				Affiliate advertising is simple: you get paid by promoting our advertising campaigns to your audience on
 				your blog, website, new sletter and search landing page. We provide promotional coupon for you to use. All
-				you do is <button class="btn btn-link fs-5 lh-1 align-baseline">promote coupon</button> onto your blog,
+				you do is
+				<button class="btn btn-link fs-5 lh-1 align-baseline" data-bs-toggle="modal"
+					data-bs-target="#affiliateGuideModal">
+					promote coupon
+				</button>
+				onto your blog,
 				website and you earn
 				commission on every sale from promo coupon.
 			</p>
@@ -69,25 +74,25 @@
 							Enter your name and address:
 						</h3>
 
-						<input class="form-control form-control-lg mb-3" type="text" placeholder="First Name *"
+						<input class="form-control form-control-light form-control-lg mb-3" type="text" placeholder="First Name *"
 							aria-label="Enter your First Name" required>
-						<input class="form-control form-control-lg mb-3" type="text" placeholder="Last Name *"
+						<input class="form-control form-control-light form-control-lg mb-3" type="text" placeholder="Last Name *"
 							aria-label="Enter your Last Name" required>
-						<input class="form-control form-control-lg mb-3" type="text" placeholder="Address *"
+						<input class="form-control form-control-light form-control-lg mb-3" type="text" placeholder="Address *"
 							aria-label="Enter your Address" required>
-						<input class="form-control form-control-lg mb-3" type="text" placeholder="Apt. Suite *"
+						<input class="form-control form-control-light form-control-lg mb-3" type="text" placeholder="Apt. Suite *"
 							aria-label="Enter your Apt. Suite">
-						<input class="form-control form-control-lg mb-3" type="text" placeholder="City *"
+						<input class="form-control form-control-light form-control-lg mb-3" type="text" placeholder="City *"
 							aria-label="Enter your City" required>
 
 						<div class="row mb-3">
 							<div class="col-6">
-								<input class="form-control form-control-lg" type="password" placeholder="Zip Code *"
+								<input class="form-control form-control-light form-control-lg" type="password" placeholder="Zip Code *"
 									aria-label="Enter your Zip Code" required>
 							</div>
 
 							<div class="col-6">
-								<select class="form-select form-select-lg" aria-label=".form-select-lg example">
+								<select class="form-select form-select-light form-select-lg" aria-label="Choose your state">
 									<option selected>State *</option>
 									<option value="1">One</option>
 									<option value="2">Two</option>
@@ -96,7 +101,7 @@
 							</div>
 						</div>
 
-						<select class="form-select form-select-lg" aria-label=".form-select-lg example">
+						<select class="form-select form-select-light form-select-lg" aria-label="Choose your Country">
 							<option selected>Country *</option>
 							<option value="1">One</option>
 							<option value="2">Two</option>
@@ -109,43 +114,43 @@
 							What's your contact information?
 						</h3>
 
-						<input class="form-control form-control-lg mb-3" type="text"
+						<input class="form-control form-control-light form-control-lg mb-3" type="text"
 							placeholder="Link to the blog / website *" aria-label="Enter your Link to the blog or website"
 							required>
-						<input class="form-control form-control-lg mb-3" type="text" placeholder="Blog / Site Category *"
+						<input class="form-control form-control-light form-control-lg mb-3" type="text" placeholder="Blog / Site Category *"
 							aria-label="Enter your Blog or Site Category" required>
-						<input class="form-control form-control-lg mb-3" type="number" placeholder="Age *"
+						<input class="form-control form-control-light form-control-lg mb-3" type="number" placeholder="Age *"
 							aria-label="Enter your Age" required>
 
 						<div class="form-check-custom mb-3">
-							<div class="form-check form-check-inline">
+							<div class="form-check form-check-lg form-check-inline">
 								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleRadio"
 									value="Male" required>
 								<label class="form-check-label" for="maleRadio">Male</label>
 							</div>
-							<div class="form-check form-check-inline">
+							<div class="form-check form-check-lg form-check-inline">
 								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleRadio"
 									value="Female" required>
 								<label class="form-check-label" for="femaleRadio">Female</label>
 							</div>
-							<div class="form-check form-check-inline">
+							<div class="form-check form-check-lg form-check-inline">
 								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="nonBinaryRadio"
 									value="nonBinary" required>
 								<label class="form-check-label" for="nonBinaryRadio">Non-binary</label>
 							</div>
 						</div>
 
-						<input class="form-control form-control-lg mb-3" type="text"
+						<input class="form-control form-control-light form-control-lg mb-3" type="text"
 							placeholder="Create your unique promo code *" aria-label="Create your unique promo code">
-						<input class="form-control form-control-lg mb-3" type="email" placeholder="Email Address *"
+						<input class="form-control form-control-light form-control-lg mb-3" type="email" placeholder="Email Address *"
 							aria-label="Enter your Email" required>
-						<input class="form-control form-control-lg" type="tel" placeholder="Phone number *"
+						<input class="form-control form-control-light form-control-lg" type="tel" placeholder="Phone number *"
 							aria-label="Enter your Phone number" required>
 					</div>
 
 					<div class="col-xxl-4 col-lg-5 col-md-6 col-12 order-md-0 order-3">
 						<div class="d-flex justify-content-center my-4">
-							<div class="form-check">
+							<div class="form-check form-check-lg">
 								<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
 								<label class="form-check-label" for="flexCheckDefault">
 									I agree to the <a href="#" class="btn btn-link align-baseline">Terms of Use</a>
@@ -204,6 +209,44 @@
 			<div class="modal-footer justify-content-center">
 				<a href="#" type="button" class="btn text-dark text-decoration-underline">Site Map</a>
 				<button type="button" class="btn text-dark text-decoration-underline" data-bs-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="affiliateGuideModal" tabindex="-1" aria-labelledby="affiliateGuideModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content py-5">
+			<div class="modal-header py-0">
+				<button type="button" class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5"
+					data-bs-dismiss="modal" aria-label="Close">
+					<span class="d-xl-inline-block d-none">Close</span>
+				</button>
+			</div>
+			<div class="modal-body d-block">
+				<h2 class="modal-title fs-5 mb-md-5 mb-4 text-primary text-center text-uppercase" id="affiliateGuideModalLabel">How it
+					works</h2>
+
+				<div class="container">
+					<div class="row gy-lg-0 gy-4 justify-content-center">
+						<div class="col-xl-2 col-lg-3 col-5">
+							<img src="./images/dist/affiliate/iphone-1.svg" class="img-fluid" alt="Guide 1">
+						</div>
+
+						<div class="col-xl-2 col-lg-3 col-5">
+							<img src="./images/dist/affiliate/iphone-2.svg" class="img-fluid" alt="Guide 2">
+						</div>
+
+						<div class="col-xl-2 col-lg-3 col-5">
+							<img src="./images/dist/affiliate/iphone-3.svg" class="img-fluid" alt="Guide 3">
+						</div>
+
+						<div class="col-xl-2 col-lg-3 col-5">
+							<img src="./images/dist/affiliate/iphone-4.svg" class="img-fluid" alt="Guide 4">
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

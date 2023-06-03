@@ -34,3 +34,22 @@
 				transform: translate(-50%) rotate(30deg)
 			&::before
 				transform: translate(-50%) rotate(-30deg)
+
+	&-form
+		.icon-star
+			width: 1.5rem
+			margin-inline: .1rem
+			&:first-child
+				margin-left: 0
+		.gift-card-tumb-button-prev, .gift-card-tumb-button-next
+			--swiper-navigation-size: 1.25rem
+			padding: 1rem
+			color: var(--item-color)
+			background-color: var(--transparent)
+		.gift-card-tumb-button-prev, .swiper-rtl .swiper-button-next
+			right: var(--swiper-navigation-sides-offset,40px)
+			left: auto
+		
+	&-accordion
+		.accordion
+			--bs-accordion-btn-padding-y: 3rem
