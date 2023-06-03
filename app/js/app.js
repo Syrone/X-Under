@@ -808,20 +808,20 @@ document.addEventListener('DOMContentLoaded', () => {
 		updateCardInfo();
 	}
 
-	const giftCardSwiper = new Swiper(".gift-card-slider-thumbs", {
+	const giftCardThumbSwiper = new Swiper(".gift-card-slider-thumbs", {
 		spaceBetween: 5,
 		slidesPerView: 4,
 		freeMode: true,
 		watchSlidesProgress: true,
 	});
-	const giftCardThumbSwiper = new Swiper(".gift-card-slider", {
+	const giftCardSwiper = new Swiper(".gift-card-slider", {
 		spaceBetween: 10,
 		navigation: {
 			nextEl: ".gift-card-tumb-button-next",
 			prevEl: ".gift-card-tumb-button-prev",
 		},
 		thumbs: {
-			swiper: giftCardSwiper,
+			swiper: giftCardThumbSwiper,
 		},
 	});
 

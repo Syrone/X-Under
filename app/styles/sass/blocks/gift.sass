@@ -49,6 +49,24 @@
 		.gift-card-tumb-button-prev, .swiper-rtl .swiper-button-next
 			right: var(--swiper-navigation-sides-offset,40px)
 			left: auto
+
+		.swiper-slide-thumb-active
+			&::after
+				content: ''
+				position: absolute
+				inset: 0
+				background-color: var(--item-color-25)
+			&::before
+				content: ''
+				width: 1.5rem
+				height: 1.5rem
+				position: absolute
+				top: .5rem
+				right: .5rem
+				background-image: url(../images/dist/icons/check-light.svg)
+				background-position: center
+				background-size: cover
+				background-repeat: no-repeat
 		
 	&-accordion
 		.accordion
