@@ -1,0 +1,22 @@
+.hotoffer
+	.clock
+		--clock-fs: 5rem
+		--clock-w: calc( var(--clock-fs) / 1.4 )
+		--clock-h: calc( var(--clock-fs) * 1.25 )
+		--clock-radius: calc( var(--clock-fs) / 10 )
+		--clock-radius-t: calc( var(--clock-fs) / 10 ) calc( var(--clock-fs) / 10 ) 0 0
+		--clock-radius-b: 0 0 calc( var(--clock-fs) / 10 ) calc( var(--clock-fs) / 10 )
+		--clock-mi-colon: calc( var(--clock-fs) / 8 )
+		--clock-gap: calc( (var(--clock-fs) / 30) + .1px )
+		--clock-bg: var(--item-color)
+		--text-color: var(--text-color-light)
+		.flip-colon
+			padding-bottom: calc(var(--clock-fs)/3)
+	.container
+		padding-block: 5rem 3rem
+		color: var(--item-color)
+	&-text
+		max-width: 990px
+		margin-inline: auto
+		text-align: center
+		line-height: 1.25

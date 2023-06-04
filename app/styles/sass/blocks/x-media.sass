@@ -35,6 +35,7 @@
 
 	.tiny-little
 		font-size: calc( .25rem + .2vw )
+	.vertical-text
 		transform: rotate(180deg) translateX(calc( 7px - .1vw ))
 
 	.modal-addtobag, .modal-qview
@@ -87,6 +88,25 @@
 		right: -.5rem
 	.swiper-button-prev
 		left: -.5rem
+
+	#shippingAddressModal, #billingAddressModal
+		.modal-content
+			padding-block: 2rem 4rem
+			form
+				padding-inline: 0rem
+
+	#contactInfoModal
+		.modal-body
+			margin-bottom: 3rem
+
+	.custom-accordion
+		.accordion
+			--bs-accordion-btn-padding-y: 2rem
+			&-collapse-word
+				.accordion-button
+					font-size: calc(1.25rem + .9vw)
+					&::before
+						font-size: .85rem
 
 	.alert-info
 		.swiper-container
@@ -161,6 +181,12 @@
 		.accordion
 			--bs-accordion-btn-padding-y: 2rem
 
+	.hotoffer
+		.clock
+			--clock-fs: 3rem
+			.flip-colon
+				padding-bottom: calc(var(--clock-fs)/1)
+
 @include media-breakpoint-down(md)
 	:root
 		--clock-fs: calc(.1rem + 4vw)
@@ -179,6 +205,11 @@
 
 	.swiper-pagination-bullet
 		width: calc( 2.2rem + 2vw )
+
+	.custom-accordion
+		.accordion-collapse-word
+			.accordion-button::before
+				display: none
 
 	.alert-info
 		.swiper-container
@@ -312,6 +343,9 @@
 		.btn-close
 			width: 10px
 
+	.list-goup-list li
+		padding-left: .25rem
+
 	.welcome
 		&__item
 			&::after
@@ -431,3 +465,9 @@
 			left: 50%
 			transform: translateX(-50%)
 			top: -2rem
+
+	.hotoffer
+		.clock
+			--clock-fs: 2.5rem
+			.flip-colon
+				padding-bottom: calc(var(--clock-fs)*1.2)

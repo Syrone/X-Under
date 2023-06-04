@@ -1,8 +1,22 @@
 .account
 	&-info
-		padding-top: 4rem
-		padding-bottom: 3rem
+		padding-block: 4rem 6rem
 		border-bottom: 1px solid var(--table-body)
+		.icon-bag, .icon-favorite, .icon-order
+			width: auto
+			height: 5rem
+			margin-bottom: 1rem
+			cursor: pointer
+			svg
+				fill: currentColor
+		.btn-arrow
+			--text-color: var(--item-color)
+			&:hover
+				color: var(--accent)
+				svg
+					transition: fill var(--trt-1), transform var(--trt-1)
+					fill: var(--accent)
+
 	&-table
 		background: var(--table-body)
 		border-color: var(--text-color-light)
@@ -50,3 +64,21 @@
 			top: 0
 			height: 100%
 			background-color: var(--body-color)
+
+	&-signup
+		color: var(--item-color)
+		.form-check-lg
+			padding-left: 2.5rem
+			white-space: normal
+			.form-check-input
+				margin-left: -2.5rem
+			.form-check-label
+				font-size: var(--font-size)
+				white-space: normal
+		.btn-link
+			--item-color: var(--text-color)
+			&:focus-visible
+				--bs-btn-color: var(--text-color-light)
+				--bs-btn-focus-box-shadow: none
+		.tiny-little
+			font-size: .5rem

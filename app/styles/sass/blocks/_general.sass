@@ -4,7 +4,9 @@ body, .modal
 	padding-right: 0!important
 
 .wrapper
-	margin-top: 3.75rem
+	position: relative
+	&.bg-white
+		padding-top: 3rem
 
 .section
 	padding-top: 6.25rem
@@ -122,6 +124,47 @@ body, .modal
 			stroke: var(--accent)
 			transform: translateX(.25rem)
 
+.btn.btn-facebook
+	background-color: var(--body-facebook)
+	color: white
+	&:hover
+		background-color: var(--body-facebook)
+		opacity: .75
+	&:focus, &:active, .active
+		background-color: var(--body-facebook)
+		color: white
+		opacity: .5
+		transition: none
+
+.btn.btn-google
+	background-color: var(--body-google)
+	color: white
+	&:hover
+		background-color: var(--body-google)
+		opacity: .75
+	&:focus, &:active, .active
+		background-color: var(--body-google)
+		color: white
+		opacity: .5
+		transition: none
+
+.btn.btn-apple
+	color: var(--text-applepay)
+	background-color: var(--body-applepay)
+	&:focus
+		background-color: var(--body-applepay)
+	&:hover
+		color: var(--text-applepay)
+		background-color: var(--body-applepay)
+		opacity: .75
+	&:active, .active
+		color: var(--text-applepay)
+		background-color: var(--body-applepay)
+		opacity: 0.5
+		transition: none
+	.icon-apple
+		margin-top: -.25rem
+
 .btn.btn-applepay
 	color: var(--text-applepay)
 	background-color: var(--body-applepay)
@@ -183,14 +226,14 @@ body, .modal
 		opacity: 0.5
 		transition: none
 
-.btn-applepay, .btn-paypal, .btn-amazonpay, .btn-afterpay, .btn-klarma
+.btn-applepay, .btn-apple, .btn-paypal, .btn-amazonpay, .btn-afterpay, .btn-klarma, .btn-facebook, .btn-google
 	display: flex
 	align-items: center
 	justify-content: center
 	font-size: 1.25rem
 	font-weight: 300
 	gap: .5rem
-	height: 3rem
+	min-height: 3rem
 	border: none
 	opacity: 1
 	transition: opacity var(--trt-1)
@@ -370,6 +413,10 @@ body, .modal
 		width: 4rem
 		svg
 			fill: var(--item-color)
+	&-apple
+		width: 1.25rem
+		svg
+			fill: currentColor
 
 .svg-img
 	display: inline-block
@@ -524,6 +571,22 @@ textarea.form-control
 			&::placeholder
 				color: white
 
+.form-floating
+	.form-control-dark
+		&:focus::placeholder
+			color: var(--transparent)
+	&>.form-control
+		height: 3rem
+		&:focus
+			&~label
+				transform: scale(.85) translateY(-0.6rem) translateX(0.15rem)
+	label
+		padding-block: .6rem
+
+	.form-select
+		padding-top: 1.3rem
+		height: 3rem
+
 //END NEW CLASS ITEM
 
 .popover
@@ -663,11 +726,72 @@ textarea.form-control
 	--bs-accordion-btn-icon-width: 0.85rem
 	--bs-accordion-border-width: 0
 
+.custom-accordion
+	.accordion
+		--bs-accordion-color: var(--item-color)
+		--bs-accordion-bg: var(--transparent)
+		--bs-accordion-border-color: var(--transparent)
+		--bs-accordion-border-width: 0
+		--bs-accordion-btn-color: var(--item-color)
+		--bs-accordion-btn-bg: var(--transparent)
+		--bs-accordion-btn-focus-border-color: var(--item-color)
+		--bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem var(--transparent)
+		--bs-accordion-active-color: var(--item-color)
+		--bs-accordion-active-bg: var(--transparent)
+		--bs-accordion-btn-icon-width: 1.25rem
+		--bs-accordion-border-radius: 0
+		--bs-accordion-inner-border-radius: 0
+		--bs-accordion-btn-padding-y: 2.75rem
+		&-item
+			border-bottom: 1px solid var(--table-body)
+			&:first-child
+				border-top: 1px solid var(--table-body)
+		&-collapse-word
+			.accordion-button
+				font-size: 1.75rem
+				&::before
+					content: 'Hide'
+					font-size: 1rem
+					text-transform: capitalize
+					position: absolute
+					top: 49%
+					transform: translate(0, -50%)
+					right: 1.8rem
+					opacity: 1
+					transition: opacity var(--trt-1), transform var(--trt-1)
+				&.collapsed::before
+					transform: translate(1.8rem, -50%)
+					opacity: 0
+
 .list-group
 	--bs-list-group-color: var(--text-color-light)
 	--bs-list-group-action-hover-color: var(--text-color)
 	--bs-list-group-action-active-color: var(--item-color-light)
 	--bs-list-group-item-padding-x: 0
+
+.list-goup-withoutlist
+	--bs-list-group-color: var(--item-color)
+	--bs-list-group-border-color: var(--transparent)
+	--bs-list-group-border-width: 0
+	--bs-list-group-border-radius: 0
+	--bs-list-group-item-padding-x: 0
+	--bs-list-group-item-padding-y: 0
+	--bs-list-group-action-color: var(--text-color)
+	--bs-list-group-action-hover-color: var(--text-color)
+	--bs-list-group-action-hover-bg: var(--item-color)
+	--bs-list-group-action-active-color: var(--body-color)
+	--bs-list-group-action-active-bg: #fff
+	--bs-list-group-disabled-color: var(--text-color-light)
+	--bs-list-group-active-bg: var(--acent)
+	--bs-list-group-active-border-color: var(--acent)
+	line-height: 1.2
+
+.list-goup-list
+	padding-left: 1.1rem
+	li
+		padding-left: 1.4rem
+		&::marker
+			font-size: 1rem
 
 .breadcrumb
 	--bs-breadcrumb-bg: var(--transparent)
@@ -1012,3 +1136,38 @@ textarea.form-control
 			--text-color-light: var(--text-color)
 		.form-check-label
 			padding-left: .3rem
+
+#shippingAddressModal, #billingAddressModal
+	.modal-content
+		padding-block: 3rem 6rem
+		form
+			padding-inline: 4rem
+
+	.modal-header
+		padding-inline: 2rem
+
+	.modal-body, .modal-footer
+		display: block
+
+	.modal-footer
+		padding: 0
+		&>*
+			margin: 0
+
+#contactInfoModal, #contactInfoModal2, #billingContactModal, #paymentMethodModal, #paymentMethodModal2, #promocodeModal
+	.modal-content
+		padding-block: 3rem 6rem
+
+	.modal-header
+		padding-inline: 2rem
+
+	.modal-body, .modal-footer
+		display: block
+
+	.modal-body
+		margin-bottom: 6rem
+
+	.modal-footer
+		padding: 0
+		&>*
+			margin: 0

@@ -21,6 +21,11 @@
 			padding-block: .5rem
 			top: 50%
 			transform: translateY(-50%)
+	.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction
+		bottom: -1rem
+	
+.alert-pagination
+	z-index: 0
 
 .alert-button-next, .alert-button-prev
 	padding: 1rem
@@ -34,6 +39,3 @@
 	left: var(--swiper-navigation-sides-offset,-10px)
 .alert-button-next, .swiper-rtl .swiper-button-prev
 	right: var(--swiper-navigation-sides-offset,-10px)
-
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction
-	bottom: -1rem

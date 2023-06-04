@@ -1,0 +1,449 @@
+<div class="modal fade" id="shippingAddressModal" tabindex="-1" aria-labelledby="shippingAddressModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content justify-content-center">
+			<div class="modal-header">
+				<button type="button" class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5"
+					data-bs-dismiss="modal" aria-label="Close">
+					<span class="d-xl-inline-block d-none">Close</span>
+				</button>
+			</div>
+			<div class="container">
+				<form action="">
+					<div class="modal-body">
+						<h2 class="modal-title mb-4 text-center text-primary text-uppercase" id="shippingAddressModalLabel">
+							Edit your shipping address</h2>
+						<div class="row mb-4">
+							<div class="col-lg-6 col-12 mb-lg-0 mb-3">
+								<div class="form-floating mb-3">
+									<input type="text" class="form-control form-control-dark" id="floatingShippingFirstName"
+										placeholder="First name" required>
+									<label for="floatingShippingFirstName">First name</label>
+								</div>
+								<div class="form-floating mb-3">
+									<input type="text" class="form-control form-control-dark" id="floatingShippingLastName"
+										placeholder="Last name" required>
+									<label for="floatingShippingLastName">Last name</label>
+								</div>
+								<div class="form-floating mb-3">
+									<input type="text" class="form-control form-control-dark" id="floatingShippingAddress"
+										placeholder="Address" required>
+									<label for="floatingShippingAddress">Address</label>
+								</div>
+								<div class="form-floating">
+									<input type="text" class="form-control form-control-dark" id="floatingShippingAptSuite"
+										placeholder="Apt. Suite" required>
+									<label for="floatingShippingAptSuite">Apt. Suite</label>
+								</div>
+							</div>
+
+							<div class="col-lg-6 col-12">
+								<div class="form-floating mb-3">
+									<input type="text" class="form-control form-control-dark" id="floatingShippingCity"
+										placeholder="City" required>
+									<label for="floatingShippingCity">City</label>
+								</div>
+								<div class="row g-3 mb-3">
+									<div class="col-md-6">
+										<div class="form-floating">
+											<input type="text" class="form-control form-control-dark" id="floatingShippingZipCode"
+												placeholder="Zip code" required>
+											<label for="floatingShippingZipCode">Zip code</label>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-floating">
+											<select class="form-select form-select-dark" id="floatingSelectShippingState"
+												aria-label="Choose your State" required>
+												<option value="" selected>NY</option>
+												<option value="1">One</option>
+												<option value="2">Two</option>
+												<option value="3">Three</option>
+											</select>
+											<label for="floatingSelectShippingState">State</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-floating mb-3">
+									<select class="form-select form-select-dark" id="floatingSelectShippingCountry"
+										aria-label="Choose your Country" required>
+										<option value="" selected>United States</option>
+										<option value="1">One</option>
+										<option value="2">Two</option>
+										<option value="3">Three</option>
+									</select>
+									<label for="floatingSelectShippingCountry">Country</label>
+								</div>
+								<div class="form-floating">
+									<input type="tel" class="form-control form-control-dark" id="floatingAddress"
+										placeholder="Phone number" required>
+									<label for="floatingShippingPhoneNumber">Phone number</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="row gy-sm-0 gy-3">
+							<div class="col-sm-6">
+								<div>
+									<button type="submit" class="btn btn-accent btn-lg w-100 text-uppercase">Save</button>
+								</div>
+							</div>
+
+							<div class="col-sm-6">
+								<div>
+									<button type="button" class="btn btn-outline-secondary btn-lg w-100 text-uppercase"
+										data-bs-dismiss="modal">Cancel</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="billingAddressModal" tabindex="-1" aria-labelledby="billingAddressModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content justify-content-center">
+			<div class="modal-header">
+				<button type="button" class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5"
+					data-bs-dismiss="modal" aria-label="Close">
+					<span class="d-xl-inline-block d-none">Close</span>
+				</button>
+			</div>
+			<div class="container">
+				<form action="">
+					<div class="modal-body">
+						<h2 class="modal-title mb-4 text-center text-primary text-uppercase" id="billingAddressModalLabel">
+							Edit your billing address</h2>
+						<div class="row mb-4">
+							<div class="col-lg-6 col-12 mb-lg-0 mb-3">
+								<div class="form-floating mb-3">
+									<input type="text" class="form-control form-control-dark" id="floatingBillingAddress"
+										placeholder="Address" required>
+									<label for="floatingBillingAddress">Address</label>
+								</div>
+								<div class="form-floating mb-3">
+									<input type="text" class="form-control form-control-dark" id="floatingBillingAptSuite"
+										placeholder="Apt. Suite" required>
+									<label for="floatingBillingAptSuite">Apt. Suite</label>
+								</div>
+								<div class="form-floating">
+									<input type="text" class="form-control form-control-dark" id="floatingBillingCity"
+										placeholder="City" required>
+									<label for="floatingBillingCity">City</label>
+								</div>
+							</div>
+
+							<div class="col-lg-6 col-12">
+								<div class="row g-3 mb-3">
+									<div class="col-md-6">
+										<div class="form-floating">
+											<input type="text" class="form-control form-control-dark" id="floatingBillingZipCode"
+												placeholder="Zip code" required>
+											<label for="floatingBillingZipCode">Zip code</label>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-floating">
+											<select class="form-select form-select-dark" id="floatingSelectState"
+												aria-label="Choose your State" required>
+												<option value="" selected>NY</option>
+												<option value="1">One</option>
+												<option value="2">Two</option>
+												<option value="3">Three</option>
+											</select>
+											<label for="floatingSelectState">State</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-floating mb-3">
+									<select class="form-select form-select-dark" id="floatingSelectCountry"
+										aria-label="Choose your Country" required>
+										<option value="" selected>United States</option>
+										<option value="1">One</option>
+										<option value="2">Two</option>
+										<option value="3">Three</option>
+									</select>
+									<label for="floatingSelectCountry">Country</label>
+								</div>
+								<div class="form-floating">
+									<input type="tel" class="form-control form-control-dark" id="floatingBillingPhoneNumber"
+										placeholder="Phone number" required>
+									<label for="floatingBillingPhoneNumber">Phone number</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="row gy-sm-0 gy-3">
+							<div class="col-sm-6">
+								<div>
+									<button type="submit" class="btn btn-accent btn-lg w-100 text-uppercase">Save</button>
+								</div>
+							</div>
+
+							<div class="col-sm-6">
+								<div>
+									<button type="button" class="btn btn-outline-secondary btn-lg w-100 text-uppercase"
+										data-bs-dismiss="modal">Cancel</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="contactInfoModal2" tabindex="-1" aria-labelledby="contactInfoModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content justify-content-center">
+			<div class="modal-header">
+				<button type="button" class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5"
+					data-bs-dismiss="modal" aria-label="Close">
+					<span class="d-xl-inline-block d-none">Close</span>
+				</button>
+			</div>
+			<div class="container">
+				<form action="">
+					<div class="modal-body">
+						<h2 class="modal-title mb-4 text-center text-primary text-uppercase" id="contactInfoModalLabel">
+							Edit your contact information
+						</h2>
+						<div class="row justify-content-center">
+							<div class="col-lg-6 col-12">
+								<div class="form-floating mb-3">
+									<input type="email" class="form-control form-control-dark" id="floatingContactEmail"
+										placeholder="Email" required>
+									<label for="floatingContactEmail">Email</label>
+								</div>
+								<div class="form-floating mb-3">
+									<input type="tel" class="form-control form-control-dark" id="floatingContactPhoneNumber"
+										placeholder="Phone number" required>
+									<label for="floatingContactPhoneNumber">Phone number</label>
+								</div>
+								<div class="form-floating">
+									<input type="text" class="form-control form-control-dark" id="floatingContactLink"
+										placeholder="Link" required>
+									<label for="floatingContactLink">Link</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="row gy-sm-0 gy-3 justify-content-center">
+							<div class="col-lg-6">
+								<div class="row">
+									<div class="col-sm-6">
+
+										<button type="submit" class="btn btn-accent btn-lg w-100 text-uppercase">Save</button>
+
+									</div>
+
+									<div class="col-sm-6">
+
+										<button type="button" class="btn btn-outline-secondary btn-lg w-100 text-uppercase"
+											data-bs-dismiss="modal">Cancel</button>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="billingContactModal" tabindex="-1" aria-labelledby="billingContactModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content justify-content-center">
+			<div class="modal-header">
+				<button type="button" class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5"
+					data-bs-dismiss="modal" aria-label="Close">
+					<span class="d-xl-inline-block d-none">Close</span>
+				</button>
+			</div>
+			<div class="container">
+				<form action="">
+					<div class="modal-body">
+						<h2 class="modal-title mb-4 text-center text-primary text-uppercase" id="billingContactModalLabel">
+							Edit your billing contact
+						</h2>
+						<div class="row justify-content-center">
+							<div class="col-lg-6 col-12">
+								<div class="form-floating mb-3">
+									<input type="text" class="form-control form-control-dark" id="floatingBillingFirstName"
+										placeholder="First name" required>
+									<label for="floatingBillingFirstName">First name</label>
+								</div>
+								<div class="form-floating mb-3">
+									<input type="text" class="form-control form-control-dark" id="floatingBillingLastName"
+										placeholder="Last name" required>
+									<label for="floatingBillingLastName">Last name</label>
+								</div>
+								<div class="form-floating mb-3">
+									<input type="email" class="form-control form-control-dark" id="floatingBillingEmail"
+										placeholder="Email" required>
+									<label for="floatingBillingEmail">Email</label>
+								</div>
+								<div class="form-floating">
+									<input type="tel" class="form-control form-control-dark" id="floatingBillingPhoneNumber"
+										placeholder="Phone number" required>
+									<label for="floatingBillingPhoneNumber">Phone number</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="row gy-sm-0 gy-3 justify-content-center">
+							<div class="col-lg-6">
+								<div class="row">
+									<div class="col-sm-6">
+
+										<button type="submit" class="btn btn-accent btn-lg w-100 text-uppercase">Save</button>
+
+									</div>
+
+									<div class="col-sm-6">
+
+										<button type="button" class="btn btn-outline-secondary btn-lg w-100 text-uppercase"
+											data-bs-dismiss="modal">Cancel</button>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="paymentMethodModal2" tabindex="-1" aria-labelledby="paymentMethodModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content justify-content-center">
+			<div class="modal-header">
+				<button type="button" class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5"
+					data-bs-dismiss="modal" aria-label="Close">
+					<span class="d-xl-inline-block d-none">Close</span>
+				</button>
+			</div>
+			<div class="container">
+				<form action="">
+					<div class="modal-body">
+						<h2 class="modal-title mb-4 text-center text-primary text-uppercase" id="paymentMethodModalLabel">
+							Edit your payment method
+						</h2>
+						<div class="row justify-content-center">
+							<div class="col-lg-6 col-12">
+								<div class="form-floating mb-3">
+									<select class="form-select form-select-dark" id="floatingSelectBank"
+										aria-label="Choose your bank" required>
+										<option value="" selected>Bank of America</option>
+										<option value="1">One</option>
+										<option value="2">Two</option>
+										<option value="3">Three</option>
+									</select>
+									<label for="floatingSelectBank">Choose your bank</label>
+								</div>
+								<div class="form-floating mb-3">
+									<input type="number" class="form-control form-control-dark" id="floatingRoutingNumber"
+										placeholder="Routing number" required>
+									<label for="floatingRoutingNumber">Routing number</label>
+								</div>
+								<div class="form-floating">
+									<input type="text" class="form-control form-control-dark" id="floatingAccountNumber"
+										placeholder="Account number" required>
+									<label for="floatingAccountNumber">Account number</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="row gy-sm-0 gy-3 justify-content-center">
+							<div class="col-lg-6">
+								<div class="row">
+									<div class="col-sm-6">
+
+										<button type="submit" class="btn btn-accent btn-lg w-100 text-uppercase">Save</button>
+
+									</div>
+
+									<div class="col-sm-6">
+
+										<button type="button" class="btn btn-outline-secondary btn-lg w-100 text-uppercase"
+											data-bs-dismiss="modal">Cancel</button>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="promocodeModal" tabindex="-1" aria-labelledby="promocodeModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content justify-content-center">
+			<div class="modal-header">
+				<button type="button" class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5"
+					data-bs-dismiss="modal" aria-label="Close">
+					<span class="d-xl-inline-block d-none">Close</span>
+				</button>
+			</div>
+			<div class="container">
+				<form action="">
+					<div class="modal-body">
+						<h2 class="modal-title mb-4 text-center text-primary text-uppercase" id="promocodeModalLabel">
+							Edit your promo code
+						</h2>
+						<div class="row justify-content-center">
+							<div class="col-lg-6 col-12">
+								<div class="form-floating">
+									<input type="number" class="form-control form-control-dark" id="floatingPromocode"
+										placeholder="Promo code" required>
+									<label for="floatingPromocode">Promo code</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="row gy-sm-0 gy-3 justify-content-center">
+							<div class="col-lg-6">
+								<div class="row">
+									<div class="col-sm-6">
+
+										<button type="submit" class="btn btn-accent btn-lg w-100 text-uppercase">Save</button>
+
+									</div>
+
+									<div class="col-sm-6">
+
+										<button type="button" class="btn btn-outline-secondary btn-lg w-100 text-uppercase"
+											data-bs-dismiss="modal">Cancel</button>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

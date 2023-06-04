@@ -213,6 +213,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const alertSwiper = new Swiper('.alert-swiper', {
 
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+
 		spaceBetween: 50,
 
 		pagination: {
@@ -229,6 +234,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	const heroSwiper = new Swiper('.hero-swiper', {
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
 
 		pagination: {
 			el: '.hero-swiper-pagination',
@@ -305,6 +314,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		spaceBetween: 16,
 
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+
 		navigation: {
 			nextEl: '.banner-button-next',
 			prevEl: '.banner-button-prev',
@@ -358,54 +372,66 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	//CLOCK
 	if (document.querySelectorAll(".clock")) {
-		const els = {
-			s: initElements('s'),
-			m: initElements('m')
-		}
 
-		function initElements(type) {
+		function initElements(type, prefix) {
 			const els = [{}, {}]
 
-			if (!['s', 'm'].includes(type)) return els
+			if (!['s', 'm', 'h', 'd'].includes(type)) return els
 
-			const target = document.querySelector(`.flip-clock-${type}`)
+			const target = document.querySelector(`.${prefix}flip-clock-${type}`)
 
 			if (!target) return els
 
 			let el
 
 			el = els[0]
-			el.digit = target.querySelector('.digit-left')
-			el.flip = el.digit.querySelector('.flip')
-			el.flipFaces = el.flip.querySelectorAll('.flip-face')
+			el.digit = target.querySelector(`.${prefix}digit-left`)
+			el.flip = el.digit.querySelector(`.${prefix}flip`)
+			el.flipFaces = el.flip.querySelectorAll(`.${prefix}flip-face`)
 			el.flipFaceA = el.flipFaces[0]
 			el.flipFaceB = el.flipFaces[1]
 
 			el = els[1]
-			el.digit = target.querySelector('.digit-right')
-			el.flip = el.digit.querySelector('.flip')
-			el.flipFaces = el.flip.querySelectorAll('.flip-face')
+			el.digit = target.querySelector(`.${prefix}digit-right`)
+			el.flip = el.digit.querySelector(`.${prefix}flip`)
+			el.flipFaces = el.flip.querySelectorAll(`.${prefix}flip-face`)
 			el.flipFaceA = el.flipFaces[0]
 			el.flipFaceB = el.flipFaces[1]
 
 			return els
 		}
 
-		function runClock() {
-			const endTime = new Date("June 10, 2023 23:59:59").getTime(),
-				nowTime = new Date().getTime(),
+		function runClock(prefix, endTime) {
+			const nowTime = new Date().getTime(),
 				distanceTime = endTime - nowTime,
 				now = {
+					d: Math.floor(distanceTime / (1000 * 60 * 60 * 24)),
+					h: Math.floor((distanceTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
 					m: Math.floor((distanceTime % (1000 * 60 * 60)) / (1000 * 60)),
-					s: Math.floor((distanceTime % (1000 * 60)) / 1000)
+					s: Math.floor((distanceTime % (1000 * 60)) / 1000),
 				}
 
+			now.d = now.d < 10 ? `0${now.d}` : `${now.d}`
+			now.h = now.h < 10 ? `0${now.h}` : `${now.h}`
 			now.m = now.m < 10 ? `0${now.m}` : `${now.m}`
 			now.s = now.s < 10 ? `0${now.s}` : `${now.s}`
+			now.d0 = now.d[1]
+			now.d1 = now.d[0]
+			now.h0 = now.h[1]
+			now.h1 = now.h[0]
 			now.m0 = now.m[1]
 			now.m1 = now.m[0]
 			now.s0 = now.s[1]
 			now.s1 = now.s[0]
+
+			// console.log(`${now.d} days, ${now.h} hours, ${now.m} minutes, ${now.s} seconds`);
+
+			const els = {
+				s: initElements('s', prefix),
+				m: initElements('m', prefix),
+				h: initElements('h', prefix),
+				d: initElements('d', prefix),
+			}
 
 			for (const t of Object.keys(els)) {
 				for (const i of ['0', '1']) {
@@ -413,7 +439,9 @@ document.addEventListener('DOMContentLoaded', () => {
 					let next = curr - 1
 
 					if (t === 'h' && i === '0' && next < 0) {
-						next = 5
+						next = 5;
+					} else if (t === 'h' && i === '1' && next < 0) {
+						next = 9;
 					} else if (t === 'm' && i === '0' && next < 0) {
 						next = 9
 					} else if (t === 'm' && i === '1' && next < 0) {
@@ -457,9 +485,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 								const flipClone = el.flip.cloneNode(true)
 								flipClone.classList.remove('flipped')
-								el.digit.replaceChild(flipClone, el.flip)
+								if (el.digit.contains(el.flip)) {
+									el.digit.replaceChild(flipClone, el.flip);
+								}
 								el.flip = flipClone
-								el.flipFaces = el.flip.querySelectorAll('.flip-face')
+								el.flipFaces = el.flip.querySelectorAll(`.${prefix}flip-face`)
 								el.flipFaceA = el.flipFaces[0]
 								el.flipFaceB = el.flipFaces[1]
 
@@ -474,9 +504,12 @@ document.addEventListener('DOMContentLoaded', () => {
 				}
 			}
 
-			setTimeout(runClock, 1000)
+			setTimeout(() => runClock(prefix, endTime), 1000);
 		}
-		runClock()
+
+		runClock('timer3-', new Date("June 7, 2023 23:59:59").getTime());
+		runClock('timer1-', new Date("June 9, 2023 23:59:59").getTime());
+		runClock('timer2-', new Date("June 10, 2023 23:59:59").getTime());
 	}
 
 	//COOKIES
@@ -721,8 +754,58 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 
+	const returnFormAdd = document.getElementById('addMoreItem');
+	const returnForm = document.getElementById('returnForm');
 
-	//DCЁ ЧТО НИЖЕ МОЖНО УДАЛИТЬ. ЖЕЛАТЕЛЬНО ОЗНАКОМИТЬСЯ.
+	if (returnForm && returnFormAdd) {
+		returnFormAdd.addEventListener('click', () => {
+			const newInputs = [
+				{ type: 'email', placeholder: 'Order number *', ariaLabel: 'Enter your Order number', required: true },
+				{ type: 'email', placeholder: 'Item SKU *', ariaLabel: 'Enter your Item SKU', required: true }
+			];
+
+			newInputs.forEach(({ type, placeholder, ariaLabel, required }) => {
+				const input = document.createElement('input');
+				input.classList.add('form-control', 'form-control-lg', 'form-control-light', 'text-center', 'mb-3');
+				input.type = type;
+				input.placeholder = placeholder;
+				input.setAttribute('aria-label', ariaLabel);
+				input.required = required;
+				returnForm.insertBefore(input, returnFormAdd);
+			});
+		});
+	}
+
+	//Changing the type of input
+	if (document.getElementById('inputDate-Text')) {
+		document.getElementById('inputDate-Text').addEventListener('focus', function () {
+			this.type = 'date';
+		});
+
+		document.getElementById('inputDate-Text').addEventListener('blur', function () {
+			this.type = 'text';
+		});
+	}
+
+	//Pressing the button shows the password
+	if (document.querySelector('.account-signup')) {
+		const passwordInput = document.getElementById('inputPassword');
+		const showPasswordButton = document.getElementById('showPassword');
+
+		showPasswordButton.addEventListener('mousedown', () => {
+			passwordInput.type = 'text';
+		});
+
+		showPasswordButton.addEventListener('mouseup', () => {
+			passwordInput.type = 'password';
+		});
+	}
+
+	// const shippingAddressModal = document.getElementById('paymentMethodModal');
+	// const modal = new bootstrap.Modal(shippingAddressModal);
+	// modal.show();
+
+	//ВCЁ ЧТО НИЖЕ МОЖНО УДАЛИТЬ. ЖЕЛАТЕЛЬНО ОЗНАКОМИТЬСЯ.
 	//Этот код можно будет удалить. Сделан был для демонстрации на странице checkout.html.
 	const bagCtas = document.querySelectorAll('.bag-cta');
 	const orderButtons = document.querySelectorAll('.btn-bag-order');

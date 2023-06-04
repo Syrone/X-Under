@@ -1,0 +1,127 @@
+<!--#set var="title" value="X-Under" -->
+<!--#include virtual="/parts/head.html" -->
+<!--#include virtual="/parts/header.html" -->
+
+<main class="wrapper bg-white">
+	<nav class="header-bottom">
+		<div class="container d-flex justify-content-between align-items-center">
+			<h1 class="fs-5 mb-0 text-primary text-uppercase">
+				Return
+			</h1>
+
+			<div class="d-flex align-items-center gap-2">
+				<button class="btn btn-back p-1 d-none d-sm-block">Come Back</button>
+				<button class="btn btn-custom btn-browser p-1 text-white d-flex align-items-center collapsed" type="button"
+					data-bs-toggle="collapse" data-bs-target="#collapseBrowserAll" aria-expanded="false"
+					aria-controls="collapseBrowserAll">
+					Browser all
+					<span class="icon icon-arrow-down">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" xml:space="preserve">
+							<path fill="none" d="m20.5 11.5-6 6-6-6" />
+						</svg>
+					</span>
+				</button>
+			</div>
+		</div>
+		<div class="collapse" id="collapseBrowserAll">
+			<div class="container">
+				<div class="py-3 border border-top-1 border-start-0 border-end-0 border-bottom-0">
+					<div class="row">
+						<div class="col-lg-2 col-sm-4 col-6 text-center text-sm-start">
+							<div class="list-group text-uppercase">
+								<a href="#" class="list-group-item list-group-item-action p-0 border-0">Underwaer</a>
+								<a href="#" class="list-group-item list-group-item-action p-0 border-0">Swemmwaer</a>
+								<a href="#" class="list-group-item list-group-item-action p-0 border-0">Accessories</a>
+								<a href="#" class="list-group-item list-group-item-action p-0 border-0">Bag</a>
+							</div>
+						</div>
+						<div class="col-lg-2 col-sm-4 col-6 text-center text-sm-start">
+							<div class="list-group text-uppercase">
+								<a href="#" class="list-group-item list-group-item-action p-0 border-0">Multipacks</a>
+								<a href="#" class="list-group-item list-group-item-action p-0 border-0">X-Club</a>
+								<a href="#" class="list-group-item list-group-item-action p-0 border-0">E-Gift Card</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<section class="return min-vh-100">
+		<div class="container">
+			<div class="row g-0 justify-content-center">
+				<div class="col-xxl-3 col-xl-5 col-lg-6 col-md-7 col-sm-8 col-12">
+					<div class="d-flex justify-content-center">
+						<span class="icon icon-review mb-3">
+							<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+								style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd"
+								viewBox="0 0 403.49 329.38">
+								<path class="fil0"
+									d="M43.22 0C19.39 0 0 19.5 0 43.46v175.2c0 23.97 19.39 43.47 43.22 43.47h200.45c2.1 0 4.13.74 5.74 2.11l76.84 65.14v-58.29c0-4.95 3.99-8.96 8.91-8.96h25.11c23.83 0 43.22-19.5 43.22-43.46V43.46C403.49 19.5 384.1 0 360.27 0H43.22zm302.07 82.44H58.2c-4.92 0-8.91-4.02-8.91-8.96 0-4.95 3.99-8.97 8.91-8.97h287.09c4.92 0 8.91 4.02 8.91 8.97 0 4.94-3.99 8.96-8.91 8.96zm0 114.77H58.2c-4.92 0-8.91-4.01-8.91-8.96 0-4.95 3.99-8.96 8.91-8.96h287.09c4.92 0 8.91 4.01 8.91 8.96 0 4.95-3.99 8.96-8.91 8.96zm0-57.38H58.2c-4.92 0-8.91-4.02-8.91-8.97 0-4.95 3.99-8.96 8.91-8.96h287.09c4.92 0 8.91 4.01 8.91 8.96 0 4.95-3.99 8.97-8.91 8.97z" />
+							</svg>
+						</span>
+					</div>
+					<h2 class="h4 text-center text-item mb-4">
+						<span class="d-block text-uppercase">
+							Return
+						</span>
+						We apologize
+
+					</h2>
+
+					<form action="#" id="returnForm" class="review-form mt-4">
+						<input class="form-control form-control-lg form-control-light text-center mb-3" type="email"
+							placeholder="Email address *" aria-label="Enter your Email address" required>
+
+						<input class="form-control form-control-lg form-control-light text-center mb-3" type="email"
+							placeholder="Order number *" aria-label="Enter your Order number" required>
+
+						<input class="form-control form-control-lg form-control-light text-center mb-3" type="email"
+							placeholder="Item SKU *" aria-label="Enter your Item SKU" required>
+
+						<button type="button" id="addMoreItem" class="btn btn-link d-block text-center mx-auto mb-4">Add more
+							item</button>
+
+						<button type="submit" class="btn btn-dark btn-lg w-100 text-uppercase">Send</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<!--#include virtual="/parts/gift.html" -->
+
+	<!--#include virtual="/parts/notification.html" -->
+
+</main>
+
+<div class="d-none cookie-alert fixed-bottom bg-dark pt-5 pb-4">
+	<div class="container">
+		<p class="mb-4">
+			We use cookies to ensure that you get the best experience on our website, although the cookies we
+			use do not contain personally identifiable information. By continuing on this website or by clicking "I Accept
+			Cookies", you agree to the storing of cookies on your device. You can learn more about our privacy policy, how
+			we use cookies, or how to disable cookies by clicking on the "Learn More" link at the end of this statement.
+		</p>
+		<div class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3">
+			<a href="#" class="btn btn-lg btn-outline-secondary text-uppercase w-100">
+				Learn More
+			</a>
+			<button class="btn btn-lg btn-outline-secondary text-uppercase w-100 accept-cookies">I Accept Cookies</button>
+		</div>
+	</div>
+</div>
+
+<!--#include virtual="/parts/modal-search.html" -->
+
+<!--#include virtual="/parts/modal-hear-xunder.html" -->
+
+<button class="btn btn-scroll-top bg-black position-fixed visually-hidden">
+	<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+		<path d="m16 11.5 9 9m-18 0 9-9" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px" />
+	</svg>
+</button>
+
+<!--#include virtual="/parts/footer.html" -->

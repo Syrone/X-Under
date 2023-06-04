@@ -24,7 +24,7 @@
 						</div>
 					</div>
 
-					<a href="#" class="btn btn-arrow">
+					<a href="./affiliate-account.html" class="btn btn-arrow">
 						Sign out
 						<span class="icon icon-arrow-right">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.91 122.88"
@@ -220,7 +220,7 @@
 								XXX-XXXX</div>
 						</div>
 						<div class="mt-auto">
-							<button type="button"
+							<button type="button" data-bs-toggle="modal" data-bs-target="#shippingAddressModal"
 								class="btn btn-custom fs-5 p-0 text-item text-decoration-underline">Edit</button>
 						</div>
 					</div>
@@ -240,7 +240,7 @@
 							</div>
 						</div>
 						<div class="mt-auto">
-							<button type="button"
+							<button type="button" data-bs-toggle="modal" data-bs-target="#contactInfoModal2"
 								class="btn btn-custom fs-5 p-0 text-item text-decoration-underline">Edit</button>
 						</div>
 					</div>
@@ -254,7 +254,7 @@
 							<div class="lh-1 text-center text-sm-start">XXXXX</div>
 						</div>
 						<div class="mt-auto">
-							<button type="button"
+							<button type="button" data-bs-toggle="modal" data-bs-target="#promocodeModal"
 								class="btn btn-custom fs-5 p-0 text-item text-decoration-underline">Edit</button>
 						</div>
 					</div>
@@ -275,7 +275,7 @@
 							<div class="lh-1 text-center text-sm-start">(XXX) XXX-XXXX</div>
 						</div>
 						<div>
-							<button type="button"
+							<button type="button" data-bs-toggle="modal" data-bs-target="#billingAddressModal"
 								class="btn btn-custom fs-5 p-0 text-item text-decoration-underline">Edit</button>
 						</div>
 					</div>
@@ -291,7 +291,7 @@
 							<div class="lh-1 text-center text-sm-start">(XXX) XXX-XXXX</div>
 						</div>
 						<div>
-							<button type="button"
+							<button type="button" data-bs-toggle="modal" data-bs-target="#billingContactModal"
 								class="btn btn-custom fs-5 p-0 text-item text-decoration-underline">Edit</button>
 						</div>
 					</div>
@@ -313,7 +313,7 @@
 							</div>
 						</div>
 						<div>
-							<button type="button"
+							<button type="button" data-bs-toggle="modal" data-bs-target="#paymentMethodModal2"
 								class="btn btn-custom fs-5 p-0 text-item text-decoration-underline">Edit</button>
 						</div>
 					</div>
@@ -357,27 +357,9 @@
 	</div>
 </div>
 
-<div class="modal-search modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel"
-	aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-header justify-content-center">
-				<h2 class="modal-title h4 text-dark text-uppercase" id="searchModalLabel">Search Products</h2>
-			</div>
-			<div class="modal-body pt-1 pb-1">
-				<div class="position-relative">
-					<input class="form-control ps-5" placeholder="Enter product name">
-					<img src="./images/dist/icons/search.svg" width="16" loading="lazy" alt="Search"
-						class="icon-search position-absolute top-50 translate-middle">
-				</div>
-			</div>
-			<div class="modal-footer justify-content-center">
-				<a href="#" type="button" class="btn text-dark text-decoration-underline">Site Map</a>
-				<button type="button" class="btn text-dark text-decoration-underline" data-bs-dismiss="modal">Close</button>
-			</div>
-		</div>
-	</div>
-</div>
+<!--#include virtual="/parts/modal-search.html" -->
+
+<!--#include virtual="/parts/affiliate-account-modal.html" -->
 
 <!--#include virtual="/parts/modal-hear-xunder.html" -->
 
