@@ -77,8 +77,23 @@
 			left: 120px
 			bottom: -110px
 
-	.bag .step-2 .btn-custom
-		--bs-btn-padding-x: 0.45rem
+	.bag
+		.step-2
+			.btn-custom
+				--bs-btn-padding-x: 0.45rem
+
+	.card-bag
+		.card-bag-wrapper
+			max-width: 270px
+
+	.account-order
+		.progress
+			&-step-2, &-step-4
+				bottom: auto
+			&-step-2
+				top: .25rem
+			&-step-4
+				top: .25rem
 
 @include media-breakpoint-down(lg)
 	:root
@@ -173,6 +188,15 @@
 				width: 45% !important
 				.w-100
 					width: 100% !important
+
+	.card-bag
+		.btn-remove
+			margin-left: unset
+		.card-bag-wrapper
+			max-width: 320px
+
+	.favorite .card-bag .card-body .btn-dark
+		margin-left: unset
 
 	.affiliate-form
 		padding-top: 3rem
@@ -327,6 +351,15 @@
 		background-position: center
 		width: 1.5rem
 
+	.favorite .card-bag .card-body .btn-dark
+		max-width: 100%
+		
+	.card-bag
+		.card-bag-wrapper
+			max-width: 100%
+			flex-direction: column
+			align-items: center
+
 	.modal-addtobag
 		.frequently-card
 			width: 100%
@@ -465,6 +498,21 @@
 			left: 50%
 			transform: translateX(-50%)
 			top: -2rem
+
+	.account-order
+		.progress
+			&-step-1, &-step-2, &-step-3, &-step-4, &-step-5
+				font-size: calc( .75rem + 1vw )
+			&-step-1, &-step-3, &-step-5
+				bottom: .75rem
+			&-step-2, &-step-4
+				top: .75rem
+			&-step-2
+				left: 15%
+			&-step-3
+				left: 40%
+			&-step-4
+				right: 15%
 
 	.hotoffer
 		.clock

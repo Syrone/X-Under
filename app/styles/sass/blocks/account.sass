@@ -82,3 +82,52 @@
 				--bs-btn-focus-box-shadow: none
 		.tiny-little
 			font-size: .5rem
+
+	&-order
+		&-wrapper
+			padding-block: 4rem
+			border-bottom: 1px solid var(--table-body)
+		.btn-dark
+			--bs-btn-padding-y: 0.1rem
+			max-width: 180px
+		.progress
+			--bs-progress-height: 0.6rem
+			--bs-progress-bg: var(--text-color)
+			&-bar
+				border-radius: var(--bs-progress-border-radius)
+			&-step-1, &-step-2, &-step-3, &-step-4, &-step-5
+				bottom: .25rem
+				font-size: 1.25rem
+				color: var(--text-color)
+				transition: color var(--trt-1)
+				&.active
+					color: var(--accent)
+			&-step-1
+				left: 0
+			&-step-2
+				left: 25%
+			&-step-3
+				left: 45%
+			&-step-4
+				right: 30%
+			&-step-5
+				right: 0
+		.orders
+			.order-item
+				border-bottom: 1px solid var(--table-body)
+				padding-block: 1.5rem
+				&:first-child
+					padding-top: 0
+				&:last-child
+					padding-bottom: 0
+					border-bottom: none
+
+	&-history
+		.history-order
+			.img-thumbnail
+				padding: 0
+			.history-item
+				border-bottom: 1px solid var(--table-body)
+				padding-block: 1.5rem
+				.row + .row
+					margin-top: 1.5rem

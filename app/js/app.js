@@ -577,22 +577,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	productThumbsSlider.controller.control = productSlider;
 
 	//PRODUCT QUANTITY
-	const buttonDecrement = document.getElementById('button-decrement');
-	const buttonIncrement = document.getElementById('button-increment');
-	const productQuantity = document.getElementById('product-quantity');
+	const buttonDecrement = document.querySelectorAll('.button-decrement');
+	const buttonIncrement = document.querySelectorAll('.button-increment');
+	const productQuantity = document.querySelectorAll('.product-quantity');
 
 	if (buttonDecrement && buttonIncrement && productQuantity) {
-		buttonDecrement.addEventListener('click', () => {
-			let currentValue = parseInt(productQuantity.value);
-			if (currentValue > 1) {
-				productQuantity.value = currentValue - 1;
-			}
-		});
+		for (let i = 0; i < buttonDecrement.length; i++) {
+			buttonDecrement[i].addEventListener('click', () => {
+				let currentValue = parseInt(productQuantity[i].value);
+				if (currentValue > 1) {
+					productQuantity[i].value = currentValue - 1;
+				}
+			});
+		}
 
-		buttonIncrement.addEventListener('click', () => {
-			let currentValue = parseInt(productQuantity.value);
-			productQuantity.value = currentValue + 1;
-		});
+		for (let i = 0; i < buttonIncrement.length; i++) {
+			buttonIncrement[i].addEventListener('click', () => {
+				let currentValue = parseInt(productQuantity[i].value);
+				productQuantity[i].value = currentValue + 1;
+			});
+		}
 	}
 
 	//PRODUCT REVIEW QUESTIONS
@@ -760,8 +764,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (returnForm && returnFormAdd) {
 		returnFormAdd.addEventListener('click', () => {
 			const newInputs = [
-				{ type: 'email', placeholder: 'Order number *', ariaLabel: 'Enter your Order number', required: true },
-				{ type: 'email', placeholder: 'Item SKU *', ariaLabel: 'Enter your Item SKU', required: true }
+				{ type: 'number', placeholder: 'Order number *', ariaLabel: 'Enter your Order number', required: true },
+				{ type: 'text', placeholder: 'Item SKU *', ariaLabel: 'Enter your Item SKU', required: true }
 			];
 
 			newInputs.forEach(({ type, placeholder, ariaLabel, required }) => {
@@ -801,9 +805,45 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-	// const shippingAddressModal = document.getElementById('paymentMethodModal');
-	// const modal = new bootstrap.Modal(shippingAddressModal);
-	// modal.show();
+	//Progress bar orders on the account page
+	if (document.querySelector('.progress-bar-order')) {
+		function updateProgressSteps() {
+			const orderProgressBar = document.querySelector('.progress-bar-order');
+			const progressValue = parseInt(orderProgressBar.style.width);
+
+			const stepsOrderProgress = [
+				{ element: document.querySelector('.progress-step-1'), threshold: 10 },
+				{ element: document.querySelector('.progress-step-2'), threshold: 33 },
+				{ element: document.querySelector('.progress-step-3'), threshold: 50 },
+				{ element: document.querySelector('.progress-step-4'), threshold: 75 },
+				{ element: document.querySelector('.progress-step-5'), threshold: 100 },
+			];
+
+			stepsOrderProgress.forEach(step => {
+				if (progressValue >= step.threshold) {
+					step.element.classList.add('active');
+				} else {
+					step.element.classList.remove('active');
+				}
+			});
+		}
+
+		const orderProgressBar = document.querySelector('.progress-bar-order');
+		const observerProgressBar = new MutationObserver(mutations => {
+			mutations.forEach(mutation => {
+				if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+					updateProgressSteps();
+				}
+			});
+		});
+
+		observerProgressBar.observe(orderProgressBar, { attributes: true });
+
+		updateProgressSteps();
+	}
+
+
+
 
 	//ВCЁ ЧТО НИЖЕ МОЖНО УДАЛИТЬ. ЖЕЛАТЕЛЬНО ОЗНАКОМИТЬСЯ.
 	//Этот код можно будет удалить. Сделан был для демонстрации на странице checkout.html.
@@ -942,6 +982,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		document.getElementById('guideBankClose').addEventListener('click', function () {
 			document.querySelector('.account-affiliate-modal').classList.add('d-none');
+		});
+	}
+
+	if (document.querySelector('.favorite')) {
+		const favorite = document.querySelector('.favorite');
+		const favoriteEmpty = document.querySelector('.favorite--empty');
+
+		// Функция для удаления элемента из списка избранного
+		function removeFavoriteItem(event) {
+			const favoriteItem = event.target.closest('.favorite-item');
+			favoriteItem.classList.add('d-none');
+
+			// Проверяем, есть ли еще элементы в списке избранного
+			const favoriteItems = favorite.querySelectorAll('.favorite-item:not(.d-none)');
+			if (favoriteItems.length === 0) {
+				favorite.classList.add('d-none');
+				favoriteEmpty.classList.remove('d-none');
+			}
+		}
+
+		// Навешиваем обработчик событий на кнопки удаления
+		const btnRemoveList = favorite.querySelectorAll('.btn-remove');
+		btnRemoveList.forEach(btnRemove => {
+			btnRemove.addEventListener('click', removeFavoriteItem);
 		});
 	}
 });
