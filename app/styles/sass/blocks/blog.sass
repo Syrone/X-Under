@@ -1,3 +1,62 @@
 .blog
 	padding-block: 5rem
 	color: var(--item-color)
+	.card-blog
+		padding-block: 3rem
+		&:last-child
+			margin-bottom: 10rem
+
+	&-text
+		padding-block: 3rem
+		.list-group-item
+			--bs-list-group-border-color: var(--transparent)
+			--bs-list-group-border-width: 0
+			--bs-list-group-border-radius: 0
+			--bs-list-group-active-bg: var(--accent)
+			--bs-list-group-active-border-color: var(--accent)
+			padding: 0
+			color: var(--item-color)
+			& + .list-group-item
+				margin-top: 1rem
+
+	.custom-accordion
+		margin-bottom: 6rem
+
+	&-share
+		padding-block: 1rem 5rem
+		border-top: 1px solid var(--table-body)
+		.btn.btn-like
+			--bs-btn-color: var(--item-color)
+			--bs-btn-border-width: 0
+			--bs-btn-border-radius: 0
+			svg
+				fill: currentColor
+			&:hover
+				color: var(--accent)
+				transition: color var(--trt-1)
+			&:active
+				color: var(--text-color)
+				transition: none
+
+		.icon-email
+			height: 1.5rem
+			width: auto
+
+		.icon-link, .icon-email
+			color: var(--item-color)
+			transition: color var(--trt-1)
+			&:hover
+				color: var(--accent)
+			&:active
+				color: var(--text-color)
+				transition: none
+
+.blog-button-prev, .blog-button-next
+	color: var(--item-color)
+	background-color: var(--transparent)
+
+.blog-button-prev, .swiper-rtl .blog-button-next
+	left: var(--swiper-navigation-sides-offset,20px)
+
+.blog-button-next, .swiper-rtl .blog-button-prev
+	right: var(--swiper-navigation-sides-offset,20px)

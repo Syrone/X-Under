@@ -1,0 +1,1588 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>X-Under</title>
+	<meta name="description" content="Online Store">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" href="images/favicon.svg">
+	
+	<link rel="stylesheet" href="css/app.min.css">
+
+</head>
+
+<body>
+<header class="header">
+	<nav class="navbar navbar-dark bg-dark fixed-top p-0">
+		<div class="alert-container">
+			<div class="container">
+				<div class="alert alert-info alert-dismissible fs-5 w-100 fade show" role="alert">
+					<div class="position-relative">
+						<div class="swiper swiper-container alert-swiper">
+							<!-- Additional required wrapper -->
+							<div class="swiper-wrapper">
+								<!-- Slides -->
+								<div class="swiper-slide alert-swiper-slide">
+									<div class="d-flex justify-content-center align-items-center h-100">
+										<div class="text-black text-center">
+											<span class="sale">20% OFF</span> $150+ Use Code: <span class="promocode">WOW20</span>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide alert-swiper-slide">
+									<div class="d-flex justify-content-center align-items-center h-100">
+										<div class="text-black text-center text-uppercase">
+											Free shipping on orders of $150+
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide alert-swiper-slide">
+									<div class="d-flex justify-content-center align-items-center h-100">
+										<div class="text-black text-center text-uppercase">
+											<span class="sale">5% OFF</span> + Free shipping on your first order!
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- If we need navigation buttons -->
+							<div class="swiper-button-prev alert-button-prev d-none d-sm-flex"></div>
+							<div class="swiper-button-next alert-button-next d-none d-sm-flex"></div>
+						</div>
+
+						<!-- If we need pagination -->
+						<div class="swiper-pagination alert-pagination"></div>
+
+					</div>
+					<button type="button"
+						class="btn-close btn-close-white btn-close-word d-flex align-items-center opacity-75 h5 m-0"
+						data-bs-dismiss="alert" aria-label="Close">
+						<span class="d-none d-lg-block">
+							Close
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="container pt-2 pb-2">
+			<div class="d-flex align-items-center gap-3">
+				<button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas"
+					data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+					<img class="header-navbar opacity-50" src="./images/dist/icons/navbar.svg" width="40" height="30"
+						alt="open menu">
+				</button>
+				<a class="navbar-brand header-logo d-flex align-items-center me-0 me-sm-1" href="#">
+					<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 166.66667 29.333332">
+						<path
+							d="m106.051 75.836-21.067 33.711-9.199-14.723 21.063-33.707 4.496 7.188zm14.66 23.46-21.067 33.708-9.199-14.723 21.063-33.707 9.203 14.723"
+							style="fill:#4d4d4d;fill-opacity:1;fill-rule:evenodd;stroke:none"
+							transform="matrix(.13333 0 0 -.13333 0 29.333)" />
+						<path
+							d="m29.375 3.086 61.07 97.723-5.46 8.738L18.456 3.086H.059l66.527 106.461L.059 216.008h18.398l57.328-91.738 5.457 8.734 9.203 14.726 42.668 68.278h18.399l-51.867-83.004-9.2-14.723-5.46-8.734 5.46-8.738 71.985 115.199h18.402L99.644 86.086l51.868-83h-18.399L96.848 61.117l4.496 7.188 4.707 7.53-6.407 10.25-51.87-83Zm151.457 0-60.121 96.21-9.203-14.722 50.926-81.488Zm-79.828 127.742-1.36 2.176ZM90.445 147.73l-42.668 68.278H29.375l51.867-83.004 9.203 14.726"
+							transform="matrix(.13333 0 0 -.13333 0 29.333)" />
+						<path
+							d="M287.762 87.469v128.484h28.23V87.183c0-19.3 4.324-33.706 12.961-42.925 8.36-9.508 21.899-14.117 39.758-14.117 17.863 0 31.117 4.898 39.758 14.117 8.929 9.508 13.25 23.91 13.25 42.926v128.769h28.234V87.469c0-27.653-7.203-48.684-21.32-63.086-14.403-14.117-35.434-21.32-63.09-21.32-25.926 0-45.227 6.917-58.195 21.03-12.961 14.118-19.586 35.145-19.586 63.376M492.879 8.824v207.129h30.824L620.5 65.578c2.305-3.457 4.031-6.34 5.762-9.222 1.441-3.165 2.879-5.758 3.746-8.352v167.949h26.789V8.824h-30.535l-98.813 152.68c-1.441 2.305-2.883 4.609-4.324 7.203-1.148 2.594-2.305 5.184-3.453 8.066V8.824h-26.793m284.676 183.219h-48.399V34.176h48.399c20.742 0 36.297 6.629 46.957 20.164 10.656 13.543 15.843 33.418 15.843 59.633 0 25.351-5.472 44.652-16.132 57.906-10.946 13.535-26.504 20.164-46.668 20.164zM700.922 8.824v207.129h78.937c28.809 0 50.989-8.644 66.258-25.93 15.559-17.281 23.047-42.058 23.047-74.609 0-33.703-7.773-59.918-23.914-78.644-15.84-18.727-38.023-27.946-66.543-27.946h-77.785m203.676 0v207.129h147.792v-25.64H932.543v-61.938h110.627V104.18H932.543V34.75h122.147V8.824H904.598m211.792 182.93v-70.293h48.11c17.29 0 29.68 2.883 36.88 8.355 6.91 5.762 10.66 14.981 10.66 28.235 0 12.387-3.46 21.027-10.09 25.926-6.91 5.183-19.3 7.777-37.45 7.777zm-27.66 24.199h80.38c12.96 0 22.47-.574 28.81-1.73 6.05-1.149 11.52-2.879 16.42-5.473 8.64-4.898 15.27-11.523 19.88-19.875 4.61-8.645 6.91-18.727 6.91-30.25 0-11.234-2.3-20.742-7.2-28.52-4.9-8.066-11.81-14.117-21.32-18.726 8.07-2.305 13.83-6.047 17.28-11.524 3.47-5.183 5.48-14.402 6.34-27.078l2.31-33.992c.58-7.488 1.44-12.965 2.88-16.422 1.44-3.746 3.75-6.336 6.63-7.773V8.824h-32.56c-2.59 4.32-4.32 13.54-5.47 27.657v.863l-1.73 27.082c-.86 13.824-3.75 22.758-8.93 27.078-4.9 4.031-17.29 6.047-37.16 6.047h-45.52V8.824h-27.95v207.129"
+							transform="matrix(.13333 0 0 -.13333 0 29.333)" />
+					</svg>
+				</a>
+				<div class="position-relative">
+					<button id="myPopoverBtn" tabindex="0" class="btn popover-btn d-none d-md-block" type="button">
+						<img src="./images/dist/ATS_logo.svg" width="65" alt="A-T-Shirt">
+						<img src="./images/dist/icons/info.svg" width="20" alt="info">
+					</button>
+					<div id="myPopover"
+						class="popover-custom start-50 translate-middle-x position-absolute rounded rounded-2 d-none"
+						tabindex="-1">
+						<div class="popover-inner">
+							<div class="popover-header">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"
+									xmlns:xlink="http://www.w3.org/1999/xlink">
+									<path
+										d="m48,9c-21.54,0-39,17.46-39,39s17.46,39 39,39 39-17.46 39-39-17.46-39-39-39zm6.117,53.349c-2.943,4.419-5.937,7.824-10.974,7.824-3.438-.561-4.851-3.024-4.107-5.535l6.48-21.462c.159-.525-.105-1.086-.585-1.257-.477-.168-1.413,.453-2.223,1.341l-3.918,4.713c-.105-.792-.012-2.1-.012-2.628 2.943-4.419 7.779-7.905 11.058-7.905 3.117,.318 4.593,2.811 4.05,5.55l-6.525,21.567c-.087,.486 .171,.981 .612,1.137 .48,.168 1.488-.453 2.301-1.341l3.915-4.71c.105,.792-.072,2.178-.072,2.706zm-.873-28.032c-2.478,0-4.488-1.806-4.488-4.464s2.01-4.461 4.488-4.461 4.488,1.806 4.488,4.461c0,2.661-2.01,4.464-4.488,4.464z" />
+								</svg>
+								NOTICE
+							</div>
+							<div class="popover-body">
+								Our official partner - A-T-Shirt brands, offer a unique range of product that all can express
+								themselves through.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="d-flex align-items-center gap-2 gap-sm-4 gap-lg-5">
+				<button type="button" class="btn position-relative d-none d-sm-block" data-bs-toggle="modal"
+					data-bs-target="#searchModal">
+					<img src="./images/dist/icons/search.svg" height="26" alt="search">
+				</button>
+				<a href="./account.html" class="btn position-relative p-2 ps-sm-3 pe-sm-3">
+					<img class="header-icon" src="./images/dist/icons/account.svg" height="26" alt="account">
+				</a>
+				<a href="./favorite.html" class="btn position-relative p-2 ps-sm-3 pe-sm-3">
+					<img class="header-icon" src="./images/dist/icons/favorites.svg" height="26" alt="favorites">
+					<span
+						class="header-current position-absolute top-50 start-50 badge rounded-pill bg-primary text-black">1</span>
+				</a>
+				<div class="dropdown">
+					<button type="button" class="btn position-relative p-2 ps-sm-3 pe-sm-3 dropdown-toggle" type="button"
+						id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+						aria-expanded="false">
+						<img class="header-icon" src="./images/dist/icons/bag.svg" height="26" alt="bag">
+						<span
+							class="header-current current-bag position-absolute top-50 start-50 badge rounded-pill bg-primary text-black"></span>
+					</button>
+					<div class="dropdown-menu dropdown-cards dropdown-menu-end bg-dark p-0 w-100"
+						aria-labelledby="dropdownMenuClickableInside">
+						<div class="dropdown-arrow"></div>
+						<div class="dropdown-overflow overflow-auto p-2 p-sm-4">
+							<div class="header-dropdown overflow-auto">
+								<div
+									class="card dropdown-card bg-dark pt-3 pb-3 pt-sm-4 pb-sm-4 border border-2 border-start-0 border-end-0 border-top-0 border-dark rounded-0">
+									<div class="row g-0 justify-content-between align-items-center bg-dark text-primary">
+										<div class="col-4">
+											<img src="./images/dist/items/item-man-1.jpg" class="img-fluid" alt="product">
+										</div>
+										<div class="col-sm-7 col-6">
+											<div class="card-body pt-0 pe-2 ps-2 pe-sm-3 ps-sm-3 pb-0">
+												<h6 class="card-title mb-3 mb-sm-4 text-uppercase">C-IN2 CORE LOW RISE BRIE</h6>
+												<p class="card-text mb-0 tiny">1 x $75.00</p>
+												<p class="card-text">$<span class="card-price">75.00</span></p>
+											</div>
+										</div>
+										<button type="button"
+											class="btn-close btn-close-custom btn-close-card col-1 align-self-start"
+											aria-label="Close">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+												<path
+													d="M4.99 3.99a1 1 0 0 0-.697 1.717L10.586 12l-6.293 6.293a1 1 0 1 0 1.414 1.414L12 13.414l6.293 6.293a1 1 0 1 0 1.414-1.414L13.414 12l6.293-6.293a1 1 0 0 0-.727-1.717 1 1 0 0 0-.687.303L12 10.586 5.707 4.293a1 1 0 0 0-.717-.303z" />
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="empty-cart-msg text-primary justify-content-center align-items-center">
+									Your bag is empty
+								</div>
+							</div>
+							<h5 class="total-dropdown text-primary text-uppercase d-flex justify-content-between pt-2 mb-5">
+								<span>Subtotal</span>
+								<p class="m-0">$<span class="total-price"></span></p>
+							</h5>
+							<a href="./404.html"
+								class="btn btn-accent btn-checkout btn-lg w-100 border border-2 border-primary text-uppercase mb-5">Chekout</a>
+							<div class="bag-text mb-2">
+								<h5 class="text-uppercase text-primary mb-0">Free Shipping</h5>
+								<p class="text-primary fs-6 m-0">Spend SXX more and get free shipping
+									<span class="d-block tiny">Shipping, taxes, and discounts codes calculated at
+										checkout.</span>
+								</p>
+							</div>
+							<ul class="list-group text-uppercase text-primary">
+								<li class="list-group-item">
+									<a href="./bag.html"
+										class="dropdown-item d-flex align-items-center gap-2 text-primary">
+										<span class="icon icon-bag">
+											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 9.333">
+												<path
+													d="M26.027 60.176c6.664 0 12.067-4.582 12.079-10.235h4.105c2.836 0 5.156-2.32 5.156-5.16V12.535c0-2.84-2.32-5.16-5.156-5.16H9.844c-2.836 0-5.156 2.32-5.156 5.16v32.246c0 2.84 2.32 5.16 5.156 5.16h4.105c.016 5.653 5.418 10.235 12.078 10.235zM16.773 49.94h18.508c-.011 4.328-4.152 7.832-9.254 7.832-5.101 0-9.242-3.504-9.254-7.832"
+													transform="matrix(.13333 0 0 -.13333 0 9.333)" />
+											</svg>
+										</span>
+										Bag
+										<span class="current-bag brackets"></span>
+									</a>
+								</li>
+								<li class="list-group-item">
+									<a href="./favorite.html"
+										class="dropdown-item d-flex align-items-center gap-2 text-primary">
+										<span class="icon icon-favorite">
+											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 9.333 9.333">
+												<path
+													d="M62.504 43.715c0 9.09-7.367 16.46-16.461 16.46-5.934 0-11.117-3.152-14.012-7.863-2.898 4.711-8.082 7.864-14.02 7.864-9.09 0-16.46-7.371-16.46-16.461 0-4.95 2.195-9.375 5.652-12.39l23.324-23.33a2.122 2.122 0 0 1 1.504-.621 2.12 2.12 0 0 1 1.5.621l23.325 23.328c3.456 3.016 5.648 7.442 5.648 12.39"
+													transform="matrix(.13333 0 0 -.13333 0 9.333)" />
+											</svg>
+										</span>
+										Favorites
+									</a>
+								</li>
+								<li class="list-group-item">
+									<a href="./orders.html"
+										class="dropdown-item d-flex align-items-center gap-2 text-primary">
+										<span class="icon icon-order">
+											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 8 9.333">
+												<path
+													d="M11.422 46.04H46.75a7.78 7.78 0 0 1 7.781 7.78 7.78 7.78 0 0 1-7.781 7.782H11.422a7.782 7.782 0 0 1 0-15.563zm35.328-3.11H11.422a7.78 7.78 0 1 1 0-15.559H46.75a7.78 7.78 0 1 1 0 15.559zM11.422 32.215a3.052 3.052 0 0 0-3.055 3.047 3.05 3.05 0 1 0 6.098 0 3.047 3.047 0 0 0-3.043-3.047zm35.328-7.852H11.422a7.78 7.78 0 0 1-7.781-7.781 7.78 7.78 0 0 1 7.78-7.781H46.75c4.3 0 7.781 3.48 7.781 7.781a7.78 7.78 0 0 1-7.781 7.781zM11.422 13.551a3.052 3.052 0 0 0-3.055 3.047c0 1.68 1.367 3.05 3.055 3.05a3.05 3.05 0 0 0 3.043-3.05 3.047 3.047 0 0 0-3.043-3.047zm0 43.328a3.046 3.046 0 0 0 3.043-3.05 3.05 3.05 0 0 0-3.043-3.052 3.056 3.056 0 0 0-3.055 3.051 3.056 3.056 0 0 0 3.055 3.05"
+													transform="matrix(.13333 0 0 -.13333 0 9.333)" />
+											</svg>
+										</span>
+										Orders
+									</a>
+								</li>
+								<li class="list-group-item">
+									<a href="./account.html"
+										class="dropdown-item d-flex align-items-center gap-2 text-primary">
+										<span class="icon icon-gears">
+											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 8 8">
+												<path
+													d="M5.914 39.926a13.21 13.21 0 0 1 1.164-2.758l-1.398-1.77a1.446 1.446 0 0 1 .105-1.921L8.2 31.059a1.446 1.446 0 0 1 1.922-.106l1.758 1.39a12.85 12.85 0 0 1 2.867-1.21l.262-2.262a1.448 1.448 0 0 1 1.437-1.281h3.418c.73 0 1.348.547 1.438 1.281l.25 2.18c1.074.277 2.105.699 3.074 1.238l1.7-1.344a1.455 1.455 0 0 1 1.921.11l2.414 2.414c.52.523.567 1.347.11 1.926l-1.325 1.675c.551.95.98 1.961 1.27 3.02l2.035.238a1.442 1.442 0 0 1 1.281 1.434v3.418c0 .73-.547 1.347-1.281 1.433l-2.008.235a12.598 12.598 0 0 1-1.215 2.988l1.239 1.562a1.45 1.45 0 0 1-.114 1.922l-2.406 2.41a1.442 1.442 0 0 1-1.922.11l-1.52-1.2a12.756 12.756 0 0 1-3.14 1.313l-.226 1.961A1.449 1.449 0 0 1 20 59.2h-3.418c-.73 0-1.348-.55-1.434-1.285l-.23-1.96a12.591 12.591 0 0 1-3.223-1.364l-1.574 1.25a1.45 1.45 0 0 1-1.922-.11l-2.414-2.414a1.441 1.441 0 0 1-.105-1.922l1.312-1.663a12.43 12.43 0 0 1-1.187-3.016l-2.11-.242a1.452 1.452 0 0 1-1.28-1.438v-3.414c0-.734.55-1.355 1.28-1.437zm8.23-20.77a1.428 1.428 0 0 1-1.28-1.406l-.016-1.445a1.43 1.43 0 0 1 1.246-1.438l1.066-.137c.176-.648.43-1.265.754-1.847l-.687-.848a1.423 1.423 0 0 1 .086-1.898l1.011-1.04a1.434 1.434 0 0 1 1.903-.128l.851.656a8.323 8.323 0 0 1 1.902-.832l.114-1.094A1.425 1.425 0 0 1 22.5 6.418l1.45-.02a1.42 1.42 0 0 1 1.433 1.247l.137 1.043a8.498 8.498 0 0 1 2.054.8l.805-.644a1.423 1.423 0 0 1 1.898.082l1.035 1.015c.52.508.579 1.32.133 1.899l-.613.797a8.31 8.31 0 0 1 .871 2.004l.95.093a1.43 1.43 0 0 1 1.28 1.407l.016 1.449a1.424 1.424 0 0 1-1.246 1.437l-.926.121a8.75 8.75 0 0 1-.785 2.004l.578.707a1.423 1.423 0 0 1-.086 1.899l-1.011 1.039a1.425 1.425 0 0 1-1.899.129l-.695-.531a8.295 8.295 0 0 1-2.082.902l-.094.898a1.425 1.425 0 0 1-1.402 1.285l-1.45.016a1.424 1.424 0 0 1-1.437-1.246l-.113-.895a8.66 8.66 0 0 1-2.156-.878l-.72.582a1.427 1.427 0 0 1-1.898-.086l-1.043-1.02a1.43 1.43 0 0 1-.132-1.898l.613-.79a8.283 8.283 0 0 1-.817-2.003zm9.348 1.64a3.768 3.768 0 0 0 3.719-3.812 3.768 3.768 0 0 0-3.813-3.718 3.77 3.77 0 0 0-3.718 3.812 3.77 3.77 0 0 0 3.812 3.719zm28.574 18.29-1.8 1.523a1.436 1.436 0 0 1-1.903-.054l-.992-.934c-.844.41-1.734.695-2.656.86l-.281 1.375a1.432 1.432 0 0 1-1.524 1.14l-2.347-.2a1.428 1.428 0 0 1-1.313-1.378l-.047-1.395a10.29 10.29 0 0 1-2.535-1.336l-1.188.794a1.432 1.432 0 0 1-1.882-.27l-1.524-1.816a1.422 1.422 0 0 1 .051-1.899l1.043-1.11a10.708 10.708 0 0 1-.77-2.538l-1.488-.305a1.448 1.448 0 0 1-1.144-1.524l.203-2.351a1.43 1.43 0 0 1 1.379-1.309l1.609-.05c.29-.77.672-1.496 1.137-2.176l-.899-1.36a1.424 1.424 0 0 1 .27-1.878l1.8-1.524a1.432 1.432 0 0 1 1.903.05l1.176 1.106c.773-.359 1.59-.629 2.422-.793l.324-1.609a1.447 1.447 0 0 1 1.523-1.148l2.352.203a1.433 1.433 0 0 1 1.312 1.379l.051 1.578c.856.304 1.672.715 2.422 1.226l1.297-.86a1.432 1.432 0 0 1 1.883.27l1.523 1.805c.469.55.445 1.371-.05 1.899l-1.051 1.105c.386.816.664 1.676.828 2.555l1.43.293c.706.14 1.203.8 1.14 1.523l-.195 2.348a1.431 1.431 0 0 1-1.383 1.312l-1.434.047a10.47 10.47 0 0 1-1.195 2.36l.781 1.175a1.424 1.424 0 0 1-.258 1.89zm-8.863-13.598a4.625 4.625 0 0 0-4.996 4.219 4.62 4.62 0 0 0 4.219 4.992 4.625 4.625 0 0 0 4.996-4.218 4.62 4.62 0 0 0-4.219-4.993zm-24.91 23.68a5.656 5.656 0 0 0 5.648-5.649 5.656 5.656 0 0 0-5.648-5.648 5.659 5.659 0 0 0-5.649 5.648 5.66 5.66 0 0 0 5.649 5.649"
+													transform="matrix(.13333 0 0 -.13333 0 8)" />
+											</svg>
+										</span>
+										Account
+									</a>
+								</li>
+								<li class="list-group-item">
+									<a href="./account-signin.html"
+										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0">
+										<span class="icon icon-account">
+											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 8 9.333">
+												<path
+													d="M4.27 16.09c0-6.395 3.02-8.715 10.03-8.715h27.458c7.012 0 10.031 2.32 10.031 8.715 0 3.984-2.144 8.016-4.152 10.101-2.125 2.207-6.184 4.946-9.574 4.946-.86 0-.516-.133-.883-.969l-.145-.383a21.062 21.062 0 0 0-.387-.668c-2.945-4.015-16.566-4.668-18.125 2.02-1.957 0-4.203-.828-5.617-1.508-4.48-2.16-8.636-7.735-8.636-13.54Zm10.562 31.152c0-10.441 12.05-27.637 22.441-11.886 3.985 6.042 6.118 14.917.332 20.667-1.359 1.348-1.746 1.829-3.585 2.754a13.547 13.547 0 0 1-4.801 1.399h-2.383c-6.59-.614-12.004-6.305-12.004-12.934Zm2.11-2.117c0 3.137 1.59 6.43 3.43 7.66 1.226-5.254 12.398-3.418 16.097-3.113 1.601.129 2.648-2.445 2.648-4.547 0-5.344-5.68-13.988-11.09-13.988-5.375 0-11.086 8.672-11.086 13.988"
+													transform="matrix(.13333 0 0 -.13333 0 9.333)" />
+											</svg>
+										</span>
+										Sign out
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header-menu offcanvas bg-dark offcanvas-start pt-3 pe-3 ps-3 pt-sm-5 pe-sm-5 ps-sm-5" tabindex="-1"
+				id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+				<div class="offcanvas-header ps-3 pe-3 ps-sm-4 pe-sm-5">
+					<h5 class="offcanvas-title text-white opacity-75 d-flex gap-3 align-items-center"
+						id="offcanvasNavbarLabel">
+						<img class="header-navbar d-none d-sm-block" src="./images/dist/icons/navbar.svg" width="40"
+							height="30" alt="open menu">
+						Menu
+					</h5>
+					<button type="button"
+						class="btn-close btn-close-white btn-close-word d-flex align-items-center opacity-75 h5"
+						data-bs-dismiss="offcanvas" aria-label="Close">Close</button>
+				</div>
+				<div class="offcanvas-body ps-3 pe-3 ps-sm-4 pe-sm-5">
+					<div class="accordion accordion-flush" id="accordionHeaderOne">
+						<div class="mb-4 mb-sm-5">
+							<div
+								class="accordion-item bg-dark text-dark border border-1 border-end-0 border-start-0 border-top-0 border-dark text-capitalize">
+								<h2 class="accordion-header" id="headingOne">
+									<button class="accordion-button bg-dark text-dark collapsed text-uppercase" type="button"
+										data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+										aria-controls="collapseOne">
+										Underwaer
+									</button>
+								</h2>
+								<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+									data-bs-parent="#accordionHeaderOne">
+									<div class="accordion-body">
+										<div class="list-group fw-light">
+											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">All
+												Underwaer</a>
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Trunks</a>
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Boxer
+												Briefs</a>
+											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">Boxers</a>
+											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">Jocks &
+												Thongs</a>
+											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">Long
+												Underwear</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div
+								class="accordion-item bg-dark text-dark border border-1 border-end-0 border-start-0 border-top-0 border-dark text-capitalize">
+								<h2 class="accordion-header" id="headingTwo">
+									<button class="accordion-button bg-dark text-dark collapsed text-uppercase" type="button"
+										data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+										aria-controls="collapseTwo">
+										Swimwaer
+									</button>
+								</h2>
+								<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+									data-bs-parent="#accordionHeaderOne">
+									<div class="accordion-body">
+										<div class="list-group fw-light">
+											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">All
+												Underwaer</a>
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Trunks</a>
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Boxer
+												Briefs</a>
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Boxers</a>
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Jocks &
+												Thongs</a>
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Long
+												Underwear</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div
+								class="accordion-item bg-dark text-dark border border-1 border-end-0 border-start-0 border-top-0 border-dark text-capitalize">
+								<h2 class="accordion-header" id="headingThree">
+									<button class="accordion-button bg-dark text-dark collapsed text-uppercase" type="button"
+										data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+										aria-controls="collapseThree">
+										Accessories
+									</button>
+								</h2>
+								<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+									data-bs-parent="#accordionHeaderOne">
+									<div class="accordion-body">
+										<div class="list-group fw-light">
+											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">All
+												Underwaer</a>
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Trunks</a>
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Boxer
+												Briefs</a>
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Boxers</a>
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Jocks &
+												Thongs</a>
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Long
+												Underwear</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div
+								class="accordion-item bg-dark text-dark border border-1 border-end-0 border-start-0 border-top-0 border-dark text-capitalize">
+								<h2 class="accordion-header" id="headingFour">
+									<button class="accordion-button bg-dark text-dark collapsed text-uppercase" type="button"
+										data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+										aria-controls="collapseFour">
+										Bag
+									</button>
+								</h2>
+								<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+									data-bs-parent="#accordionHeaderOne">
+									<div class="accordion-body">
+										<div class="list-group fw-light">
+											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">All
+												Underwaer</a>
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Trunks</a>
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">Boxer
+												Briefs</a>
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Boxers</a>
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Jocks &
+												Thongs</a>
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Long
+												Underwear</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<a href="./404.html"
+							class="accordion-button accordion-link collapsed bg-dark text-dark border border-1 border-end-0 border-start-0 border-top-0 border-dark text-uppercase">
+							Multipacks
+						</a>
+						<a href="./404.html"
+							class="accordion-button accordion-link collapsed bg-dark text-dark border border-1 border-end-0 border-start-0 border-top-0 border-dark text-uppercase">
+							X-Club
+						</a>
+						<a href="./gift-card.html"
+							class="accordion-button accordion-link collapsed bg-dark text-dark border border-1 border-end-0 border-start-0 border-top-0 border-dark text-uppercase">
+							E-Gift Card
+						</a>
+						<div
+							class="accordion-item bg-dark text-dark border border-1 border-end-0 border-start-0 border-top-0 border-dark text-capitalize">
+							<h2 class="accordion-header" id="headingFifth">
+								<button class="accordion-button bg-dark text-dark collapsed text-uppercase" type="button"
+									data-bs-toggle="collapse" data-bs-target="#collapseFifth" aria-expanded="false"
+									aria-controls="collapseFifth">
+									Hot offer
+								</button>
+							</h2>
+							<div id="collapseFifth" class="accordion-collapse collapse" aria-labelledby="headingFifth"
+								data-bs-parent="#accordionHeaderOne">
+								<div class="accordion-body">
+									<div class="list-group fw-light">
+										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">All
+											Underwaer</a>
+										<a href="./404.html"
+											class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
+										<a href="./404.html"
+											class="list-group-item border border-0 list-group-item-action bg-dark">Trunks</a>
+										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">Boxer
+											Briefs</a>
+										<a class="list-group-item border border-0 list-group-item-action bg-dark">Boxers</a>
+										<a class="list-group-item border border-0 list-group-item-action bg-dark">Jocks &
+											Thongs</a>
+										<a class="list-group-item border border-0 list-group-item-action bg-dark">Long
+											Underwear</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<a href="./affiliate-form.html"
+							class="accordion-button accordion-link collapsed bg-dark text-dark border border-1 border-end-0 border-start-0 border-top-0 border-dark text-uppercase">
+							Affiliate Program
+						</a>
+						<a href="./blogs.html"
+							class="accordion-button accordion-link collapsed bg-dark text-dark border border-1 border-end-0 border-start-0 border-top-0 border-dark text-uppercase">
+							Blog
+						</a>
+						<a href="./contact-us.html"
+							class="accordion-button accordion-link collapsed bg-dark text-dark border border-1 border-end-0 border-start-0 border-top-0 border-dark text-uppercase">
+							Contact Us
+						</a>
+						<a href="./shipping-policy.html"
+							class="accordion-button accordion-link collapsed bg-dark text-dark border border-1 border-end-0 border-start-0 border-top-0 border-dark text-uppercase">
+							Shipping & Return
+						</a>
+						<a href="./faq.html"
+							class="accordion-button accordion-link collapsed bg-dark text-dark border border-1 border-end-0 border-start-0 border-top-0 border-dark text-uppercase">
+							FAQ
+						</a>
+						<div
+							class="accordion-item bg-dark text-dark border border-1 border-end-0 border-start-0 border-top-0 border-dark text-capitalize">
+							<h2 class="accordion-header" id="headingSixth">
+								<button class="accordion-button bg-dark text-dark collapsed text-uppercase" type="button"
+									data-bs-toggle="collapse" data-bs-target="#collapseSixth" aria-expanded="false"
+									aria-controls="collapseSixth">
+									More
+								</button>
+							</h2>
+							<div id="collapseSixth" class="accordion-collapse collapse" aria-labelledby="headingSixth"
+								data-bs-parent="#accordionHeaderOne">
+								<div class="accordion-body">
+									<div class="list-group fw-light">
+										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">
+											Terms of use
+										</a>
+										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">
+											Privacy & Cookie
+										</a>
+										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">
+											Policy
+										</a>
+										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">
+											Legal
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<main class="wrapper bg-white">
+	<nav class="header-bottom">
+		<div class="container d-flex justify-content-between align-items-center">
+			<h1 class="fs-5 mb-0 text-primary text-uppercase">
+				BLog
+			</h1>
+
+			<div class="d-flex align-items-center gap-2">
+				<button class="btn btn-back p-1 d-none d-sm-block">Come Back</button>
+				<button class="btn btn-custom btn-browser p-1 text-white d-flex align-items-center collapsed" type="button"
+					data-bs-toggle="collapse" data-bs-target="#collapseBrowserAll" aria-expanded="false"
+					aria-controls="collapseBrowserAll">
+					Browser all
+					<span class="icon icon-arrow-down">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" xml:space="preserve">
+							<path fill="none" d="m20.5 11.5-6 6-6-6" />
+						</svg>
+					</span>
+				</button>
+			</div>
+		</div>
+		<div class="collapse" id="collapseBrowserAll">
+			<div class="container">
+				<div class="py-3 border border-top-1 border-start-0 border-end-0 border-bottom-0">
+					<div class="row">
+						<div class="col-lg-2 col-sm-4 col-6 text-center text-sm-start">
+							<div class="list-group text-uppercase">
+								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Underwaer</a>
+								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Swemmwaer</a>
+								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Accessories</a>
+								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Bag</a>
+							</div>
+						</div>
+						<div class="col-lg-2 col-sm-4 col-6 text-center text-sm-start">
+							<div class="list-group text-uppercase">
+								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Multipacks</a>
+								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">X-Club</a>
+								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">E-Gift Card</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<section class="blog">
+		<div class="container">
+			<h2 class="mb-3 text-uppercase text-center text-sm-start">
+				Blog
+			</h2>
+
+			<div class="blog-text fs-5 lh-sm">
+				<h3 class="h2 text-uppercase mb-5">
+					6 tips to create a perfect t-shirt design
+				</h3>
+
+				<p>
+					In the past couple of years, t-shirt design has been taking a new turn toward fashion and excellence.
+					Buying a standard pre-designed t-shirt isn't as interesting as it used to be. After all, meeting someone
+					with the same t-shirt design at work or school is less than exciting. That's why custom design is gaining
+					momentum with the speed of light.
+					With the opportunity to create your own t-shirt readily available, you face a simple question. What
+					should your design be like, anyway? Here are a few tips to push you in the right direction.
+				</p>
+
+
+
+				<ol class="list-group list-group-numbered">
+					<li class="list-group-item">
+						Go for a Walk
+						<ul class="list-unstyled">
+							<li>
+								If you are out of ideas, take a walk. You may be surprised at how many ideas surround you when
+								you
+								aren't looking. Ask nature to give you a push forward. It has inspired thousands of artists. Why
+								shouldn't it share a few pointers with you? Take photos and then turn them into designs.
+							</li>
+						</ul>
+					</li>
+
+					<li class="list-group-item">
+						Keep it simple
+						<ul class="list-unstyled">
+							<li>
+								The key purpose of a custom t-shirt design is to share something with others. Be it your inner
+								world or special fashion views, you want them to be obvious. The design should be readable at
+								one glance. If it takes forever to decipher it, no one will try. So keep things simple.
+							</li>
+						</ul>
+					</li>
+
+					<li class="list-group-item">
+						Be Careful about humor
+						<ul class="list-unstyled">
+							<li>
+								If you want your t-shirt to be humorous, make sure to keep it subtle. It's hard to find a
+								balance between subtleness, provocation, and cheap appearance. So if you aren't sure that your
+								t-shirt doesn't offend anyone, consider another design.
+							</li>
+						</ul>
+					</li>
+
+					<li class="list-group-item">
+						Choose proper colors
+						<ul class="list-unstyled">
+							<li>
+								Combining different colors could be the toughest part of the t-shirt design. You need to make
+								sure they match. Otherwise, even the most intricate design will blur into a colorful stain. Take
+								the time to figure out which colors look good against the background you've chosen or vice
+								versa.
+							</li>
+						</ul>
+					</li>
+
+					<li class="list-group-item">
+						Check out the latest trends
+						<ul class="list-unstyled">
+							<li>
+								If you need some inspiration, check out the latest design trends. Just make sure you use them
+								for ideas only. Becoming a copycat isn't just unfair, it's often illegal. Add a personal touch
+								to the design you like and come up with your own masterpiece.
+							</li>
+						</ul>
+					</li>
+
+					<li class="list-group-item">
+						Find the right company
+						<ul class="list-unstyled">
+							<li>
+								If you want your design to appear exactly as you wish, you need to find the right t-shirt
+								printing company. Only the highest quality equipment coupled with the work of professional
+								designers can help you create a t-shirt you've always dreamed about.
+								Designing t-shirts can be a bit harder than you think. If you aren't sure your design works, ask
+								for help from the professionals. You may be surprised at how well they can turn your idea into
+								reality.
+							</li>
+						</ul>
+					</li>
+				</ol>
+			</div>
+
+			<div class="position-relative pb-5 mb-5">
+				<div class="swiper blog-swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img class="img-fluid rounded" src="./images/dist/Blog/01/ATS_Blog_01-1.jpg" alt="blog picture">
+						</div>
+						<div class="swiper-slide">
+							<img class="img-fluid rounded" src="./images/dist/Blog/01/ATS_Blog_01-2.jpg" alt="blog picture">
+						</div>
+						<div class="swiper-slide">
+							<img class="img-fluid rounded" src="./images/dist/Blog/01/ATS_Blog_01-3.jpg" alt="blog picture">
+						</div>
+					</div>
+
+					<div class="swiper-button-prev blog-button-prev d-sm-flex d-none"></div>
+					<div class="swiper-button-next blog-button-next d-sm-flex d-none"></div>
+				</div>
+
+				<div class="swiper-pagination blog-swiper-pagination"></div>
+			</div>
+
+			<div class="d-flex justify-content-between flex-sm-row flex-column-reverse gap-sm-0 gap-4 blog-share">
+				<div>
+					<div class="h5 mb-2 text-sm-start text-center">
+						Share your impressions
+					</div>
+					<div class="d-flex align-items-center gap-4 justify-content-md-start justify-content-center">
+						<a class="btn-svg d-flex align-items-center gap-2 fs-6" href="#">
+							<span class="icon icon-facebook">
+								<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 10.667">
+									<path
+										d="M36.86 75.879c-10.137 0-16.083-5.352-16.083-17.55V47.593H7.922V34.738h12.855V3.883h12.86v30.855h10.285l2.57 12.856H33.637v8.558c0 4.594 1.496 6.871 5.812 6.871h7.043v12.329c-1.219.164-4.77.527-9.633.527"
+										style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+										transform="matrix(.13333 0 0 -.13333 0 10.667)" />
+								</svg>
+							</span>
+							Share
+						</a>
+
+						<a class="btn-svg d-flex align-items-center gap-2 fs-6" href="#">
+							<span class="icon icon-twitter">
+								<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+									style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd"
+									viewBox="0 0 42645 34651">
+									<path
+										d="M42645 4103c-1569 697-3255 1162-5026 1376 1806-1089 3197-2798 3848-4843-1689 1000-3565 1736-5556 2127C34315 1062 32040 0 29526 0c-4836 0-8749 3917-8749 8749 0 678 81 1348 229 1995-7269-368-13720-3851-18037-9144-752 1294-1178 2790-1178 4402 0 3034 1538 5707 3890 7277-1438-50-2786-442-3964-1097v108c0 4243 3018 7773 7013 8582-732 198-1503 302-2305 302-562 0-1112-46-1643-147 1112 3468 4344 6002 8168 6068-2991 2348-6761 3747-10857 3747-713 0-1407-35-2092-116 3875 2476 8470 3925 13418 3925 16088 0 24887-13329 24887-24891 0-376-8-759-27-1135 1713-1224 3189-2770 4367-4522z" />
+								</svg>
+							</span>
+							Tweet
+						</a>
+
+						<a class="btn-svg d-flex align-items-center gap-2 fs-6" href="#">
+							<span class="icon icon-pin">
+								<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+									style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd"
+									viewBox="0 0 5966 7707">
+									<path
+										d="M5966 2536c0 1736-965 3033-2388 3033-478-1-928-258-1082-552 0 0-257 1020-312 1217-191 695-755 1391-798 1449-31 39-99 27-106-26-12-88-155-966 13-1683 85-359 569-2413 569-2413s-141-281-141-699c0-656 381-1146 854-1146 403 0 597 302 597 664 0 405-258 1010-391 1572-111 468 236 852 699 852 839 0 1403-1078 1403-2354 0-970-653-1696-1842-1696-1342 0-2179 1001-2179 2120 0 385 113 657 292 868 81 97 93 136 64 247-22 82-70 278-91 355-29 112-120 153-221 111C288 4202-1 3525-1 2764-1 1506 1060-1 3163-1c1690 0 2802 1223 2802 2536z" />
+								</svg>
+							</span>
+							Pin
+						</a>
+					</div>
+				</div>
+
+				<div class="d-flex flex-sm-row flex-column align-items-sm-start align-items-center gap-sm-5 gap-2">
+					<div class="d-flex">
+						<button class="btn btn-custom btn-like d-flex align-items-center gap-1 py-0">
+							<span class="icon icon-like">
+								<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 5.333 6.667">
+									<path
+										d="m.95 3.118.628-.16a.25.25 0 0 0 .158-.123c.098-.169.33-.492.806-.763.18-.101.329-.18.461-.245.338-.171.542-.27.846-.646.131-.162.258-.248.387-.255a.324.324 0 0 1 .242.094.47.47 0 0 1 .127.424c-.045.224-.13.523-.276.661-.145.134-.485.393-.684.543l.6.26c.044.016.08.048.116.078l.09.1c.087.091.112.22.068.342l-.09.249a.576.576 0 0 1-.046.091l.098.143c.063.09.076.202.04.303l-.058.159a.36.36 0 0 1-.128.17.197.197 0 0 1 .008.158l-.077.212a.384.384 0 0 1-.286.243l-.092.021-.075.206a.275.275 0 0 1-.176.17l-.444.15a.404.404 0 0 1-.331-.03c-.044-.01-.347-.067-.655-.178-.216-.08-.431-.181-.563-.313a.836.836 0 0 1-.057-.057c-.127-.016-.647-.068-.944.154a.1.1 0 0 1-.083.012.107.107 0 0 1-.038-.026c-.03-.035-.02-.091.014-.12.273-.207.673-.218.908-.204-.137-.218-.14-.387-.145-.394 0-.049.036-.083.085-.084.048 0 .083.036.083.084 0 0 .013.245.29.52.163.162.508.287.78.362l-.176-.142a.323.323 0 0 1-.099-.354l.056-.153a.217.217 0 0 1 .11-.123.246.246 0 0 1-.002-.174l.065-.18a.255.255 0 0 1 .136-.143c-.005-.02-.011-.034-.014-.059-.174.099-.47.206-.824.09a.083.083 0 0 1-.051-.108.083.083 0 0 1 .108-.051c.438.147.78-.148.81-.18l.026-.073a.277.277 0 0 1 .147-.157.27.27 0 0 1-.009-.207l.057-.154a.27.27 0 0 1 .274-.176l.636.046a.284.284 0 0 0 .102-.016.082.082 0 0 1 .112.04.081.081 0 0 1-.041.111.364.364 0 0 1-.187.034l-.636-.045a.097.097 0 0 0-.102.064l-.056.154a.123.123 0 0 0 .002.079.11.11 0 0 0 .06.051l.03.012.56.191a.282.282 0 0 0 .153.008l.327-.073a.202.202 0 0 0 .15-.131l.09-.25a.163.163 0 0 0-.034-.168l-.09-.099a.148.148 0 0 0-.058-.038l-.61-.252a.163.163 0 0 1-.096-.131.145.145 0 0 1 .065-.145c.156-.117.536-.404.682-.543.09-.08.17-.286.224-.566a.3.3 0 0 0-.076-.267c-.037-.032-.072-.05-.114-.048-.05.005-.14.039-.262.192-.327.403-.56.516-.905.69-.132.067-.278.139-.452.238-.439.248-.653.542-.74.696a.426.426 0 0 1-.263.198l-.628.161a.088.088 0 0 1-.049 0c-.026-.01-.049-.03-.05-.06-.02-.043.008-.087.055-.1zm3.152 1.735.077-.212c.002-.005.004-.01 0-.018a.815.815 0 0 1-.306.069l-.274.008a.522.522 0 0 1-.166-.018L3.4 4.67c-.032-.012-.056-.027-.086-.043l-.544-.318c-.03-.017-.057-.009-.07-.007-.013.006-.035.016-.047.048l-.065.18a.084.084 0 0 0 .026.093l.518.405c.075.057.17.08.259.064l.553-.104a.216.216 0 0 0 .157-.135zm-1.683.125a.142.142 0 0 0 .044.16l.431.348a.254.254 0 0 0 .236.045l.448-.143a.107.107 0 0 0 .073-.07l.04-.11-.269.046a.505.505 0 0 1-.396-.097l-.154-.122-.303-.236a.072.072 0 0 0-.05-.012.05.05 0 0 0-.037.034l-.058.16zm1.737-1.065-.326.073a.361.361 0 0 1-.147.007l-.005-.002c-.034-.006-.068-.012-.099-.024l-.604-.202a.12.12 0 0 0-.13.079L2.78 4a.122.122 0 0 0 .053.15l.014.011.356.209.193.111a.35.35 0 0 0 .198.049l.273-.009a.713.713 0 0 0 .331-.101l.022-.01a.175.175 0 0 0 .077-.098l.058-.159a.163.163 0 0 0-.019-.145l-.093-.124c-.027.009-.055.022-.088.028" />
+								</svg>
+							</span>
+							<span>XX</span>
+						</button>
+
+						<button class="btn btn-custom btn-like d-flex align-items-center gap-1 py-0">
+							<span class="icon icon-dislike">
+								<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 5.333 6.667">
+									<path
+										d="m.95 3.118.628-.16a.25.25 0 0 0 .158-.123c.098-.169.33-.492.806-.763.18-.101.329-.18.461-.245.338-.171.542-.27.846-.646.131-.162.258-.248.387-.255a.324.324 0 0 1 .242.094.47.47 0 0 1 .127.424c-.045.224-.13.523-.276.661-.145.134-.485.393-.684.543l.6.26c.044.016.08.048.116.078l.09.1c.087.091.112.22.068.342l-.09.249a.576.576 0 0 1-.046.091l.098.143c.063.09.076.202.04.303l-.058.159a.36.36 0 0 1-.128.17.197.197 0 0 1 .008.158l-.077.212a.384.384 0 0 1-.286.243l-.092.021-.075.206a.275.275 0 0 1-.176.17l-.444.15a.404.404 0 0 1-.331-.03c-.044-.01-.347-.067-.655-.178-.216-.08-.431-.181-.563-.313a.836.836 0 0 1-.057-.057c-.127-.016-.647-.068-.944.154a.1.1 0 0 1-.083.012.107.107 0 0 1-.038-.026c-.03-.035-.02-.091.014-.12.273-.207.673-.218.908-.204-.137-.218-.14-.387-.145-.394 0-.049.036-.083.085-.084.048 0 .083.036.083.084 0 0 .013.245.29.52.163.162.508.287.78.362l-.176-.142a.323.323 0 0 1-.099-.354l.056-.153a.217.217 0 0 1 .11-.123.246.246 0 0 1-.002-.174l.065-.18a.255.255 0 0 1 .136-.143c-.005-.02-.011-.034-.014-.059-.174.099-.47.206-.824.09a.083.083 0 0 1-.051-.108.083.083 0 0 1 .108-.051c.438.147.78-.148.81-.18l.026-.073a.277.277 0 0 1 .147-.157.27.27 0 0 1-.009-.207l.057-.154a.27.27 0 0 1 .274-.176l.636.046a.284.284 0 0 0 .102-.016.082.082 0 0 1 .112.04.081.081 0 0 1-.041.111.364.364 0 0 1-.187.034l-.636-.045a.097.097 0 0 0-.102.064l-.056.154a.123.123 0 0 0 .002.079.11.11 0 0 0 .06.051l.03.012.56.191a.282.282 0 0 0 .153.008l.327-.073a.202.202 0 0 0 .15-.131l.09-.25a.163.163 0 0 0-.034-.168l-.09-.099a.148.148 0 0 0-.058-.038l-.61-.252a.163.163 0 0 1-.096-.131.145.145 0 0 1 .065-.145c.156-.117.536-.404.682-.543.09-.08.17-.286.224-.566a.3.3 0 0 0-.076-.267c-.037-.032-.072-.05-.114-.048-.05.005-.14.039-.262.192-.327.403-.56.516-.905.69-.132.067-.278.139-.452.238-.439.248-.653.542-.74.696a.426.426 0 0 1-.263.198l-.628.161a.088.088 0 0 1-.049 0c-.026-.01-.049-.03-.05-.06-.02-.043.008-.087.055-.1zm3.152 1.735.077-.212c.002-.005.004-.01 0-.018a.815.815 0 0 1-.306.069l-.274.008a.522.522 0 0 1-.166-.018L3.4 4.67c-.032-.012-.056-.027-.086-.043l-.544-.318c-.03-.017-.057-.009-.07-.007-.013.006-.035.016-.047.048l-.065.18a.084.084 0 0 0 .026.093l.518.405c.075.057.17.08.259.064l.553-.104a.216.216 0 0 0 .157-.135zm-1.683.125a.142.142 0 0 0 .044.16l.431.348a.254.254 0 0 0 .236.045l.448-.143a.107.107 0 0 0 .073-.07l.04-.11-.269.046a.505.505 0 0 1-.396-.097l-.154-.122-.303-.236a.072.072 0 0 0-.05-.012.05.05 0 0 0-.037.034l-.058.16zm1.737-1.065-.326.073a.361.361 0 0 1-.147.007l-.005-.002c-.034-.006-.068-.012-.099-.024l-.604-.202a.12.12 0 0 0-.13.079L2.78 4a.122.122 0 0 0 .053.15l.014.011.356.209.193.111a.35.35 0 0 0 .198.049l.273-.009a.713.713 0 0 0 .331-.101l.022-.01a.175.175 0 0 0 .077-.098l.058-.159a.163.163 0 0 0-.019-.145l-.093-.124c-.027.009-.055.022-.088.028" />
+								</svg>
+							</span>
+							<span>XX</span>
+						</button>
+					</div>
+
+					<div class="d-flex flex-column text-end">
+						<span class="h5">
+							May X, XXXX
+						</span>
+
+						<div class="d-flex align-items-center justify-content-end gap-4">
+							<a href="./404.html">
+								<span class="icon icon-link">
+									<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+										style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd"
+										viewBox="0 0 4370 4370">
+										<path class="fil0"
+											d="m4082 350-152-135c-354-314-897-282-1211 73l-435 491c-98 111-88 281 23 379l41 36c111 99 281 88 379-23l435-491c97-109 265-120 375-23l152 135c110 97 120 265 23 375l-952 1074c-81 91-212 116-321 60-118-61-263-34-351 65l-7 8c-60 67-85 157-68 245 16 89 71 163 151 205 126 66 263 98 397 98 239 0 474-100 642-289l952-1073c314-354 281-897-73-1211zM2063 3211l-41-36c-111-98-281-88-379 23l-435 491c-97 109-265 120-375 23l-152-135c-110-97-120-265-23-375l952-1074c79-89 209-115 316-62 123 60 272 31 363-72l3-4c58-66 83-154 68-240-16-87-69-160-147-202-351-188-782-111-1046 187L215 2808c-314 354-281 897 73 1211l152 135c163 144 366 215 568 215 237 0 473-97 642-288l435-491c98-111 88-281-23-379z" />
+									</svg>
+								</span>
+							</a>
+
+							<a href="./404.html">
+								<span class="icon icon-email">
+									<svg viewBox="0 -9.31 56.223 56.223" xmlns="http://www.w3.org/2000/svg">
+										<path data-name="email unread"
+											d="M28.182 22.548h.012a2.16 2.16 0 0 0 1.181-.346l.092-.059.063-.039 1.071-.887L56.164.123A.3.3 0 0 0 55.925 0H.297a.291.291 0 0 0-.183.066l26.745 22.045a2.1 2.1 0 0 0 1.323.437ZM.005 2.989v31.268l19.159-15.476Zm37.084 15.9 19.139 15.38V3.089Zm-6.085 5.021a4.559 4.559 0 0 1-5.619.005l-4.388-3.619L.005 37.247v.053a.3.3 0 0 0 .3.3H55.93a.3.3 0 0 0 .3-.3v-.049L35.256 20.399Z" />
+									</svg>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="custom-accordion product-accordion">
+				<div class="accordion accordion-collapse-word">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="panelsStayOpen-headingReviews">
+							<button class="accordion-button collapsed text-uppercase" type="button" data-bs-toggle="collapse"
+								data-bs-target="#panelsStayOpen-collapseReviews" aria-expanded="false"
+								aria-controls="panelsStayOpen-collapseReviews">
+								Ratings & Reviews
+							</button>
+						</h2>
+						<div id="panelsStayOpen-collapseReviews" class="accordion-collapse collapse"
+							aria-labelledby="panelsStayOpen-headingReviews">
+							<div class="accordion-body">
+								<div class="row">
+									<div class="col-md-3 col-12">
+										<div>
+											<h3 class="h5">
+												<span>4.0</span>
+												Average
+											</h3>
+
+											<div class="card-reviews mb-md-3 mb-1">
+												<div class="card-stars">
+													<span class="icon icon-star active">
+														<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+															viewBox="0 0 6.667 5.333">
+															<path
+																d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+														</svg>
+													</span>
+													<span class="icon icon-star active">
+														<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+															viewBox="0 0 6.667 5.333">
+															<path
+																d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+														</svg>
+													</span>
+													<span class="icon icon-star active">
+														<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+															viewBox="0 0 6.667 5.333">
+															<path
+																d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+														</svg>
+													</span>
+													<span class="icon icon-star active">
+														<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+															viewBox="0 0 6.667 5.333">
+															<path
+																d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+														</svg>
+													</span>
+													<span class="icon icon-star">
+														<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+															viewBox="0 0 6.667 5.333">
+															<path
+																d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+														</svg>
+													</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="row mb-2">
+											<div
+												class="col-xxl-7 col-lg-10 col-md-12 col-sm-7 col-10 d-flex align-items-center gap-3">
+												<span class="flex-shrink-0 tiny">
+													5 Stars
+												</span>
+
+												<div class="progress w-100">
+													<div class="progress-bar" role="progressbar" aria-label="Basic example"
+														style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+													</div>
+												</div>
+
+												<span class="tiny">
+													2
+												</span>
+											</div>
+											<div
+												class="col-xxl-7 col-lg-10 col-md-12 col-sm-7 col-10 d-flex align-items-center gap-3">
+												<span class="flex-shrink-0 tiny">
+													4 Stars
+												</span>
+
+												<div class="progress w-100">
+													<div class="progress-bar" role="progressbar" aria-label="Basic example"
+														style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+													</div>
+												</div>
+
+												<span class="tiny">
+													5
+												</span>
+											</div>
+											<div
+												class="col-xxl-7 col-lg-10 col-md-12 col-sm-7 col-10 d-flex align-items-center gap-3">
+												<span class="flex-shrink-0 tiny">
+													3 Stars
+												</span>
+
+												<div class="progress w-100">
+													<div class="progress-bar" role="progressbar" aria-label="Basic example"
+														style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+													</div>
+												</div>
+
+												<span class="tiny">
+													3
+												</span>
+											</div>
+											<div
+												class="col-xxl-7 col-lg-10 col-md-12 col-sm-7 col-10 d-flex align-items-center gap-3">
+												<span class="flex-shrink-0 tiny">
+													2 Stars
+												</span>
+
+												<div class="progress w-100">
+													<div class="progress-bar" role="progressbar" aria-label="Basic example"
+														style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+													</div>
+												</div>
+
+												<span class="tiny">
+													0
+												</span>
+											</div>
+											<div
+												class="col-xxl-7 col-lg-10 col-md-12 col-sm-7 col-10 d-flex align-items-center gap-3">
+												<span class="flex-shrink-0 tiny">
+													1 Stars
+												</span>
+
+												<div class="progress w-100">
+													<div class="progress-bar" role="progressbar" aria-label="Basic example"
+														style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+													</div>
+												</div>
+
+												<span class="tiny">
+													1
+												</span>
+											</div>
+										</div>
+
+										<a href="./review.html" class="btn-arrow text-decoration-underline">
+											Write a review
+											<span class="icon icon-arrow-right">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.91 122.88"
+													xml:space="preserve">
+													<path
+														d="M1.95 111.2a6.875 6.875 0 0 0 .14 9.73 6.875 6.875 0 0 0 9.73-.14L64.94 66l-4.93-4.79 4.95 4.8c2.65-2.74 2.59-7.11-.15-9.76-.08-.08-.16-.15-.24-.22L11.81 2.09c-2.65-2.73-7-2.79-9.73-.14-2.72 2.65-2.78 7-.13 9.73l48.46 49.55L1.95 111.2z" />
+												</svg>
+											</span>
+										</a>
+									</div>
+
+									<div class="col-md-9 col-12">
+										<nav class="border border-bottom-1 border-top-0 border-start-0 border-end-0 pb-1">
+											<div class="nav nav-tabs" id="nav-tab" role="tablist">
+												<button class="nav-link fs-5 text-capitalize active" id="nav-useful-tab"
+													data-bs-toggle="tab" data-bs-target="#nav-useful" type="button" role="tab"
+													aria-controls="nav-useful" aria-selected="true">Most Useful</button>
+												<button class="nav-link fs-5 text-capitalize" id="nav-resent-tab"
+													data-bs-toggle="tab" data-bs-target="#nav-resent" type="button" role="tab"
+													aria-controls="nav-resent" aria-selected="false">Most Resent</button>
+											</div>
+										</nav>
+
+										<div class="tab-content" id="nav-tabContent">
+											<div class="tab-pane fade show active" id="nav-useful" role="tabpanel"
+												aria-labelledby="nav-useful-tab" tabindex="0">
+												<div class="row product-review mt-3">
+													<div class="card-reviews mb-1">
+														<div class="card-stars">
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+														</div>
+													</div>
+
+													<h3>
+														C-IN2 Core Low Rise Brief
+													</h3>
+													<div class="col-lg-9 col-12 user-review">
+														<div
+															class="d-flex flex-sm-row flex-column align-items-sm-start align-items-center gap-2">
+															<p class="mb-sm-2 mb-1">
+																Bought 3 of these all-cotton. T's in clay red, light grey, and blue
+																wing.
+																Very
+																happy with colors and softness of fabric. Ordered XL for a loose fit on
+																my
+																closer-to-large frame, and after washing and machine drying. that seems
+																to
+																have turned out well. Couldn't resist low, low sale pricing.
+															</p>
+															<div>
+																<img src="./images/dist/items/avatar.jpg" width="100"
+																	class="rounded mb-sm-0 mb-1" loading="lazy" alt="Avatar">
+															</div>
+														</div>
+														<div class="d-flex align-items-center flex-md-row flex-column gap-md-4 gap-0">
+															<div>
+																Written by <span>Alex</span> from <span>Chicago</span> / <span>Mar
+																	XX</span>, <span>20XX</span>
+															</div>
+															<div class="d-flex align-items-center">
+																<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
+																	<span class="icon icon-like">
+																		<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																			viewBox="0 0 5.333 6.667">
+																			<path
+																				d="m.95 3.118.628-.16a.25.25 0 0 0 .158-.123c.098-.169.33-.492.806-.763.18-.101.329-.18.461-.245.338-.171.542-.27.846-.646.131-.162.258-.248.387-.255a.324.324 0 0 1 .242.094.47.47 0 0 1 .127.424c-.045.224-.13.523-.276.661-.145.134-.485.393-.684.543l.6.26c.044.016.08.048.116.078l.09.1c.087.091.112.22.068.342l-.09.249a.576.576 0 0 1-.046.091l.098.143c.063.09.076.202.04.303l-.058.159a.36.36 0 0 1-.128.17.197.197 0 0 1 .008.158l-.077.212a.384.384 0 0 1-.286.243l-.092.021-.075.206a.275.275 0 0 1-.176.17l-.444.15a.404.404 0 0 1-.331-.03c-.044-.01-.347-.067-.655-.178-.216-.08-.431-.181-.563-.313a.836.836 0 0 1-.057-.057c-.127-.016-.647-.068-.944.154a.1.1 0 0 1-.083.012.107.107 0 0 1-.038-.026c-.03-.035-.02-.091.014-.12.273-.207.673-.218.908-.204-.137-.218-.14-.387-.145-.394 0-.049.036-.083.085-.084.048 0 .083.036.083.084 0 0 .013.245.29.52.163.162.508.287.78.362l-.176-.142a.323.323 0 0 1-.099-.354l.056-.153a.217.217 0 0 1 .11-.123.246.246 0 0 1-.002-.174l.065-.18a.255.255 0 0 1 .136-.143c-.005-.02-.011-.034-.014-.059-.174.099-.47.206-.824.09a.083.083 0 0 1-.051-.108.083.083 0 0 1 .108-.051c.438.147.78-.148.81-.18l.026-.073a.277.277 0 0 1 .147-.157.27.27 0 0 1-.009-.207l.057-.154a.27.27 0 0 1 .274-.176l.636.046a.284.284 0 0 0 .102-.016.082.082 0 0 1 .112.04.081.081 0 0 1-.041.111.364.364 0 0 1-.187.034l-.636-.045a.097.097 0 0 0-.102.064l-.056.154a.123.123 0 0 0 .002.079.11.11 0 0 0 .06.051l.03.012.56.191a.282.282 0 0 0 .153.008l.327-.073a.202.202 0 0 0 .15-.131l.09-.25a.163.163 0 0 0-.034-.168l-.09-.099a.148.148 0 0 0-.058-.038l-.61-.252a.163.163 0 0 1-.096-.131.145.145 0 0 1 .065-.145c.156-.117.536-.404.682-.543.09-.08.17-.286.224-.566a.3.3 0 0 0-.076-.267c-.037-.032-.072-.05-.114-.048-.05.005-.14.039-.262.192-.327.403-.56.516-.905.69-.132.067-.278.139-.452.238-.439.248-.653.542-.74.696a.426.426 0 0 1-.263.198l-.628.161a.088.088 0 0 1-.049 0c-.026-.01-.049-.03-.05-.06-.02-.043.008-.087.055-.1zm3.152 1.735.077-.212c.002-.005.004-.01 0-.018a.815.815 0 0 1-.306.069l-.274.008a.522.522 0 0 1-.166-.018L3.4 4.67c-.032-.012-.056-.027-.086-.043l-.544-.318c-.03-.017-.057-.009-.07-.007-.013.006-.035.016-.047.048l-.065.18a.084.084 0 0 0 .026.093l.518.405c.075.057.17.08.259.064l.553-.104a.216.216 0 0 0 .157-.135zm-1.683.125a.142.142 0 0 0 .044.16l.431.348a.254.254 0 0 0 .236.045l.448-.143a.107.107 0 0 0 .073-.07l.04-.11-.269.046a.505.505 0 0 1-.396-.097l-.154-.122-.303-.236a.072.072 0 0 0-.05-.012.05.05 0 0 0-.037.034l-.058.16zm1.737-1.065-.326.073a.361.361 0 0 1-.147.007l-.005-.002c-.034-.006-.068-.012-.099-.024l-.604-.202a.12.12 0 0 0-.13.079L2.78 4a.122.122 0 0 0 .053.15l.014.011.356.209.193.111a.35.35 0 0 0 .198.049l.273-.009a.713.713 0 0 0 .331-.101l.022-.01a.175.175 0 0 0 .077-.098l.058-.159a.163.163 0 0 0-.019-.145l-.093-.124c-.027.009-.055.022-.088.028" />
+																		</svg>
+																	</span>
+																	<span>XX</span>
+																</button>
+
+																<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
+																	<span class="icon icon-dislike">
+																		<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																			viewBox="0 0 5.333 6.667">
+																			<path
+																				d="m.95 3.118.628-.16a.25.25 0 0 0 .158-.123c.098-.169.33-.492.806-.763.18-.101.329-.18.461-.245.338-.171.542-.27.846-.646.131-.162.258-.248.387-.255a.324.324 0 0 1 .242.094.47.47 0 0 1 .127.424c-.045.224-.13.523-.276.661-.145.134-.485.393-.684.543l.6.26c.044.016.08.048.116.078l.09.1c.087.091.112.22.068.342l-.09.249a.576.576 0 0 1-.046.091l.098.143c.063.09.076.202.04.303l-.058.159a.36.36 0 0 1-.128.17.197.197 0 0 1 .008.158l-.077.212a.384.384 0 0 1-.286.243l-.092.021-.075.206a.275.275 0 0 1-.176.17l-.444.15a.404.404 0 0 1-.331-.03c-.044-.01-.347-.067-.655-.178-.216-.08-.431-.181-.563-.313a.836.836 0 0 1-.057-.057c-.127-.016-.647-.068-.944.154a.1.1 0 0 1-.083.012.107.107 0 0 1-.038-.026c-.03-.035-.02-.091.014-.12.273-.207.673-.218.908-.204-.137-.218-.14-.387-.145-.394 0-.049.036-.083.085-.084.048 0 .083.036.083.084 0 0 .013.245.29.52.163.162.508.287.78.362l-.176-.142a.323.323 0 0 1-.099-.354l.056-.153a.217.217 0 0 1 .11-.123.246.246 0 0 1-.002-.174l.065-.18a.255.255 0 0 1 .136-.143c-.005-.02-.011-.034-.014-.059-.174.099-.47.206-.824.09a.083.083 0 0 1-.051-.108.083.083 0 0 1 .108-.051c.438.147.78-.148.81-.18l.026-.073a.277.277 0 0 1 .147-.157.27.27 0 0 1-.009-.207l.057-.154a.27.27 0 0 1 .274-.176l.636.046a.284.284 0 0 0 .102-.016.082.082 0 0 1 .112.04.081.081 0 0 1-.041.111.364.364 0 0 1-.187.034l-.636-.045a.097.097 0 0 0-.102.064l-.056.154a.123.123 0 0 0 .002.079.11.11 0 0 0 .06.051l.03.012.56.191a.282.282 0 0 0 .153.008l.327-.073a.202.202 0 0 0 .15-.131l.09-.25a.163.163 0 0 0-.034-.168l-.09-.099a.148.148 0 0 0-.058-.038l-.61-.252a.163.163 0 0 1-.096-.131.145.145 0 0 1 .065-.145c.156-.117.536-.404.682-.543.09-.08.17-.286.224-.566a.3.3 0 0 0-.076-.267c-.037-.032-.072-.05-.114-.048-.05.005-.14.039-.262.192-.327.403-.56.516-.905.69-.132.067-.278.139-.452.238-.439.248-.653.542-.74.696a.426.426 0 0 1-.263.198l-.628.161a.088.088 0 0 1-.049 0c-.026-.01-.049-.03-.05-.06-.02-.043.008-.087.055-.1zm3.152 1.735.077-.212c.002-.005.004-.01 0-.018a.815.815 0 0 1-.306.069l-.274.008a.522.522 0 0 1-.166-.018L3.4 4.67c-.032-.012-.056-.027-.086-.043l-.544-.318c-.03-.017-.057-.009-.07-.007-.013.006-.035.016-.047.048l-.065.18a.084.084 0 0 0 .026.093l.518.405c.075.057.17.08.259.064l.553-.104a.216.216 0 0 0 .157-.135zm-1.683.125a.142.142 0 0 0 .044.16l.431.348a.254.254 0 0 0 .236.045l.448-.143a.107.107 0 0 0 .073-.07l.04-.11-.269.046a.505.505 0 0 1-.396-.097l-.154-.122-.303-.236a.072.072 0 0 0-.05-.012.05.05 0 0 0-.037.034l-.058.16zm1.737-1.065-.326.073a.361.361 0 0 1-.147.007l-.005-.002c-.034-.006-.068-.012-.099-.024l-.604-.202a.12.12 0 0 0-.13.079L2.78 4a.122.122 0 0 0 .053.15l.014.011.356.209.193.111a.35.35 0 0 0 .198.049l.273-.009a.713.713 0 0 0 .331-.101l.022-.01a.175.175 0 0 0 .077-.098l.058-.159a.163.163 0 0 0-.019-.145l-.093-.124c-.027.009-.055.022-.088.028" />
+																		</svg>
+																	</span>
+																	<span>XX</span>
+																</button>
+															</div>
+														</div>
+													</div>
+
+													<div class="col-xxl-2 col-lg-3 col-12 mt-lg-0 mt-3 user-review-question">
+														<span class="d-block mb-2 text-center">Is this review useful?</span>
+														<div class="d-sm-flex d-block align-items-center gap-2">
+															<button
+																class="btn btn-secondary w-100 text-uppercase mb-2 mb-sm-0">Yes</button>
+															<button class="btn btn-secondary w-100 text-uppercase">No</button>
+														</div>
+													</div>
+
+													<div class="mt-lg-3 mt-4">
+														<div class="border border-bottom-1 border-top-0 border-start-0 border-end-0">
+														</div>
+													</div>
+												</div>
+												<div class="row product-review mt-3">
+													<div class="card-reviews mb-1">
+														<div class="card-stars">
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+														</div>
+													</div>
+
+													<h3>
+														C-IN2 Core Low Rise Brief
+													</h3>
+													<div class="col-lg-9 col-12 user-review">
+														<div
+															class="d-flex flex-sm-row flex-column align-items-sm-start align-items-center gap-2">
+															<p class="mb-sm-2 mb-1">
+																Bought 3 of these all-cotton. T's in clay red, light grey, and blue
+																wing.
+																Very
+																happy with colors and softness of fabric. Ordered XL for a loose fit on
+																my
+																closer-to-large frame, and after washing and machine drying. that seems
+																to
+																have turned out well. Couldn't resist low, low sale pricing.
+															</p>
+															<div>
+																<img src="./images/dist/items/avatar.jpg" width="100"
+																	class="rounded mb-sm-0 mb-1" loading="lazy" alt="Avatar">
+															</div>
+														</div>
+														<div class="d-flex align-items-center flex-md-row flex-column gap-md-4 gap-0">
+															<div>
+																Written by <span>Alex</span> from <span>Chicago</span> / <span>Mar
+																	XX</span>, <span>20XX</span>
+															</div>
+															<div class="d-flex align-items-center">
+																<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
+																	<span class="icon icon-like">
+																		<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																			viewBox="0 0 5.333 6.667">
+																			<path
+																				d="m.95 3.118.628-.16a.25.25 0 0 0 .158-.123c.098-.169.33-.492.806-.763.18-.101.329-.18.461-.245.338-.171.542-.27.846-.646.131-.162.258-.248.387-.255a.324.324 0 0 1 .242.094.47.47 0 0 1 .127.424c-.045.224-.13.523-.276.661-.145.134-.485.393-.684.543l.6.26c.044.016.08.048.116.078l.09.1c.087.091.112.22.068.342l-.09.249a.576.576 0 0 1-.046.091l.098.143c.063.09.076.202.04.303l-.058.159a.36.36 0 0 1-.128.17.197.197 0 0 1 .008.158l-.077.212a.384.384 0 0 1-.286.243l-.092.021-.075.206a.275.275 0 0 1-.176.17l-.444.15a.404.404 0 0 1-.331-.03c-.044-.01-.347-.067-.655-.178-.216-.08-.431-.181-.563-.313a.836.836 0 0 1-.057-.057c-.127-.016-.647-.068-.944.154a.1.1 0 0 1-.083.012.107.107 0 0 1-.038-.026c-.03-.035-.02-.091.014-.12.273-.207.673-.218.908-.204-.137-.218-.14-.387-.145-.394 0-.049.036-.083.085-.084.048 0 .083.036.083.084 0 0 .013.245.29.52.163.162.508.287.78.362l-.176-.142a.323.323 0 0 1-.099-.354l.056-.153a.217.217 0 0 1 .11-.123.246.246 0 0 1-.002-.174l.065-.18a.255.255 0 0 1 .136-.143c-.005-.02-.011-.034-.014-.059-.174.099-.47.206-.824.09a.083.083 0 0 1-.051-.108.083.083 0 0 1 .108-.051c.438.147.78-.148.81-.18l.026-.073a.277.277 0 0 1 .147-.157.27.27 0 0 1-.009-.207l.057-.154a.27.27 0 0 1 .274-.176l.636.046a.284.284 0 0 0 .102-.016.082.082 0 0 1 .112.04.081.081 0 0 1-.041.111.364.364 0 0 1-.187.034l-.636-.045a.097.097 0 0 0-.102.064l-.056.154a.123.123 0 0 0 .002.079.11.11 0 0 0 .06.051l.03.012.56.191a.282.282 0 0 0 .153.008l.327-.073a.202.202 0 0 0 .15-.131l.09-.25a.163.163 0 0 0-.034-.168l-.09-.099a.148.148 0 0 0-.058-.038l-.61-.252a.163.163 0 0 1-.096-.131.145.145 0 0 1 .065-.145c.156-.117.536-.404.682-.543.09-.08.17-.286.224-.566a.3.3 0 0 0-.076-.267c-.037-.032-.072-.05-.114-.048-.05.005-.14.039-.262.192-.327.403-.56.516-.905.69-.132.067-.278.139-.452.238-.439.248-.653.542-.74.696a.426.426 0 0 1-.263.198l-.628.161a.088.088 0 0 1-.049 0c-.026-.01-.049-.03-.05-.06-.02-.043.008-.087.055-.1zm3.152 1.735.077-.212c.002-.005.004-.01 0-.018a.815.815 0 0 1-.306.069l-.274.008a.522.522 0 0 1-.166-.018L3.4 4.67c-.032-.012-.056-.027-.086-.043l-.544-.318c-.03-.017-.057-.009-.07-.007-.013.006-.035.016-.047.048l-.065.18a.084.084 0 0 0 .026.093l.518.405c.075.057.17.08.259.064l.553-.104a.216.216 0 0 0 .157-.135zm-1.683.125a.142.142 0 0 0 .044.16l.431.348a.254.254 0 0 0 .236.045l.448-.143a.107.107 0 0 0 .073-.07l.04-.11-.269.046a.505.505 0 0 1-.396-.097l-.154-.122-.303-.236a.072.072 0 0 0-.05-.012.05.05 0 0 0-.037.034l-.058.16zm1.737-1.065-.326.073a.361.361 0 0 1-.147.007l-.005-.002c-.034-.006-.068-.012-.099-.024l-.604-.202a.12.12 0 0 0-.13.079L2.78 4a.122.122 0 0 0 .053.15l.014.011.356.209.193.111a.35.35 0 0 0 .198.049l.273-.009a.713.713 0 0 0 .331-.101l.022-.01a.175.175 0 0 0 .077-.098l.058-.159a.163.163 0 0 0-.019-.145l-.093-.124c-.027.009-.055.022-.088.028" />
+																		</svg>
+																	</span>
+																	<span>XX</span>
+																</button>
+
+																<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
+																	<span class="icon icon-dislike">
+																		<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																			viewBox="0 0 5.333 6.667">
+																			<path
+																				d="m.95 3.118.628-.16a.25.25 0 0 0 .158-.123c.098-.169.33-.492.806-.763.18-.101.329-.18.461-.245.338-.171.542-.27.846-.646.131-.162.258-.248.387-.255a.324.324 0 0 1 .242.094.47.47 0 0 1 .127.424c-.045.224-.13.523-.276.661-.145.134-.485.393-.684.543l.6.26c.044.016.08.048.116.078l.09.1c.087.091.112.22.068.342l-.09.249a.576.576 0 0 1-.046.091l.098.143c.063.09.076.202.04.303l-.058.159a.36.36 0 0 1-.128.17.197.197 0 0 1 .008.158l-.077.212a.384.384 0 0 1-.286.243l-.092.021-.075.206a.275.275 0 0 1-.176.17l-.444.15a.404.404 0 0 1-.331-.03c-.044-.01-.347-.067-.655-.178-.216-.08-.431-.181-.563-.313a.836.836 0 0 1-.057-.057c-.127-.016-.647-.068-.944.154a.1.1 0 0 1-.083.012.107.107 0 0 1-.038-.026c-.03-.035-.02-.091.014-.12.273-.207.673-.218.908-.204-.137-.218-.14-.387-.145-.394 0-.049.036-.083.085-.084.048 0 .083.036.083.084 0 0 .013.245.29.52.163.162.508.287.78.362l-.176-.142a.323.323 0 0 1-.099-.354l.056-.153a.217.217 0 0 1 .11-.123.246.246 0 0 1-.002-.174l.065-.18a.255.255 0 0 1 .136-.143c-.005-.02-.011-.034-.014-.059-.174.099-.47.206-.824.09a.083.083 0 0 1-.051-.108.083.083 0 0 1 .108-.051c.438.147.78-.148.81-.18l.026-.073a.277.277 0 0 1 .147-.157.27.27 0 0 1-.009-.207l.057-.154a.27.27 0 0 1 .274-.176l.636.046a.284.284 0 0 0 .102-.016.082.082 0 0 1 .112.04.081.081 0 0 1-.041.111.364.364 0 0 1-.187.034l-.636-.045a.097.097 0 0 0-.102.064l-.056.154a.123.123 0 0 0 .002.079.11.11 0 0 0 .06.051l.03.012.56.191a.282.282 0 0 0 .153.008l.327-.073a.202.202 0 0 0 .15-.131l.09-.25a.163.163 0 0 0-.034-.168l-.09-.099a.148.148 0 0 0-.058-.038l-.61-.252a.163.163 0 0 1-.096-.131.145.145 0 0 1 .065-.145c.156-.117.536-.404.682-.543.09-.08.17-.286.224-.566a.3.3 0 0 0-.076-.267c-.037-.032-.072-.05-.114-.048-.05.005-.14.039-.262.192-.327.403-.56.516-.905.69-.132.067-.278.139-.452.238-.439.248-.653.542-.74.696a.426.426 0 0 1-.263.198l-.628.161a.088.088 0 0 1-.049 0c-.026-.01-.049-.03-.05-.06-.02-.043.008-.087.055-.1zm3.152 1.735.077-.212c.002-.005.004-.01 0-.018a.815.815 0 0 1-.306.069l-.274.008a.522.522 0 0 1-.166-.018L3.4 4.67c-.032-.012-.056-.027-.086-.043l-.544-.318c-.03-.017-.057-.009-.07-.007-.013.006-.035.016-.047.048l-.065.18a.084.084 0 0 0 .026.093l.518.405c.075.057.17.08.259.064l.553-.104a.216.216 0 0 0 .157-.135zm-1.683.125a.142.142 0 0 0 .044.16l.431.348a.254.254 0 0 0 .236.045l.448-.143a.107.107 0 0 0 .073-.07l.04-.11-.269.046a.505.505 0 0 1-.396-.097l-.154-.122-.303-.236a.072.072 0 0 0-.05-.012.05.05 0 0 0-.037.034l-.058.16zm1.737-1.065-.326.073a.361.361 0 0 1-.147.007l-.005-.002c-.034-.006-.068-.012-.099-.024l-.604-.202a.12.12 0 0 0-.13.079L2.78 4a.122.122 0 0 0 .053.15l.014.011.356.209.193.111a.35.35 0 0 0 .198.049l.273-.009a.713.713 0 0 0 .331-.101l.022-.01a.175.175 0 0 0 .077-.098l.058-.159a.163.163 0 0 0-.019-.145l-.093-.124c-.027.009-.055.022-.088.028" />
+																		</svg>
+																	</span>
+																	<span>XX</span>
+																</button>
+															</div>
+														</div>
+													</div>
+
+													<div class="col-xxl-2 col-lg-3 col-12 mt-lg-0 mt-3 user-review-question">
+														<span class="d-block mb-2 text-center">Is this review useful?</span>
+														<div class="d-sm-flex d-block align-items-center gap-2">
+															<button
+																class="btn btn-secondary w-100 text-uppercase mb-2 mb-sm-0">Yes</button>
+															<button class="btn btn-secondary w-100 text-uppercase">No</button>
+														</div>
+													</div>
+
+													<div class="mt-lg-3 mt-4">
+														<div class="border border-bottom-1 border-top-0 border-start-0 border-end-0">
+														</div>
+													</div>
+												</div>
+												<div class="row product-review mt-3">
+													<div class="card-reviews mb-1">
+														<div class="card-stars">
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+														</div>
+													</div>
+
+													<h3>
+														C-IN2 Core Low Rise Brief
+													</h3>
+													<div class="col-lg-9 col-12 user-review">
+														<div
+															class="d-flex flex-sm-row flex-column align-items-sm-start align-items-center gap-2">
+															<p class="mb-sm-2 mb-1">
+																Bought 3 of these all-cotton. T's in clay red, light grey, and blue
+																wing.
+																Very
+																happy with colors and softness of fabric. Ordered XL for a loose fit on
+																my
+																closer-to-large frame, and after washing and machine drying. that seems
+																to
+																have turned out well. Couldn't resist low, low sale pricing.
+															</p>
+															<div>
+																<img src="./images/dist/items/avatar.jpg" width="100"
+																	class="rounded mb-sm-0 mb-1" loading="lazy" alt="Avatar">
+															</div>
+														</div>
+														<div class="d-flex align-items-center flex-md-row flex-column gap-md-4 gap-0">
+															<div>
+																Written by <span>Alex</span> from <span>Chicago</span> / <span>Mar
+																	XX</span>, <span>20XX</span>
+															</div>
+															<div class="d-flex align-items-center">
+																<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
+																	<span class="icon icon-like">
+																		<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																			viewBox="0 0 5.333 6.667">
+																			<path
+																				d="m.95 3.118.628-.16a.25.25 0 0 0 .158-.123c.098-.169.33-.492.806-.763.18-.101.329-.18.461-.245.338-.171.542-.27.846-.646.131-.162.258-.248.387-.255a.324.324 0 0 1 .242.094.47.47 0 0 1 .127.424c-.045.224-.13.523-.276.661-.145.134-.485.393-.684.543l.6.26c.044.016.08.048.116.078l.09.1c.087.091.112.22.068.342l-.09.249a.576.576 0 0 1-.046.091l.098.143c.063.09.076.202.04.303l-.058.159a.36.36 0 0 1-.128.17.197.197 0 0 1 .008.158l-.077.212a.384.384 0 0 1-.286.243l-.092.021-.075.206a.275.275 0 0 1-.176.17l-.444.15a.404.404 0 0 1-.331-.03c-.044-.01-.347-.067-.655-.178-.216-.08-.431-.181-.563-.313a.836.836 0 0 1-.057-.057c-.127-.016-.647-.068-.944.154a.1.1 0 0 1-.083.012.107.107 0 0 1-.038-.026c-.03-.035-.02-.091.014-.12.273-.207.673-.218.908-.204-.137-.218-.14-.387-.145-.394 0-.049.036-.083.085-.084.048 0 .083.036.083.084 0 0 .013.245.29.52.163.162.508.287.78.362l-.176-.142a.323.323 0 0 1-.099-.354l.056-.153a.217.217 0 0 1 .11-.123.246.246 0 0 1-.002-.174l.065-.18a.255.255 0 0 1 .136-.143c-.005-.02-.011-.034-.014-.059-.174.099-.47.206-.824.09a.083.083 0 0 1-.051-.108.083.083 0 0 1 .108-.051c.438.147.78-.148.81-.18l.026-.073a.277.277 0 0 1 .147-.157.27.27 0 0 1-.009-.207l.057-.154a.27.27 0 0 1 .274-.176l.636.046a.284.284 0 0 0 .102-.016.082.082 0 0 1 .112.04.081.081 0 0 1-.041.111.364.364 0 0 1-.187.034l-.636-.045a.097.097 0 0 0-.102.064l-.056.154a.123.123 0 0 0 .002.079.11.11 0 0 0 .06.051l.03.012.56.191a.282.282 0 0 0 .153.008l.327-.073a.202.202 0 0 0 .15-.131l.09-.25a.163.163 0 0 0-.034-.168l-.09-.099a.148.148 0 0 0-.058-.038l-.61-.252a.163.163 0 0 1-.096-.131.145.145 0 0 1 .065-.145c.156-.117.536-.404.682-.543.09-.08.17-.286.224-.566a.3.3 0 0 0-.076-.267c-.037-.032-.072-.05-.114-.048-.05.005-.14.039-.262.192-.327.403-.56.516-.905.69-.132.067-.278.139-.452.238-.439.248-.653.542-.74.696a.426.426 0 0 1-.263.198l-.628.161a.088.088 0 0 1-.049 0c-.026-.01-.049-.03-.05-.06-.02-.043.008-.087.055-.1zm3.152 1.735.077-.212c.002-.005.004-.01 0-.018a.815.815 0 0 1-.306.069l-.274.008a.522.522 0 0 1-.166-.018L3.4 4.67c-.032-.012-.056-.027-.086-.043l-.544-.318c-.03-.017-.057-.009-.07-.007-.013.006-.035.016-.047.048l-.065.18a.084.084 0 0 0 .026.093l.518.405c.075.057.17.08.259.064l.553-.104a.216.216 0 0 0 .157-.135zm-1.683.125a.142.142 0 0 0 .044.16l.431.348a.254.254 0 0 0 .236.045l.448-.143a.107.107 0 0 0 .073-.07l.04-.11-.269.046a.505.505 0 0 1-.396-.097l-.154-.122-.303-.236a.072.072 0 0 0-.05-.012.05.05 0 0 0-.037.034l-.058.16zm1.737-1.065-.326.073a.361.361 0 0 1-.147.007l-.005-.002c-.034-.006-.068-.012-.099-.024l-.604-.202a.12.12 0 0 0-.13.079L2.78 4a.122.122 0 0 0 .053.15l.014.011.356.209.193.111a.35.35 0 0 0 .198.049l.273-.009a.713.713 0 0 0 .331-.101l.022-.01a.175.175 0 0 0 .077-.098l.058-.159a.163.163 0 0 0-.019-.145l-.093-.124c-.027.009-.055.022-.088.028" />
+																		</svg>
+																	</span>
+																	<span>XX</span>
+																</button>
+
+																<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
+																	<span class="icon icon-dislike">
+																		<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																			viewBox="0 0 5.333 6.667">
+																			<path
+																				d="m.95 3.118.628-.16a.25.25 0 0 0 .158-.123c.098-.169.33-.492.806-.763.18-.101.329-.18.461-.245.338-.171.542-.27.846-.646.131-.162.258-.248.387-.255a.324.324 0 0 1 .242.094.47.47 0 0 1 .127.424c-.045.224-.13.523-.276.661-.145.134-.485.393-.684.543l.6.26c.044.016.08.048.116.078l.09.1c.087.091.112.22.068.342l-.09.249a.576.576 0 0 1-.046.091l.098.143c.063.09.076.202.04.303l-.058.159a.36.36 0 0 1-.128.17.197.197 0 0 1 .008.158l-.077.212a.384.384 0 0 1-.286.243l-.092.021-.075.206a.275.275 0 0 1-.176.17l-.444.15a.404.404 0 0 1-.331-.03c-.044-.01-.347-.067-.655-.178-.216-.08-.431-.181-.563-.313a.836.836 0 0 1-.057-.057c-.127-.016-.647-.068-.944.154a.1.1 0 0 1-.083.012.107.107 0 0 1-.038-.026c-.03-.035-.02-.091.014-.12.273-.207.673-.218.908-.204-.137-.218-.14-.387-.145-.394 0-.049.036-.083.085-.084.048 0 .083.036.083.084 0 0 .013.245.29.52.163.162.508.287.78.362l-.176-.142a.323.323 0 0 1-.099-.354l.056-.153a.217.217 0 0 1 .11-.123.246.246 0 0 1-.002-.174l.065-.18a.255.255 0 0 1 .136-.143c-.005-.02-.011-.034-.014-.059-.174.099-.47.206-.824.09a.083.083 0 0 1-.051-.108.083.083 0 0 1 .108-.051c.438.147.78-.148.81-.18l.026-.073a.277.277 0 0 1 .147-.157.27.27 0 0 1-.009-.207l.057-.154a.27.27 0 0 1 .274-.176l.636.046a.284.284 0 0 0 .102-.016.082.082 0 0 1 .112.04.081.081 0 0 1-.041.111.364.364 0 0 1-.187.034l-.636-.045a.097.097 0 0 0-.102.064l-.056.154a.123.123 0 0 0 .002.079.11.11 0 0 0 .06.051l.03.012.56.191a.282.282 0 0 0 .153.008l.327-.073a.202.202 0 0 0 .15-.131l.09-.25a.163.163 0 0 0-.034-.168l-.09-.099a.148.148 0 0 0-.058-.038l-.61-.252a.163.163 0 0 1-.096-.131.145.145 0 0 1 .065-.145c.156-.117.536-.404.682-.543.09-.08.17-.286.224-.566a.3.3 0 0 0-.076-.267c-.037-.032-.072-.05-.114-.048-.05.005-.14.039-.262.192-.327.403-.56.516-.905.69-.132.067-.278.139-.452.238-.439.248-.653.542-.74.696a.426.426 0 0 1-.263.198l-.628.161a.088.088 0 0 1-.049 0c-.026-.01-.049-.03-.05-.06-.02-.043.008-.087.055-.1zm3.152 1.735.077-.212c.002-.005.004-.01 0-.018a.815.815 0 0 1-.306.069l-.274.008a.522.522 0 0 1-.166-.018L3.4 4.67c-.032-.012-.056-.027-.086-.043l-.544-.318c-.03-.017-.057-.009-.07-.007-.013.006-.035.016-.047.048l-.065.18a.084.084 0 0 0 .026.093l.518.405c.075.057.17.08.259.064l.553-.104a.216.216 0 0 0 .157-.135zm-1.683.125a.142.142 0 0 0 .044.16l.431.348a.254.254 0 0 0 .236.045l.448-.143a.107.107 0 0 0 .073-.07l.04-.11-.269.046a.505.505 0 0 1-.396-.097l-.154-.122-.303-.236a.072.072 0 0 0-.05-.012.05.05 0 0 0-.037.034l-.058.16zm1.737-1.065-.326.073a.361.361 0 0 1-.147.007l-.005-.002c-.034-.006-.068-.012-.099-.024l-.604-.202a.12.12 0 0 0-.13.079L2.78 4a.122.122 0 0 0 .053.15l.014.011.356.209.193.111a.35.35 0 0 0 .198.049l.273-.009a.713.713 0 0 0 .331-.101l.022-.01a.175.175 0 0 0 .077-.098l.058-.159a.163.163 0 0 0-.019-.145l-.093-.124c-.027.009-.055.022-.088.028" />
+																		</svg>
+																	</span>
+																	<span>XX</span>
+																</button>
+															</div>
+														</div>
+													</div>
+
+													<div class="col-xxl-2 col-lg-3 col-12 mt-lg-0 mt-3 user-review-question">
+														<span class="d-block mb-2 text-center">Is this review useful?</span>
+														<div class="d-sm-flex d-block align-items-center gap-2">
+															<button
+																class="btn btn-secondary w-100 text-uppercase mb-2 mb-sm-0">Yes</button>
+															<button class="btn btn-secondary w-100 text-uppercase">No</button>
+														</div>
+													</div>
+
+													<div class="mt-lg-3 mt-4">
+														<div class="border border-bottom-1 border-top-0 border-start-0 border-end-0">
+														</div>
+													</div>
+												</div>
+												<button class="btn btn-arrow px-0 mt-2 gap-1 text-decoration-underline">
+													<span>Read all <span>XX</span> customer reviews</span>
+													<span class="icon icon-arrow-right">
+														<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.91 122.88"
+															style="enable-background:new 0 0 66.91 122.88" xml:space="preserve">
+															<path
+																d="M1.95 111.2a6.875 6.875 0 0 0 .14 9.73 6.875 6.875 0 0 0 9.73-.14L64.94 66l-4.93-4.79 4.95 4.8c2.65-2.74 2.59-7.11-.15-9.76-.08-.08-.16-.15-.24-.22L11.81 2.09c-2.65-2.73-7-2.79-9.73-.14-2.72 2.65-2.78 7-.13 9.73l48.46 49.55L1.95 111.2z" />
+														</svg>
+													</span>
+												</button>
+											</div>
+											<div class="tab-pane fade" id="nav-resent" role="tabpanel"
+												aria-labelledby="nav-resent-tab" tabindex="0">
+												222
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="row justify-content-center my-4 my-md-5">
+				<div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-5 col-8 text-center">
+					<div>
+						<div class="fs-5 mb-2 lh-sm mb-4">
+							<span class="d-block mb-0 h2 text-uppercase">Blog</span>
+							The latest news
+						</div>
+					</div>
+					<button class="btn btn-dark btn-lg w-100 text-uppercase mb-3">
+						Read more
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="gift bg-dark text-white pt-3 pt-lg-5 pb-5">
+	<div class="container">
+		<div class="row d-flex align-items-center justify-content-center text-center text-lg-start">
+			<div class="col-xxl-4 col-lg-6 col-12 d-lg-block d-flex flex-column align-items-center mb-5 mb-lg-0">
+				<span class="text-capitalize">Gift Cards</span>
+				<h2 class="gift-title">Give the gift of Our Store, underwaer, accessories, and more</h2>
+				<a href="./gift-card.html" class="btn btn-arrow btn-link ps-0 pe-0">
+					Learn more about gift cards
+					<span class="icon icon-arrow-right">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.91 122.88"
+							style="enable-background:new 0 0 66.91 122.88" xml:space="preserve">
+							<path
+								d="M1.95 111.2a6.875 6.875 0 0 0 .14 9.73 6.875 6.875 0 0 0 9.73-.14L64.94 66l-4.93-4.79 4.95 4.8c2.65-2.74 2.59-7.11-.15-9.76-.08-.08-.16-.15-.24-.22L11.81 2.09c-2.65-2.73-7-2.79-9.73-.14-2.72 2.65-2.78 7-.13 9.73l48.46 49.55L1.95 111.2z"
+								style="fill:#808080" />
+						</svg>
+					</span>
+				</a>
+			</div>
+
+			<div class="col-xxl-4 col-lg-6 col-12 d-lg-block d-flex flex-column align-items-center mt-5 mt-lg-0">
+				<div class="position-relative">
+					<div class="gift-card gift-card-50 position-absolute rounded-3">
+						<div
+							class="gift-card-decor overflow-hidden d-flex align-items-end position-relative w-100 h-100 ps-2 pe-2 rounded-3">
+							<span class="text-primary h1 fw-bold opacity-75 mb-0">
+								50
+								<span class="tiny-little vertical-text">
+									Gift Card
+								</span>
+							</span>
+						</div>
+					</div>
+					<div class="gift-card gift-card-100 position-relative rounded-3">
+						<div
+							class="gift-card-decor overflow-hidden d-flex justify-content-end position-relative w-100 h-100 ps-2 pe-2 rounded-3">
+							<span class="text-primary h1 fw-bold opacity-75 mb-0">
+								100
+								<span class="tiny-little vertical-text">
+									Gift Card
+								</span>
+							</span>
+						</div>
+					</div>
+					<div class="gift-card gift-card-150 position-absolute rounded-3">
+						<div
+							class="gift-card-decor overflow-hidden d-flex align-items-center position-relative w-100 h-100 ps-2 pe-2 rounded-3">
+							<span class="text-primary h1 fw-bold opacity-75 mb-0">
+								150
+								<span class="tiny-little vertical-text">
+									Gift Card
+								</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section class="notification pt-5 pb-5">
+	<div class="container">
+		<div class="row justify-content-between align-items-center">
+			<h2 class="notification-title h1 text-uppercase text-center text-sm-start mb-3 mb-lg-0 col-12 col-lg-6">Get
+				Major Discounts!</h2>
+
+			<form action="#" class="notification-form col-12 col-lg-6 d-block d-sm-flex justify-content-end gap-4">
+				<input type="email" class="form-control form-control-lg mb-2 mb-sm-0 fs-5 text-center" id="notificationEmail1"
+					placeholder="Email *" aria-describedby="emailHelp" required>
+				<button type="submit" class="btn btn-lg btn-dark text-uppercase flex-shrink-0 fw-light ps-5 pe-5">Sign
+					Up</button>
+			</form>
+		</div>
+	</div>
+</section>
+
+</main>
+
+<div class="d-none cookie-alert fixed-bottom bg-dark pt-5 pb-4">
+	<div class="container">
+		<p class="mb-4">
+			We use cookies to ensure that you get the best experience on our website, although the cookies we
+			use do not contain personally identifiable information. By continuing on this website or by clicking "I Accept
+			Cookies", you agree to the storing of cookies on your device. You can learn more about our privacy policy, how
+			we use cookies, or how to disable cookies by clicking on the "Learn More" link at the end of this statement.
+		</p>
+		<div class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3">
+			<a href="./404.html" class="btn btn-lg btn-outline-secondary text-uppercase w-100">
+				Learn More
+			</a>
+			<button class="btn btn-lg btn-outline-secondary text-uppercase w-100 accept-cookies">I Accept Cookies</button>
+		</div>
+	</div>
+</div>
+
+<div class="modal-search modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header justify-content-center">
+				<h2 class="modal-title h3 text-dark text-uppercase" id="searchModalLabel">Search Products</h2>
+			</div>
+			<div class="modal-body pt-1 pb-1">
+				<div class="position-relative">
+					<input class="form-control form-control-lg ps-5" placeholder="Enter product name">
+					<img src="./images/dist/icons/search.svg" width="16" loading="lazy" alt="Search"
+						class="icon-search position-absolute top-50 translate-middle">
+				</div>
+			</div>
+			<div class="modal-footer justify-content-center">
+				<div class="d-flex align-items-center justify-content-center gap-3">
+					<a href="#" type="button" class="btn btn-lg btn-link text-decoration-underline">Site Map</a>
+					<button type="button" class="btn btn-lg btn-link text-decoration-underline"
+						data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-hear-xunder fade" id="hearXUnderModal" tabindex="-1" aria-labelledby="hearXUnderModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content justify-content-center">
+			<div class="container">
+				<div class="modal-header">
+					<button type="button" class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5"
+						data-bs-dismiss="modal" aria-label="Close">
+						<span class="d-xl-inline-block d-none">Close</span>
+					</button>
+				</div>
+
+				<form action="#" id="hearXUnderForm">
+					<div class="modal-body">
+						<h2 class="modal-title h4 mb-4 text-primary text-center" id="hearXUnderModalLabel">
+							<span class="text-uppercase">How did you hear about</span> X-Under?
+							<span class="d-block">Please check all that apply:</span>
+						</h2>
+
+						<div class="row gx-0 justify-content-center">
+							<div class="col-xl-2 col-lg-3 col-sm-5 col-7">
+								<ul class="list-group">
+									<li class="list-group-item">
+										<input class="form-check-input" type="checkbox" value="" id="friendCheckbox">
+										<label class="form-check-label" for="friendCheckbox">A Friend or colleague</label>
+									</li>
+									<li class="list-group-item">
+										<input class="form-check-input" type="checkbox" value="" id="googleCheckbox">
+										<label class="form-check-label" for="googleCheckbox">Google</label>
+									</li>
+									<li class="list-group-item">
+										<input class="form-check-input" type="checkbox" value="" id="instagramCheckbox">
+										<label class="form-check-label" for="instagramCheckbox">Instagram</label>
+									</li>
+									<li class="list-group-item">
+										<input class="form-check-input" type="checkbox" value="" id="FacebookCheckbox">
+										<label class="form-check-label" for="FacebookCheckbox">Facebook</label>
+									</li>
+									<li class="list-group-item">
+										<input class="form-check-input" type="checkbox" value="" id="emailCheckbox">
+										<label class="form-check-label" for="emailCheckbox">E-mail</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="row w-100 justify-content-center">
+							<div class="col-xl-2 col-lg-3 col-sm-5 col-7 gx-0">
+								<button type="submit"
+									class="btn btn-accent w-100 border border-2 border-primary text-uppercase">Send</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<button class="btn btn-scroll-top bg-black position-fixed visually-hidden">
+	<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+		<path d="m16 11.5 9 9m-18 0 9-9" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px" />
+	</svg>
+</button>
+
+<footer class="footer pt-4 pb-4">
+	<div class="container">
+		<div class="footer-top pt-3 pb-3">
+			<img src="./images/dist/icons/pay_logo.svg" loading="lazy" alt="Payment methods" class="footer-top-pay">
+
+			<div class="footer-top-items d-flex gap-0 gap-sm-5 justify-content-between align-items-center">
+				<div class="pay-protection d-flex align-items-center gap-3">
+					<img src="./images/dist/icons/pay_secure.svg" loading="lazy" alt="Secure Methods">
+					<img src="./images/dist/icons/msfee.svg" loading="lazy" alt="McAfee">
+					<img src="./images/dist/icons/norton.svg" loading="lazy" alt="Northon">
+				</div>
+
+				<div class="block-socials d-flex align-items-center gap-3">
+					<a href="#">
+						<img src="./images/dist/icons/facebook.svg" loading="lazy" alt="Facebook">
+					</a>
+					<a href="#">
+						<img src="./images/dist/icons/instagram.svg" loading="lazy" alt="Instagram">
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer-bottom pt-3 pb-3 row">
+			<div class="col-12 col-lg-7 col-xxl-8 d-flex flex-wrap">
+				<ul class="list-group-flush m-0 p-0 d-flex flex-wrap justify-content-center gap-3">
+					<li class="list-group-item">
+						<a href="#" class="footer-link d-flex align-items-center gap-1">
+							<span class="icon icon-usa">
+								<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+									style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd"
+									viewBox="0 0 57376 35431">
+									<defs>
+									</defs>
+									<g id="layer_1">
+										<g id="_500948784">
+											<path class="fil0" d="M26914 19090H13V0h26901z" />
+											<path
+												d="m2212 745 251 774h814l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm22522 15023 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4579 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4580 0 251 774h814l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm22522-3756 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zM4501 14038l251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4467 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h814l251-774zm4592 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4466 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4466 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h814l251-774zm-2337-2026 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4580 0 251 774h814l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm22522-3756 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zM4501 10282l251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4467 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h814l251-774zm4592 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4466 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4466 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h814l251-774zm-2337-2026 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4580 0 251 774h814l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm22522-3756 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zM4501 6526l251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4467 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h814l251-774zm4592 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4466 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4466 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h814l251-774zm-2337-2026 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4580 0 251 774h814l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zM24735 744l251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zM4501 2770l251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4467 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h814l251-774zm4592 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4466 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm4466 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h814l251-774zM20155 744l251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774zm-4454 0 251 774h813l-658 478 251 774-658-478-658 478 251-774-658-478h813l251-774z"
+												style="fill:#fefefe" />
+											<path class="fil0"
+												d="M57376 2771H26915V0h30461v2771zm0 32661H0v-2771h57376v2771zm0-5472H0v-2771h57376v2771zm0-5472H0v-2771h57376v2771zm0-5397H26915v-2771h30461v2771zm0-5397H26915v-2771h30461v2771zm0-5409H26915V5514h30461v2771z" />
+										</g>
+									</g>
+								</svg>
+							</span>
+							United States
+						</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#">
+							Feedback
+						</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#">
+							Terms of use
+						</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#">
+							Privacy & Cookie Policy
+						</a>
+					</li>
+				</ul>
+				<div class="pt-1 pb-3 pt-lg-0 pb-lg-0 ms-0 ms-xxl-3 text-secondary order-last order-xxl-0">
+					This site is protected by recaptcha & the Google Privacy Policy & Terms of Service apply.
+				</div>
+				<div class="pt-2 pb-1 pt-lg-0 pb-lg-0">
+					*Plus, receive personalized emails from X-Under with exclusive offers, news and more (see privacy
+					policy).
+				</div>
+			</div>
+			<div class="col-12 col-lg-5 col-xxl-4 text-start text-lg-end">
+				<div class="footer-copyright">
+					Copyright 2023 X-Under LLC. All rights reserved. Powered by Dennetic Group.
+				</div>
+
+				<div class="footer-address">
+					XXX West 25 Street, Suite XX, New York, NY XXXXX.
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/app.min.js"></script>
+
+</body>
+
+</html>

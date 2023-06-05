@@ -112,6 +112,26 @@ body, .modal
 		object-fit: cover
 		stroke: var(--body-color)
 
+.btn-svg
+	color: var(--item-color)
+	transition: color var(--trt-1)
+	.icon
+		color: var(--item-color)
+		transition: color var(--trt-1)
+		svg
+			fill: currentColor
+	&:hover
+		color: var(--accent)
+		transition: color var(--trt-1)
+		.icon
+			color: var(--accent)
+	&:active
+		color: var(--text-color)
+		transition: none
+		.icon
+			color: var(--text-color)
+			transition: none
+
 .btn-arrow
 	display: flex
 	align-items: center
@@ -421,11 +441,30 @@ body, .modal
 		width: 4rem
 		svg
 			fill: currentColor
+	&-link
+		width: auto
+		height: 1rem
+		svg
+			fill: currentColor
+	&-email
+		width: auto
+		height: 1rem
+		svg
+			fill: currentColor
 
 .svg-img
 	display: inline-block
 	object-fit: contain
 	object-position: center
+
+.img-cover
+	object-fit: cover
+
+.object-start
+	object-position: left
+
+.object-end
+	object-position: right
 
 .standart-card, .recently-card, .advantages-card, .frequently-card
 	transition: box-shadow var(--trt-1), transform var(--trt-1)
@@ -548,6 +587,30 @@ body, .modal
 		padding-inline: var(--bs-card-spacer-x)
 	.card-body
 		padding: var(--bs-card-spacer-y) 0
+
+.card-blog
+	--bs-card-spacer-y: 0
+	--bs-card-border-width: 0
+	--bs-card-border-color: var(--transparent)
+	--bs-card-cap-padding-y: 0.5rem
+	--bs-card-cap-padding-x: 1rem
+	--bs-card-color: var(--item-color)
+	&:hover
+		.card-title
+			color: var(--accent)
+	&:active
+		.card-title
+			color: var(--text-color)
+			transition: none
+	.card-body
+		display: flex
+		flex-direction: column
+		align-items: start
+		justify-content: space-between
+		height: 100%
+		padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x) var(--bs-card-spacer-y) calc( var(--bs-card-spacer-x) * 3 )
+	.card-title
+		transition: color var(--trt-1)
 
 .card-event
 	display: flex

@@ -1,7 +1,6 @@
 import Swiper from 'swiper/bundle'
 
 document.addEventListener('DOMContentLoaded', () => {
-
 	//COOKIE
 	const versionBtns = document.querySelectorAll('.version-button');
 	const welcomePage = document.querySelector('.welcome');
@@ -842,7 +841,45 @@ document.addEventListener('DOMContentLoaded', () => {
 		updateProgressSteps();
 	}
 
+	//GIFT SWIPER
+	const giftCardThumbSwiper = new Swiper(".gift-card-slider-thumbs", {
+		spaceBetween: 5,
+		slidesPerView: 4,
+		freeMode: true,
+		watchSlidesProgress: true,
+	});
+	const giftCardSwiper = new Swiper(".gift-card-slider", {
+		spaceBetween: 10,
+		navigation: {
+			nextEl: ".gift-card-tumb-button-next",
+			prevEl: ".gift-card-tumb-button-prev",
+		},
+		thumbs: {
+			swiper: giftCardThumbSwiper,
+		},
+	});
 
+	//BLOG SWIPER
+	const blogSwiper = new Swiper(".blog-swiper", {
+
+		spaceBetween: 5,
+
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+
+		navigation: {
+			nextEl: '.blog-button-next',
+			prevEl: '.blog-button-prev',
+			appendNavigation: '.blog-swiper',
+		},
+
+		pagination: {
+			el: '.blog-swiper-pagination',
+			clickable: true,
+		},
+	});
 
 
 	//ВCЁ ЧТО НИЖЕ МОЖНО УДАЛИТЬ. ЖЕЛАТЕЛЬНО ОЗНАКОМИТЬСЯ.
@@ -930,23 +967,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (closeButtons && dropdownCard && currentCard && totalPriceTag && emptyCartMsg && bagText && totalDropdown && btnCheckout && brackets) {
 		updateCardInfo();
 	}
-
-	const giftCardThumbSwiper = new Swiper(".gift-card-slider-thumbs", {
-		spaceBetween: 5,
-		slidesPerView: 4,
-		freeMode: true,
-		watchSlidesProgress: true,
-	});
-	const giftCardSwiper = new Swiper(".gift-card-slider", {
-		spaceBetween: 10,
-		navigation: {
-			nextEl: ".gift-card-tumb-button-next",
-			prevEl: ".gift-card-tumb-button-prev",
-		},
-		thumbs: {
-			swiper: giftCardThumbSwiper,
-		},
-	});
 
 	//Можно удалить, сделано для демонстрации.
 	//Affiliate Account Form and toggle d-none and without reloading

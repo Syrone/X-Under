@@ -38,6 +38,11 @@
 	.vertical-text
 		transform: rotate(180deg) translateX(calc( 7px - .1vw ))
 
+	.card-blog
+		--bs-card-spacer-x: 0
+		.card-body
+			padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x) var(--bs-card-spacer-y) var(--bs-card-spacer-x)
+
 	.modal-addtobag, .modal-qview
 		.btn-close-word
 			width: 1.5rem
@@ -103,6 +108,14 @@
 		right: -.5rem
 	.swiper-button-prev
 		left: -.5rem
+
+	.card-blog
+		.ratio
+			all: usnet
+			&:before
+				all: unset
+			.img-cover
+				position: static
 
 	#shippingAddressModal, #billingAddressModal
 		.modal-content
@@ -210,6 +223,12 @@
 			--clock-fs: 3rem
 			.flip-colon
 				padding-bottom: calc(var(--clock-fs)/1)
+
+	.blog-button-prev, .swiper-rtl .blog-button-next
+		left: var(--swiper-navigation-sides-offset,15px)
+
+	.blog-button-next, .swiper-rtl .blog-button-prev
+		right: var(--swiper-navigation-sides-offset,15px)
 
 @include media-breakpoint-down(md)
 	:root
@@ -353,7 +372,7 @@
 
 	.favorite .card-bag .card-body .btn-dark
 		max-width: 100%
-		
+
 	.card-bag
 		.card-bag-wrapper
 			max-width: 100%
@@ -519,3 +538,9 @@
 			--clock-fs: 2.5rem
 			.flip-colon
 				padding-bottom: calc(var(--clock-fs)*1.2)
+
+	.blog-button-prev, .swiper-rtl .blog-button-next
+		left: var(--swiper-navigation-sides-offset,5px)
+
+	.blog-button-next, .swiper-rtl .blog-button-prev
+		right: var(--swiper-navigation-sides-offset,5px)
