@@ -171,10 +171,17 @@ document.addEventListener('DOMContentLoaded', () => {
 	//TOP INDENT .wrapper and .header-dropdown-bag
 	const navbar = document.querySelector('.navbar');
 	const wrapper = document.querySelector('.wrapper');
+	const headerDropdownBag = document.querySelector('.bag-dropdown-menu');
+	const dropdownOverflow = headerDropdownBag.querySelector('.dropdown-overflow');
+
 
 	function updateWrapperMarginTop() {
 		const navbarHeight = navbar.clientHeight;
+		const bagDropdownHeight = 100 * window.innerHeight / 100 - (navbarHeight + 64);
+
 		wrapper.style.marginTop = navbarHeight + 'px'
+		dropdownOverflow.style.maxHeight = `${bagDropdownHeight}px`;
+
 	}
 
 	if (wrapper) {

@@ -353,29 +353,6 @@
 			position: relative
 		&-current
 			font-size: .625rem
-		.bag-dropdown
-			position: static
-			.dropdown-arrow
-				all: unset
-			.dropdown-card
-				--bs-card-spacer-y: 1rem
-				--bs-card-spacer-x: 1rem
-				.card-body
-					padding: 0 calc( var(--bs-card-spacer-x) / 2 )
-			&-menu
-				--bs-dropdown-padding-y: 1rem
-				--bs-dropdown-padding-x: 1rem
-				--bs-dropdown-border-radius: 0
-				--bs-dropdown-spacer: 0
-				--bs-dropdown-padding-y: 2rem
-				--bs-dropdown-border-color: var(--item-color-light)
-				--bs-dropdown-border-width: 1px
-				width: 100%
-				height: 100vh
-				inset: 0
-				top: 98%
-				border: none
-				border-top: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color)
 
 	.hero
 		&-swiper
@@ -563,8 +540,33 @@
 			height: 30px
 		&-current
 			font-size: .5rem
-		.dropdown-menu
-			min-width: 300px
+		.bag-dropdown
+			position: static
+			.dropdown-arrow
+				all: unset
+			.dropdown-overflow
+				max-height: 100vh
+				overflow-x: hidden
+			.dropdown-card
+				--bs-card-spacer-y: 1rem
+				--bs-card-spacer-x: 1rem
+				.card-body
+					padding: 0 calc( var(--bs-card-spacer-x) / 2 )
+			&-menu
+				--bs-dropdown-padding-y: 1rem
+				--bs-dropdown-padding-x: 1rem
+				--bs-dropdown-border-radius: 0
+				--bs-dropdown-spacer: 0
+				--bs-dropdown-padding-y: 2rem
+				--bs-dropdown-border-color: var(--item-color-light)
+				--bs-dropdown-border-width: 1px
+				width: 100%
+				min-width: 100%
+				height: 100vh
+				inset: 0
+				top: 98%
+				border: none
+				border-top: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color)
 
 	.hero
 		&-swiper
