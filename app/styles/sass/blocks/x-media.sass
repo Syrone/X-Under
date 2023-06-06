@@ -21,6 +21,9 @@
 			.btn-title
 				font-size: var(--clock-fs)
 
+	.product-slider-thumbs.swiper-container
+		width: 90%
+
 	.footer
 		&-top
 			gap: 1rem
@@ -50,6 +53,11 @@
 
 	.modal-qview .modal-qview-slider
 		width: 100%
+
+	#affiliateGuideModal
+		.affiliate-guide-swiper
+			width: 60%
+			margin-inline: auto
 
 	.featured
 		.card-title
@@ -127,6 +135,18 @@
 		.modal-body
 			margin-bottom: 3rem
 
+	#affiliateGuideModal
+		.affiliate-guide-swiper
+			width: 50%
+			margin-inline: auto
+		.affiliate-guide-prev, .swiper-rtl .affiliate-guide-next
+			left: var(--swiper-navigation-sides-offset,10px)
+		.affiliate-guide-next, .swiper-rtl .affiliate-guide-prev
+			right: var(--swiper-navigation-sides-offset,10px)
+
+	.btn-lg
+		--bs-btn-padding-x: .5rem
+
 	.custom-accordion
 		.accordion
 			--bs-accordion-btn-padding-y: 2rem
@@ -137,11 +157,26 @@
 						font-size: .85rem
 
 	.alert-info
+		.btn-close-word
+			width: 1.5rem
+			background-position: center
+			padding: 0.25rem
 		.swiper-container
 			width: 75%
 
-	.modal-qview .modal-qview-slider
-		width: 100%
+	.modal-qview
+		.modal-qview-slider
+			width: 85%
+		.modal-qview-prev, .modal-qview-next
+			top: var(--swiper-navigation-top-offset,50%)
+			color: var(--item-color)
+			background-color: var(--transparent)
+			padding-inline: 0
+		.pay-protection img, .pay-protection-duplicate img
+			display: block
+			width: auto
+			height: 2rem
+			margin-left: auto
 
 	.form-check-lg
 		.form-check-input
@@ -195,10 +230,19 @@
 		border-right: none
 		border-bottom: 3px solid var(--item-color)
 
-	.bag-cta
-		.shipping-speed
+	.bag
+		.product-item .card-bag-wrapper
+			max-width: 100%
+			width: 100%
+			flex-direction: row
+			justify-content: space-between
+			align-items: end
+			gap: 0.5rem
+		.product-item .btn-remove
+			margin-left: auto
+		&-cta .shipping-speed
 			.w-100
-				width: 45% !important
+				width: 47% !important
 				.w-100
 					width: 100% !important
 
@@ -208,10 +252,22 @@
 		.card-bag-wrapper
 			max-width: 320px
 
-	.favorite .card-bag .card-body .btn-dark
-		margin-left: unset
+	.product-item
+		.card-bag
+			.btn-remove
+				padding: 0
+			&-wrapper
+				flex-direction: column
+				justify-content: space-between
+				gap: 1.25rem
+			.card-body
+				&-top
+					height: 100%
+					border-bottom: none
+				.btn-dark
+					margin-left: unset
 
-	.affiliate-form
+	.affiliate-signup
 		padding-top: 3rem
 
 	.gift-accordion
@@ -249,6 +305,19 @@
 	.swiper-pagination-bullet
 		width: calc( 2.2rem + 2vw )
 
+	.block-share
+		.h5
+			font-size: 1rem
+		.fs-6
+			font-size: .65rem!important
+		.icon
+			height: .9rem
+
+	.block-value
+		.btn-like
+			--bs-btn-font-size: .75rem
+			--bs-btn-padding-x: .4rem
+
 	.custom-accordion
 		.accordion-collapse-word
 			.accordion-button::before
@@ -281,8 +350,32 @@
 		&-navbar
 			width: 40px
 			height: 30px
+			position: relative
 		&-current
 			font-size: .625rem
+		.bag-dropdown
+			position: static
+			.dropdown-arrow
+				all: unset
+			.dropdown-card
+				--bs-card-spacer-y: 1rem
+				--bs-card-spacer-x: 1rem
+				.card-body
+					padding: 0 calc( var(--bs-card-spacer-x) / 2 )
+			&-menu
+				--bs-dropdown-padding-y: 1rem
+				--bs-dropdown-padding-x: 1rem
+				--bs-dropdown-border-radius: 0
+				--bs-dropdown-spacer: 0
+				--bs-dropdown-padding-y: 2rem
+				--bs-dropdown-border-color: var(--item-color-light)
+				--bs-dropdown-border-width: 1px
+				width: 100%
+				height: 100vh
+				inset: 0
+				top: 98%
+				border: none
+				border-top: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color)
 
 	.hero
 		&-swiper
@@ -326,8 +419,11 @@
 	.modal-zoom
 		.swiper-container
 			width: 75%
+		.btn-close-word
+			background-position: 90%
+			width: 100px
 		&-img
-			max-width: 600px
+			max-width: 320px
 		.zoom-button-next, .swiper-rtl .zoom-button-prev
 			right: 1rem
 		.zoom-button-prev, .swiper-rtl .zoom-button-next
@@ -344,6 +440,19 @@
 	.account-affiliate-payment
 		.btn-icon
 			right: -6rem
+
+	.product
+		&-slider-thumbs.swiper-container
+			width: 65%
+		&-support, &-support-duplicate
+			&.fs-5, .fs-5
+				font-size: .75rem!important
+			.fs-6
+				font-size: .65rem!important
+			.h5
+				font-size: 1rem
+			.icon
+				height: .9rem
 
 	.gift-accordion
 		.accordion
@@ -370,18 +479,46 @@
 		background-position: center
 		width: 1.5rem
 
+	#shippingAddressModal,
+	#billingAddressModal,
+	#billingContactModal,
+	#contactInfoModal,
+	#contactInfoModal2,
+	#paymentMethodModal,
+	#paymentMethodModal2,
+	#promocodeModal
+		.btn-close-word
+			background-position: 90%
+			width: 6.25rem
+
 	.favorite .card-bag .card-body .btn-dark
 		max-width: 100%
 
-	.card-bag
-		.card-bag-wrapper
-			max-width: 100%
-			flex-direction: column
-			align-items: center
+	.bag
+		.product-item
+			&:last-of-type
+				margin-bottom: .5rem
+			.btn-remove
+				margin-left: auto
+
+	.product-item
+		padding-block: 2rem
+		.card-bag
+			.h4
+				font-size: calc(.75rem + 1.5vw)
+			.fs-5
+				font-size: calc( .45rem + 2.25vw )!important
+			.card-bag-wrapper
+				gap: .65rem
 
 	.modal-addtobag
 		.frequently-card
 			width: 100%
+
+	#affiliateGuideModal
+		.affiliate-guide-swiper
+			width: 50vw
+			margin-inline: auto
 
 	.pay-protection
 		img:nth-child(1)
@@ -391,7 +528,7 @@
 		img:nth-child(3)
 			width: 14vw
 
-	.modal-zoom, .modal-installments
+	.modal-installments
 		.btn-close
 			width: 10px
 
@@ -412,6 +549,11 @@
 			div
 				max-width: 240px
 				margin-inline: auto
+
+	.block-form-link
+		.fs-5
+			font-size: 1rem!important
+			text-align: start
 
 	.header
 		&-logo
@@ -490,26 +632,17 @@
 				bottom: -40px
 
 	.bag-cta
-		.shipping-speed
-			.w-100
-				width: 82% !important
-				.w-100
-					width: 100% !important
 		.card-bag .ratio
 			margin-inline: auto
 		&.step-1
 			.card-bag-wrapper
 				width: auto
 				flex-direction: column
+				align-items: start
 		&.step-2
 			.pay-protection
 				img
-					width: 8rem
-
-	.review
-		.form-check
-			margin-inline: auto
-			max-width: 220px
+					width: calc( 8vw + 50px )
 
 	.account-affiliate-payment
 		.btn-icon
@@ -532,6 +665,9 @@
 				left: 40%
 			&-step-4
 				right: 15%
+
+	.product-slider-thumbs.swiper-container
+		width: 75%
 
 	.hotoffer
 		.clock

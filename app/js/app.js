@@ -143,13 +143,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	//END COOKIE
 
-	//TOP INDENT .wrapper
+	//NO SCROLL
+	const bagDropdownMenu = document.querySelector('.bag-dropdown-menu');
+
+	function updateOverflowHidden() {
+		if (bagDropdownMenu.classList.contains('show')) {
+			document.documentElement.classList.add('overflow-hidden');
+			document.body.classList.add('overflow-hidden');
+		} else {
+			document.documentElement.classList.remove('overflow-hidden');
+			document.body.classList.remove('overflow-hidden');
+		}
+	}
+
+	updateOverflowHidden();
+
+	const observeBagDropdown = new MutationObserver(function (mutations) {
+		mutations.forEach(function (mutation) {
+			if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+				updateOverflowHidden();
+			}
+		});
+	});
+
+	observeBagDropdown.observe(bagDropdownMenu, { attributes: true });
+
+	//TOP INDENT .wrapper and .header-dropdown-bag
 	const navbar = document.querySelector('.navbar');
 	const wrapper = document.querySelector('.wrapper');
 
 	function updateWrapperMarginTop() {
 		const navbarHeight = navbar.clientHeight;
-		wrapper.style.marginTop = navbarHeight + 'px';
+		wrapper.style.marginTop = navbarHeight + 'px'
 	}
 
 	if (wrapper) {
@@ -159,8 +184,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		navbar.addEventListener('DOMSubtreeModified', updateWrapperMarginTop);
 	}
 
+
 	//SCROLL TOP
-	const scrollButton = document.querySelector(".btn-scroll-top"); // Получаем кнопку по ID
+	const scrollButton = document.querySelector(".btn-scroll-top")
 
 	if (scrollButton) {
 		window.addEventListener("scroll", function () {
@@ -506,9 +532,9 @@ document.addEventListener('DOMContentLoaded', () => {
 			setTimeout(() => runClock(prefix, endTime), 1000);
 		}
 
-		runClock('timer3-', new Date("June 7, 2023 23:59:59").getTime());
-		runClock('timer1-', new Date("June 9, 2023 23:59:59").getTime());
-		runClock('timer2-', new Date("June 10, 2023 23:59:59").getTime());
+		runClock('timer3-', new Date("June 9, 2023 23:59:59").getTime());
+		runClock('timer1-', new Date("June 11, 2023 23:59:59").getTime());
+		runClock('timer2-', new Date("June 13, 2023 23:59:59").getTime());
 	}
 
 	//COOKIES
@@ -604,18 +630,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if (userReviewQuestionExists && productReviewExists) {
 		document.body.addEventListener('click', function (event) {
-			if (event.target.closest('.user-review-question') && event.target.matches('button')) {
+			if ((event.target.closest('.user-review-question') || event.target.closest('.user-review-question-duplicate')) && event.target.matches('button')) {
 				const userReview = event.target.closest('.product-review');
 				const userReviewText = userReview.querySelector('.user-review');
 				const userQuestion = userReview.querySelector('.user-review-question');
+				const userQuestionDuplicate = userReview.querySelector('.user-review-question-duplicate');
 
 				userQuestion.remove();
+
+				if (userQuestionDuplicate) {
+					userQuestionDuplicate.remove();
+				}
 
 				userReviewText.classList.remove('col-lg-9');
 				userReviewText.classList.add('col-12');
 			}
 		});
 	}
+
 
 	//RECENT SWIPER
 	const recentSwiper = new Swiper('.recent-swiper', {
@@ -685,6 +717,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		slidesPerView: 1,
 		slidesPerGroup: 1,
 		spaceBetween: 15,
+
+		navigation: {
+			nextEl: '.modal-qview-next',
+			prevEl: '.modal-qview-prev',
+			appendNavigation: '.modal-qview-slider',
+		},
 	})
 
 	const qViewThumbsSlider = new Swiper('.modal-qview-slider-thumbs', {
@@ -692,12 +730,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		slidesPerView: 1,
 		slidesPerGroup: 1,
 		slideToClickedSlide: true,
-
-		navigation: {
-			nextEl: '.modal-qview-tumb-button-next',
-			prevEl: '.modal-qview-tumb-button-prev',
-			appendNavigation: '.modal-qview-slider-thumbs',
-		},
 	});
 
 	qViewSwiper.controller.control = qViewThumbsSlider;
@@ -791,16 +823,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	//Pressing the button shows the password
-	if (document.querySelector('.account-signup')) {
-		const passwordInput = document.getElementById('inputPassword');
-		const showPasswordButton = document.getElementById('showPassword');
-
-		showPasswordButton.addEventListener('mousedown', () => {
-			passwordInput.type = 'text';
-		});
-
-		showPasswordButton.addEventListener('mouseup', () => {
-			passwordInput.type = 'password';
+	if (document.getElementById('showPassword') && document.getElementById('inputPassword')) {
+		document.getElementById('showPassword').addEventListener('click', function () {
+			const passwordInput = document.getElementById('inputPassword');
+			if (passwordInput.type === 'password') {
+				passwordInput.type = 'text';
+			} else {
+				passwordInput.type = 'password';
+			}
 		});
 	}
 
@@ -881,6 +911,105 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 	});
 
+	//ACCOUNT SWIPER
+	const accountItemSwiper = new Swiper(".account-info-swiper", {
+		slidesPerView: 3,
+		spaceBetween: 40,
+
+		breakpoints: {
+			280: {
+				slidesPerView: 1,
+				slidesPerGroup: 1,
+				spaceBetween: 40,
+				autoplay: {
+					delay: 5000,
+					disableOnInteraction: false,
+				},
+			},
+			776: {
+				grabCursor: true,
+				slidesPerView: 2,
+				slidesPerGroup: 1,
+				spaceBetween: 40,
+				autoplay: {
+					delay: 5000,
+					disableOnInteraction: false,
+				},
+			},
+			992: {
+				slidesPerView: 3,
+				slidesPerGroup: 1,
+				spaceBetween: 40,
+				autoplay: false,
+			},
+		},
+
+		navigation: {
+			nextEl: '.account-info-next',
+			prevEl: '.account-info-prev',
+			appendNavigation: '.account-info-swiper',
+		},
+
+		pagination: {
+			el: '.account-info-pagination',
+			clickable: true,
+		},
+	});
+
+	//AFFILIATE SWIPER
+	const affiliateGuideModal = document.querySelector('#affiliateGuideModal');
+	if (affiliateGuideModal) {
+		affiliateGuideModal.addEventListener('shown.bs.modal', () => {
+			const affiliateGuideSwiper = new Swiper(".affiliate-guide-swiper", {
+				slidesPerView: 4,
+				spaceBetween: 40,
+
+				breakpoints: {
+					280: {
+						slidesPerView: 1,
+						slidesPerGroup: 1,
+						spaceBetween: 40,
+						autoplay: {
+							delay: 5000,
+							disableOnInteraction: false,
+						},
+					},
+					992: {
+						grabCursor: true,
+						slidesPerView: 2,
+						slidesPerGroup: 2,
+						spaceBetween: 40,
+						autoplay: {
+							delay: 5000,
+							disableOnInteraction: false,
+						},
+					},
+					1200: {
+						slidesPerView: 4,
+						slidesPerGroup: 1,
+						spaceBetween: 40,
+						autoplay: false,
+					},
+				},
+
+				navigation: {
+					nextEl: '.affiliate-guide-next',
+					prevEl: '.affiliate-guide-prev',
+					appendNavigation: '.affiliate-guide-swiper',
+				},
+
+				pagination: {
+					el: '.affiliate-guide-pagination',
+					clickable: true,
+				},
+			});
+		});
+
+		affiliateGuideModal.addEventListener('hidden.bs.modal', () => {
+			affiliateGuideSwiper.destroy();
+		});
+	}
+
 
 	//ВCЁ ЧТО НИЖЕ МОЖНО УДАЛИТЬ. ЖЕЛАТЕЛЬНО ОЗНАКОМИТЬСЯ.
 	//Этот код можно будет удалить. Сделан был для демонстрации на странице checkout.html.
@@ -896,6 +1025,82 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		});
 	});
+
+	//Duplicate HTML
+	//Page main qview modal
+	const qviewHeaders = document.querySelectorAll('.qview-header');
+	const qviewHeaderDuplicates = document.querySelectorAll('.qview-header-duplicate');
+	const qviewPayProtects = document.querySelectorAll('.pay-protection')
+	const qviewPayProtectDuplicates = document.querySelectorAll('.pay-protection-duplicate')
+
+	if (qviewHeaders.length && qviewHeaderDuplicates.length) {
+		qviewHeaders.forEach((qviewHeader, index) => {
+			if (qviewHeaderDuplicates[index]) {
+				qviewHeaderDuplicates[index].insertAdjacentHTML('beforeend', qviewHeader.innerHTML);
+			}
+		});
+	}
+
+	if (qviewPayProtects.length && qviewPayProtectDuplicates.length) {
+		qviewPayProtects.forEach((qviewPayProtect, index) => {
+			if (qviewPayProtectDuplicates[index]) {
+				qviewPayProtectDuplicates[index].insertAdjacentHTML('beforeend', qviewPayProtect.innerHTML);
+			}
+		});
+	}
+
+	//Page Bag
+	const infoProducts = document.querySelectorAll('.product-info');
+	const infoProductDuplicates = document.querySelectorAll('.product-info-duplicate');
+
+	if (infoProducts.length && infoProductDuplicates.length) {
+		infoProducts.forEach((infoProduct, index) => {
+			if (infoProductDuplicates[index]) {
+				infoProductDuplicates[index].insertAdjacentHTML('beforeend', infoProduct.innerHTML);
+			}
+		});
+	}
+
+
+	//Page Card
+	const productHeader = document.querySelector('.product-header');
+	const productHeaderDuplicate = document.querySelector('.product-header-duplicate');
+
+	if (productHeader && productHeaderDuplicate) {
+		productHeaderDuplicate.insertAdjacentHTML('beforeend', productHeader.innerHTML);
+	}
+
+	const productSupport = document.querySelector('.product-support');
+	const productSupportDuplicate = document.querySelector('.product-support-duplicate');
+
+	if (productSupport && productSupportDuplicate) {
+		productSupportDuplicate.insertAdjacentHTML('beforeend', productSupport.innerHTML);
+	}
+
+	const userReviewQuestions = document.querySelectorAll('.user-review-question');
+	const userReviewQuestionDuplicates = document.querySelectorAll('.user-review-question-duplicate');
+
+	if (userReviewQuestions.length && userReviewQuestionDuplicates.length) {
+		userReviewQuestions.forEach((userReviewQuestion, index) => {
+			if (userReviewQuestionDuplicates[index]) {
+				userReviewQuestionDuplicates[index].insertAdjacentHTML('beforeend', userReviewQuestion.innerHTML);
+			}
+		});
+	}
+
+	//Page Favorite
+	const favoriteBlockBtns = document.querySelectorAll('.block-btn');
+	const favoriteBlockBtnDuplicates = document.querySelectorAll('.block-btn-duplicate');
+
+	if (favoriteBlockBtns.length && favoriteBlockBtnDuplicates.length) {
+		favoriteBlockBtns.forEach((favoriteBlockBtn, index) => {
+			if (favoriteBlockBtnDuplicates[index]) {
+				favoriteBlockBtnDuplicates[index].insertAdjacentHTML('beforeend', favoriteBlockBtn.innerHTML);
+			}
+		});
+	}
+
+
 
 	// Возможно этот код тоже не понадобиться. Показывает скрытые карточки на странице категории.
 	//BTN SHOW MORE
@@ -1011,11 +1216,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		// Функция для удаления элемента из списка избранного
 		function removeFavoriteItem(event) {
-			const favoriteItem = event.target.closest('.favorite-item');
+			const favoriteItem = event.target.closest('.product-item');
 			favoriteItem.classList.add('d-none');
 
 			// Проверяем, есть ли еще элементы в списке избранного
-			const favoriteItems = favorite.querySelectorAll('.favorite-item:not(.d-none)');
+			const favoriteItems = favorite.querySelectorAll('.product-item:not(.d-none)');
 			if (favoriteItems.length === 0) {
 				favorite.classList.add('d-none');
 				favoriteEmpty.classList.remove('d-none');

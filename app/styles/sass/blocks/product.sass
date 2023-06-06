@@ -49,11 +49,17 @@
 		&:hover
 			.icon-zoom
 				transform: scale(1.25)
+
 	.img-thumbnail
-		display: block
-		max-height: 460px
-		margin-inline: auto
 		padding: 0
+
+	&-slider
+		.img-thumbnail
+			display: block
+			max-height: 460px
+			margin-inline: auto
+		&-thumbs.swiper-container
+			width: 55%
 
 	.btn-custom, .btn-arrow
 		border: none
@@ -74,7 +80,7 @@
 			border-color: var(--accent)
 			box-shadow: var(--box-shadow-3)
 
-	&-support
+	&-support, .product-support-duplicate
 		.icon-watched
 			width: .5rem
 			margin-left: 0
@@ -135,6 +141,8 @@
 					fill: var(--accent)
 
 		.product-review
+			padding-block: 1rem
+			border-bottom: 1px solid var(--table-body)
 			.card-reviews
 				.icon-star
 					width: 1rem

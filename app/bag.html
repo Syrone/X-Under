@@ -10,42 +10,10 @@
 			</h1>
 
 			<div class="d-flex align-items-center gap-2">
-				<button class="btn btn-back p-1 d-none d-sm-block">Come Back</button>
-				<button class="btn btn-custom btn-browser p-1 text-white d-flex align-items-center collapsed" type="button"
-					data-bs-toggle="collapse" data-bs-target="#collapseBrowserAll" aria-expanded="false"
-					aria-controls="collapseBrowserAll">
-					Browser all
-					<span class="icon icon-arrow-down">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" xml:space="preserve">
-							<path fill="none" d="m20.5 11.5-6 6-6-6" />
-						</svg>
-					</span>
-				</button>
+				<!--#include virtual="/parts/browser-top.html" -->
 			</div>
 		</div>
-		<div class="collapse" id="collapseBrowserAll">
-			<div class="container">
-				<div class="py-3 border border-top-1 border-start-0 border-end-0 border-bottom-0">
-					<div class="row">
-						<div class="col-lg-2 col-sm-4 col-6 text-center text-sm-start">
-							<div class="list-group text-uppercase">
-								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Underwaer</a>
-								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Swemmwaer</a>
-								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Accessories</a>
-								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Bag</a>
-							</div>
-						</div>
-						<div class="col-lg-2 col-sm-4 col-6 text-center text-sm-start">
-							<div class="list-group text-uppercase">
-								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Multipacks</a>
-								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">X-Club</a>
-								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">E-Gift Card</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<!--#include virtual="/parts/browser-bottom.html" -->
 	</nav>
 
 	<section class="bag py-5">
@@ -82,7 +50,7 @@
 			</div>
 
 			<div class="bag-cta  step-1  row">
-				<div class="col-12 d-flex align-items-center justify-content-sm-end justify-content-center">
+				<div class="col-12 d-flex align-items-center justify-content-end">
 					<div
 						class="position-relative cta-step active d-flex align-items-center gap-2 text-capitalize fw-bold tiny">
 						<span class="icon icon-bag">
@@ -115,48 +83,60 @@
 				</div>
 
 				<div class="col-12">
-					<div class="card card-bag py-5 border border-top-0 border-start-0 border-end-0">
-						<div class="row">
-							<div class="col-lg-3 col-md-4 col-sm-5 col-12 mb-sm-0 mb-3">
-								<div class="ratio ratio-1x1">
-									<img src="./images/dist/items/item-man-1.jpg" class="img-fluid img-thumbnail rounded-start"
-										alt="Item">
-								</div>
-							</div>
-							<div class="col-lg-9 col-md-8 col-sm-7 col-12">
-								<div class="card-body">
-									<div
-										class="d-flex flex-sm-row flex-column flex-wrap align-items-center align-items-md-start justify-content-between pb-lg-3 pb-2 border border-top-0 border-start-0 border-end-0">
-										<h3 class="card-title h4 text-center text-uppercase">C-IN2 Core Low Rise Brief</h3>
-										<div class="card-bag-wrapper">
-											<div class="card-quantity fs-5 order-lg-0 order-md-1 order-0">
-												Qty:
-												<input type="text" class="product-quantity" value="1" readonly>
-												<button class="btn btn-custom button-increment">+</button>
-												/
-												<button class="btn btn-custom button-decrement">-</button>
-											</div>
-											<div class="d-md-block d-flex align-items-center gap-2">
-												<div class="card-price fs-5">
-													$75.00
-												</div>
-												<button class="btn btn-custom btn-remove text-decoration-underline">Remove</button>
-											</div>
-										</div>
+					<div class="product-item">
+						<div class="card card-bag">
+							<div class="row">
+								<div class="col-lg-3 col-md-4 col-sm-5 col-6">
+									<div class="ratio ratio-1x1 mx-sm-0 mx-auto">
+										<img src="./images/dist/items/item-man-1.jpg"
+											class="img-fluid img-thumbnail rounded-start" alt="Item">
 									</div>
+								</div>
+								<div class="col-lg-9 col-md-8 col-sm-7 col-6">
+									<div class="card-body">
+										<div
+											class="card-body-top d-flex flex-lg-row flex-column align-items-start justify-content-between pb-lg-3 pb-0">
+											<h3 class="card-title h4 mb-lg-0 text-uppercase">
+												C-IN2 Core Low Rise Brief
+											</h3>
 
-									<div class="pt-3 fs-5 text-sm-start text-center">
-										<div>
-											Color: <span>White</span>
+											<div class="product-info-duplicate d-lg-none"></div>
+
+											<div class="card-bag-wrapper">
+												<div class="card-quantity fs-5">
+													Qty:
+													<input type="text" class="product-quantity" value="1" readonly>
+													<button class="btn btn-custom button-increment">+</button>
+													/
+													<button class="btn btn-custom button-decrement">-</button>
+												</div>
+												<div class="d-sm-block d-flex gap-3">
+													<div class="card-price fs-5">
+														$75.00
+													</div>
+													<button
+														class="btn btn-custom btn-remove text-decoration-underline">Remove</button>
+												</div>
+											</div>
 										</div>
-										<div>
-											Size: <span>XS</span>
-										</div>
-										<div>
-											BID: <span>XXXX / SKU: XXXXX</span>
-										</div>
-										<div>
-											Status: <span>In Stock</span>
+
+										<div class="row d-lg-flex d-none justify-content-sm-start justify-content-center">
+											<div class="product-info col-xxl-8 col-lg-7">
+												<div class="pt-lg-3 mb-lg-0 mb-2 fs-5">
+													<div>
+														Color: <span>White</span>
+													</div>
+													<div>
+														Size: <span>XS</span>
+													</div>
+													<div>
+														BID: <span>XXXX / SKU: XXXXX</span>
+													</div>
+													<div>
+														Status: <span>In Stock</span>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -169,7 +149,7 @@
 					<div class="row justify-content-end">
 						<div class="col-12 col-lg-9">
 							<div class="py-4 border border-top-0 border-start-0 border-end-0">
-								<h3 class="h4 mb-3 mb-xxl-5 text-sm-start text-center">
+								<h3 class="h4 mb-3 mb-xxl-5">
 									Shipping
 									<span class="d-block tiny">
 										Select your shipping speed
@@ -177,7 +157,7 @@
 								</h3>
 
 								<div
-									class="shipping-speed d-flex flex-md-nowrap flex-wrap justify-content-sm-between justify-content-center align-items-center gap-3 gap-xxl-5">
+									class="shipping-speed d-flex flex-md-nowrap flex-wrap justify-content-between align-items-center gap-3 gap-xxl-5">
 									<div class="w-100">
 										<button class="active btn btn-dark btn-lg w-100 mb-3 text-uppercase">Standard</button>
 										<div class="tiny text-center">
@@ -251,17 +231,18 @@
 								</div>
 							</div>
 
-							<div class="row py-4 align-items-center justify-content-md-between justify-content-center">
-								<div class="col-md-8 col-12">
+							<div class="row py-4 g-4 align-items-center">
+								<div class="col-md-8 order-md-0 order-1">
 									<div
-										class="pay-protection d-flex align-items-center justify-content-md-start justify-content-center gap-3 mb-md-0 mb-3">
+										class="pay-protection d-flex align-items-center justify-content-md-start justify-content-end gap-3 mb-md-0 mb-3">
 										<img src="./images/dist/icons/pay_secure.svg" loading="lazy" alt="Secure Methods">
 										<img src="./images/dist/icons/msfee.svg" loading="lazy" alt="McAfee">
 										<img src="./images/dist/icons/norton.svg" loading="lazy" alt="Northon">
 									</div>
 								</div>
-								<div class="col-md-4 col-sm-6 col-10">
-									<a href="./checkout.html" class="btn btn-dark btn-lg btn-bag-order w-100 text-uppercase">Checkout</a>
+								<div class="col-md-4">
+									<a href="./checkout.html"
+										class="btn btn-dark btn-lg btn-bag-order w-100 text-uppercase">Checkout</a>
 								</div>
 							</div>
 						</div>

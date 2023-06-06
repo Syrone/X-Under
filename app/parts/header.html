@@ -108,7 +108,7 @@
 					<span
 						class="header-current position-absolute top-50 start-50 badge rounded-pill bg-primary text-black">1</span>
 				</a>
-				<div class="dropdown">
+				<div class="dropdown bag-dropdown">
 					<button type="button" class="btn position-relative p-2 ps-sm-3 pe-sm-3 dropdown-toggle" type="button"
 						id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside"
 						aria-expanded="false">
@@ -116,22 +116,25 @@
 						<span
 							class="header-current current-bag position-absolute top-50 start-50 badge rounded-pill bg-primary text-black"></span>
 					</button>
-					<div class="dropdown-menu dropdown-cards dropdown-menu-end bg-dark p-0 w-100"
+					<div class="dropdown-menu bag-dropdown-menu dropdown-cards dropdown-menu-end"
 						aria-labelledby="dropdownMenuClickableInside">
 						<div class="dropdown-arrow"></div>
-						<div class="dropdown-overflow overflow-auto p-2 p-sm-4">
-							<div class="header-dropdown overflow-auto">
-								<div
-									class="card dropdown-card bg-dark pt-3 pb-3 pt-sm-4 pb-sm-4 border border-2 border-start-0 border-end-0 border-top-0 border-dark rounded-0">
-									<div class="row g-0 justify-content-between align-items-center bg-dark text-primary">
-										<div class="col-4">
-											<img src="./images/dist/items/item-man-1.jpg" class="img-fluid" alt="product">
+						<div class="dropdown-overflow">
+							<div class="header-dropdown">
+								<div class="card dropdown-card">
+									<div class="row g-0 justify-content-between">
+										<div class="col-md-3 col-4">
+											<div class="dropdown-card-img ratio ratio-1x1">
+												<img src="./images/dist/items/item-man-1.jpg" class="img-fluid" alt="product">
+											</div>
 										</div>
-										<div class="col-sm-7 col-6">
-											<div class="card-body pt-0 pe-2 ps-2 pe-sm-3 ps-sm-3 pb-0">
-												<h6 class="card-title mb-3 mb-sm-4 text-uppercase">C-IN2 CORE LOW RISE BRIE</h6>
-												<p class="card-text mb-0 tiny">1 x $75.00</p>
-												<p class="card-text">$<span class="card-price">75.00</span></p>
+										<div class="col-md-8 col-7">
+											<div class="card-body">
+												<h3 class="card-title h5 text-uppercase">C-IN2 CORE LOW RISE BRIE</h3>
+												<div>
+													<span class="card-text mb-0 small">1 x $75.00</span>
+													<span class="card-text">$<span class="card-price">75.00</span></span>
+												</div>
 											</div>
 										</div>
 										<button type="button"
@@ -148,7 +151,7 @@
 									Your bag is empty
 								</div>
 							</div>
-							<h5 class="total-dropdown text-primary text-uppercase d-flex justify-content-between pt-2 mb-5">
+							<h5 class="total-dropdown text-primary text-uppercase d-flex justify-content-between pt-3 mb-5">
 								<span>Subtotal</span>
 								<p class="m-0">$<span class="total-price"></span></p>
 							</h5>
@@ -162,9 +165,9 @@
 								</p>
 							</div>
 							<ul class="list-group text-uppercase text-primary">
-								<li class="list-group-item">
+								<li>
 									<a href="./bag.html"
-										class="dropdown-item d-flex align-items-center gap-2 text-primary">
+										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
 										<span class="icon icon-bag">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 9.333">
 												<path
@@ -176,9 +179,9 @@
 										<span class="current-bag brackets"></span>
 									</a>
 								</li>
-								<li class="list-group-item">
+								<li>
 									<a href="./favorite.html"
-										class="dropdown-item d-flex align-items-center gap-2 text-primary">
+										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
 										<span class="icon icon-favorite">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 9.333 9.333">
 												<path
@@ -189,9 +192,9 @@
 										Favorites
 									</a>
 								</li>
-								<li class="list-group-item">
+								<li>
 									<a href="./orders.html"
-										class="dropdown-item d-flex align-items-center gap-2 text-primary">
+										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
 										<span class="icon icon-order">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 8 9.333">
 												<path
@@ -202,9 +205,9 @@
 										Orders
 									</a>
 								</li>
-								<li class="list-group-item">
+								<li>
 									<a href="./account.html"
-										class="dropdown-item d-flex align-items-center gap-2 text-primary">
+										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
 										<span class="icon icon-gears">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 8 8">
 												<path
@@ -215,7 +218,7 @@
 										Account
 									</a>
 								</li>
-								<li class="list-group-item">
+								<li>
 									<a href="./account-signin.html"
 										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0">
 										<span class="icon icon-account">
@@ -244,7 +247,9 @@
 					</h5>
 					<button type="button"
 						class="btn-close btn-close-white btn-close-word d-flex align-items-center opacity-75 h5"
-						data-bs-dismiss="offcanvas" aria-label="Close">Close</button>
+						data-bs-dismiss="offcanvas" aria-label="Close">
+						<span class="d-xl-inline-block d-none">Close</span>
+					</button>
 				</div>
 				<div class="offcanvas-body ps-3 pe-3 ps-sm-4 pe-sm-5">
 					<div class="accordion accordion-flush" id="accordionHeaderOne">
@@ -262,7 +267,8 @@
 									data-bs-parent="#accordionHeaderOne">
 									<div class="accordion-body">
 										<div class="list-group fw-light">
-											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">All
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">All
 												Underwaer</a>
 											<a href="./404.html"
 												class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
@@ -271,10 +277,10 @@
 											<a href="./404.html"
 												class="list-group-item border border-0 list-group-item-action bg-dark">Boxer
 												Briefs</a>
-											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">Boxers</a>
-											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">Jocks &
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Boxers</a>
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Jocks &
 												Thongs</a>
-											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">Long
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Long
 												Underwear</a>
 										</div>
 									</div>
@@ -293,7 +299,8 @@
 									data-bs-parent="#accordionHeaderOne">
 									<div class="accordion-body">
 										<div class="list-group fw-light">
-											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">All
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">All
 												Underwaer</a>
 											<a href="./404.html"
 												class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
@@ -324,7 +331,8 @@
 									data-bs-parent="#accordionHeaderOne">
 									<div class="accordion-body">
 										<div class="list-group fw-light">
-											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">All
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">All
 												Underwaer</a>
 											<a href="./404.html"
 												class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
@@ -355,7 +363,8 @@
 									data-bs-parent="#accordionHeaderOne">
 									<div class="accordion-body">
 										<div class="list-group fw-light">
-											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">All
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">All
 												Underwaer</a>
 											<a href="./404.html"
 												class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
@@ -400,13 +409,15 @@
 								data-bs-parent="#accordionHeaderOne">
 								<div class="accordion-body">
 									<div class="list-group fw-light">
-										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">All
+										<a href="./404.html"
+											class="list-group-item border border-0 list-group-item-action bg-dark">All
 											Underwaer</a>
 										<a href="./404.html"
 											class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
 										<a href="./404.html"
 											class="list-group-item border border-0 list-group-item-action bg-dark">Trunks</a>
-										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">Boxer
+										<a href="./404.html"
+											class="list-group-item border border-0 list-group-item-action bg-dark">Boxer
 											Briefs</a>
 										<a class="list-group-item border border-0 list-group-item-action bg-dark">Boxers</a>
 										<a class="list-group-item border border-0 list-group-item-action bg-dark">Jocks &
@@ -450,16 +461,20 @@
 								data-bs-parent="#accordionHeaderOne">
 								<div class="accordion-body">
 									<div class="list-group fw-light">
-										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">
+										<a href="./404.html"
+											class="list-group-item border border-0 list-group-item-action bg-dark">
 											Terms of use
 										</a>
-										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">
+										<a href="./404.html"
+											class="list-group-item border border-0 list-group-item-action bg-dark">
 											Privacy & Cookie
 										</a>
-										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">
+										<a href="./404.html"
+											class="list-group-item border border-0 list-group-item-action bg-dark">
 											Policy
 										</a>
-										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">
+										<a href="./404.html"
+											class="list-group-item border border-0 list-group-item-action bg-dark">
 											Legal
 										</a>
 									</div>

@@ -76,7 +76,7 @@
 					<span
 						class="header-current position-absolute top-50 start-50 badge rounded-pill bg-primary text-black">1</span>
 				</a>
-				<div class="dropdown">
+				<div class="dropdown bag-dropdown">
 					<button type="button" class="btn position-relative p-2 ps-sm-3 pe-sm-3 dropdown-toggle" type="button"
 						id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside"
 						aria-expanded="false">
@@ -84,11 +84,34 @@
 						<span
 							class="header-current current-bag position-absolute top-50 start-50 badge rounded-pill bg-primary text-black"></span>
 					</button>
-					<div class="dropdown-menu dropdown-cards dropdown-menu-end bg-dark w-100 p-2 p-sm-4"
+					<div class="dropdown-menu bag-dropdown-menu dropdown-cards dropdown-menu-end"
 						aria-labelledby="dropdownMenuClickableInside">
 						<div class="dropdown-arrow"></div>
-						<div class="dropdown-overflow overflow-auto">
-							<div class="header-dropdown overflow-auto pe-2">
+						<div class="dropdown-overflow">
+							<div class="header-dropdown">
+								<div
+									class="card dropdown-card bg-dark pt-3 pb-3 pt-sm-4 pb-sm-4 border border-2 border-start-0 border-end-0 border-top-0 border-dark rounded-0">
+									<div class="row g-0 justify-content-between align-items-center bg-dark text-primary">
+										<div class="col-4">
+											<img src="./images/dist/items/item-man-1.jpg" class="img-fluid" alt="product">
+										</div>
+										<div class="col-sm-7 col-6">
+											<div class="card-body pt-0 pe-2 ps-2 pe-sm-3 ps-sm-3 pb-0">
+												<h6 class="card-title mb-3 mb-sm-4 text-uppercase">C-IN2 CORE LOW RISE BRIE</h6>
+												<p class="card-text mb-0 tiny">1 x $75.00</p>
+												<p class="card-text">$<span class="card-price">75.00</span></p>
+											</div>
+										</div>
+										<button type="button"
+											class="btn-close btn-close-custom btn-close-card col-1 align-self-start"
+											aria-label="Close">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+												<path
+													d="M4.99 3.99a1 1 0 0 0-.697 1.717L10.586 12l-6.293 6.293a1 1 0 1 0 1.414 1.414L12 13.414l6.293 6.293a1 1 0 1 0 1.414-1.414L13.414 12l6.293-6.293a1 1 0 0 0-.727-1.717 1 1 0 0 0-.687.303L12 10.586 5.707 4.293a1 1 0 0 0-.717-.303z" />
+											</svg>
+										</button>
+									</div>
+								</div>
 								<div
 									class="card dropdown-card bg-dark pt-3 pb-3 pt-sm-4 pb-sm-4 border border-2 border-start-0 border-end-0 border-top-0 border-dark rounded-0">
 									<div class="row g-0 justify-content-between align-items-center bg-dark text-primary">
@@ -212,7 +235,9 @@
 					</h5>
 					<button type="button"
 						class="btn-close btn-close-white btn-close-word d-flex align-items-center opacity-75 h5"
-						data-bs-dismiss="offcanvas" aria-label="Close">Close</button>
+						data-bs-dismiss="offcanvas" aria-label="Close">
+						<span class="d-xl-inline-block d-none">Close</span>
+					</button>
 				</div>
 				<div class="offcanvas-body ps-3 pe-3 ps-sm-4 pe-sm-5">
 					<div class="accordion accordion-flush" id="accordionHeaderOne">

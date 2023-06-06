@@ -97,7 +97,7 @@
 					<span
 						class="header-current position-absolute top-50 start-50 badge rounded-pill bg-primary text-black">1</span>
 				</a>
-				<div class="dropdown">
+				<div class="dropdown bag-dropdown">
 					<button type="button" class="btn position-relative p-2 ps-sm-3 pe-sm-3 dropdown-toggle" type="button"
 						id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside"
 						aria-expanded="false">
@@ -105,11 +105,34 @@
 						<span
 							class="header-current current-bag position-absolute top-50 start-50 badge rounded-pill bg-primary text-black"></span>
 					</button>
-					<div class="dropdown-menu dropdown-cards dropdown-menu-end bg-dark w-100 p-2 p-sm-4"
+					<div class="dropdown-menu bag-dropdown-menu dropdown-cards dropdown-menu-end"
 						aria-labelledby="dropdownMenuClickableInside">
 						<div class="dropdown-arrow"></div>
-						<div class="dropdown-overflow overflow-auto">
-							<div class="header-dropdown overflow-auto pe-2">
+						<div class="dropdown-overflow">
+							<div class="header-dropdown">
+								<div
+									class="card dropdown-card bg-dark pt-3 pb-3 pt-sm-4 pb-sm-4 border border-2 border-start-0 border-end-0 border-top-0 border-dark rounded-0">
+									<div class="row g-0 justify-content-between align-items-center bg-dark text-primary">
+										<div class="col-4">
+											<img src="./images/dist/items/item-man-1.jpg" class="img-fluid" alt="product">
+										</div>
+										<div class="col-sm-7 col-6">
+											<div class="card-body pt-0 pe-2 ps-2 pe-sm-3 ps-sm-3 pb-0">
+												<h6 class="card-title mb-3 mb-sm-4 text-uppercase">C-IN2 CORE LOW RISE BRIE</h6>
+												<p class="card-text mb-0 tiny">1 x $75.00</p>
+												<p class="card-text">$<span class="card-price">75.00</span></p>
+											</div>
+										</div>
+										<button type="button"
+											class="btn-close btn-close-custom btn-close-card col-1 align-self-start"
+											aria-label="Close">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+												<path
+													d="M4.99 3.99a1 1 0 0 0-.697 1.717L10.586 12l-6.293 6.293a1 1 0 1 0 1.414 1.414L12 13.414l6.293 6.293a1 1 0 1 0 1.414-1.414L13.414 12l6.293-6.293a1 1 0 0 0-.727-1.717 1 1 0 0 0-.687.303L12 10.586 5.707 4.293a1 1 0 0 0-.717-.303z" />
+											</svg>
+										</button>
+									</div>
+								</div>
 								<div
 									class="card dropdown-card bg-dark pt-3 pb-3 pt-sm-4 pb-sm-4 border border-2 border-start-0 border-end-0 border-top-0 border-dark rounded-0">
 									<div class="row g-0 justify-content-between align-items-center bg-dark text-primary">
@@ -233,7 +256,9 @@
 					</h5>
 					<button type="button"
 						class="btn-close btn-close-white btn-close-word d-flex align-items-center opacity-75 h5"
-						data-bs-dismiss="offcanvas" aria-label="Close">Close</button>
+						data-bs-dismiss="offcanvas" aria-label="Close">
+						<span class="d-xl-inline-block d-none">Close</span>
+					</button>
 				</div>
 				<div class="offcanvas-body ps-3 pe-3 ps-sm-4 pe-sm-5">
 					<div class="accordion accordion-flush" id="accordionHeaderOne">
@@ -471,157 +496,113 @@
 
 			<div class="d-flex align-items-center gap-2">
 				<button class="btn btn-back p-1 d-none d-sm-block">Come Back</button>
-				<button class="btn btn-custom btn-browser p-1 text-white d-flex align-items-center collapsed" type="button"
-					data-bs-toggle="collapse" data-bs-target="#collapseBrowserAll" aria-expanded="false"
-					aria-controls="collapseBrowserAll">
-					Browser all
-					<span class="icon icon-arrow-down">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" xml:space="preserve">
-							<path fill="none" d="m20.5 11.5-6 6-6-6" />
-						</svg>
-					</span>
-				</button>
+<button class="btn btn-custom btn-browser p-1 text-white d-flex align-items-center collapsed" type="button"
+	data-bs-toggle="collapse" data-bs-target="#collapseBrowserAll" aria-expanded="false"
+	aria-controls="collapseBrowserAll">
+	Browser all
+	<span class="icon icon-arrow-down">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" xml:space="preserve">
+			<path fill="none" d="m20.5 11.5-6 6-6-6" />
+		</svg>
+	</span>
+</button>
 			</div>
 		</div>
 		<div class="collapse" id="collapseBrowserAll">
-			<div class="container">
-				<div class="py-3 border border-top-1 border-start-0 border-end-0 border-bottom-0">
-					<div class="row">
-						<div class="col-lg-2 col-sm-4 col-6 text-center text-sm-start">
-							<div class="list-group text-uppercase">
-								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Underwaer</a>
-								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Swemmwaer</a>
-								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Accessories</a>
-								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Bag</a>
-							</div>
-						</div>
-						<div class="col-lg-2 col-sm-4 col-6 text-center text-sm-start">
-							<div class="list-group text-uppercase">
-								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Multipacks</a>
-								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">X-Club</a>
-								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">E-Gift Card</a>
-							</div>
-						</div>
+	<div class="container">
+		<div class="py-3 border border-top-1 border-start-0 border-end-0 border-bottom-0">
+			<div class="row">
+				<div class="col-lg-2 col-sm-4 col-6">
+					<div class="list-group text-uppercase">
+						<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Underwaer</a>
+						<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Swemmwaer</a>
+						<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Accessories</a>
+						<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Bag</a>
+					</div>
+				</div>
+				<div class="col-lg-2 col-sm-4 col-6">
+					<div class="list-group text-uppercase">
+						<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Multipacks</a>
+						<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">X-Club</a>
+						<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">E-Gift Card</a>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+</div>
 	</nav>
 
 	<section class="product">
 		<div class="container py-5">
 			<div class="row">
-				<div class="col-md-6 col-12 order-1 order-md-0 mt-md-0 mt-3 text-center text-md-start">
-					<div class="mb-xxl-4 mb-2">
-						<h2 class="mb-0 text-item text-uppercase">
-							<span class="d-block text-primary fs-5">Sale</span>
-							C-IN2 Core Low Rise Brief
-						</h2>
-					</div>
-
-					<div
-						class="card-reviews d-flex align-items-center gap-3 justify-content-md-start justify-content-center">
-						<div class="card-stars">
-							<span class="icon icon-star active">
-								<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
-									<path
-										d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-										transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-								</svg>
-							</span>
-							<span class="icon icon-star active">
-								<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
-									<path
-										d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-										transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-								</svg>
-							</span>
-							<span class="icon icon-star active">
-								<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
-									<path
-										d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-										transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-								</svg>
-							</span>
-							<span class="icon icon-star active">
-								<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
-									<path
-										d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-										transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-								</svg>
-							</span>
-							<span class="icon icon-star active">
-								<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
-									<path
-										d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-										transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-								</svg>
-							</span>
-						</div>
-						<a href="./404.html" class="btn btn-link text-decoration-underline tiny">12 Reviews</a>
-					</div>
-
-					<div
-						class="product-price d-flex align-items-center gap-2 justify-content-md-start justify-content-center fs-4">
-						$75.00
-						<span class="text-decoration-line-through text-dark">$85.00</span>
-						<span class="badge tiny text-bg-primary px-2 py-2">You save 11%</span>
-					</div>
-
-					<div
-						class="d-flex flex-wrap align-items-center gap-1 justify-content-md-start justify-content-center mb-2">
-						Or 4 <button class="btn btn-link text-decoration-underline" data-bs-toggle="modal"
-							data-bs-target="#installmentsModal">installments</button> of
-						<span>$XX.XX</span> by <img class="d-inline-block" width="100" src="./images/dist/icons/afterpay.svg"
-							alt="AfterPay">
-					</div>
-
-					<div class="lh-sm mb-2">
-						<div>90% cotton & 10% spandex</div>
-						<div>Heat molded grament to give shpape, form and smoothness</div>
-						<div>SKU: <span>XXXXX</span></div>
-					</div>
-
-					<div class="fs-5 mb-3">
-						<div class="mb-1">
-							Category: <a class="text-decoration-underline" href="#">Brief</a>
+				<div class="col-md-6 col-12 order-2 order-md-0 mt-md-0 mt-3">
+					<div class="product-header mb-2 d-md-block d-none">
+						<div class="mb-xxl-4 mb-2">
+							<h2 class="mb-0 text-item text-uppercase">
+								<span class="d-block text-primary fs-5">Sale</span>
+								C-IN2 Core Low Rise Brief
+							</h2>
 						</div>
 
-						<div class="row justify-content-center justify-content-md-start mb-3">
-							<div class="col-xl-4 col-md-6 col-sm-4 col-6">
-								<select class="form-select form-select-lg" aria-label="Select Color">
-									<option selected>Color *</option>
-									<option value="1">Color1</option>
-									<option value="2">Color2</option>
-									<option value="3">Color3</option>
-								</select>
-							</div>
-							<div class="col-xl-4 col-md-6 col-sm-4 col-6">
-								<select class="form-select form-select-lg" aria-label="Select Size">
-									<option selected>Size *</option>
-									<option value="1">Size1</option>
-									<option value="2">Size2</option>
-									<option value="3">Size3</option>
-								</select>
-							</div>
-						</div>
-						<div class="row justify-content-md-start justify-content-center">
-							<div class="col-12">
-								<div class="input-group justify-content-md-start justify-content-center gap-1">
-									<button class="btn btn-outline-secondary button-decrement fw-bold" type="button">–</button>
-									<input type="text" class="form-control product-quantity text-center" value="1" readonly>
-									<button class="btn btn-outline-secondary button-increment" type="button">+</button>
+						<div class="d-flex justify-content-between">
+							<div>
+								<div class="card-reviews d-flex align-items-center gap-3">
+									<div class="card-stars">
+										<span class="icon icon-star active">
+											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
+												<path
+													d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+													transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+											</svg>
+										</span>
+										<span class="icon icon-star active">
+											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
+												<path
+													d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+													transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+											</svg>
+										</span>
+										<span class="icon icon-star active">
+											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
+												<path
+													d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+													transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+											</svg>
+										</span>
+										<span class="icon icon-star active">
+											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
+												<path
+													d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+													transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+											</svg>
+										</span>
+										<span class="icon icon-star active">
+											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
+												<path
+													d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+													transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+											</svg>
+										</span>
+									</div>
+									<a href="./404.html" class="btn btn-link text-decoration-underline tiny">12 Reviews</a>
+								</div>
+
+								<div class="product-price d-flex align-items-center gap-2 fs-4">
+									$75.00
+									<span class="text-decoration-line-through text-dark">$85.00</span>
+									<span class="badge tiny text-bg-primary px-2 py-2">You save 11%</span>
+								</div>
+
+								<div class="d-flex flex-wrap align-items-center gap-1">
+									Or 4 <button class="btn btn-link text-underline" data-bs-toggle="modal"
+										data-bs-target="#installmentsModal">installments</button> of
+									<span>$XX.XX</span> by <img class="d-inline-block" width="100"
+										src="./images/dist/icons/afterpay.svg" alt="AfterPay">
 								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="mb-5">
-						<div class="row flex-md-row flex-column-reverse align-items-md-start align-items-center">
-							<div class="col-xxl-4 col-lg-6 col-sm-8 col-12 mt-2 mt-md-0">
-								<button class="btn btn-dark btn-lg w-100 text-uppercase">Add to Bag</button>
-							</div>
-							<div class="col-2 d-flex justify-content-center">
+							<div class="align-self-end d-md-none d-block">
 								<div class="card-favorite">
 									<div class="icon icon-favorite--outline ">
 										<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="9.333" height="8">
@@ -635,23 +616,81 @@
 						</div>
 					</div>
 
-					<div class="product-support row fs-5">
-						<div class="col-xxl-5 col-lg-6 col-12 mb-3 mb-lg-0 lh-sm">
-							<div class="mb-1 mb-lg-4">
+					<div class="lh-sm mb-2">
+						<div>90% cotton & 10% spandex</div>
+						<div>Heat molded grament to give shpape, form and smoothness</div>
+						<div>SKU: <span>XXXXX</span></div>
+					</div>
+
+					<div class="fs-5 mb-3">
+						<div class="mb-1">
+							Category: <a class="text-decoration-underline" href="#">Brief</a>
+						</div>
+
+						<div class="row gx-4 mb-3">
+							<div class="col-xl-4 col-6">
+								<select class="form-select form-select-lg" aria-label="Select Color">
+									<option selected>Color *</option>
+									<option value="1">Color1</option>
+									<option value="2">Color2</option>
+									<option value="3">Color3</option>
+								</select>
+							</div>
+							<div class="col-xl-4 col-6">
+								<select class="form-select form-select-lg" aria-label="Select Size">
+									<option selected>Size *</option>
+									<option value="1">Size1</option>
+									<option value="2">Size2</option>
+									<option value="3">Size3</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<div class="input-group gap-1">
+									<button class="btn btn-outline-secondary button-decrement fw-bold" type="button">–</button>
+									<input type="text" class="form-control product-quantity text-center" value="1" readonly>
+									<button class="btn btn-outline-secondary button-increment" type="button">+</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-5">
+						<div class="row gx-4 flex-md-row flex-column-reverse">
+							<div class="col-xxl-4 col-md-6 col-12 mt-2 mt-md-0">
+								<button class="btn btn-dark btn-lg w-100 text-uppercase">Add to Bag</button>
+							</div>
+							<div class="col-2 d-none d-md-flex justify-content-center">
+								<div class="card-favorite">
+									<div class="icon icon-favorite--outline ">
+										<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="9.333" height="8">
+											<path
+												d="M69.566 37.547c0 9.09-7.367 16.457-16.46 16.457-5.938 0-11.122-3.152-14.016-7.863-2.899 4.71-8.082 7.863-14.02 7.863-9.09 0-16.46-7.367-16.46-16.457 0-4.953 2.195-9.379 5.652-12.395L37.586 1.824a2.146 2.146 0 0 1 1.504-.62 2.14 2.14 0 0 1 1.5.62l23.324 23.328c3.461 3.016 5.652 7.442 5.652 12.395"
+												transform="matrix(.53333 0 0 -.53333 0 36)" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="product-support d-lg-flex d-none row fs-5">
+						<div class="col-xxl-5 col-6 lh-sm">
+							<div class="mb-md-4 mb-3">
 								<h4 class="h5 mb-0"><b>Shipping:</b></h4>
 								<div class="lh-sm">Standrat / 5-10 Business days</div>
 								<div class="lh-sm">Priority / 3-5 Business days</div>
 								<div class="lh-sm">Express / 2-3 Business days</div>
 							</div>
 
-							<div>
+							<div class="block-share">
 								<div class="mb-2">
 									Share your impressions
 								</div>
-								<div
-									class="d-flex align-items-center gap-xl-4 gap-md-1 gap-3 justify-content-md-start justify-content-center">
+								<div class="d-flex align-items-center gap-xl-4 gap-md-3 gap-2 flex-wrap">
 									<a class="btn-svg d-flex align-items-center gap-2 fs-6" href="#">
-										<span class="icon icon-facebook">
+										<span class="icon icon-facebook flex-shrink-0">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
 												viewBox="0 0 6.667 10.667">
 												<path
@@ -664,7 +703,7 @@
 									</a>
 
 									<a class="btn-svg d-flex align-items-center gap-2 fs-6" href="#">
-										<span class="icon icon-twitter">
+										<span class="icon icon-twitter flex-shrink-0">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
 												style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd"
 												viewBox="0 0 42645 34651">
@@ -676,7 +715,7 @@
 									</a>
 
 									<a class="btn-svg d-flex align-items-center gap-2 fs-6" href="#">
-										<span class="icon icon-pin">
+										<span class="icon icon-pin flex-shrink-0">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
 												style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd"
 												viewBox="0 0 5966 7707">
@@ -689,16 +728,16 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-xxl-5 col-lg-6 col-12 lh-sm">
-							<div class="mb-1 mb-lg-4">
+						<div class="col-xxl-5 col-6 lh-sm">
+							<div class="mb-md-4 mb-3">
 								<h4 class="h5 mb-0"><b>Help:</b></h4>
-								<button class="btn fs-5 lh-sm btn-link text-decoration-underline" data-bs-toggle="modal"
+								<button class="btn fs-5 btn-link text-underline" data-bs-toggle="modal"
 									data-bs-target="#sizeGuideModal">
 									Size guide
 								</button>
 								<div class="lh-sm">
 									Availability:
-									<button class="btn fs-5 lh-sm btn-link text-decoration-underline text-capitalize align-top"
+									<button class="btn fs-5 btn-link text-underline text-capitalize align-top"
 										data-bs-toggle="modal" data-bs-target="#itemNotificModal">
 										Out Stock
 									</button>
@@ -708,10 +747,10 @@
 								</div>
 							</div>
 
-							<div class="d-md-block d-flex flex-column align-items-md-start align-items-center">
-								<button class="btn btn-link btn-svg d-flex align-items-center gap-2 fs-5 lh-sm mb-2"
+							<div class="d-md-block d-flex flex-column">
+								<button class="btn btn-link btn-svg d-flex align-items-center gap-2 mb-2 fs-5 text-decoration-none"
 									data-bs-toggle="modal" data-bs-target="#itemVideoModal">
-									<span class="text-decoration-underline">
+									<span class="text-underline">
 										Watch the film
 									</span>
 									<span class="icon icon-play">
@@ -723,7 +762,7 @@
 										</svg>
 									</span>
 								</button>
-								<div class="d-flex align-items-center">
+								<div class="d-flex align-items-start">
 									<span class="icon icon-watched">
 										<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 2.667 4">
 											<path
@@ -738,10 +777,11 @@
 					</div>
 				</div>
 
-				<div class="col-md-6 col-12">
+				<div class="col-md-6 col-12 order-1 order-md-0 mb-md-0 mb-5">
+					<div class="product-header-duplicate mb-4 d-md-none d-block"></div>
 					<div class="row">
 						<div class="col-lg-10 col-12">
-							<div class="swiper product-slider mb-5">
+							<div class="swiper product-slider mb-lg-5 mb-4">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
 										<button class="btn position-relative wrapper-product d-block" data-bs-toggle="modal"
@@ -867,6 +907,8 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="product-support-duplicate row order-3 order-md-0 d-lg-none d-flex fs-5"></div>
 			</div>
 		</div>
 	</section>
@@ -1057,8 +1099,8 @@
 										</div>
 									</div>
 
-									<a href="./review.html" class="btn-arrow text-decoration-underline">
-										Write a review
+									<a href="./review.html" class="btn-arrow">
+										<span class="text-underline">Write a review</span>
 										<span class="icon icon-arrow-right">
 											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.91 122.88"
 												xml:space="preserve">
@@ -1084,335 +1126,350 @@
 									<div class="tab-content" id="nav-tabContent">
 										<div class="tab-pane fade show active" id="nav-useful" role="tabpanel"
 											aria-labelledby="nav-useful-tab" tabindex="0">
-											<div class="row product-review mt-3">
-												<div class="card-reviews mb-1">
-													<div class="card-stars">
-														<span class="icon icon-star active">
-															<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-																viewBox="0 0 6.667 5.333">
-																<path
-																	d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-																	transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-															</svg>
-														</span>
-														<span class="icon icon-star active">
-															<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-																viewBox="0 0 6.667 5.333">
-																<path
-																	d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-																	transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-															</svg>
-														</span>
-														<span class="icon icon-star active">
-															<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-																viewBox="0 0 6.667 5.333">
-																<path
-																	d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-																	transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-															</svg>
-														</span>
-														<span class="icon icon-star active">
-															<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-																viewBox="0 0 6.667 5.333">
-																<path
-																	d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-																	transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-															</svg>
-														</span>
-														<span class="icon icon-star">
-															<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-																viewBox="0 0 6.667 5.333">
-																<path
-																	d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-																	transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-															</svg>
-														</span>
+											<div class="product-review">
+												<div class="row">
+													<div class="card-reviews mb-1">
+														<div class="card-stars">
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+														</div>
 													</div>
-												</div>
 
-												<h3>
-													C-IN2 Core Low Rise Brief
-												</h3>
-												<div class="col-lg-9 col-12 user-review">
+													<h3>
+														C-IN2 Core Low Rise Brief
+													</h3>
+													<div class="col-lg-9 col-12 user-review">
+														<div class="row">
+															<p class="col-xxl-10 col-sm-9 text-justify mb-sm-2 mb-1">
+																Bought 3 of these all-cotton. T's in clay red, light grey, and blue
+																wing.
+																Very
+																happy with colors and softness of fabric. Ordered XL for a loose fit on
+																my
+																closer-to-large frame, and after washing and machine drying. that seems
+																to
+																have turned out well. Couldn't resist low, low sale pricing.
+															</p>
+
+															<div class="col-xxl-2 col-sm-3 col-5">
+																<img src="./images/dist/items/avatar.jpg" width="100"
+																	class="rounded mb-sm-0 mb-1" loading="lazy" alt="Avatar">
+															</div>
+
+															<div class="user-review-question-duplicate d-sm-none d-block col-7"></div>
+
+															<div
+																class="col-12 d-flex align-items-start gap-md-4 gap-3 w-100 mt-sm-0 mt-3">
+																<div>
+																	Written by <span>Alex</span> from <span>Chicago</span> / <span>Mar
+																		XX</span>, <span>20XX</span>
+																</div>
+																<div class="d-flex align-items-center">
+																	<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
+																		<span class="icon icon-like">
+																			<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																				viewBox="0 0 5.333 6.667">
+																				<path
+																					d="m.95 3.118.628-.16a.25.25 0 0 0 .158-.123c.098-.169.33-.492.806-.763.18-.101.329-.18.461-.245.338-.171.542-.27.846-.646.131-.162.258-.248.387-.255a.324.324 0 0 1 .242.094.47.47 0 0 1 .127.424c-.045.224-.13.523-.276.661-.145.134-.485.393-.684.543l.6.26c.044.016.08.048.116.078l.09.1c.087.091.112.22.068.342l-.09.249a.576.576 0 0 1-.046.091l.098.143c.063.09.076.202.04.303l-.058.159a.36.36 0 0 1-.128.17.197.197 0 0 1 .008.158l-.077.212a.384.384 0 0 1-.286.243l-.092.021-.075.206a.275.275 0 0 1-.176.17l-.444.15a.404.404 0 0 1-.331-.03c-.044-.01-.347-.067-.655-.178-.216-.08-.431-.181-.563-.313a.836.836 0 0 1-.057-.057c-.127-.016-.647-.068-.944.154a.1.1 0 0 1-.083.012.107.107 0 0 1-.038-.026c-.03-.035-.02-.091.014-.12.273-.207.673-.218.908-.204-.137-.218-.14-.387-.145-.394 0-.049.036-.083.085-.084.048 0 .083.036.083.084 0 0 .013.245.29.52.163.162.508.287.78.362l-.176-.142a.323.323 0 0 1-.099-.354l.056-.153a.217.217 0 0 1 .11-.123.246.246 0 0 1-.002-.174l.065-.18a.255.255 0 0 1 .136-.143c-.005-.02-.011-.034-.014-.059-.174.099-.47.206-.824.09a.083.083 0 0 1-.051-.108.083.083 0 0 1 .108-.051c.438.147.78-.148.81-.18l.026-.073a.277.277 0 0 1 .147-.157.27.27 0 0 1-.009-.207l.057-.154a.27.27 0 0 1 .274-.176l.636.046a.284.284 0 0 0 .102-.016.082.082 0 0 1 .112.04.081.081 0 0 1-.041.111.364.364 0 0 1-.187.034l-.636-.045a.097.097 0 0 0-.102.064l-.056.154a.123.123 0 0 0 .002.079.11.11 0 0 0 .06.051l.03.012.56.191a.282.282 0 0 0 .153.008l.327-.073a.202.202 0 0 0 .15-.131l.09-.25a.163.163 0 0 0-.034-.168l-.09-.099a.148.148 0 0 0-.058-.038l-.61-.252a.163.163 0 0 1-.096-.131.145.145 0 0 1 .065-.145c.156-.117.536-.404.682-.543.09-.08.17-.286.224-.566a.3.3 0 0 0-.076-.267c-.037-.032-.072-.05-.114-.048-.05.005-.14.039-.262.192-.327.403-.56.516-.905.69-.132.067-.278.139-.452.238-.439.248-.653.542-.74.696a.426.426 0 0 1-.263.198l-.628.161a.088.088 0 0 1-.049 0c-.026-.01-.049-.03-.05-.06-.02-.043.008-.087.055-.1zm3.152 1.735.077-.212c.002-.005.004-.01 0-.018a.815.815 0 0 1-.306.069l-.274.008a.522.522 0 0 1-.166-.018L3.4 4.67c-.032-.012-.056-.027-.086-.043l-.544-.318c-.03-.017-.057-.009-.07-.007-.013.006-.035.016-.047.048l-.065.18a.084.084 0 0 0 .026.093l.518.405c.075.057.17.08.259.064l.553-.104a.216.216 0 0 0 .157-.135zm-1.683.125a.142.142 0 0 0 .044.16l.431.348a.254.254 0 0 0 .236.045l.448-.143a.107.107 0 0 0 .073-.07l.04-.11-.269.046a.505.505 0 0 1-.396-.097l-.154-.122-.303-.236a.072.072 0 0 0-.05-.012.05.05 0 0 0-.037.034l-.058.16zm1.737-1.065-.326.073a.361.361 0 0 1-.147.007l-.005-.002c-.034-.006-.068-.012-.099-.024l-.604-.202a.12.12 0 0 0-.13.079L2.78 4a.122.122 0 0 0 .053.15l.014.011.356.209.193.111a.35.35 0 0 0 .198.049l.273-.009a.713.713 0 0 0 .331-.101l.022-.01a.175.175 0 0 0 .077-.098l.058-.159a.163.163 0 0 0-.019-.145l-.093-.124c-.027.009-.055.022-.088.028" />
+																			</svg>
+																		</span>
+																		<span>XX</span>
+																	</button>
+
+																	<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
+																		<span class="icon icon-dislike">
+																			<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																				viewBox="0 0 5.333 6.667">
+																				<path
+																					d="m.95 3.118.628-.16a.25.25 0 0 0 .158-.123c.098-.169.33-.492.806-.763.18-.101.329-.18.461-.245.338-.171.542-.27.846-.646.131-.162.258-.248.387-.255a.324.324 0 0 1 .242.094.47.47 0 0 1 .127.424c-.045.224-.13.523-.276.661-.145.134-.485.393-.684.543l.6.26c.044.016.08.048.116.078l.09.1c.087.091.112.22.068.342l-.09.249a.576.576 0 0 1-.046.091l.098.143c.063.09.076.202.04.303l-.058.159a.36.36 0 0 1-.128.17.197.197 0 0 1 .008.158l-.077.212a.384.384 0 0 1-.286.243l-.092.021-.075.206a.275.275 0 0 1-.176.17l-.444.15a.404.404 0 0 1-.331-.03c-.044-.01-.347-.067-.655-.178-.216-.08-.431-.181-.563-.313a.836.836 0 0 1-.057-.057c-.127-.016-.647-.068-.944.154a.1.1 0 0 1-.083.012.107.107 0 0 1-.038-.026c-.03-.035-.02-.091.014-.12.273-.207.673-.218.908-.204-.137-.218-.14-.387-.145-.394 0-.049.036-.083.085-.084.048 0 .083.036.083.084 0 0 .013.245.29.52.163.162.508.287.78.362l-.176-.142a.323.323 0 0 1-.099-.354l.056-.153a.217.217 0 0 1 .11-.123.246.246 0 0 1-.002-.174l.065-.18a.255.255 0 0 1 .136-.143c-.005-.02-.011-.034-.014-.059-.174.099-.47.206-.824.09a.083.083 0 0 1-.051-.108.083.083 0 0 1 .108-.051c.438.147.78-.148.81-.18l.026-.073a.277.277 0 0 1 .147-.157.27.27 0 0 1-.009-.207l.057-.154a.27.27 0 0 1 .274-.176l.636.046a.284.284 0 0 0 .102-.016.082.082 0 0 1 .112.04.081.081 0 0 1-.041.111.364.364 0 0 1-.187.034l-.636-.045a.097.097 0 0 0-.102.064l-.056.154a.123.123 0 0 0 .002.079.11.11 0 0 0 .06.051l.03.012.56.191a.282.282 0 0 0 .153.008l.327-.073a.202.202 0 0 0 .15-.131l.09-.25a.163.163 0 0 0-.034-.168l-.09-.099a.148.148 0 0 0-.058-.038l-.61-.252a.163.163 0 0 1-.096-.131.145.145 0 0 1 .065-.145c.156-.117.536-.404.682-.543.09-.08.17-.286.224-.566a.3.3 0 0 0-.076-.267c-.037-.032-.072-.05-.114-.048-.05.005-.14.039-.262.192-.327.403-.56.516-.905.69-.132.067-.278.139-.452.238-.439.248-.653.542-.74.696a.426.426 0 0 1-.263.198l-.628.161a.088.088 0 0 1-.049 0c-.026-.01-.049-.03-.05-.06-.02-.043.008-.087.055-.1zm3.152 1.735.077-.212c.002-.005.004-.01 0-.018a.815.815 0 0 1-.306.069l-.274.008a.522.522 0 0 1-.166-.018L3.4 4.67c-.032-.012-.056-.027-.086-.043l-.544-.318c-.03-.017-.057-.009-.07-.007-.013.006-.035.016-.047.048l-.065.18a.084.084 0 0 0 .026.093l.518.405c.075.057.17.08.259.064l.553-.104a.216.216 0 0 0 .157-.135zm-1.683.125a.142.142 0 0 0 .044.16l.431.348a.254.254 0 0 0 .236.045l.448-.143a.107.107 0 0 0 .073-.07l.04-.11-.269.046a.505.505 0 0 1-.396-.097l-.154-.122-.303-.236a.072.072 0 0 0-.05-.012.05.05 0 0 0-.037.034l-.058.16zm1.737-1.065-.326.073a.361.361 0 0 1-.147.007l-.005-.002c-.034-.006-.068-.012-.099-.024l-.604-.202a.12.12 0 0 0-.13.079L2.78 4a.122.122 0 0 0 .053.15l.014.011.356.209.193.111a.35.35 0 0 0 .198.049l.273-.009a.713.713 0 0 0 .331-.101l.022-.01a.175.175 0 0 0 .077-.098l.058-.159a.163.163 0 0 0-.019-.145l-.093-.124c-.027.009-.055.022-.088.028" />
+																			</svg>
+																		</span>
+																		<span>XX</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+
 													<div
-														class="d-flex flex-sm-row flex-column align-items-sm-start align-items-center gap-2">
-														<p class="mb-sm-2 mb-1">
-															Bought 3 of these all-cotton. T's in clay red, light grey, and blue wing.
-															Very
-															happy with colors and softness of fabric. Ordered XL for a loose fit on my
-															closer-to-large frame, and after washing and machine drying. that seems to
-															have turned out well. Couldn't resist low, low sale pricing.
-														</p>
-														<div>
-															<img src="./images/dist/items/avatar.jpg" width="100"
-																class="rounded mb-sm-0 mb-1" loading="lazy" alt="Avatar">
+														class="user-review-question d-sm-block mx-auto d-none col-xxl-2 col-lg-3 col-sm-6 col-12 mt-lg-0 mt-3">
+														<span class="d-block mb-2 text-center">Is this review useful?</span>
+														<div class="d-flex align-items-center gap-2">
+															<button class="btn btn-secondary w-100 text-uppercase">Yes</button>
+															<button class="btn btn-secondary w-100 text-uppercase">No</button>
 														</div>
-													</div>
-													<div class="d-flex align-items-center flex-md-row flex-column gap-md-4 gap-0">
-														<div>
-															Written by <span>Alex</span> from <span>Chicago</span> / <span>Mar
-																XX</span>, <span>20XX</span>
-														</div>
-														<div class="d-flex align-items-center">
-															<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
-																<span class="icon icon-like">
-																	<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-																		viewBox="0 0 5.333 6.667">
-																		<path
-																			d="m.95 3.118.628-.16a.25.25 0 0 0 .158-.123c.098-.169.33-.492.806-.763.18-.101.329-.18.461-.245.338-.171.542-.27.846-.646.131-.162.258-.248.387-.255a.324.324 0 0 1 .242.094.47.47 0 0 1 .127.424c-.045.224-.13.523-.276.661-.145.134-.485.393-.684.543l.6.26c.044.016.08.048.116.078l.09.1c.087.091.112.22.068.342l-.09.249a.576.576 0 0 1-.046.091l.098.143c.063.09.076.202.04.303l-.058.159a.36.36 0 0 1-.128.17.197.197 0 0 1 .008.158l-.077.212a.384.384 0 0 1-.286.243l-.092.021-.075.206a.275.275 0 0 1-.176.17l-.444.15a.404.404 0 0 1-.331-.03c-.044-.01-.347-.067-.655-.178-.216-.08-.431-.181-.563-.313a.836.836 0 0 1-.057-.057c-.127-.016-.647-.068-.944.154a.1.1 0 0 1-.083.012.107.107 0 0 1-.038-.026c-.03-.035-.02-.091.014-.12.273-.207.673-.218.908-.204-.137-.218-.14-.387-.145-.394 0-.049.036-.083.085-.084.048 0 .083.036.083.084 0 0 .013.245.29.52.163.162.508.287.78.362l-.176-.142a.323.323 0 0 1-.099-.354l.056-.153a.217.217 0 0 1 .11-.123.246.246 0 0 1-.002-.174l.065-.18a.255.255 0 0 1 .136-.143c-.005-.02-.011-.034-.014-.059-.174.099-.47.206-.824.09a.083.083 0 0 1-.051-.108.083.083 0 0 1 .108-.051c.438.147.78-.148.81-.18l.026-.073a.277.277 0 0 1 .147-.157.27.27 0 0 1-.009-.207l.057-.154a.27.27 0 0 1 .274-.176l.636.046a.284.284 0 0 0 .102-.016.082.082 0 0 1 .112.04.081.081 0 0 1-.041.111.364.364 0 0 1-.187.034l-.636-.045a.097.097 0 0 0-.102.064l-.056.154a.123.123 0 0 0 .002.079.11.11 0 0 0 .06.051l.03.012.56.191a.282.282 0 0 0 .153.008l.327-.073a.202.202 0 0 0 .15-.131l.09-.25a.163.163 0 0 0-.034-.168l-.09-.099a.148.148 0 0 0-.058-.038l-.61-.252a.163.163 0 0 1-.096-.131.145.145 0 0 1 .065-.145c.156-.117.536-.404.682-.543.09-.08.17-.286.224-.566a.3.3 0 0 0-.076-.267c-.037-.032-.072-.05-.114-.048-.05.005-.14.039-.262.192-.327.403-.56.516-.905.69-.132.067-.278.139-.452.238-.439.248-.653.542-.74.696a.426.426 0 0 1-.263.198l-.628.161a.088.088 0 0 1-.049 0c-.026-.01-.049-.03-.05-.06-.02-.043.008-.087.055-.1zm3.152 1.735.077-.212c.002-.005.004-.01 0-.018a.815.815 0 0 1-.306.069l-.274.008a.522.522 0 0 1-.166-.018L3.4 4.67c-.032-.012-.056-.027-.086-.043l-.544-.318c-.03-.017-.057-.009-.07-.007-.013.006-.035.016-.047.048l-.065.18a.084.084 0 0 0 .026.093l.518.405c.075.057.17.08.259.064l.553-.104a.216.216 0 0 0 .157-.135zm-1.683.125a.142.142 0 0 0 .044.16l.431.348a.254.254 0 0 0 .236.045l.448-.143a.107.107 0 0 0 .073-.07l.04-.11-.269.046a.505.505 0 0 1-.396-.097l-.154-.122-.303-.236a.072.072 0 0 0-.05-.012.05.05 0 0 0-.037.034l-.058.16zm1.737-1.065-.326.073a.361.361 0 0 1-.147.007l-.005-.002c-.034-.006-.068-.012-.099-.024l-.604-.202a.12.12 0 0 0-.13.079L2.78 4a.122.122 0 0 0 .053.15l.014.011.356.209.193.111a.35.35 0 0 0 .198.049l.273-.009a.713.713 0 0 0 .331-.101l.022-.01a.175.175 0 0 0 .077-.098l.058-.159a.163.163 0 0 0-.019-.145l-.093-.124c-.027.009-.055.022-.088.028" />
-																	</svg>
-																</span>
-																<span>XX</span>
-															</button>
-
-															<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
-																<span class="icon icon-dislike">
-																	<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-																		viewBox="0 0 5.333 6.667">
-																		<path
-																			d="m.95 3.118.628-.16a.25.25 0 0 0 .158-.123c.098-.169.33-.492.806-.763.18-.101.329-.18.461-.245.338-.171.542-.27.846-.646.131-.162.258-.248.387-.255a.324.324 0 0 1 .242.094.47.47 0 0 1 .127.424c-.045.224-.13.523-.276.661-.145.134-.485.393-.684.543l.6.26c.044.016.08.048.116.078l.09.1c.087.091.112.22.068.342l-.09.249a.576.576 0 0 1-.046.091l.098.143c.063.09.076.202.04.303l-.058.159a.36.36 0 0 1-.128.17.197.197 0 0 1 .008.158l-.077.212a.384.384 0 0 1-.286.243l-.092.021-.075.206a.275.275 0 0 1-.176.17l-.444.15a.404.404 0 0 1-.331-.03c-.044-.01-.347-.067-.655-.178-.216-.08-.431-.181-.563-.313a.836.836 0 0 1-.057-.057c-.127-.016-.647-.068-.944.154a.1.1 0 0 1-.083.012.107.107 0 0 1-.038-.026c-.03-.035-.02-.091.014-.12.273-.207.673-.218.908-.204-.137-.218-.14-.387-.145-.394 0-.049.036-.083.085-.084.048 0 .083.036.083.084 0 0 .013.245.29.52.163.162.508.287.78.362l-.176-.142a.323.323 0 0 1-.099-.354l.056-.153a.217.217 0 0 1 .11-.123.246.246 0 0 1-.002-.174l.065-.18a.255.255 0 0 1 .136-.143c-.005-.02-.011-.034-.014-.059-.174.099-.47.206-.824.09a.083.083 0 0 1-.051-.108.083.083 0 0 1 .108-.051c.438.147.78-.148.81-.18l.026-.073a.277.277 0 0 1 .147-.157.27.27 0 0 1-.009-.207l.057-.154a.27.27 0 0 1 .274-.176l.636.046a.284.284 0 0 0 .102-.016.082.082 0 0 1 .112.04.081.081 0 0 1-.041.111.364.364 0 0 1-.187.034l-.636-.045a.097.097 0 0 0-.102.064l-.056.154a.123.123 0 0 0 .002.079.11.11 0 0 0 .06.051l.03.012.56.191a.282.282 0 0 0 .153.008l.327-.073a.202.202 0 0 0 .15-.131l.09-.25a.163.163 0 0 0-.034-.168l-.09-.099a.148.148 0 0 0-.058-.038l-.61-.252a.163.163 0 0 1-.096-.131.145.145 0 0 1 .065-.145c.156-.117.536-.404.682-.543.09-.08.17-.286.224-.566a.3.3 0 0 0-.076-.267c-.037-.032-.072-.05-.114-.048-.05.005-.14.039-.262.192-.327.403-.56.516-.905.69-.132.067-.278.139-.452.238-.439.248-.653.542-.74.696a.426.426 0 0 1-.263.198l-.628.161a.088.088 0 0 1-.049 0c-.026-.01-.049-.03-.05-.06-.02-.043.008-.087.055-.1zm3.152 1.735.077-.212c.002-.005.004-.01 0-.018a.815.815 0 0 1-.306.069l-.274.008a.522.522 0 0 1-.166-.018L3.4 4.67c-.032-.012-.056-.027-.086-.043l-.544-.318c-.03-.017-.057-.009-.07-.007-.013.006-.035.016-.047.048l-.065.18a.084.084 0 0 0 .026.093l.518.405c.075.057.17.08.259.064l.553-.104a.216.216 0 0 0 .157-.135zm-1.683.125a.142.142 0 0 0 .044.16l.431.348a.254.254 0 0 0 .236.045l.448-.143a.107.107 0 0 0 .073-.07l.04-.11-.269.046a.505.505 0 0 1-.396-.097l-.154-.122-.303-.236a.072.072 0 0 0-.05-.012.05.05 0 0 0-.037.034l-.058.16zm1.737-1.065-.326.073a.361.361 0 0 1-.147.007l-.005-.002c-.034-.006-.068-.012-.099-.024l-.604-.202a.12.12 0 0 0-.13.079L2.78 4a.122.122 0 0 0 .053.15l.014.011.356.209.193.111a.35.35 0 0 0 .198.049l.273-.009a.713.713 0 0 0 .331-.101l.022-.01a.175.175 0 0 0 .077-.098l.058-.159a.163.163 0 0 0-.019-.145l-.093-.124c-.027.009-.055.022-.088.028" />
-																	</svg>
-																</span>
-																<span>XX</span>
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-xxl-2 col-lg-3 col-12 mt-lg-0 mt-3 user-review-question">
-													<span class="d-block mb-2 text-center">Is this review useful?</span>
-													<div class="d-sm-flex d-block align-items-center gap-2">
-														<button
-															class="btn btn-secondary w-100 text-uppercase mb-2 mb-sm-0">Yes</button>
-														<button class="btn btn-secondary w-100 text-uppercase">No</button>
-													</div>
-												</div>
-
-												<div class="mt-lg-3 mt-4">
-													<div class="border border-bottom-1 border-top-0 border-start-0 border-end-0">
 													</div>
 												</div>
 											</div>
-											<div class="row product-review mt-3">
-												<div class="card-reviews mb-1">
-													<div class="card-stars">
-														<span class="icon icon-star active">
-															<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-																viewBox="0 0 6.667 5.333">
-																<path
-																	d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-																	transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-															</svg>
-														</span>
-														<span class="icon icon-star active">
-															<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-																viewBox="0 0 6.667 5.333">
-																<path
-																	d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-																	transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-															</svg>
-														</span>
-														<span class="icon icon-star active">
-															<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-																viewBox="0 0 6.667 5.333">
-																<path
-																	d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-																	transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-															</svg>
-														</span>
-														<span class="icon icon-star active">
-															<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-																viewBox="0 0 6.667 5.333">
-																<path
-																	d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-																	transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-															</svg>
-														</span>
-														<span class="icon icon-star">
-															<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-																viewBox="0 0 6.667 5.333">
-																<path
-																	d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-																	transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-															</svg>
-														</span>
-													</div>
-												</div>
 
-												<h3>
-													C-IN2 Core Low Rise Brief
-												</h3>
-												<div class="col-lg-9 col-12 user-review">
+											<div class="product-review">
+												<div class="row">
+													<div class="card-reviews mb-1">
+														<div class="card-stars">
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+														</div>
+													</div>
+
+													<h3>
+														C-IN2 Core Low Rise Brief
+													</h3>
+													<div class="col-lg-9 col-12 user-review">
+														<div class="row">
+															<p class="col-xxl-10 col-sm-9 text-justify mb-sm-2 mb-1">
+																Bought 3 of these all-cotton. T's in clay red, light grey, and blue
+																wing.
+																Very
+																happy with colors and softness of fabric. Ordered XL for a loose fit on
+																my
+																closer-to-large frame, and after washing and machine drying. that seems
+																to
+																have turned out well. Couldn't resist low, low sale pricing.
+															</p>
+
+															<div class="col-xxl-2 col-sm-3 col-5">
+																<img src="./images/dist/items/avatar.jpg" width="100"
+																	class="rounded mb-sm-0 mb-1" loading="lazy" alt="Avatar">
+															</div>
+
+															<div class="user-review-question-duplicate d-sm-none d-block col-7"></div>
+
+															<div
+																class="col-12 d-flex align-items-start gap-md-4 gap-3 w-100 mt-sm-0 mt-3">
+																<div>
+																	Written by <span>Alex</span> from <span>Chicago</span> / <span>Mar
+																		XX</span>, <span>20XX</span>
+																</div>
+																<div class="d-flex align-items-center">
+																	<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
+																		<span class="icon icon-like">
+																			<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																				viewBox="0 0 5.333 6.667">
+																				<path
+																					d="m.95 3.118.628-.16a.25.25 0 0 0 .158-.123c.098-.169.33-.492.806-.763.18-.101.329-.18.461-.245.338-.171.542-.27.846-.646.131-.162.258-.248.387-.255a.324.324 0 0 1 .242.094.47.47 0 0 1 .127.424c-.045.224-.13.523-.276.661-.145.134-.485.393-.684.543l.6.26c.044.016.08.048.116.078l.09.1c.087.091.112.22.068.342l-.09.249a.576.576 0 0 1-.046.091l.098.143c.063.09.076.202.04.303l-.058.159a.36.36 0 0 1-.128.17.197.197 0 0 1 .008.158l-.077.212a.384.384 0 0 1-.286.243l-.092.021-.075.206a.275.275 0 0 1-.176.17l-.444.15a.404.404 0 0 1-.331-.03c-.044-.01-.347-.067-.655-.178-.216-.08-.431-.181-.563-.313a.836.836 0 0 1-.057-.057c-.127-.016-.647-.068-.944.154a.1.1 0 0 1-.083.012.107.107 0 0 1-.038-.026c-.03-.035-.02-.091.014-.12.273-.207.673-.218.908-.204-.137-.218-.14-.387-.145-.394 0-.049.036-.083.085-.084.048 0 .083.036.083.084 0 0 .013.245.29.52.163.162.508.287.78.362l-.176-.142a.323.323 0 0 1-.099-.354l.056-.153a.217.217 0 0 1 .11-.123.246.246 0 0 1-.002-.174l.065-.18a.255.255 0 0 1 .136-.143c-.005-.02-.011-.034-.014-.059-.174.099-.47.206-.824.09a.083.083 0 0 1-.051-.108.083.083 0 0 1 .108-.051c.438.147.78-.148.81-.18l.026-.073a.277.277 0 0 1 .147-.157.27.27 0 0 1-.009-.207l.057-.154a.27.27 0 0 1 .274-.176l.636.046a.284.284 0 0 0 .102-.016.082.082 0 0 1 .112.04.081.081 0 0 1-.041.111.364.364 0 0 1-.187.034l-.636-.045a.097.097 0 0 0-.102.064l-.056.154a.123.123 0 0 0 .002.079.11.11 0 0 0 .06.051l.03.012.56.191a.282.282 0 0 0 .153.008l.327-.073a.202.202 0 0 0 .15-.131l.09-.25a.163.163 0 0 0-.034-.168l-.09-.099a.148.148 0 0 0-.058-.038l-.61-.252a.163.163 0 0 1-.096-.131.145.145 0 0 1 .065-.145c.156-.117.536-.404.682-.543.09-.08.17-.286.224-.566a.3.3 0 0 0-.076-.267c-.037-.032-.072-.05-.114-.048-.05.005-.14.039-.262.192-.327.403-.56.516-.905.69-.132.067-.278.139-.452.238-.439.248-.653.542-.74.696a.426.426 0 0 1-.263.198l-.628.161a.088.088 0 0 1-.049 0c-.026-.01-.049-.03-.05-.06-.02-.043.008-.087.055-.1zm3.152 1.735.077-.212c.002-.005.004-.01 0-.018a.815.815 0 0 1-.306.069l-.274.008a.522.522 0 0 1-.166-.018L3.4 4.67c-.032-.012-.056-.027-.086-.043l-.544-.318c-.03-.017-.057-.009-.07-.007-.013.006-.035.016-.047.048l-.065.18a.084.084 0 0 0 .026.093l.518.405c.075.057.17.08.259.064l.553-.104a.216.216 0 0 0 .157-.135zm-1.683.125a.142.142 0 0 0 .044.16l.431.348a.254.254 0 0 0 .236.045l.448-.143a.107.107 0 0 0 .073-.07l.04-.11-.269.046a.505.505 0 0 1-.396-.097l-.154-.122-.303-.236a.072.072 0 0 0-.05-.012.05.05 0 0 0-.037.034l-.058.16zm1.737-1.065-.326.073a.361.361 0 0 1-.147.007l-.005-.002c-.034-.006-.068-.012-.099-.024l-.604-.202a.12.12 0 0 0-.13.079L2.78 4a.122.122 0 0 0 .053.15l.014.011.356.209.193.111a.35.35 0 0 0 .198.049l.273-.009a.713.713 0 0 0 .331-.101l.022-.01a.175.175 0 0 0 .077-.098l.058-.159a.163.163 0 0 0-.019-.145l-.093-.124c-.027.009-.055.022-.088.028" />
+																			</svg>
+																		</span>
+																		<span>XX</span>
+																	</button>
+
+																	<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
+																		<span class="icon icon-dislike">
+																			<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																				viewBox="0 0 5.333 6.667">
+																				<path
+																					d="m.95 3.118.628-.16a.25.25 0 0 0 .158-.123c.098-.169.33-.492.806-.763.18-.101.329-.18.461-.245.338-.171.542-.27.846-.646.131-.162.258-.248.387-.255a.324.324 0 0 1 .242.094.47.47 0 0 1 .127.424c-.045.224-.13.523-.276.661-.145.134-.485.393-.684.543l.6.26c.044.016.08.048.116.078l.09.1c.087.091.112.22.068.342l-.09.249a.576.576 0 0 1-.046.091l.098.143c.063.09.076.202.04.303l-.058.159a.36.36 0 0 1-.128.17.197.197 0 0 1 .008.158l-.077.212a.384.384 0 0 1-.286.243l-.092.021-.075.206a.275.275 0 0 1-.176.17l-.444.15a.404.404 0 0 1-.331-.03c-.044-.01-.347-.067-.655-.178-.216-.08-.431-.181-.563-.313a.836.836 0 0 1-.057-.057c-.127-.016-.647-.068-.944.154a.1.1 0 0 1-.083.012.107.107 0 0 1-.038-.026c-.03-.035-.02-.091.014-.12.273-.207.673-.218.908-.204-.137-.218-.14-.387-.145-.394 0-.049.036-.083.085-.084.048 0 .083.036.083.084 0 0 .013.245.29.52.163.162.508.287.78.362l-.176-.142a.323.323 0 0 1-.099-.354l.056-.153a.217.217 0 0 1 .11-.123.246.246 0 0 1-.002-.174l.065-.18a.255.255 0 0 1 .136-.143c-.005-.02-.011-.034-.014-.059-.174.099-.47.206-.824.09a.083.083 0 0 1-.051-.108.083.083 0 0 1 .108-.051c.438.147.78-.148.81-.18l.026-.073a.277.277 0 0 1 .147-.157.27.27 0 0 1-.009-.207l.057-.154a.27.27 0 0 1 .274-.176l.636.046a.284.284 0 0 0 .102-.016.082.082 0 0 1 .112.04.081.081 0 0 1-.041.111.364.364 0 0 1-.187.034l-.636-.045a.097.097 0 0 0-.102.064l-.056.154a.123.123 0 0 0 .002.079.11.11 0 0 0 .06.051l.03.012.56.191a.282.282 0 0 0 .153.008l.327-.073a.202.202 0 0 0 .15-.131l.09-.25a.163.163 0 0 0-.034-.168l-.09-.099a.148.148 0 0 0-.058-.038l-.61-.252a.163.163 0 0 1-.096-.131.145.145 0 0 1 .065-.145c.156-.117.536-.404.682-.543.09-.08.17-.286.224-.566a.3.3 0 0 0-.076-.267c-.037-.032-.072-.05-.114-.048-.05.005-.14.039-.262.192-.327.403-.56.516-.905.69-.132.067-.278.139-.452.238-.439.248-.653.542-.74.696a.426.426 0 0 1-.263.198l-.628.161a.088.088 0 0 1-.049 0c-.026-.01-.049-.03-.05-.06-.02-.043.008-.087.055-.1zm3.152 1.735.077-.212c.002-.005.004-.01 0-.018a.815.815 0 0 1-.306.069l-.274.008a.522.522 0 0 1-.166-.018L3.4 4.67c-.032-.012-.056-.027-.086-.043l-.544-.318c-.03-.017-.057-.009-.07-.007-.013.006-.035.016-.047.048l-.065.18a.084.084 0 0 0 .026.093l.518.405c.075.057.17.08.259.064l.553-.104a.216.216 0 0 0 .157-.135zm-1.683.125a.142.142 0 0 0 .044.16l.431.348a.254.254 0 0 0 .236.045l.448-.143a.107.107 0 0 0 .073-.07l.04-.11-.269.046a.505.505 0 0 1-.396-.097l-.154-.122-.303-.236a.072.072 0 0 0-.05-.012.05.05 0 0 0-.037.034l-.058.16zm1.737-1.065-.326.073a.361.361 0 0 1-.147.007l-.005-.002c-.034-.006-.068-.012-.099-.024l-.604-.202a.12.12 0 0 0-.13.079L2.78 4a.122.122 0 0 0 .053.15l.014.011.356.209.193.111a.35.35 0 0 0 .198.049l.273-.009a.713.713 0 0 0 .331-.101l.022-.01a.175.175 0 0 0 .077-.098l.058-.159a.163.163 0 0 0-.019-.145l-.093-.124c-.027.009-.055.022-.088.028" />
+																			</svg>
+																		</span>
+																		<span>XX</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+
 													<div
-														class="d-flex flex-sm-row flex-column align-items-sm-start align-items-center gap-2">
-														<p class="mb-sm-2 mb-1">
-															Bought 3 of these all-cotton. T's in clay red, light grey, and blue wing.
-															Very
-															happy with colors and softness of fabric. Ordered XL for a loose fit on my
-															closer-to-large frame, and after washing and machine drying. that seems to
-															have turned out well. Couldn't resist low, low sale pricing.
-														</p>
-														<div>
-															<img src="./images/dist/items/avatar.jpg" width="100"
-																class="rounded mb-sm-0 mb-1" loading="lazy" alt="Avatar">
+														class="user-review-question d-sm-block mx-auto d-none col-xxl-2 col-lg-3 col-sm-6 col-12 mt-lg-0 mt-3">
+														<span class="d-block mb-2 text-center">Is this review useful?</span>
+														<div class="d-flex align-items-center gap-2">
+															<button class="btn btn-secondary w-100 text-uppercase">Yes</button>
+															<button class="btn btn-secondary w-100 text-uppercase">No</button>
 														</div>
-													</div>
-													<div class="d-flex align-items-center flex-md-row flex-column gap-md-4 gap-0">
-														<div>
-															Written by <span>Alex</span> from <span>Chicago</span> / <span>Mar
-																XX</span>, <span>20XX</span>
-														</div>
-														<div class="d-flex align-items-center">
-															<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
-																<span class="icon icon-like">
-																	<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-																		viewBox="0 0 5.333 6.667">
-																		<path
-																			d="m.95 3.118.628-.16a.25.25 0 0 0 .158-.123c.098-.169.33-.492.806-.763.18-.101.329-.18.461-.245.338-.171.542-.27.846-.646.131-.162.258-.248.387-.255a.324.324 0 0 1 .242.094.47.47 0 0 1 .127.424c-.045.224-.13.523-.276.661-.145.134-.485.393-.684.543l.6.26c.044.016.08.048.116.078l.09.1c.087.091.112.22.068.342l-.09.249a.576.576 0 0 1-.046.091l.098.143c.063.09.076.202.04.303l-.058.159a.36.36 0 0 1-.128.17.197.197 0 0 1 .008.158l-.077.212a.384.384 0 0 1-.286.243l-.092.021-.075.206a.275.275 0 0 1-.176.17l-.444.15a.404.404 0 0 1-.331-.03c-.044-.01-.347-.067-.655-.178-.216-.08-.431-.181-.563-.313a.836.836 0 0 1-.057-.057c-.127-.016-.647-.068-.944.154a.1.1 0 0 1-.083.012.107.107 0 0 1-.038-.026c-.03-.035-.02-.091.014-.12.273-.207.673-.218.908-.204-.137-.218-.14-.387-.145-.394 0-.049.036-.083.085-.084.048 0 .083.036.083.084 0 0 .013.245.29.52.163.162.508.287.78.362l-.176-.142a.323.323 0 0 1-.099-.354l.056-.153a.217.217 0 0 1 .11-.123.246.246 0 0 1-.002-.174l.065-.18a.255.255 0 0 1 .136-.143c-.005-.02-.011-.034-.014-.059-.174.099-.47.206-.824.09a.083.083 0 0 1-.051-.108.083.083 0 0 1 .108-.051c.438.147.78-.148.81-.18l.026-.073a.277.277 0 0 1 .147-.157.27.27 0 0 1-.009-.207l.057-.154a.27.27 0 0 1 .274-.176l.636.046a.284.284 0 0 0 .102-.016.082.082 0 0 1 .112.04.081.081 0 0 1-.041.111.364.364 0 0 1-.187.034l-.636-.045a.097.097 0 0 0-.102.064l-.056.154a.123.123 0 0 0 .002.079.11.11 0 0 0 .06.051l.03.012.56.191a.282.282 0 0 0 .153.008l.327-.073a.202.202 0 0 0 .15-.131l.09-.25a.163.163 0 0 0-.034-.168l-.09-.099a.148.148 0 0 0-.058-.038l-.61-.252a.163.163 0 0 1-.096-.131.145.145 0 0 1 .065-.145c.156-.117.536-.404.682-.543.09-.08.17-.286.224-.566a.3.3 0 0 0-.076-.267c-.037-.032-.072-.05-.114-.048-.05.005-.14.039-.262.192-.327.403-.56.516-.905.69-.132.067-.278.139-.452.238-.439.248-.653.542-.74.696a.426.426 0 0 1-.263.198l-.628.161a.088.088 0 0 1-.049 0c-.026-.01-.049-.03-.05-.06-.02-.043.008-.087.055-.1zm3.152 1.735.077-.212c.002-.005.004-.01 0-.018a.815.815 0 0 1-.306.069l-.274.008a.522.522 0 0 1-.166-.018L3.4 4.67c-.032-.012-.056-.027-.086-.043l-.544-.318c-.03-.017-.057-.009-.07-.007-.013.006-.035.016-.047.048l-.065.18a.084.084 0 0 0 .026.093l.518.405c.075.057.17.08.259.064l.553-.104a.216.216 0 0 0 .157-.135zm-1.683.125a.142.142 0 0 0 .044.16l.431.348a.254.254 0 0 0 .236.045l.448-.143a.107.107 0 0 0 .073-.07l.04-.11-.269.046a.505.505 0 0 1-.396-.097l-.154-.122-.303-.236a.072.072 0 0 0-.05-.012.05.05 0 0 0-.037.034l-.058.16zm1.737-1.065-.326.073a.361.361 0 0 1-.147.007l-.005-.002c-.034-.006-.068-.012-.099-.024l-.604-.202a.12.12 0 0 0-.13.079L2.78 4a.122.122 0 0 0 .053.15l.014.011.356.209.193.111a.35.35 0 0 0 .198.049l.273-.009a.713.713 0 0 0 .331-.101l.022-.01a.175.175 0 0 0 .077-.098l.058-.159a.163.163 0 0 0-.019-.145l-.093-.124c-.027.009-.055.022-.088.028" />
-																	</svg>
-																</span>
-																<span>XX</span>
-															</button>
-
-															<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
-																<span class="icon icon-dislike">
-																	<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-																		viewBox="0 0 5.333 6.667">
-																		<path
-																			d="m.95 3.118.628-.16a.25.25 0 0 0 .158-.123c.098-.169.33-.492.806-.763.18-.101.329-.18.461-.245.338-.171.542-.27.846-.646.131-.162.258-.248.387-.255a.324.324 0 0 1 .242.094.47.47 0 0 1 .127.424c-.045.224-.13.523-.276.661-.145.134-.485.393-.684.543l.6.26c.044.016.08.048.116.078l.09.1c.087.091.112.22.068.342l-.09.249a.576.576 0 0 1-.046.091l.098.143c.063.09.076.202.04.303l-.058.159a.36.36 0 0 1-.128.17.197.197 0 0 1 .008.158l-.077.212a.384.384 0 0 1-.286.243l-.092.021-.075.206a.275.275 0 0 1-.176.17l-.444.15a.404.404 0 0 1-.331-.03c-.044-.01-.347-.067-.655-.178-.216-.08-.431-.181-.563-.313a.836.836 0 0 1-.057-.057c-.127-.016-.647-.068-.944.154a.1.1 0 0 1-.083.012.107.107 0 0 1-.038-.026c-.03-.035-.02-.091.014-.12.273-.207.673-.218.908-.204-.137-.218-.14-.387-.145-.394 0-.049.036-.083.085-.084.048 0 .083.036.083.084 0 0 .013.245.29.52.163.162.508.287.78.362l-.176-.142a.323.323 0 0 1-.099-.354l.056-.153a.217.217 0 0 1 .11-.123.246.246 0 0 1-.002-.174l.065-.18a.255.255 0 0 1 .136-.143c-.005-.02-.011-.034-.014-.059-.174.099-.47.206-.824.09a.083.083 0 0 1-.051-.108.083.083 0 0 1 .108-.051c.438.147.78-.148.81-.18l.026-.073a.277.277 0 0 1 .147-.157.27.27 0 0 1-.009-.207l.057-.154a.27.27 0 0 1 .274-.176l.636.046a.284.284 0 0 0 .102-.016.082.082 0 0 1 .112.04.081.081 0 0 1-.041.111.364.364 0 0 1-.187.034l-.636-.045a.097.097 0 0 0-.102.064l-.056.154a.123.123 0 0 0 .002.079.11.11 0 0 0 .06.051l.03.012.56.191a.282.282 0 0 0 .153.008l.327-.073a.202.202 0 0 0 .15-.131l.09-.25a.163.163 0 0 0-.034-.168l-.09-.099a.148.148 0 0 0-.058-.038l-.61-.252a.163.163 0 0 1-.096-.131.145.145 0 0 1 .065-.145c.156-.117.536-.404.682-.543.09-.08.17-.286.224-.566a.3.3 0 0 0-.076-.267c-.037-.032-.072-.05-.114-.048-.05.005-.14.039-.262.192-.327.403-.56.516-.905.69-.132.067-.278.139-.452.238-.439.248-.653.542-.74.696a.426.426 0 0 1-.263.198l-.628.161a.088.088 0 0 1-.049 0c-.026-.01-.049-.03-.05-.06-.02-.043.008-.087.055-.1zm3.152 1.735.077-.212c.002-.005.004-.01 0-.018a.815.815 0 0 1-.306.069l-.274.008a.522.522 0 0 1-.166-.018L3.4 4.67c-.032-.012-.056-.027-.086-.043l-.544-.318c-.03-.017-.057-.009-.07-.007-.013.006-.035.016-.047.048l-.065.18a.084.084 0 0 0 .026.093l.518.405c.075.057.17.08.259.064l.553-.104a.216.216 0 0 0 .157-.135zm-1.683.125a.142.142 0 0 0 .044.16l.431.348a.254.254 0 0 0 .236.045l.448-.143a.107.107 0 0 0 .073-.07l.04-.11-.269.046a.505.505 0 0 1-.396-.097l-.154-.122-.303-.236a.072.072 0 0 0-.05-.012.05.05 0 0 0-.037.034l-.058.16zm1.737-1.065-.326.073a.361.361 0 0 1-.147.007l-.005-.002c-.034-.006-.068-.012-.099-.024l-.604-.202a.12.12 0 0 0-.13.079L2.78 4a.122.122 0 0 0 .053.15l.014.011.356.209.193.111a.35.35 0 0 0 .198.049l.273-.009a.713.713 0 0 0 .331-.101l.022-.01a.175.175 0 0 0 .077-.098l.058-.159a.163.163 0 0 0-.019-.145l-.093-.124c-.027.009-.055.022-.088.028" />
-																	</svg>
-																</span>
-																<span>XX</span>
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-xxl-2 col-lg-3 col-12 mt-lg-0 mt-3 user-review-question">
-													<span class="d-block mb-2 text-center">Is this review useful?</span>
-													<div class="d-sm-flex d-block align-items-center gap-2">
-														<button
-															class="btn btn-secondary w-100 text-uppercase mb-2 mb-sm-0">Yes</button>
-														<button class="btn btn-secondary w-100 text-uppercase">No</button>
-													</div>
-												</div>
-
-												<div class="mt-lg-3 mt-4">
-													<div class="border border-bottom-1 border-top-0 border-start-0 border-end-0">
 													</div>
 												</div>
 											</div>
-											<div class="row product-review mt-3">
-												<div class="card-reviews mb-1">
-													<div class="card-stars">
-														<span class="icon icon-star active">
-															<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-																viewBox="0 0 6.667 5.333">
-																<path
-																	d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-																	transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-															</svg>
-														</span>
-														<span class="icon icon-star active">
-															<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-																viewBox="0 0 6.667 5.333">
-																<path
-																	d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-																	transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-															</svg>
-														</span>
-														<span class="icon icon-star active">
-															<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-																viewBox="0 0 6.667 5.333">
-																<path
-																	d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-																	transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-															</svg>
-														</span>
-														<span class="icon icon-star active">
-															<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-																viewBox="0 0 6.667 5.333">
-																<path
-																	d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-																	transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-															</svg>
-														</span>
-														<span class="icon icon-star">
-															<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-																viewBox="0 0 6.667 5.333">
-																<path
-																	d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-																	transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-															</svg>
-														</span>
-													</div>
-												</div>
 
-												<h3>
-													C-IN2 Core Low Rise Brief
-												</h3>
-												<div class="col-lg-9 col-12 user-review">
+											<div class="product-review">
+												<div class="row">
+													<div class="card-reviews mb-1">
+														<div class="card-stars">
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star active">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+															<span class="icon icon-star">
+																<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																	viewBox="0 0 6.667 5.333">
+																	<path
+																		d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+																		transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+																</svg>
+															</span>
+														</div>
+													</div>
+
+													<h3>
+														C-IN2 Core Low Rise Brief
+													</h3>
+													<div class="col-lg-9 col-12 user-review">
+														<div class="row">
+															<p class="col-xxl-10 col-sm-9 text-justify mb-sm-2 mb-1">
+																Bought 3 of these all-cotton. T's in clay red, light grey, and blue
+																wing.
+																Very
+																happy with colors and softness of fabric. Ordered XL for a loose fit on
+																my
+																closer-to-large frame, and after washing and machine drying. that seems
+																to
+																have turned out well. Couldn't resist low, low sale pricing.
+															</p>
+
+															<div class="col-xxl-2 col-sm-3 col-5">
+																<img src="./images/dist/items/avatar.jpg" width="100"
+																	class="rounded mb-sm-0 mb-1" loading="lazy" alt="Avatar">
+															</div>
+
+															<div class="user-review-question-duplicate d-sm-none d-block col-7"></div>
+
+															<div
+																class="col-12 d-flex align-items-start gap-md-4 gap-3 w-100 mt-sm-0 mt-3">
+																<div>
+																	Written by <span>Alex</span> from <span>Chicago</span> / <span>Mar
+																		XX</span>, <span>20XX</span>
+																</div>
+																<div class="d-flex align-items-center">
+																	<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
+																		<span class="icon icon-like">
+																			<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																				viewBox="0 0 5.333 6.667">
+																				<path
+																					d="m.95 3.118.628-.16a.25.25 0 0 0 .158-.123c.098-.169.33-.492.806-.763.18-.101.329-.18.461-.245.338-.171.542-.27.846-.646.131-.162.258-.248.387-.255a.324.324 0 0 1 .242.094.47.47 0 0 1 .127.424c-.045.224-.13.523-.276.661-.145.134-.485.393-.684.543l.6.26c.044.016.08.048.116.078l.09.1c.087.091.112.22.068.342l-.09.249a.576.576 0 0 1-.046.091l.098.143c.063.09.076.202.04.303l-.058.159a.36.36 0 0 1-.128.17.197.197 0 0 1 .008.158l-.077.212a.384.384 0 0 1-.286.243l-.092.021-.075.206a.275.275 0 0 1-.176.17l-.444.15a.404.404 0 0 1-.331-.03c-.044-.01-.347-.067-.655-.178-.216-.08-.431-.181-.563-.313a.836.836 0 0 1-.057-.057c-.127-.016-.647-.068-.944.154a.1.1 0 0 1-.083.012.107.107 0 0 1-.038-.026c-.03-.035-.02-.091.014-.12.273-.207.673-.218.908-.204-.137-.218-.14-.387-.145-.394 0-.049.036-.083.085-.084.048 0 .083.036.083.084 0 0 .013.245.29.52.163.162.508.287.78.362l-.176-.142a.323.323 0 0 1-.099-.354l.056-.153a.217.217 0 0 1 .11-.123.246.246 0 0 1-.002-.174l.065-.18a.255.255 0 0 1 .136-.143c-.005-.02-.011-.034-.014-.059-.174.099-.47.206-.824.09a.083.083 0 0 1-.051-.108.083.083 0 0 1 .108-.051c.438.147.78-.148.81-.18l.026-.073a.277.277 0 0 1 .147-.157.27.27 0 0 1-.009-.207l.057-.154a.27.27 0 0 1 .274-.176l.636.046a.284.284 0 0 0 .102-.016.082.082 0 0 1 .112.04.081.081 0 0 1-.041.111.364.364 0 0 1-.187.034l-.636-.045a.097.097 0 0 0-.102.064l-.056.154a.123.123 0 0 0 .002.079.11.11 0 0 0 .06.051l.03.012.56.191a.282.282 0 0 0 .153.008l.327-.073a.202.202 0 0 0 .15-.131l.09-.25a.163.163 0 0 0-.034-.168l-.09-.099a.148.148 0 0 0-.058-.038l-.61-.252a.163.163 0 0 1-.096-.131.145.145 0 0 1 .065-.145c.156-.117.536-.404.682-.543.09-.08.17-.286.224-.566a.3.3 0 0 0-.076-.267c-.037-.032-.072-.05-.114-.048-.05.005-.14.039-.262.192-.327.403-.56.516-.905.69-.132.067-.278.139-.452.238-.439.248-.653.542-.74.696a.426.426 0 0 1-.263.198l-.628.161a.088.088 0 0 1-.049 0c-.026-.01-.049-.03-.05-.06-.02-.043.008-.087.055-.1zm3.152 1.735.077-.212c.002-.005.004-.01 0-.018a.815.815 0 0 1-.306.069l-.274.008a.522.522 0 0 1-.166-.018L3.4 4.67c-.032-.012-.056-.027-.086-.043l-.544-.318c-.03-.017-.057-.009-.07-.007-.013.006-.035.016-.047.048l-.065.18a.084.084 0 0 0 .026.093l.518.405c.075.057.17.08.259.064l.553-.104a.216.216 0 0 0 .157-.135zm-1.683.125a.142.142 0 0 0 .044.16l.431.348a.254.254 0 0 0 .236.045l.448-.143a.107.107 0 0 0 .073-.07l.04-.11-.269.046a.505.505 0 0 1-.396-.097l-.154-.122-.303-.236a.072.072 0 0 0-.05-.012.05.05 0 0 0-.037.034l-.058.16zm1.737-1.065-.326.073a.361.361 0 0 1-.147.007l-.005-.002c-.034-.006-.068-.012-.099-.024l-.604-.202a.12.12 0 0 0-.13.079L2.78 4a.122.122 0 0 0 .053.15l.014.011.356.209.193.111a.35.35 0 0 0 .198.049l.273-.009a.713.713 0 0 0 .331-.101l.022-.01a.175.175 0 0 0 .077-.098l.058-.159a.163.163 0 0 0-.019-.145l-.093-.124c-.027.009-.055.022-.088.028" />
+																			</svg>
+																		</span>
+																		<span>XX</span>
+																	</button>
+
+																	<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
+																		<span class="icon icon-dislike">
+																			<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+																				viewBox="0 0 5.333 6.667">
+																				<path
+																					d="m.95 3.118.628-.16a.25.25 0 0 0 .158-.123c.098-.169.33-.492.806-.763.18-.101.329-.18.461-.245.338-.171.542-.27.846-.646.131-.162.258-.248.387-.255a.324.324 0 0 1 .242.094.47.47 0 0 1 .127.424c-.045.224-.13.523-.276.661-.145.134-.485.393-.684.543l.6.26c.044.016.08.048.116.078l.09.1c.087.091.112.22.068.342l-.09.249a.576.576 0 0 1-.046.091l.098.143c.063.09.076.202.04.303l-.058.159a.36.36 0 0 1-.128.17.197.197 0 0 1 .008.158l-.077.212a.384.384 0 0 1-.286.243l-.092.021-.075.206a.275.275 0 0 1-.176.17l-.444.15a.404.404 0 0 1-.331-.03c-.044-.01-.347-.067-.655-.178-.216-.08-.431-.181-.563-.313a.836.836 0 0 1-.057-.057c-.127-.016-.647-.068-.944.154a.1.1 0 0 1-.083.012.107.107 0 0 1-.038-.026c-.03-.035-.02-.091.014-.12.273-.207.673-.218.908-.204-.137-.218-.14-.387-.145-.394 0-.049.036-.083.085-.084.048 0 .083.036.083.084 0 0 .013.245.29.52.163.162.508.287.78.362l-.176-.142a.323.323 0 0 1-.099-.354l.056-.153a.217.217 0 0 1 .11-.123.246.246 0 0 1-.002-.174l.065-.18a.255.255 0 0 1 .136-.143c-.005-.02-.011-.034-.014-.059-.174.099-.47.206-.824.09a.083.083 0 0 1-.051-.108.083.083 0 0 1 .108-.051c.438.147.78-.148.81-.18l.026-.073a.277.277 0 0 1 .147-.157.27.27 0 0 1-.009-.207l.057-.154a.27.27 0 0 1 .274-.176l.636.046a.284.284 0 0 0 .102-.016.082.082 0 0 1 .112.04.081.081 0 0 1-.041.111.364.364 0 0 1-.187.034l-.636-.045a.097.097 0 0 0-.102.064l-.056.154a.123.123 0 0 0 .002.079.11.11 0 0 0 .06.051l.03.012.56.191a.282.282 0 0 0 .153.008l.327-.073a.202.202 0 0 0 .15-.131l.09-.25a.163.163 0 0 0-.034-.168l-.09-.099a.148.148 0 0 0-.058-.038l-.61-.252a.163.163 0 0 1-.096-.131.145.145 0 0 1 .065-.145c.156-.117.536-.404.682-.543.09-.08.17-.286.224-.566a.3.3 0 0 0-.076-.267c-.037-.032-.072-.05-.114-.048-.05.005-.14.039-.262.192-.327.403-.56.516-.905.69-.132.067-.278.139-.452.238-.439.248-.653.542-.74.696a.426.426 0 0 1-.263.198l-.628.161a.088.088 0 0 1-.049 0c-.026-.01-.049-.03-.05-.06-.02-.043.008-.087.055-.1zm3.152 1.735.077-.212c.002-.005.004-.01 0-.018a.815.815 0 0 1-.306.069l-.274.008a.522.522 0 0 1-.166-.018L3.4 4.67c-.032-.012-.056-.027-.086-.043l-.544-.318c-.03-.017-.057-.009-.07-.007-.013.006-.035.016-.047.048l-.065.18a.084.084 0 0 0 .026.093l.518.405c.075.057.17.08.259.064l.553-.104a.216.216 0 0 0 .157-.135zm-1.683.125a.142.142 0 0 0 .044.16l.431.348a.254.254 0 0 0 .236.045l.448-.143a.107.107 0 0 0 .073-.07l.04-.11-.269.046a.505.505 0 0 1-.396-.097l-.154-.122-.303-.236a.072.072 0 0 0-.05-.012.05.05 0 0 0-.037.034l-.058.16zm1.737-1.065-.326.073a.361.361 0 0 1-.147.007l-.005-.002c-.034-.006-.068-.012-.099-.024l-.604-.202a.12.12 0 0 0-.13.079L2.78 4a.122.122 0 0 0 .053.15l.014.011.356.209.193.111a.35.35 0 0 0 .198.049l.273-.009a.713.713 0 0 0 .331-.101l.022-.01a.175.175 0 0 0 .077-.098l.058-.159a.163.163 0 0 0-.019-.145l-.093-.124c-.027.009-.055.022-.088.028" />
+																			</svg>
+																		</span>
+																		<span>XX</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+
 													<div
-														class="d-flex flex-sm-row flex-column align-items-sm-start align-items-center gap-2">
-														<p class="mb-sm-2 mb-1">
-															Bought 3 of these all-cotton. T's in clay red, light grey, and blue wing.
-															Very
-															happy with colors and softness of fabric. Ordered XL for a loose fit on my
-															closer-to-large frame, and after washing and machine drying. that seems to
-															have turned out well. Couldn't resist low, low sale pricing.
-														</p>
-														<div>
-															<img src="./images/dist/items/avatar.jpg" width="100"
-																class="rounded mb-sm-0 mb-1" loading="lazy" alt="Avatar">
+														class="user-review-question d-sm-block mx-auto d-none col-xxl-2 col-lg-3 col-sm-6 col-12 mt-lg-0 mt-3">
+														<span class="d-block mb-2 text-center">Is this review useful?</span>
+														<div class="d-flex align-items-center gap-2">
+															<button class="btn btn-secondary w-100 text-uppercase">Yes</button>
+															<button class="btn btn-secondary w-100 text-uppercase">No</button>
 														</div>
-													</div>
-													<div class="d-flex align-items-center flex-md-row flex-column gap-md-4 gap-0">
-														<div>
-															Written by <span>Alex</span> from <span>Chicago</span> / <span>Mar
-																XX</span>, <span>20XX</span>
-														</div>
-														<div class="d-flex align-items-center">
-															<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
-																<span class="icon icon-like">
-																	<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-																		viewBox="0 0 5.333 6.667">
-																		<path
-																			d="m.95 3.118.628-.16a.25.25 0 0 0 .158-.123c.098-.169.33-.492.806-.763.18-.101.329-.18.461-.245.338-.171.542-.27.846-.646.131-.162.258-.248.387-.255a.324.324 0 0 1 .242.094.47.47 0 0 1 .127.424c-.045.224-.13.523-.276.661-.145.134-.485.393-.684.543l.6.26c.044.016.08.048.116.078l.09.1c.087.091.112.22.068.342l-.09.249a.576.576 0 0 1-.046.091l.098.143c.063.09.076.202.04.303l-.058.159a.36.36 0 0 1-.128.17.197.197 0 0 1 .008.158l-.077.212a.384.384 0 0 1-.286.243l-.092.021-.075.206a.275.275 0 0 1-.176.17l-.444.15a.404.404 0 0 1-.331-.03c-.044-.01-.347-.067-.655-.178-.216-.08-.431-.181-.563-.313a.836.836 0 0 1-.057-.057c-.127-.016-.647-.068-.944.154a.1.1 0 0 1-.083.012.107.107 0 0 1-.038-.026c-.03-.035-.02-.091.014-.12.273-.207.673-.218.908-.204-.137-.218-.14-.387-.145-.394 0-.049.036-.083.085-.084.048 0 .083.036.083.084 0 0 .013.245.29.52.163.162.508.287.78.362l-.176-.142a.323.323 0 0 1-.099-.354l.056-.153a.217.217 0 0 1 .11-.123.246.246 0 0 1-.002-.174l.065-.18a.255.255 0 0 1 .136-.143c-.005-.02-.011-.034-.014-.059-.174.099-.47.206-.824.09a.083.083 0 0 1-.051-.108.083.083 0 0 1 .108-.051c.438.147.78-.148.81-.18l.026-.073a.277.277 0 0 1 .147-.157.27.27 0 0 1-.009-.207l.057-.154a.27.27 0 0 1 .274-.176l.636.046a.284.284 0 0 0 .102-.016.082.082 0 0 1 .112.04.081.081 0 0 1-.041.111.364.364 0 0 1-.187.034l-.636-.045a.097.097 0 0 0-.102.064l-.056.154a.123.123 0 0 0 .002.079.11.11 0 0 0 .06.051l.03.012.56.191a.282.282 0 0 0 .153.008l.327-.073a.202.202 0 0 0 .15-.131l.09-.25a.163.163 0 0 0-.034-.168l-.09-.099a.148.148 0 0 0-.058-.038l-.61-.252a.163.163 0 0 1-.096-.131.145.145 0 0 1 .065-.145c.156-.117.536-.404.682-.543.09-.08.17-.286.224-.566a.3.3 0 0 0-.076-.267c-.037-.032-.072-.05-.114-.048-.05.005-.14.039-.262.192-.327.403-.56.516-.905.69-.132.067-.278.139-.452.238-.439.248-.653.542-.74.696a.426.426 0 0 1-.263.198l-.628.161a.088.088 0 0 1-.049 0c-.026-.01-.049-.03-.05-.06-.02-.043.008-.087.055-.1zm3.152 1.735.077-.212c.002-.005.004-.01 0-.018a.815.815 0 0 1-.306.069l-.274.008a.522.522 0 0 1-.166-.018L3.4 4.67c-.032-.012-.056-.027-.086-.043l-.544-.318c-.03-.017-.057-.009-.07-.007-.013.006-.035.016-.047.048l-.065.18a.084.084 0 0 0 .026.093l.518.405c.075.057.17.08.259.064l.553-.104a.216.216 0 0 0 .157-.135zm-1.683.125a.142.142 0 0 0 .044.16l.431.348a.254.254 0 0 0 .236.045l.448-.143a.107.107 0 0 0 .073-.07l.04-.11-.269.046a.505.505 0 0 1-.396-.097l-.154-.122-.303-.236a.072.072 0 0 0-.05-.012.05.05 0 0 0-.037.034l-.058.16zm1.737-1.065-.326.073a.361.361 0 0 1-.147.007l-.005-.002c-.034-.006-.068-.012-.099-.024l-.604-.202a.12.12 0 0 0-.13.079L2.78 4a.122.122 0 0 0 .053.15l.014.011.356.209.193.111a.35.35 0 0 0 .198.049l.273-.009a.713.713 0 0 0 .331-.101l.022-.01a.175.175 0 0 0 .077-.098l.058-.159a.163.163 0 0 0-.019-.145l-.093-.124c-.027.009-.055.022-.088.028" />
-																	</svg>
-																</span>
-																<span>XX</span>
-															</button>
-
-															<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
-																<span class="icon icon-dislike">
-																	<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
-																		viewBox="0 0 5.333 6.667">
-																		<path
-																			d="m.95 3.118.628-.16a.25.25 0 0 0 .158-.123c.098-.169.33-.492.806-.763.18-.101.329-.18.461-.245.338-.171.542-.27.846-.646.131-.162.258-.248.387-.255a.324.324 0 0 1 .242.094.47.47 0 0 1 .127.424c-.045.224-.13.523-.276.661-.145.134-.485.393-.684.543l.6.26c.044.016.08.048.116.078l.09.1c.087.091.112.22.068.342l-.09.249a.576.576 0 0 1-.046.091l.098.143c.063.09.076.202.04.303l-.058.159a.36.36 0 0 1-.128.17.197.197 0 0 1 .008.158l-.077.212a.384.384 0 0 1-.286.243l-.092.021-.075.206a.275.275 0 0 1-.176.17l-.444.15a.404.404 0 0 1-.331-.03c-.044-.01-.347-.067-.655-.178-.216-.08-.431-.181-.563-.313a.836.836 0 0 1-.057-.057c-.127-.016-.647-.068-.944.154a.1.1 0 0 1-.083.012.107.107 0 0 1-.038-.026c-.03-.035-.02-.091.014-.12.273-.207.673-.218.908-.204-.137-.218-.14-.387-.145-.394 0-.049.036-.083.085-.084.048 0 .083.036.083.084 0 0 .013.245.29.52.163.162.508.287.78.362l-.176-.142a.323.323 0 0 1-.099-.354l.056-.153a.217.217 0 0 1 .11-.123.246.246 0 0 1-.002-.174l.065-.18a.255.255 0 0 1 .136-.143c-.005-.02-.011-.034-.014-.059-.174.099-.47.206-.824.09a.083.083 0 0 1-.051-.108.083.083 0 0 1 .108-.051c.438.147.78-.148.81-.18l.026-.073a.277.277 0 0 1 .147-.157.27.27 0 0 1-.009-.207l.057-.154a.27.27 0 0 1 .274-.176l.636.046a.284.284 0 0 0 .102-.016.082.082 0 0 1 .112.04.081.081 0 0 1-.041.111.364.364 0 0 1-.187.034l-.636-.045a.097.097 0 0 0-.102.064l-.056.154a.123.123 0 0 0 .002.079.11.11 0 0 0 .06.051l.03.012.56.191a.282.282 0 0 0 .153.008l.327-.073a.202.202 0 0 0 .15-.131l.09-.25a.163.163 0 0 0-.034-.168l-.09-.099a.148.148 0 0 0-.058-.038l-.61-.252a.163.163 0 0 1-.096-.131.145.145 0 0 1 .065-.145c.156-.117.536-.404.682-.543.09-.08.17-.286.224-.566a.3.3 0 0 0-.076-.267c-.037-.032-.072-.05-.114-.048-.05.005-.14.039-.262.192-.327.403-.56.516-.905.69-.132.067-.278.139-.452.238-.439.248-.653.542-.74.696a.426.426 0 0 1-.263.198l-.628.161a.088.088 0 0 1-.049 0c-.026-.01-.049-.03-.05-.06-.02-.043.008-.087.055-.1zm3.152 1.735.077-.212c.002-.005.004-.01 0-.018a.815.815 0 0 1-.306.069l-.274.008a.522.522 0 0 1-.166-.018L3.4 4.67c-.032-.012-.056-.027-.086-.043l-.544-.318c-.03-.017-.057-.009-.07-.007-.013.006-.035.016-.047.048l-.065.18a.084.084 0 0 0 .026.093l.518.405c.075.057.17.08.259.064l.553-.104a.216.216 0 0 0 .157-.135zm-1.683.125a.142.142 0 0 0 .044.16l.431.348a.254.254 0 0 0 .236.045l.448-.143a.107.107 0 0 0 .073-.07l.04-.11-.269.046a.505.505 0 0 1-.396-.097l-.154-.122-.303-.236a.072.072 0 0 0-.05-.012.05.05 0 0 0-.037.034l-.058.16zm1.737-1.065-.326.073a.361.361 0 0 1-.147.007l-.005-.002c-.034-.006-.068-.012-.099-.024l-.604-.202a.12.12 0 0 0-.13.079L2.78 4a.122.122 0 0 0 .053.15l.014.011.356.209.193.111a.35.35 0 0 0 .198.049l.273-.009a.713.713 0 0 0 .331-.101l.022-.01a.175.175 0 0 0 .077-.098l.058-.159a.163.163 0 0 0-.019-.145l-.093-.124c-.027.009-.055.022-.088.028" />
-																	</svg>
-																</span>
-																<span>XX</span>
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-xxl-2 col-lg-3 col-12 mt-lg-0 mt-3 user-review-question">
-													<span class="d-block mb-2 text-center">Is this review useful?</span>
-													<div class="d-sm-flex d-block align-items-center gap-2">
-														<button
-															class="btn btn-secondary w-100 text-uppercase mb-2 mb-sm-0">Yes</button>
-														<button class="btn btn-secondary w-100 text-uppercase">No</button>
-													</div>
-												</div>
-
-												<div class="mt-lg-3 mt-4">
-													<div class="border border-bottom-1 border-top-0 border-start-0 border-end-0">
 													</div>
 												</div>
 											</div>
-											<button class="btn btn-arrow px-0 mt-2 gap-1 text-decoration-underline">
-												<span>Read all <span>XX</span> customer reviews</span>
+
+											<button class="btn btn-arrow px-0 mt-2 gap-1">
+												<span class="text-underline">Read all XX customer reviews</span>
 												<span class="icon icon-arrow-right">
 													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.91 122.88"
 														style="enable-background:new 0 0 66.91 122.88" xml:space="preserve">
@@ -1612,8 +1669,8 @@
 			<div class="col-xxl-4 col-lg-6 col-12 d-lg-block d-flex flex-column align-items-center mb-5 mb-lg-0">
 				<span class="text-capitalize">Gift Cards</span>
 				<h2 class="gift-title">Give the gift of Our Store, underwaer, accessories, and more</h2>
-				<a href="./gift-card.html" class="btn btn-arrow btn-link ps-0 pe-0">
-					Learn more about gift cards
+				<a href="./gift-card.html" class="btn btn-arrow btn-link ps-0 pe-0 text-decoration-none">
+					<span class="text-underline">Learn more about gift cards</span>
 					<span class="icon icon-arrow-right">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.91 122.88"
 							style="enable-background:new 0 0 66.91 122.88" xml:space="preserve">
@@ -1731,7 +1788,7 @@
 	<button type="button"
 		class="btn-close btn-close-white btn-close-word position-absolute d-flex align-items-center fs-5"
 		data-bs-dismiss="modal" aria-label="Close">
-		<span class="d-sm-inline-block d-none">Close</span>
+		<span class="d-inline-block">Close</span>
 	</button>
 	<div class="modal-dialog modal-dialog-centered modal-lg">
 		<div class="modal-content">

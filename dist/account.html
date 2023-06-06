@@ -129,7 +129,7 @@
 					<span
 						class="header-current position-absolute top-50 start-50 badge rounded-pill bg-primary text-black">1</span>
 				</a>
-				<div class="dropdown">
+				<div class="dropdown bag-dropdown">
 					<button type="button" class="btn position-relative p-2 ps-sm-3 pe-sm-3 dropdown-toggle" type="button"
 						id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside"
 						aria-expanded="false">
@@ -137,22 +137,25 @@
 						<span
 							class="header-current current-bag position-absolute top-50 start-50 badge rounded-pill bg-primary text-black"></span>
 					</button>
-					<div class="dropdown-menu dropdown-cards dropdown-menu-end bg-dark p-0 w-100"
+					<div class="dropdown-menu bag-dropdown-menu dropdown-cards dropdown-menu-end"
 						aria-labelledby="dropdownMenuClickableInside">
 						<div class="dropdown-arrow"></div>
-						<div class="dropdown-overflow overflow-auto p-2 p-sm-4">
-							<div class="header-dropdown overflow-auto">
-								<div
-									class="card dropdown-card bg-dark pt-3 pb-3 pt-sm-4 pb-sm-4 border border-2 border-start-0 border-end-0 border-top-0 border-dark rounded-0">
-									<div class="row g-0 justify-content-between align-items-center bg-dark text-primary">
-										<div class="col-4">
-											<img src="./images/dist/items/item-man-1.jpg" class="img-fluid" alt="product">
+						<div class="dropdown-overflow">
+							<div class="header-dropdown">
+								<div class="card dropdown-card">
+									<div class="row g-0 justify-content-between">
+										<div class="col-md-3 col-4">
+											<div class="dropdown-card-img ratio ratio-1x1">
+												<img src="./images/dist/items/item-man-1.jpg" class="img-fluid" alt="product">
+											</div>
 										</div>
-										<div class="col-sm-7 col-6">
-											<div class="card-body pt-0 pe-2 ps-2 pe-sm-3 ps-sm-3 pb-0">
-												<h6 class="card-title mb-3 mb-sm-4 text-uppercase">C-IN2 CORE LOW RISE BRIE</h6>
-												<p class="card-text mb-0 tiny">1 x $75.00</p>
-												<p class="card-text">$<span class="card-price">75.00</span></p>
+										<div class="col-md-8 col-7">
+											<div class="card-body">
+												<h3 class="card-title h5 text-uppercase">C-IN2 CORE LOW RISE BRIE</h3>
+												<div>
+													<span class="card-text mb-0 small">1 x $75.00</span>
+													<span class="card-text">$<span class="card-price">75.00</span></span>
+												</div>
 											</div>
 										</div>
 										<button type="button"
@@ -169,7 +172,7 @@
 									Your bag is empty
 								</div>
 							</div>
-							<h5 class="total-dropdown text-primary text-uppercase d-flex justify-content-between pt-2 mb-5">
+							<h5 class="total-dropdown text-primary text-uppercase d-flex justify-content-between pt-3 mb-5">
 								<span>Subtotal</span>
 								<p class="m-0">$<span class="total-price"></span></p>
 							</h5>
@@ -183,9 +186,9 @@
 								</p>
 							</div>
 							<ul class="list-group text-uppercase text-primary">
-								<li class="list-group-item">
+								<li>
 									<a href="./bag.html"
-										class="dropdown-item d-flex align-items-center gap-2 text-primary">
+										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
 										<span class="icon icon-bag">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 9.333">
 												<path
@@ -197,9 +200,9 @@
 										<span class="current-bag brackets"></span>
 									</a>
 								</li>
-								<li class="list-group-item">
+								<li>
 									<a href="./favorite.html"
-										class="dropdown-item d-flex align-items-center gap-2 text-primary">
+										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
 										<span class="icon icon-favorite">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 9.333 9.333">
 												<path
@@ -210,9 +213,9 @@
 										Favorites
 									</a>
 								</li>
-								<li class="list-group-item">
+								<li>
 									<a href="./orders.html"
-										class="dropdown-item d-flex align-items-center gap-2 text-primary">
+										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
 										<span class="icon icon-order">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 8 9.333">
 												<path
@@ -223,9 +226,9 @@
 										Orders
 									</a>
 								</li>
-								<li class="list-group-item">
+								<li>
 									<a href="./account.html"
-										class="dropdown-item d-flex align-items-center gap-2 text-primary">
+										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
 										<span class="icon icon-gears">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 8 8">
 												<path
@@ -236,7 +239,7 @@
 										Account
 									</a>
 								</li>
-								<li class="list-group-item">
+								<li>
 									<a href="./account-signin.html"
 										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0">
 										<span class="icon icon-account">
@@ -265,7 +268,9 @@
 					</h5>
 					<button type="button"
 						class="btn-close btn-close-white btn-close-word d-flex align-items-center opacity-75 h5"
-						data-bs-dismiss="offcanvas" aria-label="Close">Close</button>
+						data-bs-dismiss="offcanvas" aria-label="Close">
+						<span class="d-xl-inline-block d-none">Close</span>
+					</button>
 				</div>
 				<div class="offcanvas-body ps-3 pe-3 ps-sm-4 pe-sm-5">
 					<div class="accordion accordion-flush" id="accordionHeaderOne">
@@ -283,7 +288,8 @@
 									data-bs-parent="#accordionHeaderOne">
 									<div class="accordion-body">
 										<div class="list-group fw-light">
-											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">All
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">All
 												Underwaer</a>
 											<a href="./404.html"
 												class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
@@ -292,10 +298,10 @@
 											<a href="./404.html"
 												class="list-group-item border border-0 list-group-item-action bg-dark">Boxer
 												Briefs</a>
-											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">Boxers</a>
-											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">Jocks &
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Boxers</a>
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Jocks &
 												Thongs</a>
-											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">Long
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Long
 												Underwear</a>
 										</div>
 									</div>
@@ -314,7 +320,8 @@
 									data-bs-parent="#accordionHeaderOne">
 									<div class="accordion-body">
 										<div class="list-group fw-light">
-											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">All
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">All
 												Underwaer</a>
 											<a href="./404.html"
 												class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
@@ -345,7 +352,8 @@
 									data-bs-parent="#accordionHeaderOne">
 									<div class="accordion-body">
 										<div class="list-group fw-light">
-											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">All
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">All
 												Underwaer</a>
 											<a href="./404.html"
 												class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
@@ -376,7 +384,8 @@
 									data-bs-parent="#accordionHeaderOne">
 									<div class="accordion-body">
 										<div class="list-group fw-light">
-											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">All
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">All
 												Underwaer</a>
 											<a href="./404.html"
 												class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
@@ -421,13 +430,15 @@
 								data-bs-parent="#accordionHeaderOne">
 								<div class="accordion-body">
 									<div class="list-group fw-light">
-										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">All
+										<a href="./404.html"
+											class="list-group-item border border-0 list-group-item-action bg-dark">All
 											Underwaer</a>
 										<a href="./404.html"
 											class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
 										<a href="./404.html"
 											class="list-group-item border border-0 list-group-item-action bg-dark">Trunks</a>
-										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">Boxer
+										<a href="./404.html"
+											class="list-group-item border border-0 list-group-item-action bg-dark">Boxer
 											Briefs</a>
 										<a class="list-group-item border border-0 list-group-item-action bg-dark">Boxers</a>
 										<a class="list-group-item border border-0 list-group-item-action bg-dark">Jocks &
@@ -471,16 +482,20 @@
 								data-bs-parent="#accordionHeaderOne">
 								<div class="accordion-body">
 									<div class="list-group fw-light">
-										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">
+										<a href="./404.html"
+											class="list-group-item border border-0 list-group-item-action bg-dark">
 											Terms of use
 										</a>
-										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">
+										<a href="./404.html"
+											class="list-group-item border border-0 list-group-item-action bg-dark">
 											Privacy & Cookie
 										</a>
-										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">
+										<a href="./404.html"
+											class="list-group-item border border-0 list-group-item-action bg-dark">
 											Policy
 										</a>
-										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">
+										<a href="./404.html"
+											class="list-group-item border border-0 list-group-item-action bg-dark">
 											Legal
 										</a>
 									</div>
@@ -528,48 +543,55 @@
 					</a>
 				</div>
 
-				<div class="row g-4 justify-content-center text-item">
-					<div class="col-lg-3 col-sm-4 col-6 h-auto">
-						<a href="./bag.html"
-							class="btn-link d-flex flex-column align-items-center justify-content-between h-100 fs-4 text-item text-decoration-none text-center">
-							<span class="icon icon-bag">
-								<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 9.333">
-									<path
-										d="M26.027 60.176c6.664 0 12.067-4.582 12.079-10.235h4.105c2.836 0 5.156-2.32 5.156-5.16V12.535c0-2.84-2.32-5.16-5.156-5.16H9.844c-2.836 0-5.156 2.32-5.156 5.16v32.246c0 2.84 2.32 5.16 5.156 5.16h4.105c.016 5.653 5.418 10.235 12.078 10.235zM16.773 49.94h18.508c-.011 4.328-4.152 7.832-9.254 7.832-5.101 0-9.242-3.504-9.254-7.832"
-										transform="matrix(.13333 0 0 -.13333 0 9.333)" />
-								</svg>
-							</span>
-							Bag
-						</a>
+				<div class="position-relative py-5">
+					<div class="swiper account-info-swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="./bag.html"
+									class="btn-link d-flex flex-column align-items-center justify-content-between h-100 fs-4 text-item text-decoration-none text-center">
+									<span class="icon icon-bag">
+										<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 9.333">
+											<path
+												d="M26.027 60.176c6.664 0 12.067-4.582 12.079-10.235h4.105c2.836 0 5.156-2.32 5.156-5.16V12.535c0-2.84-2.32-5.16-5.156-5.16H9.844c-2.836 0-5.156 2.32-5.156 5.16v32.246c0 2.84 2.32 5.16 5.156 5.16h4.105c.016 5.653 5.418 10.235 12.078 10.235zM16.773 49.94h18.508c-.011 4.328-4.152 7.832-9.254 7.832-5.101 0-9.242-3.504-9.254-7.832"
+												transform="matrix(.13333 0 0 -.13333 0 9.333)" />
+										</svg>
+									</span>
+									Bag
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="./favorite.html"
+									class="btn-link d-flex flex-column align-items-center justify-content-between h-100 fs-4 text-item text-decoration-none text-center">
+									<span class="icon icon-favorite">
+										<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 9.333 9.333">
+											<path
+												d="M62.504 43.715c0 9.09-7.367 16.46-16.461 16.46-5.934 0-11.117-3.152-14.012-7.863-2.898 4.711-8.082 7.864-14.02 7.864-9.09 0-16.46-7.371-16.46-16.461 0-4.95 2.195-9.375 5.652-12.39l23.324-23.33a2.122 2.122 0 0 1 1.504-.621 2.12 2.12 0 0 1 1.5.621l23.325 23.328c3.456 3.016 5.648 7.442 5.648 12.39"
+												transform="matrix(.13333 0 0 -.13333 0 9.333)" />
+										</svg>
+									</span>
+									Favorites
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="./orders.html"
+									class="btn-link d-flex flex-column align-items-center justify-content-between h-100 fs-4 text-item text-decoration-none text-center">
+									<span class="icon icon-order">
+										<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 8 9.333">
+											<path
+												d="M11.422 46.04H46.75a7.78 7.78 0 0 1 7.781 7.78 7.78 7.78 0 0 1-7.781 7.782H11.422a7.782 7.782 0 0 1 0-15.563zm35.328-3.11H11.422a7.78 7.78 0 1 1 0-15.559H46.75a7.78 7.78 0 1 1 0 15.559zM11.422 32.215a3.052 3.052 0 0 0-3.055 3.047 3.05 3.05 0 1 0 6.098 0 3.047 3.047 0 0 0-3.043-3.047zm35.328-7.852H11.422a7.78 7.78 0 0 1-7.781-7.781 7.78 7.78 0 0 1 7.78-7.781H46.75c4.3 0 7.781 3.48 7.781 7.781a7.78 7.78 0 0 1-7.781 7.781zM11.422 13.551a3.052 3.052 0 0 0-3.055 3.047c0 1.68 1.367 3.05 3.055 3.05a3.05 3.05 0 0 0 3.043-3.05 3.047 3.047 0 0 0-3.043-3.047zm0 43.328a3.046 3.046 0 0 0 3.043-3.05 3.05 3.05 0 0 0-3.043-3.052 3.056 3.056 0 0 0-3.055 3.051 3.056 3.056 0 0 0 3.055 3.05"
+												transform="matrix(.13333 0 0 -.13333 0 9.333)" />
+										</svg>
+									</span>
+									Orders
+								</a>
+							</div>
+						</div>
 					</div>
+					
+					<div class="swiper-pagination account-info-pagination"></div>
 
-					<div class="col-lg-3 col-sm-4 col-6 h-auto">
-						<a href="./favorite.html"
-							class="btn-link d-flex flex-column align-items-center justify-content-between h-100 fs-4 text-item text-decoration-none text-center">
-							<span class="icon icon-favorite">
-								<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 9.333 9.333">
-									<path
-										d="M62.504 43.715c0 9.09-7.367 16.46-16.461 16.46-5.934 0-11.117-3.152-14.012-7.863-2.898 4.711-8.082 7.864-14.02 7.864-9.09 0-16.46-7.371-16.46-16.461 0-4.95 2.195-9.375 5.652-12.39l23.324-23.33a2.122 2.122 0 0 1 1.504-.621 2.12 2.12 0 0 1 1.5.621l23.325 23.328c3.456 3.016 5.648 7.442 5.648 12.39"
-										transform="matrix(.13333 0 0 -.13333 0 9.333)" />
-								</svg>
-							</span>
-							Favorites
-						</a>
-					</div>
-
-					<div class="col-lg-3 col-sm-4 col-6 h-auto">
-						<a href="./orders.html"
-							class="btn-link d-flex flex-column align-items-center justify-content-between h-100 fs-4 text-item text-decoration-none text-center">
-							<span class="icon icon-order">
-								<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 8 9.333">
-									<path
-										d="M11.422 46.04H46.75a7.78 7.78 0 0 1 7.781 7.78 7.78 7.78 0 0 1-7.781 7.782H11.422a7.782 7.782 0 0 1 0-15.563zm35.328-3.11H11.422a7.78 7.78 0 1 1 0-15.559H46.75a7.78 7.78 0 1 1 0 15.559zM11.422 32.215a3.052 3.052 0 0 0-3.055 3.047 3.05 3.05 0 1 0 6.098 0 3.047 3.047 0 0 0-3.043-3.047zm35.328-7.852H11.422a7.78 7.78 0 0 1-7.781-7.781 7.78 7.78 0 0 1 7.78-7.781H46.75c4.3 0 7.781 3.48 7.781 7.781a7.78 7.78 0 0 1-7.781 7.781zM11.422 13.551a3.052 3.052 0 0 0-3.055 3.047c0 1.68 1.367 3.05 3.055 3.05a3.05 3.05 0 0 0 3.043-3.05 3.047 3.047 0 0 0-3.043-3.047zm0 43.328a3.046 3.046 0 0 0 3.043-3.05 3.05 3.05 0 0 0-3.043-3.052 3.056 3.056 0 0 0-3.055 3.051 3.056 3.056 0 0 0 3.055 3.05"
-										transform="matrix(.13333 0 0 -.13333 0 9.333)" />
-								</svg>
-							</span>
-							Orders
-						</a>
-					</div>
+					<div class="swiper-button-prev account-info-prev"></div>
+					<div class="swiper-button-next account-info-next"></div>
 				</div>
 			</div>
 		</div>
@@ -577,24 +599,24 @@
 
 	<section>
 		<div class="container account-settings">
-			<h2 class="mb-4 mb-lg-3 text-uppercase text-center text-sm-start">Account Settings</h2>
+			<h2 class="mb-4 mb-lg-3 text-uppercase">Account Settings</h2>
 
 			<div class="row mb-5 mb-sm-4">
-				<h3 class="col-sm-6 col-lg-3 text-center text-sm-start text-capitalize">Shipping</h3>
+				<h3 class="col-lg-3 col-12 text-capitalize mb-lg-0 mb-3">Shipping</h3>
 
-				<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0 text-center text-sm-start">
+				<div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
 					<div class="d-flex flex-column justify-content-between h-100 gap-3">
-						<div class="d-flex flex-column align-items-center align-items-sm-start gap-1">
+						<div class="d-flex flex-column gap-1 lh-1">
 							<h4 class="h5 mb-0">Shipping address</h4>
 
-							<div class="lh-1 text-center text-sm-start">Dxxxx Dxxxxx</div>
-							<div class="lh-1 text-center text-sm-start">XXX W XXX St., Apt
+							<div>Dxxxx Dxxxxx</div>
+							<div>XXX W XXX St., Apt
 								XX,</div>
-							<div class="lh-1 text-center text-sm-start">New
+							<div>New
 								York, NY XXXXX</div>
-							<div class="lh-1 text-center text-sm-start">
+							<div>
 								United States</div>
-							<div class="lh-1 text-center text-sm-start">(XXX)
+							<div>(XXX)
 								XXX-XXXX</div>
 						</div>
 						<div class="mt-auto">
@@ -604,14 +626,13 @@
 					</div>
 				</div>
 
-				<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0 text-center text-sm-start">
+				<div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
 					<div class="d-flex flex-column justify-content-between h-100 gap-3">
-						<div class="d-flex flex-column align-items-center align-items-sm-start gap-1">
+						<div class="d-flex flex-column gap-1 lh-1">
 							<h4 class="mb-0">Contact information</h4>
 
-							<div class="lh-1 text-center text-sm-start">xxxxx@gmail.com</div>
-							<div class="lh-1 text-center text-sm-start">(XXX) XXX-XXXX
-							</div>
+							<div>xxxxx@gmail.com</div>
+							<div>(XXX) XXX-XXXX</div>
 						</div>
 						<div class="mt-auto">
 							<button type="button" data-bs-toggle="modal" data-bs-target="#contactInfoModal"
@@ -623,18 +644,18 @@
 				</div>
 			</div>
 
-			<div class="row justify-content-between mb-5 pb-3">
-				<h3 class="col-sm-6 col-lg-3 text-capitalize text-center text-sm-start">Payment</h3>
+			<div class="row mb-5 pb-3">
+				<h3 class="col-lg-3 col-12 text-capitalize mb-lg-0 mb-3">Payment</h3>
 
-				<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0 text-center text-sm-start">
+				<div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
 					<div class="d-flex flex-column justify-content-between h-100 gap-3">
-						<div class="d-flex flex-column align-items-center align-items-sm-start gap-1">
+						<div class="d-flex flex-column gap-1 lh-1">
 							<h4 class="mb-0">Billing address</h4>
 
-							<div class="lh-1 text-center text-sm-start">XXX W XXX St., Apt XX,</div>
-							<div class="lh-1 text-center text-sm-start">New York, NY XXXXX</div>
-							<div class="lh-1 text-center text-sm-start">United States</div>
-							<div class="lh-1 text-center text-sm-start">(XXX) XXX-XXXX</div>
+							<div>XXX W XXX St., Apt XX,</div>
+							<div>New York, NY XXXXX</div>
+							<div>United States</div>
+							<div>(XXX) XXX-XXXX</div>
 						</div>
 						<div>
 							<button type="button" data-bs-toggle="modal" data-bs-target="#billingAddressModal"
@@ -643,14 +664,14 @@
 					</div>
 				</div>
 
-				<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0 text-center text-sm-start">
+				<div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
 					<div class="d-flex flex-column justify-content-between h-100 gap-3">
-						<div class="d-flex flex-column align-items-center align-items-sm-start gap-1">
+						<div class="d-flex flex-column gap-1 lh-1">
 							<h4 class="mb-0">Billing contact</h4>
 
-							<div class="lh-1 text-center text-sm-start">Dxxxx Dxxxxx</div>
-							<div class="lh-1 text-center text-sm-start">xxxxx@gmail.com</div>
-							<div class="lh-1 text-center text-sm-start">(XXX) XXX-XXXX</div>
+							<div>Dxxxx Dxxxxx</div>
+							<div>xxxxx@gmail.com</div>
+							<div>(XXX) XXX-XXXX</div>
 						</div>
 						<div>
 							<button type="button" data-bs-toggle="modal" data-bs-target="#billingContactModal"
@@ -659,15 +680,13 @@
 					</div>
 				</div>
 
-				<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0 text-center text-sm-start">
+				<div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
 					<div class="d-flex flex-column justify-content-between h-100 gap-3">
-						<div class="d-flex flex-column align-items-center align-items-sm-start gap-1">
+						<div class="d-flex flex-column gap-1 lh-1">
 							<h4 class="mb-0">Payment method</h4>
 
-							<div class="lh-1 text-center text-sm-start">Visa****XXXX</div>
-							<div class="lh-1 text-center text-sm-start">
-								<span type="text" class="text-center text-sm-start">XX/XX</span>
-							</div>
+							<div>Visa****XXXX</div>
+							<div>XX/XX</div>
 						</div>
 						<div>
 							<button type="button" data-bs-toggle="modal" data-bs-target="#paymentMethodModal"
@@ -678,7 +697,7 @@
 			</div>
 
 			<div class="row justify-content-end">
-				<div class="col-lg-9 col-12 text-lg-start text-center">
+				<div class="col-lg-9 col-12">
 					<h3 class="h6 mb-0">
 						Personal information:
 					</h3>
@@ -697,8 +716,8 @@
 			<div class="col-xxl-4 col-lg-6 col-12 d-lg-block d-flex flex-column align-items-center mb-5 mb-lg-0">
 				<span class="text-capitalize">Gift Cards</span>
 				<h2 class="gift-title">Give the gift of Our Store, underwaer, accessories, and more</h2>
-				<a href="./gift-card.html" class="btn btn-arrow btn-link ps-0 pe-0">
-					Learn more about gift cards
+				<a href="./gift-card.html" class="btn btn-arrow btn-link ps-0 pe-0 text-decoration-none">
+					<span class="text-underline">Learn more about gift cards</span>
 					<span class="icon icon-arrow-right">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.91 122.88"
 							style="enable-background:new 0 0 66.91 122.88" xml:space="preserve">
@@ -818,7 +837,7 @@
 			<div class="modal-header">
 				<button type="button" class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5"
 					data-bs-dismiss="modal" aria-label="Close">
-					<span class="d-xl-inline-block d-none">Close</span>
+					Close
 				</button>
 			</div>
 			<div class="container">
@@ -828,15 +847,22 @@
 							Edit your shipping address</h2>
 						<div class="row mb-4">
 							<div class="col-lg-6 col-12 mb-lg-0 mb-3">
-								<div class="form-floating mb-3">
-									<input type="text" class="form-control form-control-dark" id="floatingShippingFirstName"
-										placeholder="First name" required>
-									<label for="floatingShippingFirstName">First name</label>
-								</div>
-								<div class="form-floating mb-3">
-									<input type="text" class="form-control form-control-dark" id="floatingShippingLastName"
-										placeholder="Last name" required>
-									<label for="floatingShippingLastName">Last name</label>
+								<div class="row g-3 mb-3">
+									<div class="col-lg-12 col-6">
+										<div class="form-floating">
+											<input type="text" class="form-control form-control-dark"
+												id="floatingShippingFirstName" placeholder="First name" required>
+											<label for="floatingShippingFirstName">First name</label>
+										</div>
+									</div>
+
+									<div class="col-lg-12 col-6">
+										<div class="form-floating">
+											<input type="text" class="form-control form-control-dark" id="floatingShippingLastName"
+												placeholder="Last name" required>
+											<label for="floatingShippingLastName">Last name</label>
+										</div>
+									</div>
 								</div>
 								<div class="form-floating mb-3">
 									<input type="text" class="form-control form-control-dark" id="floatingShippingAddress"
@@ -857,14 +883,14 @@
 									<label for="floatingShippingCity">City</label>
 								</div>
 								<div class="row g-3 mb-3">
-									<div class="col-md-6">
+									<div class="col-6">
 										<div class="form-floating">
 											<input type="number" class="form-control form-control-dark"
 												id="floatingShippingZipCode" placeholder="Zip code" required>
 											<label for="floatingShippingZipCode">Zip code</label>
 										</div>
 									</div>
-									<div class="col-md-6">
+									<div class="col-6">
 										<div class="form-floating">
 											<select class="form-select form-select-dark" id="floatingSelectShippingState"
 												aria-label="Floating label select example" required>
@@ -924,7 +950,7 @@
 			<div class="modal-header">
 				<button type="button" class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5"
 					data-bs-dismiss="modal" aria-label="Close">
-					<span class="d-xl-inline-block d-none">Close</span>
+					Close
 				</button>
 			</div>
 			<div class="container">
@@ -953,14 +979,14 @@
 
 							<div class="col-lg-6 col-12">
 								<div class="row g-3 mb-3">
-									<div class="col-md-6">
+									<div class="col-6">
 										<div class="form-floating">
 											<input type="number" class="form-control form-control-dark" id="floatingBillingZipCode"
 												placeholder="Zip code" required>
 											<label for="floatingBillingZipCode">Zip code</label>
 										</div>
 									</div>
-									<div class="col-md-6">
+									<div class="col-6">
 										<div class="form-floating">
 											<select class="form-select form-select-dark" id="floatingSelectBillingState"
 												aria-label="Floating label select example" required>
@@ -1019,7 +1045,7 @@
 			<div class="modal-header">
 				<button type="button" class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5"
 					data-bs-dismiss="modal" aria-label="Close">
-					<span class="d-xl-inline-block d-none">Close</span>
+					Close
 				</button>
 			</div>
 			<div class="container">
@@ -1046,7 +1072,7 @@
 					<div class="modal-footer">
 						<div class="row gy-sm-0 gy-3 justify-content-center">
 							<div class="col-lg-6">
-								<div class="row">
+								<div class="row g-3">
 									<div class="col-sm-6">
 
 										<button type="submit" class="btn btn-accent btn-lg w-100 text-uppercase">Save</button>
@@ -1076,7 +1102,7 @@
 			<div class="modal-header">
 				<button type="button" class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5"
 					data-bs-dismiss="modal" aria-label="Close">
-					<span class="d-xl-inline-block d-none">Close</span>
+					Close
 				</button>
 			</div>
 			<div class="container">
@@ -1087,15 +1113,22 @@
 						</h2>
 						<div class="row justify-content-center">
 							<div class="col-lg-6 col-12">
-								<div class="form-floating mb-3">
-									<input type="text" class="form-control form-control-dark"
-										id="floatingBillingContactFirstName" placeholder="First name" required>
-									<label for="floatingBillingContactFirstName">First name</label>
-								</div>
-								<div class="form-floating mb-3">
-									<input type="text" class="form-control form-control-dark" id="floatingBillingContactLastName"
-										placeholder="Last name" required>
-									<label for="floatingBillingContactLastName">Last name</label>
+								<div class="row g-3">
+									<div class="col-lg-12 col-6">
+										<div class="form-floating mb-3">
+											<input type="text" class="form-control form-control-dark"
+												id="floatingBillingContactFirstName" placeholder="First name" required>
+											<label for="floatingBillingContactFirstName">First name</label>
+										</div>
+									</div>
+
+									<div class="col-lg-12 col-6">
+										<div class="form-floating mb-3">
+											<input type="text" class="form-control form-control-dark"
+												id="floatingBillingContactLastName" placeholder="Last name" required>
+											<label for="floatingBillingContactLastName">Last name</label>
+										</div>
+									</div>
 								</div>
 								<div class="form-floating mb-3">
 									<input type="email" class="form-control form-control-dark" id="floatingBillingContactEmail"
@@ -1113,7 +1146,7 @@
 					<div class="modal-footer">
 						<div class="row gy-sm-0 gy-3 justify-content-center">
 							<div class="col-lg-6">
-								<div class="row">
+								<div class="row g-3">
 									<div class="col-sm-6">
 
 										<button type="submit" class="btn btn-accent btn-lg w-100 text-uppercase">Save</button>
@@ -1143,7 +1176,7 @@
 			<div class="modal-header">
 				<button type="button" class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5"
 					data-bs-dismiss="modal" aria-label="Close">
-					<span class="d-xl-inline-block d-none">Close</span>
+					Close
 				</button>
 			</div>
 			<div class="container">
@@ -1155,23 +1188,23 @@
 						<div class="row justify-content-center">
 							<div class="col-lg-6 col-12">
 								<div class="form-floating mb-3">
-									<input type="number" maxlength="19" class="form-control form-control-dark" id="floatingCreditCard"
-										placeholder="Credit or Debit Card number" required>
+									<input type="number" maxlength="19" class="form-control form-control-dark"
+										id="floatingCreditCard" placeholder="Credit or Debit Card number" required>
 									<label for="floatingCreditCard">Credit or Debit Card number</label>
 								</div>
 								<div class="form-floating mb-3">
-									<input type="text" maxlength="30" class="form-control form-control-dark" id="floatingCardHolder"
-										placeholder="Card holder" required>
+									<input type="text" maxlength="30" class="form-control form-control-dark"
+										id="floatingCardHolder" placeholder="Card holder" required>
 									<label for="floatingCardHolder">Card holder</label>
 								</div>
 								<div class="form-floating mb-3">
-									<input type="number" maxlength="5" class="form-control form-control-dark" id="floatingExpiration"
-										placeholder="Expiration MM/YY" required>
+									<input type="number" maxlength="5" class="form-control form-control-dark"
+										id="floatingExpiration" placeholder="Expiration MM/YY" required>
 									<label for="floatingExpiration">Expiration MM/YY</label>
 								</div>
 								<div class="form-floating mb-3">
-									<input type="password" maxlength="4" class="form-control form-control-dark" id="floatingCvvCode"
-										placeholder="CVV" required>
+									<input type="password" maxlength="4" class="form-control form-control-dark"
+										id="floatingCvvCode" placeholder="CVV" required>
 									<label for="floatingCvvCode">CVV</label>
 								</div>
 							</div>
@@ -1180,7 +1213,7 @@
 					<div class="modal-footer">
 						<div class="row gy-sm-0 gy-3 justify-content-center">
 							<div class="col-lg-6">
-								<div class="row">
+								<div class="row g-3">
 									<div class="col-sm-6">
 
 										<button type="submit" class="btn btn-accent btn-lg w-100 text-uppercase">Save</button>

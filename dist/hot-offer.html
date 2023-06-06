@@ -129,7 +129,7 @@
 					<span
 						class="header-current position-absolute top-50 start-50 badge rounded-pill bg-primary text-black">1</span>
 				</a>
-				<div class="dropdown">
+				<div class="dropdown bag-dropdown">
 					<button type="button" class="btn position-relative p-2 ps-sm-3 pe-sm-3 dropdown-toggle" type="button"
 						id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside"
 						aria-expanded="false">
@@ -137,22 +137,25 @@
 						<span
 							class="header-current current-bag position-absolute top-50 start-50 badge rounded-pill bg-primary text-black"></span>
 					</button>
-					<div class="dropdown-menu dropdown-cards dropdown-menu-end bg-dark p-0 w-100"
+					<div class="dropdown-menu bag-dropdown-menu dropdown-cards dropdown-menu-end"
 						aria-labelledby="dropdownMenuClickableInside">
 						<div class="dropdown-arrow"></div>
-						<div class="dropdown-overflow overflow-auto p-2 p-sm-4">
-							<div class="header-dropdown overflow-auto">
-								<div
-									class="card dropdown-card bg-dark pt-3 pb-3 pt-sm-4 pb-sm-4 border border-2 border-start-0 border-end-0 border-top-0 border-dark rounded-0">
-									<div class="row g-0 justify-content-between align-items-center bg-dark text-primary">
-										<div class="col-4">
-											<img src="./images/dist/items/item-man-1.jpg" class="img-fluid" alt="product">
+						<div class="dropdown-overflow">
+							<div class="header-dropdown">
+								<div class="card dropdown-card">
+									<div class="row g-0 justify-content-between">
+										<div class="col-md-3 col-4">
+											<div class="dropdown-card-img ratio ratio-1x1">
+												<img src="./images/dist/items/item-man-1.jpg" class="img-fluid" alt="product">
+											</div>
 										</div>
-										<div class="col-sm-7 col-6">
-											<div class="card-body pt-0 pe-2 ps-2 pe-sm-3 ps-sm-3 pb-0">
-												<h6 class="card-title mb-3 mb-sm-4 text-uppercase">C-IN2 CORE LOW RISE BRIE</h6>
-												<p class="card-text mb-0 tiny">1 x $75.00</p>
-												<p class="card-text">$<span class="card-price">75.00</span></p>
+										<div class="col-md-8 col-7">
+											<div class="card-body">
+												<h3 class="card-title h5 text-uppercase">C-IN2 CORE LOW RISE BRIE</h3>
+												<div>
+													<span class="card-text mb-0 small">1 x $75.00</span>
+													<span class="card-text">$<span class="card-price">75.00</span></span>
+												</div>
 											</div>
 										</div>
 										<button type="button"
@@ -169,7 +172,7 @@
 									Your bag is empty
 								</div>
 							</div>
-							<h5 class="total-dropdown text-primary text-uppercase d-flex justify-content-between pt-2 mb-5">
+							<h5 class="total-dropdown text-primary text-uppercase d-flex justify-content-between pt-3 mb-5">
 								<span>Subtotal</span>
 								<p class="m-0">$<span class="total-price"></span></p>
 							</h5>
@@ -183,9 +186,9 @@
 								</p>
 							</div>
 							<ul class="list-group text-uppercase text-primary">
-								<li class="list-group-item">
+								<li>
 									<a href="./bag.html"
-										class="dropdown-item d-flex align-items-center gap-2 text-primary">
+										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
 										<span class="icon icon-bag">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 9.333">
 												<path
@@ -197,9 +200,9 @@
 										<span class="current-bag brackets"></span>
 									</a>
 								</li>
-								<li class="list-group-item">
+								<li>
 									<a href="./favorite.html"
-										class="dropdown-item d-flex align-items-center gap-2 text-primary">
+										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
 										<span class="icon icon-favorite">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 9.333 9.333">
 												<path
@@ -210,9 +213,9 @@
 										Favorites
 									</a>
 								</li>
-								<li class="list-group-item">
+								<li>
 									<a href="./orders.html"
-										class="dropdown-item d-flex align-items-center gap-2 text-primary">
+										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
 										<span class="icon icon-order">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 8 9.333">
 												<path
@@ -223,9 +226,9 @@
 										Orders
 									</a>
 								</li>
-								<li class="list-group-item">
+								<li>
 									<a href="./account.html"
-										class="dropdown-item d-flex align-items-center gap-2 text-primary">
+										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0 border border-dark border-2 border-top-0 border-start-0 border-end-0">
 										<span class="icon icon-gears">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 8 8">
 												<path
@@ -236,7 +239,7 @@
 										Account
 									</a>
 								</li>
-								<li class="list-group-item">
+								<li>
 									<a href="./account-signin.html"
 										class="dropdown-item d-flex align-items-center gap-2 text-primary ps-0">
 										<span class="icon icon-account">
@@ -265,7 +268,9 @@
 					</h5>
 					<button type="button"
 						class="btn-close btn-close-white btn-close-word d-flex align-items-center opacity-75 h5"
-						data-bs-dismiss="offcanvas" aria-label="Close">Close</button>
+						data-bs-dismiss="offcanvas" aria-label="Close">
+						<span class="d-xl-inline-block d-none">Close</span>
+					</button>
 				</div>
 				<div class="offcanvas-body ps-3 pe-3 ps-sm-4 pe-sm-5">
 					<div class="accordion accordion-flush" id="accordionHeaderOne">
@@ -283,7 +288,8 @@
 									data-bs-parent="#accordionHeaderOne">
 									<div class="accordion-body">
 										<div class="list-group fw-light">
-											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">All
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">All
 												Underwaer</a>
 											<a href="./404.html"
 												class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
@@ -292,10 +298,10 @@
 											<a href="./404.html"
 												class="list-group-item border border-0 list-group-item-action bg-dark">Boxer
 												Briefs</a>
-											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">Boxers</a>
-											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">Jocks &
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Boxers</a>
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Jocks &
 												Thongs</a>
-											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">Long
+											<a class="list-group-item border border-0 list-group-item-action bg-dark">Long
 												Underwear</a>
 										</div>
 									</div>
@@ -314,7 +320,8 @@
 									data-bs-parent="#accordionHeaderOne">
 									<div class="accordion-body">
 										<div class="list-group fw-light">
-											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">All
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">All
 												Underwaer</a>
 											<a href="./404.html"
 												class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
@@ -345,7 +352,8 @@
 									data-bs-parent="#accordionHeaderOne">
 									<div class="accordion-body">
 										<div class="list-group fw-light">
-											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">All
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">All
 												Underwaer</a>
 											<a href="./404.html"
 												class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
@@ -376,7 +384,8 @@
 									data-bs-parent="#accordionHeaderOne">
 									<div class="accordion-body">
 										<div class="list-group fw-light">
-											<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">All
+											<a href="./404.html"
+												class="list-group-item border border-0 list-group-item-action bg-dark">All
 												Underwaer</a>
 											<a href="./404.html"
 												class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
@@ -421,13 +430,15 @@
 								data-bs-parent="#accordionHeaderOne">
 								<div class="accordion-body">
 									<div class="list-group fw-light">
-										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">All
+										<a href="./404.html"
+											class="list-group-item border border-0 list-group-item-action bg-dark">All
 											Underwaer</a>
 										<a href="./404.html"
 											class="list-group-item border border-0 list-group-item-action bg-dark">Briefs</a>
 										<a href="./404.html"
 											class="list-group-item border border-0 list-group-item-action bg-dark">Trunks</a>
-										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">Boxer
+										<a href="./404.html"
+											class="list-group-item border border-0 list-group-item-action bg-dark">Boxer
 											Briefs</a>
 										<a class="list-group-item border border-0 list-group-item-action bg-dark">Boxers</a>
 										<a class="list-group-item border border-0 list-group-item-action bg-dark">Jocks &
@@ -471,16 +482,20 @@
 								data-bs-parent="#accordionHeaderOne">
 								<div class="accordion-body">
 									<div class="list-group fw-light">
-										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">
+										<a href="./404.html"
+											class="list-group-item border border-0 list-group-item-action bg-dark">
 											Terms of use
 										</a>
-										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">
+										<a href="./404.html"
+											class="list-group-item border border-0 list-group-item-action bg-dark">
 											Privacy & Cookie
 										</a>
-										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">
+										<a href="./404.html"
+											class="list-group-item border border-0 list-group-item-action bg-dark">
 											Policy
 										</a>
-										<a href="./404.html" class="list-group-item border border-0 list-group-item-action bg-dark">
+										<a href="./404.html"
+											class="list-group-item border border-0 list-group-item-action bg-dark">
 											Legal
 										</a>
 									</div>
@@ -503,41 +518,41 @@
 
 			<div class="d-flex align-items-center gap-2">
 				<button class="btn btn-back p-1 d-none d-sm-block">Come Back</button>
-				<button class="btn btn-custom btn-browser p-1 text-white d-flex align-items-center collapsed" type="button"
-					data-bs-toggle="collapse" data-bs-target="#collapseBrowserAll" aria-expanded="false"
-					aria-controls="collapseBrowserAll">
-					Browser all
-					<span class="icon icon-arrow-down">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" xml:space="preserve">
-							<path fill="none" d="m20.5 11.5-6 6-6-6" />
-						</svg>
-					</span>
-				</button>
+<button class="btn btn-custom btn-browser p-1 text-white d-flex align-items-center collapsed" type="button"
+	data-bs-toggle="collapse" data-bs-target="#collapseBrowserAll" aria-expanded="false"
+	aria-controls="collapseBrowserAll">
+	Browser all
+	<span class="icon icon-arrow-down">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" xml:space="preserve">
+			<path fill="none" d="m20.5 11.5-6 6-6-6" />
+		</svg>
+	</span>
+</button>
 			</div>
 		</div>
 		<div class="collapse" id="collapseBrowserAll">
-			<div class="container">
-				<div class="py-3 border border-top-1 border-start-0 border-end-0 border-bottom-0">
-					<div class="row">
-						<div class="col-lg-2 col-sm-4 col-6 text-center text-sm-start">
-							<div class="list-group text-uppercase">
-								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Underwaer</a>
-								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Swemmwaer</a>
-								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Accessories</a>
-								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Bag</a>
-							</div>
-						</div>
-						<div class="col-lg-2 col-sm-4 col-6 text-center text-sm-start">
-							<div class="list-group text-uppercase">
-								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Multipacks</a>
-								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">X-Club</a>
-								<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">E-Gift Card</a>
-							</div>
-						</div>
+	<div class="container">
+		<div class="py-3 border border-top-1 border-start-0 border-end-0 border-bottom-0">
+			<div class="row">
+				<div class="col-lg-2 col-sm-4 col-6">
+					<div class="list-group text-uppercase">
+						<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Underwaer</a>
+						<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Swemmwaer</a>
+						<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Accessories</a>
+						<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Bag</a>
+					</div>
+				</div>
+				<div class="col-lg-2 col-sm-4 col-6">
+					<div class="list-group text-uppercase">
+						<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">Multipacks</a>
+						<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">X-Club</a>
+						<a href="./404.html" class="list-group-item list-group-item-action p-0 border-0">E-Gift Card</a>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+</div>
 	</nav>
 
 	<section class="hotoffer bg-white">
@@ -1695,8 +1710,8 @@
 			<div class="col-xxl-4 col-lg-6 col-12 d-lg-block d-flex flex-column align-items-center mb-5 mb-lg-0">
 				<span class="text-capitalize">Gift Cards</span>
 				<h2 class="gift-title">Give the gift of Our Store, underwaer, accessories, and more</h2>
-				<a href="./gift-card.html" class="btn btn-arrow btn-link ps-0 pe-0">
-					Learn more about gift cards
+				<a href="./gift-card.html" class="btn btn-arrow btn-link ps-0 pe-0 text-decoration-none">
+					<span class="text-underline">Learn more about gift cards</span>
 					<span class="icon icon-arrow-right">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.91 122.88"
 							style="enable-background:new 0 0 66.91 122.88" xml:space="preserve">
@@ -1816,34 +1831,11 @@
 			<div class="modal-body">
 				<div class="container">
 					<div class="row">
-						<div class="col-xl-4 col-lg-5 col-12 order-lg-0 order-2 my-lg-0 mb-5 mt-3">
-							<div class="swiper modal-qview-slider mb-lg-4 mb-2">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<div class="wrapper-img-thumbnail">
-											<img class="img-thumbnail" src="./images/dist/items/item-male-2.jpg" alt="Item Photo">
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="wrapper-img-thumbnail">
-											<img class="img-thumbnail" src="./images/dist/items/item-man-1.jpg" alt="Item Photo">
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="wrapper-img-thumbnail">
-											<img class="img-thumbnail" src="./images/dist/items/item-male-2.jpg" alt="Item Photo">
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="wrapper-img-thumbnail">
-											<img class="img-thumbnail" src="./images/dist/items/item-man-1.jpg" alt="Item Photo">
-										</div>
-									</div>
-								</div>
-							</div>
+						<div class="col-xl-4 col-lg-5 col-12 order-lg-0 order-2 my-lg-0 mb-4 mt-3">
+							<div class="qview-header-duplicate d-lg-none mt-2 mb-4"></div>
 
 							<div class="position-relative">
-								<div thumbSlide="" class="swiper swiper-container modal-qview-slider-thumbs">
+								<div class="swiper modal-qview-slider mb-lg-4 mb-2">
 									<div class="swiper-wrapper">
 										<div class="swiper-slide">
 											<div class="wrapper-img-thumbnail">
@@ -1872,73 +1864,103 @@
 									</div>
 								</div>
 
-								<div class="swiper-button-prev modal-qview-tumb-button-prev"></div>
-								<div class="swiper-button-next modal-qview-tumb-button-next"></div>
+
+								<div thumbSlide="" class="swiper swiper-container modal-qview-slider-thumbs d-none d-lg-block">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="wrapper-img-thumbnail">
+												<img class="img-thumbnail" src="./images/dist/items/item-male-2.jpg"
+													alt="Item Photo">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="wrapper-img-thumbnail">
+												<img class="img-thumbnail" src="./images/dist/items/item-man-1.jpg"
+													alt="Item Photo">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="wrapper-img-thumbnail">
+												<img class="img-thumbnail" src="./images/dist/items/item-male-2.jpg"
+													alt="Item Photo">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="wrapper-img-thumbnail">
+												<img class="img-thumbnail" src="./images/dist/items/item-man-1.jpg"
+													alt="Item Photo">
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="swiper-button-prev modal-qview-prev"></div>
+								<div class="swiper-button-next modal-qview-next"></div>
 							</div>
 						</div>
 
 						<div class="col-lg-6 col-12 order-lg-0 order-3">
-							<h2 class="h3 mt-xl-3 mt-0 mb-xl-3 mb-0 text-primary text-md-start text-center text-uppercase">
-								<span class="d-block fs-5 mb-1">Sale</span>
-								C-IN2 Core Low Rise Brief
-							</h2>
+							<div class="qview-header d-lg-block d-none">
+								<h2 class="h3 mt-xl-3 mt-0 mb-xl-3 mb-0 text-primary text-uppercase">
+									<span class="d-block fs-5 mb-1">Sale</span>
+									C-IN2 Core Low Rise Brief
+								</h2>
 
-							<div
-								class="card-reviews mb-xl-2 mb-0 d-flex align-items-center gap-3 justify-content-md-start justify-content-center">
-								<div class="card-stars">
-									<span class="icon icon-star active">
-										<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
-											<path
-												d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-												transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-										</svg>
-									</span>
-									<span class="icon icon-star active">
-										<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
-											<path
-												d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-												transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-										</svg>
-									</span>
-									<span class="icon icon-star active">
-										<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
-											<path
-												d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-												transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-										</svg>
-									</span>
-									<span class="icon icon-star active">
-										<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
-											<path
-												d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-												transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-										</svg>
-									</span>
-									<span class="icon icon-star active">
-										<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
-											<path
-												d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
-												transform="matrix(.13333 0 0 -.13333 0 5.333)" />
-										</svg>
-									</span>
+								<div class="card-reviews mb-xl-2 mb-0 d-flex align-items-center gap-3">
+									<div class="card-stars">
+										<span class="icon icon-star active">
+											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
+												<path
+													d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+													transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+											</svg>
+										</span>
+										<span class="icon icon-star active">
+											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
+												<path
+													d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+													transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+											</svg>
+										</span>
+										<span class="icon icon-star active">
+											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
+												<path
+													d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+													transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+											</svg>
+										</span>
+										<span class="icon icon-star active">
+											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
+												<path
+													d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+													transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+											</svg>
+										</span>
+										<span class="icon icon-star active">
+											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
+												<path
+													d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
+													transform="matrix(.13333 0 0 -.13333 0 5.333)" />
+											</svg>
+										</span>
+									</div>
+									<a href="#" class="btn btn-link text-decoration-underline tiny">12 Reviews</a>
 								</div>
-								<a href="#" class="btn btn-link text-decoration-underline tiny">12 Reviews</a>
-							</div>
 
-							<div
-								class="product-price text-primary d-flex align-items-center gap-2 justify-content-md-start justify-content-center fs-4">
-								$75.00
-								<span class="text-decoration-line-through text-black">$85.00</span>
-								<span class="badge tiny text-bg-primary px-2 py-2">You save 11%</span>
+								<div class="product-price text-primary d-flex align-items-center gap-2 fs-4">
+									$75.00
+									<span class="text-decoration-line-through text-black">$85.00</span>
+									<span class="badge tiny text-bg-primary px-2 py-2">You save 11%</span>
+								</div>
 							</div>
 
 							<div class="fs-5 mb-4">
-								<div class="mb-2 text-md-start text-center">
+								<div class="mb-2">
 									Category: <a class="text-decoration-underline" href="#">Brief</a>
 								</div>
 
-								<div class="row gy-md-0 gy-2 justify-content-center justify-content-md-start mb-md-3 mb-2">
-									<div class="col-md-6 col-12">
+								<div class="row gy-md-0 gy-3 mb-3">
+									<div class="col-6">
 										<select class="form-select form-select-lg text-md-start text-center"
 											aria-label="Select Color">
 											<option selected>Color *</option>
@@ -1947,7 +1969,7 @@
 											<option value="3">Color3</option>
 										</select>
 									</div>
-									<div class="col-md-6 col-12">
+									<div class="col-6">
 										<select class="form-select form-select-lg text-md-start text-center"
 											aria-label="Select Size">
 											<option selected>Size *</option>
@@ -1957,9 +1979,9 @@
 										</select>
 									</div>
 								</div>
-								<div class="row gy-md-4 gy-2 justify-content-md-start justify-content-center">
-									<div class="col-md-6 col-12">
-										<div class="input-group gap-1 justify-content-md-start justify-content-center">
+								<div class="row gy-4">
+									<div class="col-sm-6">
+										<div class="input-group gap-1">
 											<button class="btn btn-outline-secondary fw-bold" type="button"
 												id="button-decrement">–</button>
 											<input type="text" class="form-control text-center" id="product-quantity" value="1"
@@ -1969,11 +1991,13 @@
 										</div>
 									</div>
 
-									<div class="col-xl-12 col-md-6 col-12 text-md-start text-center">
+									<div class="col-xl-12 col-lg-6 d-flex align-items-end justify-content-between">
 										<div class="lh-sm">
 											<div>SKU: <span>XXXXX</span></div>
-											<a href="#" class="btn btn-link">See details</a>
+											<a href="#" class="btn btn-link p-0">See details</a>
 										</div>
+
+										<div class="pay-protection-duplicate d-lg-none d-flex gap-2"></div>
 									</div>
 								</div>
 							</div>

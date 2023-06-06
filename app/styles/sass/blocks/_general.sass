@@ -12,6 +12,25 @@ body, .modal
 	padding-top: 6.25rem
 	padding-bottom: 5rem
 
+//SCROLLBAR
+*
+	scrollbar-width: thin
+	scrollbar-color: var(--item-color-light) var(--item-color)
+
+/* Chrome, Safari, Edge */
+*::-webkit-scrollbar
+	width: .15rem
+
+*::-webkit-scrollbar-track
+	background: var(--item-color)
+
+*::-webkit-scrollbar-thumb
+	background-color: var(--item-color-light)
+	border-radius: .5rem
+
+*::-webkit-scrollbar-thumb:hover
+	background-color: var(--text-color)
+
 //NEW CLASS ITEM
 .text-item
 	color: var(--item-color)
@@ -20,6 +39,14 @@ body, .modal
 	background: var(--gradient-accent)
 	-webkit-background-clip: text
 	-webkit-text-fill-color: transparent
+
+.text-justify
+	text-align: justify
+
+.block-form-link
+	display: flex
+	flex-direction: column
+	gap: .5rem
 
 .strip
 	display: block
@@ -46,7 +73,6 @@ body, .modal
 .btn-link
 	--bs-btn-active-color: var(--text-color)
 	display: inline-block
-	font-weight: 300
 	padding: 0
 	border: 0
 	margin: 0
@@ -137,6 +163,7 @@ body, .modal
 	align-items: center
 	gap: 1rem
 	color: var(--text-color)
+	padding-inline: 0
 	transition: color var(--trt-1)
 	&:hover
 		svg
@@ -253,7 +280,7 @@ body, .modal
 	font-size: 1.25rem
 	font-weight: 300
 	gap: .5rem
-	min-height: 3rem
+	height: 3rem
 	border: none
 	opacity: 1
 	transition: opacity var(--trt-1)
@@ -452,6 +479,20 @@ body, .modal
 		svg
 			fill: currentColor
 
+.text-underline
+	line-height: 1
+	text-decoration: none
+	position: relative
+	&::before
+		content: ''
+		width: 100%
+		height: 1px
+		border-bottom: 1px solid currentColor
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+
 .svg-img
 	display: inline-block
 	object-fit: contain
@@ -465,6 +506,24 @@ body, .modal
 
 .object-end
 	object-position: right
+
+.product-item
+	padding-block: 3rem
+	& + .product-item
+		border-top: 1px solid var(--table-body)
+	.card-bag
+		.card-body
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			height: 100%
+			line-height: 1.25
+			&-top
+				border-bottom: 1px solid var(--table-body)
+		& + .block-btn-duplicate
+			margin-top: 1rem
+	&:last-of-type
+		margin-bottom: 3rem
 
 .standart-card, .recently-card, .advantages-card, .frequently-card
 	transition: box-shadow var(--trt-1), transform var(--trt-1)
@@ -713,6 +772,9 @@ input::-webkit-inner-spin-button
 /* Firefox */
 input[type=number]
 	-moz-appearance: textfield
+
+.block-value
+	display: flex
 
 //END NEW CLASS ITEM
 
@@ -1221,8 +1283,8 @@ input[type=number]
 		margin-inline: auto
 	.modal-qview-slider-thumbs
 		width: 55%
-	.modal-qview-tumb-button-prev, .modal-qview-tumb-button-next
-		top: var(--swiper-navigation-top-offset,45%)
+	.modal-qview-prev, .modal-qview-next
+		top: var(--swiper-navigation-top-offset,82%)
 		color: var(--item-color)
 		background-color: var(--transparent)
 
@@ -1301,3 +1363,16 @@ input[type=number]
 		padding: 0
 		&>*
 			margin: 0
+
+#affiliateGuideModal
+	.affiliate-guide-swiper
+		width: 80%
+		margin-inline: auto
+	.affiliate-guide-prev, .affiliate-guide-next
+		color: var(--item-color)
+		background-color: var(--transparent)
+		top: var(--swiper-navigation-top-offset,40%)
+	.affiliate-guide-prev, .swiper-rtl .affiliate-guide-next
+		left: var(--swiper-navigation-sides-offset,70px)
+	.affiliate-guide-next, .swiper-rtl .affiliate-guide-prev
+		right: var(--swiper-navigation-sides-offset,70px)
