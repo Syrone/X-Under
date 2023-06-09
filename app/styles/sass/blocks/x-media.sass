@@ -143,6 +143,10 @@
 			left: var(--swiper-navigation-sides-offset,10px)
 		.affiliate-guide-next, .swiper-rtl .affiliate-guide-prev
 			right: var(--swiper-navigation-sides-offset,10px)
+	
+	#itemNotificModal
+		.modal-title
+			max-width: 340px
 
 	.btn-lg
 		--bs-btn-padding-x: .5rem
@@ -463,7 +467,11 @@
 	#contactInfoModal2,
 	#paymentMethodModal,
 	#paymentMethodModal2,
-	#promocodeModal
+	#promocodeModal,
+	#installmentsModal,
+	#sizeGuideModal,
+	#itemNotificModal,
+	#itemVideoModal
 		.btn-close-word
 			background-position: 90%
 			width: 6.25rem
@@ -472,6 +480,12 @@
 		max-width: 100%
 
 	.bag
+		&-cta
+			.cta-step:after
+				width: 1rem
+			.cta-step .icon
+				width: auto
+				height: 1rem
 		.product-item
 			&:last-of-type
 				margin-bottom: .5rem
@@ -647,11 +661,9 @@
 					width: calc( 8vw + 50px )
 
 	.account-affiliate-payment
-		.btn-icon
-			right: auto
-			left: 50%
-			transform: translateX(-50%)
-			top: -2rem
+		#guideBankModal
+			right: 0.25rem
+			top: -1.5rem
 
 	.account-order
 		.progress

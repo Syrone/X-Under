@@ -1018,20 +1018,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 
-	//ВCЁ ЧТО НИЖЕ МОЖНО УДАЛИТЬ. ЖЕЛАТЕЛЬНО ОЗНАКОМИТЬСЯ.
-	//Этот код можно будет удалить. Сделан был для демонстрации на странице checkout.html.
-	const bagCtas = document.querySelectorAll('.bag-cta');
-	const orderButtons = document.querySelectorAll('.btn-bag-order');
 
-	orderButtons.forEach((button, index) => {
-		button.addEventListener('click', () => {
-			bagCtas[index].classList.add('d-none');
-
-			if (index < bagCtas.length - 1) {
-				bagCtas[index + 1].classList.remove('d-none');
-			}
-		});
-	});
 
 	//Duplicate HTML
 	//Page main qview modal
@@ -1108,6 +1095,20 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 
+	//ВCЁ ЧТО НИЖЕ МОЖНО УДАЛИТЬ. ЖЕЛАТЕЛЬНО ОЗНАКОМИТЬСЯ.
+	//Этот код можно будет удалить. Сделан был для демонстрации на странице checkout.html.
+	const bagCtas = document.querySelectorAll('.bag-cta');
+	const orderButtons = document.querySelectorAll('.btn-bag-order');
+
+	orderButtons.forEach((button, index) => {
+		button.addEventListener('click', () => {
+			bagCtas[index].classList.add('d-none');
+
+			if (index < bagCtas.length - 1) {
+				bagCtas[index + 1].classList.remove('d-none');
+			}
+		});
+	});
 
 	// Возможно этот код тоже не понадобиться. Показывает скрытые карточки на странице категории.
 	//BTN SHOW MORE
