@@ -1,12 +1,104 @@
 .category
-	.svg-img
-		width: 1.5rem
-		height: 1.3rem
-		left: 0
+	padding-bottom: 4rem
+	.icon
+		object-fit: contain
+		height: 1.25rem
+	&-top-duplicate
+		.accordion
+			--custom-accordion-btn-padding-x: 2rem
+			--bs-accordion-border-radius: 0
+			--bs-accordion-inner-border-radius: 0
+			--bs-accordion-color: var(--text-color-light)
+			--bs-accordion-btn-color: var(--text-color-light)
+			--bs-accordion-bg: var(--body-color)
+			--bs-accordion-btn-icon: url(../images/dist/icons/close-light.svg)
+			--bs-accordion-btn-active-icon: url(../images/dist/icons/close-light.svg)
+		.list-group
+			--custom-accordion-btn-padding-x: 2rem
+			--custom-accordion-btn-padding-y: .75rem
+			--bs-list-group-border-radius: 0
+		.nav
+			--bs-nav-link-padding-x: 0
+			--bs-nav-link-padding-y: 0.75rem
+			--bs-nav-link-color: var(--text-color-light)
+			--bs-nav-link-hover-color: var(--text-color)
+			--bs-nav-link-disabled-color: var(--text-color-light)
+		.nav-pills
+			--bs-nav-pills-border-radius: 0
+			--bs-nav-pills-link-active-color: var(--accent)
+			--bs-nav-pills-link-active-bg: var(--transparent)
+		.nav-link, .accordion-item
+			border-bottom: 2px solid var(--item-color-light)
+
+		.accordion-button
+			&:focus
+				border-color: none
+				box-shadow: none
+			&:not(.collapsed)
+				background-color: var(--transparent)
+				color: var(--text-color-light)
+
+		.list-group
+			--bs-list-group-bg: var(--transparent)
+			--bs-list-group-action-hover-bg: var(--transparent)
+			--bs-list-group-action-active-bg: var(--transparent)
+			--bs-list-group-color: var(--item-color)
+			--bs-list-group-action-color: var(--item-color)
+			--bs-list-group-action-hover-color: var(--text-color)
+			--bs-list-group-action-active-color: var(--item-color)
+			--bs-list-group-active-color: var(--item-color)
+			--bs-list-group-active-bg: var(--transparent)
+			--bs-list-group-active-border-color: var(--transparent)
+			--bs-list-group-border-color: var(--border-color)
+		.list-group-item
+			&-action
+				&:focus
+					color: var(--item-color)
+				&:active, &.active
+					font-weight: 700
+	&-bottom-duplicate
+		.icon
+			object-fit: contain
+			height: 1.25rem
+		.accordion
+			--custom-accordion-btn-padding-x: 2rem
+			--bs-accordion-border-radius: 0
+			--bs-accordion-inner-border-radius: 0
+			--bs-accordion-color: var(--text-color-light)
+			--bs-accordion-btn-color: var(--text-color-light)
+			--bs-accordion-bg: var(--body-color)
+			--bs-accordion-btn-icon: url(../images/dist/icons/close-light.svg)
+			--bs-accordion-btn-active-icon: url(../images/dist/icons/close-light.svg)
+		.accordion-button
+			padding: var(--bs-accordion-btn-padding-y) 0 var(--bs-accordion-btn-padding-y) var(--custom-accordion-btn-padding-x)
+			&:focus
+				border-color: none
+				box-shadow: none
+			&:not(.collapsed)
+				background-color: var(--transparent)
+				color: var(--text-color-light)
+		.list-group
+			--custom-accordion-btn-padding-x: 2rem
+			--custom-accordion-btn-padding-y: .75rem
+			--bs-list-group-border-radius: 0
+			&-item
+				border: none
+				border-bottom: var(--bs-list-group-border-width) solid var(--border-color)
+				padding: var(--custom-accordion-btn-padding-y) 0 var(--custom-accordion-btn-padding-y) var(--custom-accordion-btn-padding-x)
+				--bs-list-group-active-bg: var(--body-color)
+				--bs-list-group-active-border-color: var(--body-color)
+				--bs-list-group-action-hover-bg: var(--body-color)
+				&-action
+					&:focus
+						color: var(--text-color)
+						font-weight: initial
+					&:active, &.active
+						font-weight: initial
 	.accordion
 		--custom-accordion-btn-padding-x: 2rem
 		--bs-accordion-border-radius: 0
 		--bs-accordion-inner-border-radius: 0
+		--bs-accordion-color: var(--item-color)
 	.list-group
 		--custom-accordion-btn-padding-x: 2rem
 		--custom-accordion-btn-padding-y: .75rem

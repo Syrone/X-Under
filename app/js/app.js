@@ -146,45 +146,47 @@ document.addEventListener('DOMContentLoaded', () => {
 	//NO SCROLL
 	const bagDropdownMenu = document.querySelector('.bag-dropdown-menu');
 
-	function updateOverflowHidden() {
-		if (bagDropdownMenu.classList.contains('show')) {
-			document.documentElement.classList.add('overflow-hidden');
-			document.body.classList.add('overflow-hidden');
-		} else {
-			document.documentElement.classList.remove('overflow-hidden');
-			document.body.classList.remove('overflow-hidden');
-		}
-	}
-
-	updateOverflowHidden();
-
-	const observeBagDropdown = new MutationObserver(function (mutations) {
-		mutations.forEach(function (mutation) {
-			if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-				updateOverflowHidden();
+	if (bagDropdownMenu) {
+		function updateOverflowHidden() {
+			if (bagDropdownMenu.classList.contains('show')) {
+				document.documentElement.classList.add('overflow-hidden');
+				document.body.classList.add('overflow-hidden');
+			} else {
+				document.documentElement.classList.remove('overflow-hidden');
+				document.body.classList.remove('overflow-hidden');
 			}
-		});
-	});
+		}
 
-	observeBagDropdown.observe(bagDropdownMenu, { attributes: true });
+		updateOverflowHidden();
+
+		const observeBagDropdown = new MutationObserver(function (mutations) {
+			mutations.forEach(function (mutation) {
+				if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+					updateOverflowHidden();
+				}
+			});
+		});
+
+		observeBagDropdown.observe(bagDropdownMenu, { attributes: true });
+	}
 
 	//TOP INDENT .wrapper and .header-dropdown-bag
 	const navbar = document.querySelector('.navbar');
 	const wrapper = document.querySelector('.wrapper');
 	const headerDropdownBag = document.querySelector('.bag-dropdown-menu');
-	const dropdownOverflow = headerDropdownBag.querySelector('.dropdown-overflow');
 
-
-	function updateWrapperMarginTop() {
-		const navbarHeight = navbar.clientHeight;
-		const bagDropdownHeight = 100 * window.innerHeight / 100 - (navbarHeight + 64);
-
-		wrapper.style.marginTop = navbarHeight + 'px'
-		dropdownOverflow.style.maxHeight = `${bagDropdownHeight}px`;
-
-	}
 
 	if (wrapper) {
+		const dropdownOverflow = headerDropdownBag.querySelector('.dropdown-overflow');
+		function updateWrapperMarginTop() {
+			const navbarHeight = navbar.clientHeight;
+			const bagDropdownHeight = 100 * window.innerHeight / 100 - (navbarHeight + 64);
+
+			wrapper.style.marginTop = navbarHeight + 'px'
+			dropdownOverflow.style.maxHeight = `${bagDropdownHeight}px`;
+		}
+
+
 		window.addEventListener('load', updateWrapperMarginTop);
 		window.addEventListener('resize', updateWrapperMarginTop);
 
@@ -418,22 +420,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			el = els[0]
 			el.digit = target.querySelector(`.${prefix}digit-left`)
-			el.flip = el.digit.querySelector(`.${prefix}flip`)
-			el.flipFaces = el.flip.querySelectorAll(`.${prefix}flip-face`)
-			el.flipFaceA = el.flipFaces[0]
-			el.flipFaceB = el.flipFaces[1]
+			if (el.digit) {
+				el.flip = el.digit.querySelector(`.${prefix}flip`)
+				el.flipFaces = el.flip.querySelectorAll(`.${prefix}flip-face`)
+				el.flipFaceA = el.flipFaces[0]
+				el.flipFaceB = el.flipFaces[1]
+			}
 
 			el = els[1]
 			el.digit = target.querySelector(`.${prefix}digit-right`)
-			el.flip = el.digit.querySelector(`.${prefix}flip`)
-			el.flipFaces = el.flip.querySelectorAll(`.${prefix}flip-face`)
-			el.flipFaceA = el.flipFaces[0]
-			el.flipFaceB = el.flipFaces[1]
+			if (el.digit) {
+				el.flip = el.digit.querySelector(`.${prefix}flip`)
+				el.flipFaces = el.flip.querySelectorAll(`.${prefix}flip-face`)
+				el.flipFaceA = el.flipFaces[0]
+				el.flipFaceB = el.flipFaces[1]
+			}
 
 			return els
 		}
 
-		function runClock(prefix, endTime) {
+		let timeoutIds = [];
+
+		function runClock(prefix, endTime, timeoutId) {
 			const nowTime = new Date().getTime(),
 				distanceTime = endTime - nowTime,
 				now = {
@@ -465,6 +473,49 @@ document.addEventListener('DOMContentLoaded', () => {
 				d: initElements('d', prefix),
 			}
 
+			if (distanceTime == 0) {
+				els.d.forEach(days => {
+					days.digit.dataset.digitBefore = '0';
+					days.flipFaceA.textContent = '0';
+					days.digit.dataset.digitAfter = '0';
+					days.flipFaceB.textContent = '0';
+					days.flip.classList.add('flipped')
+				})
+
+				els.h.forEach(hours => {
+					hours.digit.dataset.digitBefore = '0';
+					hours.flipFaceA.textContent = '0';
+					hours.digit.dataset.digitAfter = '0';
+					hours.flipFaceB.textContent = '0';
+					hours.flip.classList.add('flipped')
+				})
+
+				els.m.forEach(minutes => {
+					minutes.digit.dataset.digitBefore = '0';
+					minutes.flipFaceA.textContent = '0';
+					minutes.digit.dataset.digitAfter = '0';
+					minutes.flipFaceB.textContent = '0';
+					minutes.flip.classList.add('flipped')
+				})
+
+				els.s.forEach(seconds => {
+					seconds.digit.dataset.digitBefore = '0';
+					seconds.flipFaceA.textContent = '0';
+					seconds.digit.dataset.digitAfter = '0';
+					seconds.flipFaceB.textContent = '0';
+					seconds.flip.classList.add('flipped')
+				})
+
+				const index = timeoutIds.indexOf(timeoutId);
+				if (index !== -1) {
+					timeoutIds.splice(index, 1);
+				}
+				clearTimeout(timeoutId);
+				return;
+			} else {
+				timeoutIds.push(timeoutId);
+			}
+
 			for (const t of Object.keys(els)) {
 				for (const i of ['0', '1']) {
 					const curr = now[`${t}${i}`]
@@ -486,25 +537,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 					const el = els[t][i]
 
-					if (distanceTime <= 0) {
-						els.m.forEach(minutes => {
-							minutes.digit.dataset.digitBefore = '0';
-							minutes.flipFaceA.textContent = '0';
-							minutes.digit.dataset.digitAfter = '0';
-							minutes.flipFaceB.textContent = '0';
-							minutes.flip.classList.add('flipped')
-						})
 
-						els.s.forEach(seconds => {
-							seconds.digit.dataset.digitBefore = '0';
-							seconds.flipFaceA.textContent = '0';
-							seconds.digit.dataset.digitAfter = '0';
-							seconds.flipFaceB.textContent = '0';
-							seconds.flip.classList.add('flipped')
-						})
-
-						return;
-					} else if (el && el.digit) {
+					if (el && el.digit) {
 						if (!el.digit.dataset.digitBefore) {
 							el.digit.dataset.digitBefore = curr
 							el.flipFaceA.textContent = el.digit.dataset.digitBefore
@@ -539,9 +573,9 @@ document.addEventListener('DOMContentLoaded', () => {
 			setTimeout(() => runClock(prefix, endTime), 1000);
 		}
 
-		runClock('timer3-', new Date("June 9, 2023 23:59:59").getTime());
-		runClock('timer1-', new Date("June 11, 2023 23:59:59").getTime());
-		runClock('timer2-', new Date("June 13, 2023 23:59:59").getTime());
+		runClock('timer3-', new Date("June 14, 2023 23:59:59").getTime());
+		runClock('timer1-', new Date("June 17, 2023 23:59:59").getTime());
+		runClock('timer2-', new Date("June 20, 2023 23:59:59").getTime());
 	}
 
 	//COOKIES
@@ -1093,6 +1127,24 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		});
 	}
+
+	//Page Category
+	const categoryTop = document.querySelector('.category-top');
+	const categoryTopDuplicate = document.querySelector('.category-top-duplicate');
+	const categoryBottom = document.querySelector('.category-bottom');
+	const categoryBottomDuplicate = document.querySelector('.category-bottom-duplicate');
+
+
+	if (categoryTop && categoryTopDuplicate) {
+		categoryTopDuplicate.insertAdjacentHTML('beforeend', categoryTop.innerHTML);
+	}
+
+	if (categoryBottom && categoryBottomDuplicate) {
+		categoryBottomDuplicate.insertAdjacentHTML('beforeend', categoryBottom.innerHTML);
+	}
+
+
+
 
 
 	//ВCЁ ЧТО НИЖЕ МОЖНО УДАЛИТЬ. ЖЕЛАТЕЛЬНО ОЗНАКОМИТЬСЯ.

@@ -13682,7 +13682,7 @@ body, .modal {
 .icon-favorite--outline {
   display: block;
   width: 2.8rem;
-  height: 2.8rem;
+  height: auto;
   cursor: pointer;
 }
 .icon-favorite--outline svg {
@@ -13934,6 +13934,13 @@ body, .modal {
   height: 1rem;
 }
 .icon-email svg {
+  fill: currentColor;
+}
+.icon-underwaer {
+  width: 1.5rem;
+  height: auto;
+}
+.icon-underwaer svg {
   fill: currentColor;
 }
 
@@ -15786,15 +15793,124 @@ input[type=number] {
   right: var(--swiper-navigation-sides-offset, 20px);
 }
 
-.category .svg-img {
-  width: 1.5rem;
-  height: 1.3rem;
-  left: 0;
+.category {
+  padding-bottom: 4rem;
+}
+.category .icon {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 1.25rem;
+}
+.category-top-duplicate .accordion {
+  --custom-accordion-btn-padding-x: 2rem;
+  --bs-accordion-border-radius: 0;
+  --bs-accordion-inner-border-radius: 0;
+  --bs-accordion-color: var(--text-color-light);
+  --bs-accordion-btn-color: var(--text-color-light);
+  --bs-accordion-bg: var(--body-color);
+  --bs-accordion-btn-icon: url(../images/dist/icons/close-light.svg);
+  --bs-accordion-btn-active-icon: url(../images/dist/icons/close-light.svg);
+}
+.category-top-duplicate .list-group {
+  --custom-accordion-btn-padding-x: 2rem;
+  --custom-accordion-btn-padding-y: .75rem;
+  --bs-list-group-border-radius: 0;
+}
+.category-top-duplicate .nav {
+  --bs-nav-link-padding-x: 0;
+  --bs-nav-link-padding-y: 0.75rem;
+  --bs-nav-link-color: var(--text-color-light);
+  --bs-nav-link-hover-color: var(--text-color);
+  --bs-nav-link-disabled-color: var(--text-color-light);
+}
+.category-top-duplicate .nav-pills {
+  --bs-nav-pills-border-radius: 0;
+  --bs-nav-pills-link-active-color: var(--accent);
+  --bs-nav-pills-link-active-bg: var(--transparent);
+}
+.category-top-duplicate .nav-link, .category-top-duplicate .accordion-item {
+  border-bottom: 2px solid var(--item-color-light);
+}
+.category-top-duplicate .accordion-button:focus {
+  border-color: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.category-top-duplicate .accordion-button:not(.collapsed) {
+  background-color: var(--transparent);
+  color: var(--text-color-light);
+}
+.category-top-duplicate .list-group {
+  --bs-list-group-bg: var(--transparent);
+  --bs-list-group-action-hover-bg: var(--transparent);
+  --bs-list-group-action-active-bg: var(--transparent);
+  --bs-list-group-color: var(--item-color);
+  --bs-list-group-action-color: var(--item-color);
+  --bs-list-group-action-hover-color: var(--text-color);
+  --bs-list-group-action-active-color: var(--item-color);
+  --bs-list-group-active-color: var(--item-color);
+  --bs-list-group-active-bg: var(--transparent);
+  --bs-list-group-active-border-color: var(--transparent);
+  --bs-list-group-border-color: var(--border-color);
+}
+.category-top-duplicate .list-group-item-action:focus {
+  color: var(--item-color);
+}
+.category-top-duplicate .list-group-item-action:active, .category-top-duplicate .list-group-item-action.active {
+  font-weight: 700;
+}
+.category-bottom-duplicate .icon {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 1.25rem;
+}
+.category-bottom-duplicate .accordion {
+  --custom-accordion-btn-padding-x: 2rem;
+  --bs-accordion-border-radius: 0;
+  --bs-accordion-inner-border-radius: 0;
+  --bs-accordion-color: var(--text-color-light);
+  --bs-accordion-btn-color: var(--text-color-light);
+  --bs-accordion-bg: var(--body-color);
+  --bs-accordion-btn-icon: url(../images/dist/icons/close-light.svg);
+  --bs-accordion-btn-active-icon: url(../images/dist/icons/close-light.svg);
+}
+.category-bottom-duplicate .accordion-button {
+  padding: var(--bs-accordion-btn-padding-y) 0 var(--bs-accordion-btn-padding-y) var(--custom-accordion-btn-padding-x);
+}
+.category-bottom-duplicate .accordion-button:focus {
+  border-color: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.category-bottom-duplicate .accordion-button:not(.collapsed) {
+  background-color: var(--transparent);
+  color: var(--text-color-light);
+}
+.category-bottom-duplicate .list-group {
+  --custom-accordion-btn-padding-x: 2rem;
+  --custom-accordion-btn-padding-y: .75rem;
+  --bs-list-group-border-radius: 0;
+}
+.category-bottom-duplicate .list-group-item {
+  border: none;
+  border-bottom: var(--bs-list-group-border-width) solid var(--border-color);
+  padding: var(--custom-accordion-btn-padding-y) 0 var(--custom-accordion-btn-padding-y) var(--custom-accordion-btn-padding-x);
+  --bs-list-group-active-bg: var(--body-color);
+  --bs-list-group-active-border-color: var(--body-color);
+  --bs-list-group-action-hover-bg: var(--body-color);
+}
+.category-bottom-duplicate .list-group-item-action:focus {
+  color: var(--text-color);
+  font-weight: initial;
+}
+.category-bottom-duplicate .list-group-item-action:active, .category-bottom-duplicate .list-group-item-action.active {
+  font-weight: initial;
 }
 .category .accordion {
   --custom-accordion-btn-padding-x: 2rem;
   --bs-accordion-border-radius: 0;
   --bs-accordion-inner-border-radius: 0;
+  --bs-accordion-color: var(--item-color);
 }
 .category .list-group {
   --custom-accordion-btn-padding-x: 2rem;
@@ -17326,6 +17442,27 @@ input[type=number] {
     width: 0.5rem;
     background-position: center;
   }
+  .standart-card, .recently-card, .advantages-card, .frequently-card {
+    --bs-card-img-overlay-padding: 0.5rem;
+  }
+  .standart-card .btn-primary {
+    --bs-btn-padding-x: 0.25rem;
+  }
+  .standart-card .card-title {
+    font-size: calc(1.275rem + 0.3vw);
+  }
+  .standart-card .icon-favorite--outline {
+    width: 1.5rem;
+  }
+  .standart-card .card-watched {
+    margin-bottom: 0.4rem;
+  }
+  .standart-card .card-watched .icon-watched {
+    width: 0.5rem;
+  }
+  .standart-card .card-watched .tiny {
+    font-size: 0.5rem;
+  }
   .welcome__bg {
     background-size: cover;
   }
@@ -17473,12 +17610,23 @@ input[type=number] {
   #installmentsModal .btn-close-word,
   #sizeGuideModal .btn-close-word,
   #itemNotificModal .btn-close-word,
-  #itemVideoModal .btn-close-word {
+  #itemVideoModal .btn-close-word,
+  .offcanvas .btn-close-word {
     background-position: 90%;
     width: 6.25rem;
   }
   .favorite .card-bag .card-body .btn-dark {
     max-width: 100%;
+  }
+  .card-event {
+    top: 1rem;
+    left: -1.25rem;
+  }
+  .card-event:after {
+    width: 0.75rem;
+    -webkit-transform: skewY(45deg);
+        -ms-transform: skewY(45deg);
+            transform: skewY(45deg);
   }
   .bag-cta .cta-step:after {
     width: 1rem;
