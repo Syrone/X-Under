@@ -17646,6 +17646,7 @@ input[type=number] {
   #sizeGuideModal .btn-close-word,
   #itemNotificModal .btn-close-word,
   #itemVideoModal .btn-close-word,
+  #hearXUnderModal .btn-close-word,
   .offcanvas .btn-close-word {
     background-position: 90%;
     width: 6.25rem;
