@@ -4,8 +4,9 @@
 		padding-inline: 0
 
 	.card-reviews
-		.btn-link
-			--item-color: var(--text-color)
+		.icon-star
+			svg
+				--text-color: var(--item-color)
 
 	.pagination
 		--bs-pagination-padding-x: 0.4rem
@@ -82,29 +83,36 @@
 
 	&-support, .product-support-duplicate
 		.icon-watched
-			width: .5rem
 			margin-left: 0
 			svg
 				fill: var(--item-color)
 
 	&-nav
-		.product-button-prev, .product-button-next,
 		.product-tumb-button-prev, .product-tumb-button-next
 			padding: .25rem
 			margin-top: 0
-			background: var(--transparent)
+			background-color: var(--transparent)
 			&::after
 				font-size: 1rem
 				color: var(--item-color)
-		.product-button-prev, .product-button-next
-			position: relative
-			inset: auto
-			transform: none
 		.product-tumb-button-prev, .product-tumb-button-next
 			top: -2.5rem
 		.product-tumb-button-prev
 			right: 2.5rem
 			left: auto
+		&-duplicate
+			.product-tumb-button-prev, .product-tumb-button-next
+				padding: .25rem
+				margin-top: 0
+				background-color: var(--transparent)
+				top: var(--swiper-navigation-top-offset, 35%)
+				&::after
+					font-size: 1rem
+					color: var(--item-color)
+			.product-tumb-button-next
+				right: var(--swiper-navigation-sides-offset, 0)
+			.product-tumb-button-prev
+				left: var(--swiper-navigation-sides-offset, 0)
 
 	&-accordion
 		.progress
@@ -113,6 +121,8 @@
 		.icon-star
 			width: 1.75rem
 			margin-inline: .1rem
+			svg
+				--text-color: var(--item-color)
 		.btn-arrow:hover
 			.icon-arrow-right svg
 				fill: var(--accent)

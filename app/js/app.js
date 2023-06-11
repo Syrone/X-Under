@@ -620,17 +620,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	//PRODUCT SWIPER
-	const productSlider = new Swiper('.product-slider', {
-		slidesPerView: 1,
-		slidesPerGroup: 1,
-		spaceBetween: 10,
-	});
-
 	const productThumbsSlider = new Swiper('.product-slider-thumbs', {
 		spaceBetween: 10,
 		slidesPerView: 2,
 		slidesPerGroup: 1,
 		slideToClickedSlide: true,
+		freeMode: true,
 
 		navigation: {
 			nextEl: '.product-tumb-button-next',
@@ -639,8 +634,18 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 	});
 
-	productSlider.controller.control = productThumbsSlider;
-	productThumbsSlider.controller.control = productSlider;
+	const productSlider = new Swiper('.product-slider', {
+		slidesPerView: 1,
+		slidesPerGroup: 1,
+		spaceBetween: 10,
+
+		thumbs: {
+			swiper: productThumbsSlider,
+		},
+	});
+
+	// productSlider.controller.control = productThumbsSlider;
+	// productThumbsSlider.controller.control = productSlider;
 
 	//PRODUCT QUANTITY
 	const buttonDecrement = document.querySelectorAll('.button-decrement');
@@ -701,12 +706,12 @@ document.addEventListener('DOMContentLoaded', () => {
 				slidesPerGroup: 1,
 				spaceBetween: 100
 			},
-			576: {
+			768: {
 				slidesPerView: 2,
 				slidesPerGroup: 2,
 				spaceBetween: 15
 			},
-			768: {
+			992: {
 				slidesPerView: 3,
 				slidesPerGroup: 3,
 				spaceBetween: 15
@@ -1103,17 +1108,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if (productSupport && productSupportDuplicate) {
 		productSupportDuplicate.insertAdjacentHTML('beforeend', productSupport.innerHTML);
-	}
-
-	const userReviewQuestions = document.querySelectorAll('.user-review-question');
-	const userReviewQuestionDuplicates = document.querySelectorAll('.user-review-question-duplicate');
-
-	if (userReviewQuestions.length && userReviewQuestionDuplicates.length) {
-		userReviewQuestions.forEach((userReviewQuestion, index) => {
-			if (userReviewQuestionDuplicates[index]) {
-				userReviewQuestionDuplicates[index].insertAdjacentHTML('beforeend', userReviewQuestion.innerHTML);
-			}
-		});
 	}
 
 	//Page Favorite

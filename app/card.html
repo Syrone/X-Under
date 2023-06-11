@@ -19,9 +19,9 @@
 	<section class="product">
 		<div class="container py-5">
 			<div class="row">
-				<div class="col-md-6 col-12 order-2 order-md-0 mt-md-0 mt-3">
+				<div class="col-md-6 col-12 order-2 order-md-0 mt-md-0 mt-5">
 					<div class="product-header mb-2 d-md-block d-none">
-						<div class="mb-xxl-4 mb-2">
+						<div class="mb-xxl-4 mb-md-2 mb-4">
 							<h2 class="mb-0 text-item text-uppercase">
 								<span class="d-block text-primary fs-5">Sale</span>
 								C-IN2 Core Low Rise Brief
@@ -60,7 +60,7 @@
 													transform="matrix(.13333 0 0 -.13333 0 5.333)" />
 											</svg>
 										</span>
-										<span class="icon icon-star active">
+										<span class="icon icon-star">
 											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 5.333">
 												<path
 													d="m27.703 36 5.172-13.777 16.828.027-13.633-8.488L41.3 0 27.704 8.535 14.11 0l5.23 13.762L5.708 22.25l16.828-.027L27.703 36"
@@ -85,8 +85,8 @@
 								</div>
 							</div>
 
-							<div class="align-self-end d-md-none d-block">
-								<div class="card-favorite">
+							<div class="align-self-end d-md-none d-block mb-md-0 mb-3">
+								<div class="card-favorite d-md-block d-none">
 									<div class="icon icon-favorite--outline ">
 										<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="9.333" height="8">
 											<path
@@ -95,6 +95,38 @@
 										</svg>
 									</div>
 								</div>
+
+								<nav class="d-md-none" aria-label="Navigating product card pages">
+									<ul class="pagination flex-xxl-nowrap flex-md-wrap flex-nowrap justify-content-center">
+										<li class="page-item flex-shrink-0 order-xxl-0 ordermd-md-2">
+											<a class="page-link" href="#" aria-label="Previous">
+												<span class="icon icon-arrow-left" aria-hidden="true">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.91 122.88"
+														style="enable-background:new 0 0 66.91 122.88" xml:space="preserve">
+														<path
+															d="M1.95 111.2a6.875 6.875 0 0 0 .14 9.73 6.875 6.875 0 0 0 9.73-.14L64.94 66l-4.93-4.79 4.95 4.8c2.65-2.74 2.59-7.11-.15-9.76-.08-.08-.16-.15-.24-.22L11.81 2.09c-2.65-2.73-7-2.79-9.73-.14-2.72 2.65-2.78 7-.13 9.73l48.46 49.55L1.95 111.2z" />
+													</svg>
+												</span>
+											</a>
+										</li>
+										<div class="flex-shrink-0 order-xxl-0 order-md-1">
+											<span>XX</span>
+											of
+											<span>XX</span>
+										</div>
+										<li class="page-item flex-shrink-0 order-xxl-0 order-md-2">
+											<a class="page-link" href="#" aria-label="Next">
+												<span class="icon icon-arrow-right" aria-hidden="true">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.91 122.88"
+														style="enable-background:new 0 0 66.91 122.88" xml:space="preserve">
+														<path
+															d="M1.95 111.2a6.875 6.875 0 0 0 .14 9.73 6.875 6.875 0 0 0 9.73-.14L64.94 66l-4.93-4.79 4.95 4.8c2.65-2.74 2.59-7.11-.15-9.76-.08-.08-.16-.15-.24-.22L11.81 2.09c-2.65-2.73-7-2.79-9.73-.14-2.72 2.65-2.78 7-.13 9.73l48.46 49.55L1.95 111.2z" />
+													</svg>
+												</span>
+											</a>
+										</li>
+									</ul>
+								</nav>
 							</div>
 						</div>
 					</div>
@@ -105,7 +137,7 @@
 						<div>SKU: <span>XXXXX</span></div>
 					</div>
 
-					<div class="fs-5 mb-3">
+					<div class="fs-5 mb-md-3 mb-5">
 						<div class="mb-1">
 							Category: <a class="text-decoration-underline" href="#">Brief</a>
 						</div>
@@ -139,10 +171,13 @@
 						</div>
 					</div>
 
-					<div class="mb-5">
+					<div class="mb-5 pb-md-0 pb-5">
 						<div class="row gx-4 flex-md-row flex-column-reverse">
-							<div class="col-xxl-4 col-md-6 col-12 mt-2 mt-md-0">
+							<div class="col-xxl-4 col-md-6 col-12 mt-5 mt-md-0">
 								<button class="btn btn-dark btn-lg w-100 text-uppercase">Add to Bag</button>
+							</div>
+							<div class="col d-md-none d-block">
+								<button class="btn btn-dark btn-lg w-100 text-uppercase">Save item</button>
 							</div>
 							<div class="col-2 d-none d-md-flex justify-content-center">
 								<div class="card-favorite">
@@ -231,7 +266,8 @@
 							</div>
 
 							<div class="d-md-block d-flex flex-column">
-								<button class="btn btn-link btn-svg d-flex align-items-center gap-2 mb-2 fs-5 text-decoration-none"
+								<button
+									class="btn btn-link btn-svg d-flex align-items-center gap-2 mb-2 fs-5 text-decoration-none"
 									data-bs-toggle="modal" data-bs-target="#itemVideoModal">
 									<span class="text-underline">
 										Watch the film
@@ -245,7 +281,7 @@
 										</svg>
 									</span>
 								</button>
-								<div class="d-flex align-items-start">
+								<div class="d-flex align-items-center">
 									<span class="icon icon-watched">
 										<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 2.667 4">
 											<path
@@ -261,7 +297,7 @@
 				</div>
 
 				<div class="col-md-6 col-12 order-1 order-md-0 mb-md-0 mb-5">
-					<div class="product-header-duplicate mb-4 d-md-none d-block"></div>
+					<div class="product-header-duplicate mb-5 d-md-none d-block"></div>
 					<div class="row">
 						<div class="col-lg-10 col-12">
 							<div class="swiper product-slider mb-lg-5 mb-4">
@@ -360,22 +396,31 @@
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="col-lg-10 col-12">
-							<div thumbSlide="" class="swiper swiper-container product-slider-thumbs">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<img class="img-thumbnail" src="./images/dist/items/item-male-2.jpg" alt="">
+					<div class="row justify-content-center">
+						<div class="col-lg-10">
+							<div class="position-relative product-thumb-wrapper">
+								<div thumbSlide="" class="swiper swiper-container product-slider-thumbs">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img class="img-thumbnail" src="./images/dist/items/item-male-2.jpg" alt="">
+										</div>
+										<div class="swiper-slide">
+											<img class="img-thumbnail" src="./images/dist/items/item-man-1.jpg" alt="">
+										</div>
+										<div class="swiper-slide">
+											<img class="img-thumbnail" loading="lazy" src="./images/dist/items/item-male-2.jpg"
+												alt="">
+										</div>
+										<div class="swiper-slide">
+											<img class="img-thumbnail" loading="lazy" src="./images/dist/items/item-man-1.jpg"
+												alt="">
+										</div>
 									</div>
-									<div class="swiper-slide">
-										<img class="img-thumbnail" src="./images/dist/items/item-man-1.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-thumbnail" loading="lazy" src="./images/dist/items/item-man-1.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-thumbnail" loading="lazy" src="./images/dist/items/item-man-1.jpg" alt="">
-									</div>
+								</div>
+
+								<div class="product-nav-duplicate d-lg-none">
+									<div class="swiper-button-prev product-tumb-button-prev"></div>
+									<div class="swiper-button-next product-tumb-button-next"></div>
 								</div>
 							</div>
 						</div>
@@ -411,11 +456,11 @@
 						aria-labelledby="panelsStayOpen-headingProductInfo">
 						<div class="accordion-body">
 							<div class="row mb-4">
-								<div class="col-sm-3 col-12">
+								<div class="col-md-3 mb-md-0 mb-2">
 									<h5>Overview</h5>
 								</div>
 
-								<div class="col-sm-9 col-12 text-justify">
+								<div class="col-md-9 lh-sm text-justify">
 									Super-soft cotton and a relaxed V-neckline make T-shirt from Club Room an ideal choice for
 									casual style and comfort. Superfine liquid cotton fabrication gives life to this tee. Its
 									breathable materil allows it to be worm year-round for a multitude of occasions.
@@ -423,11 +468,11 @@
 							</div>
 
 							<div class="row">
-								<div class="col-sm-3 col-12">
+								<div class="col-md-3 mb-md-0 mb-2">
 									<h5>Care Instructions</h5>
 								</div>
 
-								<div class="col-sm-9 col-12">
+								<div class="col-md-9">
 									<img src="./images/dist/icons/care.svg" width="200" loading="lazy" alt="icon">
 								</div>
 							</div>
@@ -453,7 +498,7 @@
 											Average
 										</h3>
 
-										<div class="card-reviews mb-md-3 mb-1">
+										<div class="card-reviews mb-3">
 											<div class="card-stars">
 												<span class="icon icon-star active">
 													<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
@@ -499,9 +544,8 @@
 										</div>
 									</div>
 
-									<div class="row mb-2">
-										<div
-											class="col-xxl-7 col-lg-10 col-md-12 col-sm-7 col-10 d-flex align-items-center gap-3">
+									<div class="row mb-lg-2 mb-3">
+										<div class="col-xxl-7 col-lg-10 d-flex align-items-center gap-3">
 											<span class="flex-shrink-0 tiny">
 												5 Stars
 											</span>
@@ -516,8 +560,7 @@
 												2
 											</span>
 										</div>
-										<div
-											class="col-xxl-7 col-lg-10 col-md-12 col-sm-7 col-10 d-flex align-items-center gap-3">
+										<div class="col-xxl-7 col-lg-10 d-flex align-items-center gap-3">
 											<span class="flex-shrink-0 tiny">
 												4 Stars
 											</span>
@@ -532,8 +575,7 @@
 												5
 											</span>
 										</div>
-										<div
-											class="col-xxl-7 col-lg-10 col-md-12 col-sm-7 col-10 d-flex align-items-center gap-3">
+										<div class="col-xxl-7 col-lg-10 d-flex align-items-center gap-3">
 											<span class="flex-shrink-0 tiny">
 												3 Stars
 											</span>
@@ -548,8 +590,7 @@
 												3
 											</span>
 										</div>
-										<div
-											class="col-xxl-7 col-lg-10 col-md-12 col-sm-7 col-10 d-flex align-items-center gap-3">
+										<div class="col-xxl-7 col-lg-10 d-flex align-items-center gap-3">
 											<span class="flex-shrink-0 tiny">
 												2 Stars
 											</span>
@@ -564,8 +605,7 @@
 												0
 											</span>
 										</div>
-										<div
-											class="col-xxl-7 col-lg-10 col-md-12 col-sm-7 col-10 d-flex align-items-center gap-3">
+										<div class="col-xxl-7 col-lg-10 d-flex align-items-center gap-3">
 											<span class="flex-shrink-0 tiny">
 												1 Stars
 											</span>
@@ -656,12 +696,12 @@
 														</div>
 													</div>
 
-													<h3>
+													<h3 class="text-uppercase">
 														C-IN2 Core Low Rise Brief
 													</h3>
 													<div class="col-lg-9 col-12 user-review">
 														<div class="row">
-															<p class="col-xxl-10 col-sm-9 text-justify mb-sm-2 mb-1">
+															<p class="col-xxl-10 col-md-9 lh-sm text-justify mb-md-2 mb-3">
 																Bought 3 of these all-cotton. T's in clay red, light grey, and blue
 																wing.
 																Very
@@ -672,21 +712,23 @@
 																have turned out well. Couldn't resist low, low sale pricing.
 															</p>
 
-															<div class="col-xxl-2 col-sm-3 col-5">
+															<div class="col-xxl-2 col-md-3 col-4 order-md-0 order-2">
 																<img src="./images/dist/items/avatar.jpg" width="100"
-																	class="rounded mb-sm-0 mb-1" loading="lazy" alt="Avatar">
+																	class="d-block rounded m-md-0 ms-auto" loading="lazy" alt="Avatar">
 															</div>
 
-															<div class="user-review-question-duplicate d-sm-none d-block col-7"></div>
+															<!-- <div class="user-review-question-duplicate d-sm-none col-7"></div> -->
 
 															<div
-																class="col-12 d-flex align-items-start gap-md-4 gap-3 w-100 mt-sm-0 mt-3">
+																class="col-md-12 col-8 order-md-0 order-1 d-flex flex-md-row flex-column align-items-start gap-md-4 gap-3">
 																<div>
-																	Written by <span>Alex</span> from <span>Chicago</span> / <span>Mar
-																		XX</span>, <span>20XX</span>
+																	<span class="d-md-inline-block d-block">Written by Alex from
+																		Chicago</span>
+																	<span class="d-md-inline-block d-none"> / </span>
+																	<span>Mar XX, 20XX</span>
 																</div>
-																<div class="d-flex align-items-center">
-																	<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
+																<div class="d-flex align-items-center gap-4">
+																	<button class="btn btn-custom d-flex align-items-center gap-1 p-0">
 																		<span class="icon icon-like">
 																			<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
 																				viewBox="0 0 5.333 6.667">
@@ -697,7 +739,7 @@
 																		<span>XX</span>
 																	</button>
 
-																	<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
+																	<button class="btn btn-custom d-flex align-items-center gap-1 p-0">
 																		<span class="icon icon-dislike">
 																			<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
 																				viewBox="0 0 5.333 6.667">
@@ -712,8 +754,7 @@
 														</div>
 													</div>
 
-													<div
-														class="user-review-question d-sm-block mx-auto d-none col-xxl-2 col-lg-3 col-sm-6 col-12 mt-lg-0 mt-3">
+													<div class="user-review-question mx-auto col-xxl-2 col-lg-3 mt-lg-0 mt-3">
 														<span class="d-block mb-2 text-center">Is this review useful?</span>
 														<div class="d-flex align-items-center gap-2">
 															<button class="btn btn-secondary w-100 text-uppercase">Yes</button>
@@ -770,12 +811,12 @@
 														</div>
 													</div>
 
-													<h3>
+													<h3 class="text-uppercase">
 														C-IN2 Core Low Rise Brief
 													</h3>
 													<div class="col-lg-9 col-12 user-review">
 														<div class="row">
-															<p class="col-xxl-10 col-sm-9 text-justify mb-sm-2 mb-1">
+															<p class="col-xxl-10 col-md-9 lh-sm text-justify mb-md-2 mb-3">
 																Bought 3 of these all-cotton. T's in clay red, light grey, and blue
 																wing.
 																Very
@@ -786,21 +827,23 @@
 																have turned out well. Couldn't resist low, low sale pricing.
 															</p>
 
-															<div class="col-xxl-2 col-sm-3 col-5">
+															<div class="col-xxl-2 col-md-3 col-4 order-md-0 order-2">
 																<img src="./images/dist/items/avatar.jpg" width="100"
-																	class="rounded mb-sm-0 mb-1" loading="lazy" alt="Avatar">
+																	class="d-block rounded m-md-0 ms-auto" loading="lazy" alt="Avatar">
 															</div>
 
-															<div class="user-review-question-duplicate d-sm-none d-block col-7"></div>
+															<!-- <div class="user-review-question-duplicate d-sm-none col-7"></div> -->
 
 															<div
-																class="col-12 d-flex align-items-start gap-md-4 gap-3 w-100 mt-sm-0 mt-3">
+																class="col-md-12 col-8 order-md-0 order-1 d-flex flex-md-row flex-column align-items-start gap-md-4 gap-3">
 																<div>
-																	Written by <span>Alex</span> from <span>Chicago</span> / <span>Mar
-																		XX</span>, <span>20XX</span>
+																	<span class="d-md-inline-block d-block">Written by Alex from
+																		Chicago</span>
+																	<span class="d-md-inline-block d-none"> / </span>
+																	<span>Mar XX, 20XX</span>
 																</div>
-																<div class="d-flex align-items-center">
-																	<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
+																<div class="d-flex align-items-center gap-4">
+																	<button class="btn btn-custom d-flex align-items-center gap-1 p-0">
 																		<span class="icon icon-like">
 																			<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
 																				viewBox="0 0 5.333 6.667">
@@ -811,7 +854,7 @@
 																		<span>XX</span>
 																	</button>
 
-																	<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
+																	<button class="btn btn-custom d-flex align-items-center gap-1 p-0">
 																		<span class="icon icon-dislike">
 																			<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
 																				viewBox="0 0 5.333 6.667">
@@ -826,8 +869,7 @@
 														</div>
 													</div>
 
-													<div
-														class="user-review-question d-sm-block mx-auto d-none col-xxl-2 col-lg-3 col-sm-6 col-12 mt-lg-0 mt-3">
+													<div class="user-review-question mx-auto col-xxl-2 col-lg-3 mt-lg-0 mt-3">
 														<span class="d-block mb-2 text-center">Is this review useful?</span>
 														<div class="d-flex align-items-center gap-2">
 															<button class="btn btn-secondary w-100 text-uppercase">Yes</button>
@@ -884,12 +926,12 @@
 														</div>
 													</div>
 
-													<h3>
+													<h3 class="text-uppercase">
 														C-IN2 Core Low Rise Brief
 													</h3>
 													<div class="col-lg-9 col-12 user-review">
 														<div class="row">
-															<p class="col-xxl-10 col-sm-9 text-justify mb-sm-2 mb-1">
+															<p class="col-xxl-10 col-md-9 lh-sm text-justify mb-md-2 mb-3">
 																Bought 3 of these all-cotton. T's in clay red, light grey, and blue
 																wing.
 																Very
@@ -900,21 +942,23 @@
 																have turned out well. Couldn't resist low, low sale pricing.
 															</p>
 
-															<div class="col-xxl-2 col-sm-3 col-5">
+															<div class="col-xxl-2 col-md-3 col-4 order-md-0 order-2">
 																<img src="./images/dist/items/avatar.jpg" width="100"
-																	class="rounded mb-sm-0 mb-1" loading="lazy" alt="Avatar">
+																	class="d-block rounded m-md-0 ms-auto" loading="lazy" alt="Avatar">
 															</div>
 
-															<div class="user-review-question-duplicate d-sm-none d-block col-7"></div>
+															<!-- <div class="user-review-question-duplicate d-sm-none col-7"></div> -->
 
 															<div
-																class="col-12 d-flex align-items-start gap-md-4 gap-3 w-100 mt-sm-0 mt-3">
+																class="col-md-12 col-8 order-md-0 order-1 d-flex flex-md-row flex-column align-items-start gap-md-4 gap-3">
 																<div>
-																	Written by <span>Alex</span> from <span>Chicago</span> / <span>Mar
-																		XX</span>, <span>20XX</span>
+																	<span class="d-md-inline-block d-block">Written by Alex from
+																		Chicago</span>
+																	<span class="d-md-inline-block d-none"> / </span>
+																	<span>Mar XX, 20XX</span>
 																</div>
-																<div class="d-flex align-items-center">
-																	<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
+																<div class="d-flex align-items-center gap-4">
+																	<button class="btn btn-custom d-flex align-items-center gap-1 p-0">
 																		<span class="icon icon-like">
 																			<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
 																				viewBox="0 0 5.333 6.667">
@@ -925,7 +969,7 @@
 																		<span>XX</span>
 																	</button>
 
-																	<button class="btn btn-custom d-flex align-items-center gap-1 py-0">
+																	<button class="btn btn-custom d-flex align-items-center gap-1 p-0">
 																		<span class="icon icon-dislike">
 																			<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
 																				viewBox="0 0 5.333 6.667">
@@ -940,8 +984,7 @@
 														</div>
 													</div>
 
-													<div
-														class="user-review-question d-sm-block mx-auto d-none col-xxl-2 col-lg-3 col-sm-6 col-12 mt-lg-0 mt-3">
+													<div class="user-review-question mx-auto col-xxl-2 col-lg-3 mt-lg-0 mt-3">
 														<span class="d-block mb-2 text-center">Is this review useful?</span>
 														<div class="d-flex align-items-center gap-2">
 															<button class="btn btn-secondary w-100 text-uppercase">Yes</button>
@@ -950,8 +993,7 @@
 													</div>
 												</div>
 											</div>
-
-											<button class="btn btn-arrow px-0 mt-2 gap-1">
+											<button class="btn btn-arrow px-0 mt-md-2 mt-4 gap-1">
 												<span class="text-underline">Read all XX customer reviews</span>
 												<span class="icon icon-arrow-right">
 													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.91 122.88"
@@ -984,22 +1026,22 @@
 						aria-labelledby="panelsStayOpen-headingReturn">
 						<div class="accordion-body">
 							<div class="row mb-4">
-								<div class="col-sm-3 col-12">
+								<div class="col-md-3 mb-md-0 mb-2">
 									<h5 class="text-capitalize">Return Announcement</h5>
 								</div>
 
-								<div class="col-sm-9 col-12 text-justify">
+								<div class="col-md-9 lh-sm text-justify">
 									We hope you love your X-Under product. But if not, we accept returns and offer free size
 									exchanges within 30 days from your date of purchase.
 								</div>
 							</div>
 
 							<div class="row">
-								<div class="col-sm-3 col-12">
+								<div class="col-md-3 mb-md-0 mb-2">
 									<h5 class="text-capitalize">Delivery</h5>
 								</div>
 
-								<div class="col-sm-9 col-12 text-justify">
+								<div class="col-md-9 lh-sm text-justify">
 									We offer different international shipping methods. You can choose your preferred method on
 									the on the checkout page. The cost if shipping varies based on the shipping method selected.
 									Total delivery time = Proccessing time + Shipping time.

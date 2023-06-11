@@ -517,7 +517,7 @@
 	<section class="account">
 		<div class="container">
 			<div class="account-info">
-				<div class="d-flex align-items-center justify-content-between mb-5">
+				<div class="d-flex align-items-start justify-content-between mb-5">
 					<div>
 						<h2 class="mb-0 text-item text-uppercase">
 							Account
@@ -527,7 +527,7 @@
 						</div>
 					</div>
 
-					<a href="./account-signin.html" class="btn btn-arrow text-item">
+					<a href="./account-signin.html" class="btn btn-arrow text-item p-0">
 						Sign out
 						<span class="icon icon-arrow-right">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.91 122.88"
@@ -540,54 +540,17 @@
 				</div>
 
 				<div class="position-relative py-5">
-					<div class="swiper account-info-swiper">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<a href="./bag.html"
-									class="btn-link d-flex flex-column align-items-center justify-content-between h-100 fs-4 text-item text-decoration-none text-center">
-									<span class="icon icon-bag">
-										<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 6.667 9.333">
-											<path
-												d="M26.027 60.176c6.664 0 12.067-4.582 12.079-10.235h4.105c2.836 0 5.156-2.32 5.156-5.16V12.535c0-2.84-2.32-5.16-5.156-5.16H9.844c-2.836 0-5.156 2.32-5.156 5.16v32.246c0 2.84 2.32 5.16 5.156 5.16h4.105c.016 5.653 5.418 10.235 12.078 10.235zM16.773 49.94h18.508c-.011 4.328-4.152 7.832-9.254 7.832-5.101 0-9.242-3.504-9.254-7.832"
-												transform="matrix(.13333 0 0 -.13333 0 9.333)" />
-										</svg>
-									</span>
-									Bag
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="./favorite.html"
-									class="btn-link d-flex flex-column align-items-center justify-content-between h-100 fs-4 text-item text-decoration-none text-center">
-									<span class="icon icon-favorite">
-										<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 9.333 9.333">
-											<path
-												d="M62.504 43.715c0 9.09-7.367 16.46-16.461 16.46-5.934 0-11.117-3.152-14.012-7.863-2.898 4.711-8.082 7.864-14.02 7.864-9.09 0-16.46-7.371-16.46-16.461 0-4.95 2.195-9.375 5.652-12.39l23.324-23.33a2.122 2.122 0 0 1 1.504-.621 2.12 2.12 0 0 1 1.5.621l23.325 23.328c3.456 3.016 5.648 7.442 5.648 12.39"
-												transform="matrix(.13333 0 0 -.13333 0 9.333)" />
-										</svg>
-									</span>
-									Favorites
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="./orders.html"
-									class="btn-link d-flex flex-column align-items-center justify-content-between h-100 fs-4 text-item text-decoration-none text-center">
-									<span class="icon icon-order">
-										<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 8 9.333">
-											<path
-												d="M11.422 46.04H46.75a7.78 7.78 0 0 1 7.781 7.78 7.78 7.78 0 0 1-7.781 7.782H11.422a7.782 7.782 0 0 1 0-15.563zm35.328-3.11H11.422a7.78 7.78 0 1 1 0-15.559H46.75a7.78 7.78 0 1 1 0 15.559zM11.422 32.215a3.052 3.052 0 0 0-3.055 3.047 3.05 3.05 0 1 0 6.098 0 3.047 3.047 0 0 0-3.043-3.047zm35.328-7.852H11.422a7.78 7.78 0 0 1-7.781-7.781 7.78 7.78 0 0 1 7.78-7.781H46.75c4.3 0 7.781 3.48 7.781 7.781a7.78 7.78 0 0 1-7.781 7.781zM11.422 13.551a3.052 3.052 0 0 0-3.055 3.047c0 1.68 1.367 3.05 3.055 3.05a3.05 3.05 0 0 0 3.043-3.05 3.047 3.047 0 0 0-3.043-3.047zm0 43.328a3.046 3.046 0 0 0 3.043-3.05 3.05 3.05 0 0 0-3.043-3.052 3.056 3.056 0 0 0-3.055 3.051 3.056 3.056 0 0 0 3.055 3.05"
-												transform="matrix(.13333 0 0 -.13333 0 9.333)" />
-										</svg>
-									</span>
-									Orders
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="swiper-pagination account-info-pagination"></div>
-
-					<div class="swiper-button-prev account-info-prev"></div>
-					<div class="swiper-button-next account-info-next"></div>
+					<a href="./orders.html"
+						class="btn-link d-flex flex-column align-items-center justify-content-between h-100 fs-4 text-item text-decoration-none text-center">
+						<span class="icon icon-order">
+							<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 8 9.333">
+								<path
+									d="M11.422 46.04H46.75a7.78 7.78 0 0 1 7.781 7.78 7.78 7.78 0 0 1-7.781 7.782H11.422a7.782 7.782 0 0 1 0-15.563zm35.328-3.11H11.422a7.78 7.78 0 1 1 0-15.559H46.75a7.78 7.78 0 1 1 0 15.559zM11.422 32.215a3.052 3.052 0 0 0-3.055 3.047 3.05 3.05 0 1 0 6.098 0 3.047 3.047 0 0 0-3.043-3.047zm35.328-7.852H11.422a7.78 7.78 0 0 1-7.781-7.781 7.78 7.78 0 0 1 7.78-7.781H46.75c4.3 0 7.781 3.48 7.781 7.781a7.78 7.78 0 0 1-7.781 7.781zM11.422 13.551a3.052 3.052 0 0 0-3.055 3.047c0 1.68 1.367 3.05 3.055 3.05a3.05 3.05 0 0 0 3.043-3.05 3.047 3.047 0 0 0-3.043-3.047zm0 43.328a3.046 3.046 0 0 0 3.043-3.05 3.05 3.05 0 0 0-3.043-3.052 3.056 3.056 0 0 0-3.055 3.051 3.056 3.056 0 0 0 3.055 3.05"
+									transform="matrix(.13333 0 0 -.13333 0 9.333)" />
+							</svg>
+						</span>
+						Orders
+					</a>
 				</div>
 			</div>
 		</div>
@@ -600,8 +563,8 @@
 				<div class="row justify-content-xxl-center justify-content-sm-end justify-content-start mb-sm-4">
 					<div class="col-xxl-8 col-lg-9 col-12">
 						<div>
-							<div class="row gy-sm-0 gy-2 justify-content-between mb-3">
-								<div class="col-xxl-9 col-md-8 col-sm-7 col-12">
+							<div class="row gy-md-0 gy-3 justify-content-between mb-3">
+								<div class="col-xxl-9 col-md-8">
 									<div class="lh-sm">
 										<h3 class="h4 mb-0">
 											Order number: <span>XXXXXX</span>
@@ -612,8 +575,8 @@
 									</div>
 								</div>
 
-								<div class="col-xxl-3 col-md-4 col-sm-5 col-12">
-									<div class="text-sm-end">
+								<div class="col-xxl-3 col-md-4">
+									<div class="text-md-end">
 										<h3 class="h4">
 											Delivers:
 											<span class="d-block fs-5 fw-light">Shipping - Standard</span>
@@ -624,16 +587,19 @@
 						</div>
 
 						<div class="col-12">
-							<h3 class="h5 mb-0">
+							<h3 class="d-md-block d-none h5 mb-0">
 								Items:
 							</h3>
 						</div>
 
-						<div class="orders mb-5">
+						<div class="orders mb-md-5 mb-4">
 							<div class="order-item">
-								<div class="row gy-sm-0 gy-2 justify-content-between">
-									<div class="col-xxl-9 col-sm-8 col-12">
+								<div class="row gy-md-0 gy-4 justify-content-between">
+									<div class="col-xxl-9 col-md-8">
 										<div class="lh-sm">
+											<h3 class="d-md-none h5 mb-0">
+												Items:
+											</h3>
 											<div class="h5 mb-0 fw-light">
 												<span class="text-uppercase">C-IN2 CORE LOW RISE BRIE</span>
 												/
@@ -647,17 +613,19 @@
 										</div>
 									</div>
 
-									<div
-										class="col-xxl-3 col-sm-4 col-12 d-flex justify-content-sm-end justify-content-start align-self-start">
+									<div class="col-xxl-3 col-md-4 d-flex justify-content-md-end align-self-start">
 										<button class="btn btn-dark w-100 text-uppercase">Track package</button>
 									</div>
 								</div>
 							</div>
 
 							<div class="order-item">
-								<div class="row gy-sm-0 gy-2 justify-content-between">
-									<div class="col-xxl-9 col-sm-8 col-12">
+								<div class="row gy-md-0 gy-4 justify-content-between">
+									<div class="col-xxl-9 col-md-8">
 										<div class="lh-sm">
+											<h3 class="d-md-none h5 mb-0">
+												Items:
+											</h3>
 											<div class="h5 mb-0 fw-light">
 												<span class="text-uppercase">C-IN2 CORE LOW RISE BRIE</span>
 												/
@@ -666,8 +634,7 @@
 										</div>
 									</div>
 
-									<div
-										class="col-xxl-3 col-sm-4 col-12 d-flex justify-content-sm-end justify-content-start align-self-start">
+									<div class="col-xxl-3 col-md-4 d-flex justify-content-md-end align-self-start">
 										<button class="btn btn-dark w-100 text-uppercase">Track package</button>
 									</div>
 								</div>
@@ -680,9 +647,13 @@
 									aria-label="Progress bar delivery of your goods" style="width: 40%" aria-valuenow="40"
 									aria-valuemin="0" aria-valuemax="100"></div>
 							</div>
-							<div class="progress-step-1 position-absolute">Order placed</div>
-							<div class="progress-step-2 position-absolute">Order confirmed</div>
-							<div class="progress-step-3 position-absolute">Proccessing</div>
+							<div class="progress-step-1 position-absolute">
+								<span class="d-md-inline-block d-none">Order</span> placed
+							</div>
+							<div class="progress-step-2 position-absolute">
+								<span class="d-md-inline-block d-none">Order</span> confirmed
+							</div>
+							<div class="progress-step-3 position-absolute">Processing</div>
 							<div class="progress-step-4 position-absolute">Shipped</div>
 							<div class="progress-step-5 position-absolute">Delivery</div>
 						</div>
@@ -701,8 +672,8 @@
 				<div class="history-orders row justify-content-xxl-center justify-content-sm-end justify-content-start">
 					<div class="col-xxl-8 col-lg-9">
 						<div>
-							<div class="row gy-sm-0 gy-2 justify-content-between mb-4">
-								<div class="col-xl-8 col-sm-7">
+							<div class="row gy-md-0 gy-3 justify-content-between mb-4">
+								<div class="col-xl-8 col-md-7">
 									<div class="lh-sm">
 										<h3 class="h4 mb-0">
 											Order number: <span>XXXXXX</span>
@@ -713,8 +684,8 @@
 									</div>
 								</div>
 
-								<div class="col-xl-4 col-sm-5">
-									<div class="text-sm-end">
+								<div class="col-xl-4 col-md-5">
+									<div class="text-md-end">
 										<h3 class="h4 mb-0">
 											Order total: <span>$XXX.XX</span>
 										</h3>
@@ -728,14 +699,14 @@
 
 						<div class="history-wrapper">
 							<div class="history-order">
-								<div class="history-item row justify-content-sm-end justify-content-start">
-									<div class="col-md-2 col-3 d-none d-sm-block mb-sm-0 mb-4">
+								<div class="history-item row justify-content-md-end">
+									<div class="col-sm-2 col-3 mb-sm-0 mb-4">
 										<img src="./images/dist/items/item-male-2.jpg" alt="Item" class="img-thumbnail">
 									</div>
-									<div class="col-md-10 col-sm-9">
-										<div class="row g-md-2 h-100">
-											<div class="col-md-6 col-sm-8 order-sm-0 order-2">
-												<h4 class="text-uppercase">C-in2 core low rise brie</h4>
+									<div class="col-sm-10 col-9">
+										<div class="row g-md-2 h-md-100">
+											<div class="col-md-6 order-md-0 order-2">
+												<h4 class="text-uppercase mb-md-2 mb-0">C-in2 core low rise brie</h4>
 												<div>
 													BID: <span>XXXXX</span> /
 													SKU: <span>XXXXX</span> /
@@ -743,12 +714,11 @@
 												</div>
 											</div>
 
-											<div class="col-md-2 order-md-0 order-3 align-self-md-start align-self-end lh-1">
+											<div class="col-md-2 order-md-0 order-3 lh-1">
 												<span class="h4">$XX.XX</span>
 											</div>
 
-											<div
-												class="col-sm-4 d-sm-block d-flex gap-3 order-sm-0 order-1 mb-sm-0 mb-2 text-end">
+											<div class="col-4 d-md-block d-none mb-sm-0 mb-2 text-end">
 												<div class="text-truncate">ID: <span>92467583002574180320</span></div>
 												<span>Delivered</span>
 											</div>
@@ -756,14 +726,14 @@
 									</div>
 								</div>
 
-								<div class="history-item row justify-content-sm-end justify-content-start">
-									<div class="col-md-2 col-3 d-none d-sm-block mb-sm-0 mb-4">
+								<div class="history-item row justify-content-md-end">
+									<div class="col-sm-2 col-3 mb-sm-0 mb-4">
 										<img src="./images/dist/items/item-male-2.jpg" alt="Item" class="img-thumbnail">
 									</div>
-									<div class="col-md-10 col-sm-9">
-										<div class="row g-md-2 h-100">
-											<div class="col-md-6 col-sm-8">
-												<h4 class="text-uppercase">C-in2 core low rise brie</h4>
+									<div class="col-md-10 col-9">
+										<div class="row g-md-2 h-md-100">
+											<div class="col-md-6 order-md-0 order-2">
+												<h4 class="text-uppercase mb-md-2 mb-0">C-in2 core low rise brie</h4>
 												<div>
 													BID: <span>XXXXX</span> /
 													SKU: <span>XXXXX</span> /
@@ -771,23 +741,27 @@
 												</div>
 											</div>
 
-											<div class="col-md-2 order-md-0 order-sm-2 align-self-md-start align-self-end lh-1">
+											<div class="col-md-2 order-md-0 order-3 lh-1">
 												<span class="h4">$XX.XX</span>
 											</div>
 										</div>
 									</div>
+								</div>
+
+								<div class="history-item history-order-id d-md-none text-truncate">
+									Delivered: ID: 92467583002574180320
 								</div>
 							</div>
 
 							<div class="history-order">
-								<div class="history-item row justify-content-sm-end justify-content-start">
-									<div class="col-md-2 col-3 d-none d-sm-block mb-sm-0 mb-4">
+								<div class="history-item row justify-content-md-end">
+									<div class="col-sm-2 col-3 mb-sm-0 mb-4">
 										<img src="./images/dist/items/item-male-2.jpg" alt="Item" class="img-thumbnail">
 									</div>
-									<div class="col-md-10 col-sm-9">
-										<div class="row g-md-2 h-100">
-											<div class="col-md-6 col-sm-8 order-sm-0 order-2">
-												<h4 class="text-uppercase">C-in2 core low rise brie</h4>
+									<div class="col-md-10 col-9">
+										<div class="row g-md-2 h-md-100">
+											<div class="col-md-6 order-md-0 order-2">
+												<h4 class="text-uppercase mb-md-2 mb-0">C-in2 core low rise brie</h4>
 												<div>
 													BID: <span>XXXXX</span> /
 													SKU: <span>XXXXX</span> /
@@ -795,17 +769,20 @@
 												</div>
 											</div>
 
-											<div class="col-md-2 order-md-0 order-3 align-self-md-start align-self-end lh-1">
+											<div class="col-md-2 order-md-0 order-3 lh-1">
 												<span class="h4">$XX.XX</span>
 											</div>
 
-											<div
-												class="col-sm-4 d-sm-block d-flex gap-3 order-sm-0 order-1 mb-sm-0 mb-2 text-end">
+											<div class="col-4 d-md-block d-none mb-sm-0 mb-2 text-end">
 												<div class="text-truncate">ID: <span>92467583002574180320</span></div>
 												<span>Delivered</span>
 											</div>
 										</div>
 									</div>
+								</div>
+
+								<div class="history-item history-order-id d-md-none text-truncate">
+									Delivered: ID: 92467583002574180320
 								</div>
 							</div>
 						</div>
@@ -815,8 +792,8 @@
 				<div class="history-orders row justify-content-xxl-center justify-content-sm-end justify-content-start">
 					<div class="col-xxl-8 col-lg-9">
 						<div>
-							<div class="row gy-sm-0 gy-2 justify-content-between mb-4">
-								<div class="col-xl-8 col-sm-7">
+							<div class="row gy-md-0 gy-3 justify-content-between mb-4">
+								<div class="col-xl-8 col-md-7">
 									<div class="lh-sm">
 										<h3 class="h4 mb-0">
 											Order number: <span>XXXXXX</span>
@@ -827,8 +804,8 @@
 									</div>
 								</div>
 
-								<div class="col-xl-4 col-sm-5">
-									<div class="text-sm-end">
+								<div class="col-xl-4 col-md-5">
+									<div class="text-md-end">
 										<h3 class="h4 mb-0">
 											Order total: <span>$XXX.XX</span>
 										</h3>
@@ -842,14 +819,14 @@
 
 						<div class="history-wrapper">
 							<div class="history-order">
-								<div class="history-item row justify-content-sm-end justify-content-start">
-									<div class="col-md-2 col-3 d-none d-sm-block mb-sm-0 mb-4">
+								<div class="history-item row justify-content-md-end">
+									<div class="col-sm-2 col-3 mb-sm-0 mb-4">
 										<img src="./images/dist/items/item-male-2.jpg" alt="Item" class="img-thumbnail">
 									</div>
-									<div class="col-md-10 col-sm-9">
-										<div class="row g-md-2 h-100">
-											<div class="col-md-6 col-sm-8 order-sm-0 order-2">
-												<h4 class="text-uppercase">C-in2 core low rise brie</h4>
+									<div class="col-sm-10 col-9">
+										<div class="row g-md-2 h-md-100">
+											<div class="col-md-6 order-md-0 order-2">
+												<h4 class="text-uppercase mb-md-2 mb-0">C-in2 core low rise brie</h4>
 												<div>
 													BID: <span>XXXXX</span> /
 													SKU: <span>XXXXX</span> /
@@ -857,12 +834,11 @@
 												</div>
 											</div>
 
-											<div class="col-md-2 order-md-0 order-3 align-self-md-start align-self-end lh-1">
+											<div class="col-md-2 order-md-0 order-3 lh-1">
 												<span class="h4">$XX.XX</span>
 											</div>
 
-											<div
-												class="col-sm-4 d-sm-block d-flex gap-3 order-sm-0 order-1 mb-sm-0 mb-2 text-end">
+											<div class="col-4 d-md-block d-none mb-sm-0 mb-2 text-end">
 												<div class="text-truncate">ID: <span>92467583002574180320</span></div>
 												<span>Delivered</span>
 											</div>
@@ -870,14 +846,14 @@
 									</div>
 								</div>
 
-								<div class="history-item row justify-content-sm-end justify-content-start">
-									<div class="col-md-2 col-3 d-none d-sm-block mb-sm-0 mb-4">
+								<div class="history-item row justify-content-md-end">
+									<div class="col-sm-2 col-3 mb-sm-0 mb-4">
 										<img src="./images/dist/items/item-male-2.jpg" alt="Item" class="img-thumbnail">
 									</div>
-									<div class="col-md-10 col-sm-9">
-										<div class="row g-md-2 h-100">
-											<div class="col-md-6 col-sm-8">
-												<h4 class="text-uppercase">C-in2 core low rise brie</h4>
+									<div class="col-md-10 col-9">
+										<div class="row g-md-2 h-md-100">
+											<div class="col-md-6 order-md-0 order-2">
+												<h4 class="text-uppercase mb-md-2 mb-0">C-in2 core low rise brie</h4>
 												<div>
 													BID: <span>XXXXX</span> /
 													SKU: <span>XXXXX</span> /
@@ -885,11 +861,15 @@
 												</div>
 											</div>
 
-											<div class="col-md-2 order-md-0 order-sm-2 align-self-md-start align-self-end lh-1">
+											<div class="col-md-2 order-md-0 order-3 lh-1">
 												<span class="h4">$XX.XX</span>
 											</div>
 										</div>
 									</div>
+								</div>
+
+								<div class="history-item history-order-id d-md-none text-truncate">
+									Delivered: ID: 92467583002574180320
 								</div>
 							</div>
 						</div>
@@ -899,18 +879,20 @@
 
 
 			<div class="row justify-content-center my-4 my-md-5">
-				<div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-5 col-8 text-center">
+				<div class="col-xxl-2 col-xl-3 col-lg-4 text-center">
 					<button class="btn btn-dark btn-lg w-100 text-uppercase mb-3">Show
 						more</button>
-					<div>
-						<div class="fs-5 mb-2">Showing
-							<span>X</span>
-							of
-							<span>XX</span>
-						</div>
-						<div class="progress">
-							<div class="progress-bar" role="progressbar" aria-label="Basic example" style="width: 20%;"
-								aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+					<div class="row justify-content-center">
+						<div class="col-lg-12 col-sm-6 col-8">
+							<div class="fs-5 mb-2">Showing
+								<span>X</span>
+								of
+								<span>XX</span>
+							</div>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" aria-label="Basic example" style="width: 20%;"
+									aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -1454,7 +1436,7 @@
 				<div class="modal-header">
 					<button type="button" class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5"
 						data-bs-dismiss="modal" aria-label="Close">
-						<span class="d-xl-inline-block d-none">Close</span>
+						Close
 					</button>
 				</div>
 

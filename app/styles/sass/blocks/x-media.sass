@@ -101,12 +101,10 @@
 
 	.account-order
 		.progress
-			&-step-2, &-step-4
-				bottom: auto
 			&-step-2
-				top: .25rem
+				left: 20%
 			&-step-4
-				top: .25rem
+				right: 20%
 
 @include media-breakpoint-down(lg)
 	:root
@@ -227,9 +225,6 @@
 				left: 30px
 				bottom: -50px
 
-	.product-accordion .icon-star
-		width: 1.45rem
-
 	.modal-installments .modal-footer-img
 		border-right: none
 		border-bottom: 3px solid var(--item-color)
@@ -256,6 +251,9 @@
 		.card-bag-wrapper
 			max-width: 320px
 
+	.product-accordion .icon-star
+		width: 1.45rem
+
 	.product-item
 		.card-bag
 			.btn-remove
@@ -270,6 +268,9 @@
 					border-bottom: none
 				.btn-dark
 					margin-left: unset
+
+	.product-slider-thumbs.swiper-container
+		width: 80%
 
 	.affiliate-signup
 		padding-top: 3rem
@@ -308,6 +309,9 @@
 
 	.swiper-pagination-bullet
 		width: calc( 2.2rem + 2vw )
+	
+	.h-md-100
+		height: auto!important
 
 	.block-share
 		.h5
@@ -321,11 +325,6 @@
 		.btn-like
 			--bs-btn-font-size: .75rem
 			--bs-btn-padding-x: .4rem
-
-	.custom-accordion
-		.accordion-collapse-word
-			.accordion-button::before
-				display: none
 
 	.alert-info
 		.swiper-container
@@ -439,18 +438,38 @@
 		.btn-icon
 			right: -6rem
 
+	.account-order
+		.orders
+			.order-item
+				border: none
+				padding-block: .75rem
+			.btn-dark
+				max-width: 100%
+				font-size: 1.25rem
+				padding: .5rem
+		.progress
+			&-step-2, &-step-1
+				text-transform: capitalize
+
 	.product
 		&-slider-thumbs.swiper-container
-			width: 65%
-		&-support, &-support-duplicate
-			&.fs-5, .fs-5
-				font-size: .75rem!important
+			width: 85%
+		.product-thumb-wrapper
+			max-width: 460px
+			margin-inline: auto
+		.block-share
 			.fs-6
-				font-size: .65rem!important
-			.h5
-				font-size: 1rem
+				font-size: 1rem!important
 			.icon
-				height: .9rem
+				height: 1.25rem
+		&-accordion
+			.product-review
+				padding-block: 2rem 1rem
+			.accordion-body
+				padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x) calc(var(--bs-accordion-body-padding-y) * 2) var(--bs-accordion-body-padding-x)
+
+	.recent .swiper-container
+		width: 50%
 
 	.gift-accordion
 		.accordion
@@ -472,6 +491,11 @@
 		margin-right: -.2rem
 	.swiper-button-prev:after
 		margin-left: -.2rem
+
+	.custom-accordion
+		.accordion-collapse-word
+			.accordion-button::before
+				display: none
 
 	.btn-close-word
 		background-position: center
@@ -693,17 +717,13 @@
 	.account-order
 		.progress
 			&-step-1, &-step-2, &-step-3, &-step-4, &-step-5
-				font-size: calc( .75rem + 1vw )
-			&-step-1, &-step-3, &-step-5
-				bottom: .75rem
-			&-step-2, &-step-4
-				top: .75rem
+				font-size: calc( .25rem + 3vw )
 			&-step-2
-				left: 15%
+				left: 17%
 			&-step-3
-				left: 40%
+				left: 41%
 			&-step-4
-				right: 15%
+				right: 17%
 
 	.product-slider-thumbs.swiper-container
 		width: 75%
