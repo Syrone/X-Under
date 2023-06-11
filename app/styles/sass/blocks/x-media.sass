@@ -24,6 +24,9 @@
 	.product-slider-thumbs.swiper-container
 		width: 90%
 
+	.account-rewards-progress
+		max-width: 290px
+
 	.footer
 		&-top
 			gap: 1rem
@@ -145,6 +148,13 @@
 	#itemNotificModal
 		.modal-title
 			max-width: 340px
+
+	#rewardsModal
+		.rewards-input + .rewards-input
+			&:after
+				left: 50%
+				bottom: 105%
+				transform: translateX(-50%)
 
 	.btn-lg
 		--bs-btn-padding-x: .5rem
@@ -269,6 +279,9 @@
 				.btn-dark
 					margin-left: unset
 
+	.account-rewards-progress
+		max-width: 100%
+
 	.product-slider-thumbs.swiper-container
 		width: 80%
 
@@ -309,7 +322,7 @@
 
 	.swiper-pagination-bullet
 		width: calc( 2.2rem + 2vw )
-	
+
 	.h-md-100
 		height: auto!important
 
@@ -450,7 +463,7 @@
 		.progress
 			&-step-2, &-step-1
 				text-transform: capitalize
-			
+
 	.account-history .history-wrapper .history-order .btn-history-item
 		max-width: 100%
 
@@ -517,6 +530,9 @@
 	#itemNotificModal,
 	#itemVideoModal,
 	#hearXUnderModal,
+	#rewardsModal,
+	#rewardsCodeModal,
+	#helpRewardsModal,
 	.offcanvas
 		.btn-close-word
 			background-position: 90%

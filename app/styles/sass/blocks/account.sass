@@ -14,10 +14,8 @@
 			&:hover
 				color: var(--accent)
 				svg
-					transition: fill var(--trt-1), transform var(--trt-1)
-					fill: var(--accent)
+					fill: currentColor
 
-		
 		.account-info-prev, .account-info-next
 			color: var(--item-color)
 			background-color: var(--transparent)
@@ -157,3 +155,26 @@
 					margin-top: 1.5rem
 				.btn-history-item
 					max-width: 230px
+
+	&-rewards
+		padding-block: 4rem
+		.accoung-balance
+			padding: 2rem 1rem
+		&-header
+			.btn-link, .btn-arrow
+				max-width: max-content
+		&-progress
+			max-width: 92%
+			margin-left: auto
+			.icon-info
+				width: 0.75rem
+			.progress
+				--bs-progress-height: .3rem
+				--bs-progress-bg: var(--table-body)
+				--bs-progress-bar-bg: var(--item-color)
+		.btn-arrow
+			--text-color: var(--item-color)
+			&:hover
+				color: var(--accent)
+				svg
+					fill: currentColor

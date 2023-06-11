@@ -111,8 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (document.getElementById('hearXUnderModal')) {
 		const formSubmittedKey = 'formSubmitted';
 		const showModal = () => {
-			const myModal = new bootstrap.Modal(document.getElementById('hearXUnderModal'));
-			myModal.show();
+			const hearXUnderModal = new bootstrap.Modal(document.getElementById('hearXUnderModal'));
+			hearXUnderModal.show();
 		};
 
 		const showModalWithDelay = (delay) => {
@@ -136,9 +136,46 @@ document.addEventListener('DOMContentLoaded', () => {
 		document.getElementById('hearXUnderForm').addEventListener('submit', (event) => {
 			event.preventDefault();
 			setCookie(formSubmittedKey, 'true', 365); // Сохранить cookie на 1 год
-			const myModal = bootstrap.Modal.getInstance(document.getElementById('hearXUnderModal'));
-			myModal.hide();
+			const hearXUnderModal = bootstrap.Modal.getInstance(document.getElementById('hearXUnderModal'));
+			hearXUnderModal.hide();
 		});
+	}
+
+	const alertPromotions = document.getElementById('alertPromotions');
+	const alertCookie = getCookie('alert-promotions-2023');
+
+	if (alertCookie && alertPromotions) {
+		if (alertCookie === 'true') {
+			alertPromotions.remove();
+		} else {
+			alertPromotions.classList.add('show')
+		}
+	}
+
+	alertPromotions.addEventListener('closed.bs.alert', () => {
+		setCookie('alert-promotions-2023', 'true', 1);
+	});
+
+	function setCookie(name, value, days) {
+		const date = new Date();
+		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+		const expires = `expires=${date.toUTCString()}`;
+		document.cookie = `${name}=${value};${expires};path=/`;
+	}
+
+	function getCookie(name) {
+		const nameEQ = `${name}=`;
+		const cookies = document.cookie.split(';');
+		for (let i = 0; i < cookies.length; i++) {
+			let cookie = cookies[i];
+			while (cookie.charAt(0) === ' ') {
+				cookie = cookie.substring(1, cookie.length);
+			}
+			if (cookie.indexOf(nameEQ) === 0) {
+				return cookie.substring(nameEQ.length, cookie.length);
+			}
+		}
+		return null;
 	}
 
 	//END COOKIE
@@ -1068,7 +1105,21 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
+	//BTN COPY PROMOCODE
+	const rewardsCode = document.getElementById('rewardsCode');
+	const rewardsCodeBtn = document.getElementById('rewardsCodeBtn');
 
+	if (rewardsCode && rewardsCodeBtn) {
+		document.getElementById('rewardsCodeBtn').addEventListener('click', async function () {
+			try {
+				await navigator.clipboard.writeText(rewardsCode.textContent);
+
+				rewardsCodeBtn.classList.add('disabled');
+			} catch (err) {
+				console.error('Не удалось скопировать промокод:', err);
+			}
+		});
+	}
 
 
 	//Duplicate HTML

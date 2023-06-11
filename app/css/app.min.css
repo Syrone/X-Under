@@ -13961,6 +13961,13 @@ body, .modal {
 .icon-rewards svg {
   fill: currentColor;
 }
+.icon-cup {
+  width: 5.5rem;
+  height: auto;
+}
+.icon-cup svg {
+  fill: currentColor;
+}
 
 .text-underline {
   line-height: 1;
@@ -15160,22 +15167,22 @@ input[type=number] {
   margin: 0;
 }
 
-#contactInfoModal .modal-content, #contactInfoModal2 .modal-content, #billingContactModal .modal-content, #paymentMethodModal .modal-content, #paymentMethodModal2 .modal-content, #promocodeModal .modal-content {
+#contactInfoModal .modal-content, #contactInfoModal2 .modal-content, #billingContactModal .modal-content, #paymentMethodModal .modal-content, #paymentMethodModal2 .modal-content, #promocodeModal .modal-content, #rewardsModal .modal-content, #rewardsCodeModal .modal-content, #helpRewardsModal .modal-content {
   padding-block: 3rem 6rem;
 }
-#contactInfoModal .modal-header, #contactInfoModal2 .modal-header, #billingContactModal .modal-header, #paymentMethodModal .modal-header, #paymentMethodModal2 .modal-header, #promocodeModal .modal-header {
+#contactInfoModal .modal-header, #contactInfoModal2 .modal-header, #billingContactModal .modal-header, #paymentMethodModal .modal-header, #paymentMethodModal2 .modal-header, #promocodeModal .modal-header, #rewardsModal .modal-header, #rewardsCodeModal .modal-header, #helpRewardsModal .modal-header {
   padding-inline: 2rem;
 }
-#contactInfoModal .modal-body, #contactInfoModal .modal-footer, #contactInfoModal2 .modal-body, #contactInfoModal2 .modal-footer, #billingContactModal .modal-body, #billingContactModal .modal-footer, #paymentMethodModal .modal-body, #paymentMethodModal .modal-footer, #paymentMethodModal2 .modal-body, #paymentMethodModal2 .modal-footer, #promocodeModal .modal-body, #promocodeModal .modal-footer {
+#contactInfoModal .modal-body, #contactInfoModal .modal-footer, #contactInfoModal2 .modal-body, #contactInfoModal2 .modal-footer, #billingContactModal .modal-body, #billingContactModal .modal-footer, #paymentMethodModal .modal-body, #paymentMethodModal .modal-footer, #paymentMethodModal2 .modal-body, #paymentMethodModal2 .modal-footer, #promocodeModal .modal-body, #promocodeModal .modal-footer, #rewardsModal .modal-body, #rewardsModal .modal-footer, #rewardsCodeModal .modal-body, #rewardsCodeModal .modal-footer, #helpRewardsModal .modal-body, #helpRewardsModal .modal-footer {
   display: block;
 }
-#contactInfoModal .modal-body, #contactInfoModal2 .modal-body, #billingContactModal .modal-body, #paymentMethodModal .modal-body, #paymentMethodModal2 .modal-body, #promocodeModal .modal-body {
+#contactInfoModal .modal-body, #contactInfoModal2 .modal-body, #billingContactModal .modal-body, #paymentMethodModal .modal-body, #paymentMethodModal2 .modal-body, #promocodeModal .modal-body, #rewardsModal .modal-body, #rewardsCodeModal .modal-body, #helpRewardsModal .modal-body {
   margin-bottom: 6rem;
 }
-#contactInfoModal .modal-footer, #contactInfoModal2 .modal-footer, #billingContactModal .modal-footer, #paymentMethodModal .modal-footer, #paymentMethodModal2 .modal-footer, #promocodeModal .modal-footer {
+#contactInfoModal .modal-footer, #contactInfoModal2 .modal-footer, #billingContactModal .modal-footer, #paymentMethodModal .modal-footer, #paymentMethodModal2 .modal-footer, #promocodeModal .modal-footer, #rewardsModal .modal-footer, #rewardsCodeModal .modal-footer, #helpRewardsModal .modal-footer {
   padding: 0;
 }
-#contactInfoModal .modal-footer > *, #contactInfoModal2 .modal-footer > *, #billingContactModal .modal-footer > *, #paymentMethodModal .modal-footer > *, #paymentMethodModal2 .modal-footer > *, #promocodeModal .modal-footer > * {
+#contactInfoModal .modal-footer > *, #contactInfoModal2 .modal-footer > *, #billingContactModal .modal-footer > *, #paymentMethodModal .modal-footer > *, #paymentMethodModal2 .modal-footer > *, #promocodeModal .modal-footer > *, #rewardsModal .modal-footer > *, #rewardsCodeModal .modal-footer > *, #helpRewardsModal .modal-footer > * {
   margin: 0;
 }
 
@@ -15193,6 +15200,120 @@ input[type=number] {
 }
 #affiliateGuideModal .affiliate-guide-next, #affiliateGuideModal .swiper-rtl .affiliate-guide-prev {
   right: var(--swiper-navigation-sides-offset, 70px);
+}
+
+#rewardsModal .rewards-input + .rewards-input {
+  position: relative;
+}
+#rewardsModal .rewards-input + .rewards-input:after {
+  content: "=";
+  left: -0.45rem;
+  bottom: 0.75rem;
+  position: absolute;
+}
+#rewardsModal .form-label {
+  font-size: 1.25rem;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+#rewardsModal .form-control-lg {
+  text-align: center;
+}
+#rewardsModal #pointsControlInput {
+  font-size: 0.75rem;
+  min-height: 48.13px;
+}
+#rewardsModal #pointsControlInput::-webkit-input-placeholder {
+  font-size: 0.75rem;
+  text-align: center;
+}
+#rewardsModal #pointsControlInput::-moz-placeholder {
+  font-size: 0.75rem;
+  text-align: center;
+}
+#rewardsModal #pointsControlInput:-ms-input-placeholder {
+  font-size: 0.75rem;
+  text-align: center;
+}
+#rewardsModal #pointsControlInput::-ms-input-placeholder {
+  font-size: 0.75rem;
+  text-align: center;
+}
+#rewardsModal #pointsControlInput::placeholder {
+  font-size: 0.75rem;
+  text-align: center;
+}
+#rewardsModal #pointsControlInput:focus {
+  font-size: 1.25rem;
+}
+#rewardsModal #pointsControlInput:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+#rewardsModal #pointsControlInput:focus::-moz-placeholder {
+  opacity: 0;
+}
+#rewardsModal #pointsControlInput:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+#rewardsModal #pointsControlInput:focus::-ms-input-placeholder {
+  opacity: 0;
+}
+#rewardsModal #pointsControlInput:focus::placeholder {
+  opacity: 0;
+}
+
+#rewardsCodeModal .btn-primary {
+  --bs-btn-disabled-color: var(--item-color);
+  --bs-btn-disabled-bg: var(--item-color);
+  --bs-btn-disabled-border-color: var(--item-color);
+  --bs-btn-disabled-opacity: 1;
+}
+#rewardsCodeModal .btn-primary.disabled {
+  --gradient-accent: var(--item-color);
+}
+#rewardsCodeModal .btn-primary.disabled:focus {
+  border: 2px solid var(--item-color);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#helpRewardsModal .modal-body {
+  margin-bottom: 0;
+}
+#helpRewardsModal .modal-body-header {
+  max-width: 840px;
+  margin-inline: auto;
+}
+#helpRewardsModal .list-group {
+  --bs-list-group-bg: var(--body-color);
+  --bs-list-group-color: var(--text-color);
+  --bs-list-group-border-color: var(--item-color);
+  border-radius: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+#helpRewardsModal .list-group .list-group-item {
+  width: 100%;
+  border-radius: 0;
+  font-weight: 300;
+}
+#helpRewardsModal .list-group:first-child .list-group-item {
+  font-weight: 400;
+}
+#helpRewardsModal .list-group:first-child .list-group-item:first-child {
+  border-top-left-radius: var(--bs-list-group-border-radius);
+}
+#helpRewardsModal .list-group:first-child .list-group-item:last-child {
+  border-top-right-radius: var(--bs-list-group-border-radius);
+}
+#helpRewardsModal .list-group:last-child .list-group-item:first-child {
+  border-bottom-left-radius: var(--bs-list-group-border-radius);
+}
+#helpRewardsModal .list-group:last-child .list-group-item:last-child {
+  border-bottom-right-radius: var(--bs-list-group-border-radius);
 }
 
 .account-info {
@@ -15215,12 +15336,7 @@ input[type=number] {
   color: var(--accent);
 }
 .account-info .btn-arrow:hover svg {
-  -webkit-transition: fill var(--trt-1), -webkit-transform var(--trt-1);
-  transition: fill var(--trt-1), -webkit-transform var(--trt-1);
-  -o-transition: fill var(--trt-1), transform var(--trt-1);
-  transition: fill var(--trt-1), transform var(--trt-1);
-  transition: fill var(--trt-1), transform var(--trt-1), -webkit-transform var(--trt-1);
-  fill: var(--accent);
+  fill: currentColor;
 }
 .account-info .account-info-prev, .account-info .account-info-next {
   color: var(--item-color);
@@ -15398,6 +15514,38 @@ input[type=number] {
 }
 .account-history .history-wrapper .history-order .btn-history-item {
   max-width: 230px;
+}
+.account-rewards {
+  padding-block: 4rem;
+}
+.account-rewards .accoung-balance {
+  padding: 2rem 1rem;
+}
+.account-rewards-header .btn-link, .account-rewards-header .btn-arrow {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+.account-rewards-progress {
+  max-width: 92%;
+  margin-left: auto;
+}
+.account-rewards-progress .icon-info {
+  width: 0.75rem;
+}
+.account-rewards-progress .progress {
+  --bs-progress-height: .3rem;
+  --bs-progress-bg: var(--table-body);
+  --bs-progress-bar-bg: var(--item-color);
+}
+.account-rewards .btn-arrow {
+  --text-color: var(--item-color);
+}
+.account-rewards .btn-arrow:hover {
+  color: var(--accent);
+}
+.account-rewards .btn-arrow:hover svg {
+  fill: currentColor;
 }
 
 .advantages.section {
@@ -15886,11 +16034,17 @@ input[type=number] {
   --custom-accordion-btn-padding-x: 2rem;
   --bs-accordion-border-radius: 0;
   --bs-accordion-inner-border-radius: 0;
+  --bs-accordion-border-width: 1px;
   --bs-accordion-color: var(--text-color-light);
   --bs-accordion-btn-color: var(--text-color-light);
   --bs-accordion-bg: var(--body-color);
+  --bs-accordion-border-color: var(--item-color-light);
   --bs-accordion-btn-icon: url(../images/dist/icons/close-light.svg);
   --bs-accordion-btn-active-icon: url(../images/dist/icons/close-light.svg);
+}
+.category-bottom-duplicate .accordion-item {
+  border: none;
+  border-bottom: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
 }
 .category-bottom-duplicate .accordion-button {
   padding: var(--bs-accordion-btn-padding-y) 0 var(--bs-accordion-btn-padding-y) var(--custom-accordion-btn-padding-x);
@@ -16201,6 +16355,9 @@ input[type=number] {
   display: block;
   max-width: 320px;
   margin-inline: auto;
+}
+.favorite .product-item:last-child {
+  border-bottom: 1px solid var(--table-body);
 }
 
 .featured.section {
@@ -16571,6 +16728,17 @@ input[type=number] {
 }
 .hotoffer-text {
   max-width: 990px;
+  margin-inline: auto;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.multipacks .container {
+  padding-block: 5rem 3rem;
+  color: var(--item-color);
+}
+.multipacks-text {
+  max-width: 740px;
   margin-inline: auto;
   text-align: center;
   line-height: 1.25;
@@ -17134,6 +17302,9 @@ input[type=number] {
   .product-slider-thumbs.swiper-container {
     width: 90%;
   }
+  .account-rewards-progress {
+    max-width: 290px;
+  }
   .footer-top {
     gap: 1rem;
   }
@@ -17260,6 +17431,13 @@ input[type=number] {
   }
   #itemNotificModal .modal-title {
     max-width: 340px;
+  }
+  #rewardsModal .rewards-input + .rewards-input:after {
+    left: 50%;
+    bottom: 105%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   .btn-lg, .btn-group-lg > .btn {
     --bs-btn-padding-x: .5rem;
@@ -17403,6 +17581,9 @@ input[type=number] {
   }
   .product-item .card-bag .card-body .btn-dark {
     margin-left: unset;
+  }
+  .account-rewards-progress {
+    max-width: 100%;
   }
   .product-slider-thumbs.swiper-container {
     width: 80%;
@@ -17664,6 +17845,9 @@ input[type=number] {
   #itemNotificModal .btn-close-word,
   #itemVideoModal .btn-close-word,
   #hearXUnderModal .btn-close-word,
+  #rewardsModal .btn-close-word,
+  #rewardsCodeModal .btn-close-word,
+  #helpRewardsModal .btn-close-word,
   .offcanvas .btn-close-word {
     background-position: 90%;
     width: 6.25rem;

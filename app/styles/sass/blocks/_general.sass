@@ -496,6 +496,11 @@ body, .modal
 		height: 5rem
 		svg
 			fill: currentColor
+	&-cup
+		width: 5.5rem
+		height: auto
+		svg
+			fill: currentColor
 
 .text-underline
 	line-height: 1
@@ -1365,7 +1370,7 @@ input[type=number]
 		&>*
 			margin: 0
 
-#contactInfoModal, #contactInfoModal2, #billingContactModal, #paymentMethodModal, #paymentMethodModal2, #promocodeModal
+#contactInfoModal, #contactInfoModal2, #billingContactModal, #paymentMethodModal, #paymentMethodModal2, #promocodeModal, #rewardsModal, #rewardsCodeModal, #helpRewardsModal
 	.modal-content
 		padding-block: 3rem 6rem
 
@@ -1395,3 +1400,71 @@ input[type=number]
 		left: var(--swiper-navigation-sides-offset,70px)
 	.affiliate-guide-next, .swiper-rtl .affiliate-guide-prev
 		right: var(--swiper-navigation-sides-offset,70px)
+
+#rewardsModal
+	.rewards-input + .rewards-input
+		position: relative
+		&:after
+			content: '='
+			left: -.45rem
+			bottom: .75rem
+			position: absolute
+	.form-label
+		font-size: 1.25rem
+		text-align: center
+		width: 100%
+		margin-bottom: .25rem
+	.form-control-lg
+		text-align: center
+	#pointsControlInput
+		font-size: .75rem
+		min-height: 48.13px
+		&::placeholder
+			font-size: .75rem
+			text-align: center
+		&:focus
+			font-size: 1.25rem
+			&::placeholder
+				opacity: 0
+
+#rewardsCodeModal
+	.btn-primary
+		--bs-btn-disabled-color: var(--item-color)
+		--bs-btn-disabled-bg: var(--item-color)
+		--bs-btn-disabled-border-color: var(--item-color)
+		--bs-btn-disabled-opacity: 1
+		&.disabled
+			--gradient-accent: var(--item-color)
+			&:focus
+				border: 2px solid var(--item-color)
+				box-shadow: none
+
+#helpRewardsModal
+	.modal-body
+		margin-bottom: 0
+		&-header
+			max-width: 840px
+			margin-inline: auto
+	.list-group
+		--bs-list-group-bg: var(--body-color)
+		--bs-list-group-color: var(--text-color)
+		--bs-list-group-border-color: var(--item-color)
+		border-radius: 0
+		justify-content: space-between
+		text-align: center
+		.list-group-item
+			width: 100%
+			border-radius: 0
+			font-weight: 300
+		&:first-child
+			.list-group-item
+				font-weight: 400
+				&:first-child
+					border-top-left-radius: var(--bs-list-group-border-radius)
+				&:last-child
+					border-top-right-radius: var(--bs-list-group-border-radius)
+		&:last-child
+			.list-group-item:first-child
+				border-bottom-left-radius: var(--bs-list-group-border-radius)
+			.list-group-item:last-child
+				border-bottom-right-radius: var(--bs-list-group-border-radius)

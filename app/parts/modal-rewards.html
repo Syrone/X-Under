@@ -1,0 +1,179 @@
+<div class="modal fade" id="rewardsModal" tabindex="-1" aria-labelledby="rewardsModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content justify-content-center">
+			<div class="container">
+				<div class="modal-header">
+					<button type="button" class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5"
+						data-bs-dismiss="modal" aria-label="Close">
+						Close
+					</button>
+				</div>
+
+				<form action="#">
+					<div class="modal-body">
+						<h2 class="modal-title mb-5 text-primary text-center" id="rewardsModalLabel">
+							<span class="d-block text-uppercase">Get rewards</span>
+							<span>Current balance: XXX PTS</span>
+						</h2>
+
+						<div class="row gx-0 justify-content-center">
+							<div class="col-xl-8">
+								<div class="row g-5">
+									<div class="col-lg-6 rewards-input">
+										<div>
+											<label for="pointsControlInput" class="form-label">Points value to be redeemed</label>
+											<input type="number" class="form-control form-control-lg form-control-dark"
+												id="pointsControlInput" placeholder="Enter the number of points to redeem" required>
+										</div>
+									</div>
+
+									<div class="col-lg-6 rewards-input">
+										<div>
+											<label for="amountsControlInput" class="form-label">Redemption amount</label>
+											<input type="number" class="form-control form-control-lg form-control-dark"
+												id="amountsControlInput" placeholder="$XX.XX" readonly>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="row w-100 justify-content-center">
+							<div class="col-xl-6 col-lg-10">
+								<div class="row gx-5 gy-3">
+									<div class="col-sm-6">
+										<button type="submit" class="btn btn-primary btn-accent btn-lg w-100 text-uppercase"
+											data-bs-toggle="modal" data-bs-target="#rewardsCodeModal">
+											Submit
+										</button>
+									</div>
+
+									<div class="col-sm-6">
+										<button type="button" class="btn btn-outline-secondary btn-lg w-100 text-uppercase"
+											data-bs-dismiss="modal">
+											Cancel
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade" id="rewardsCodeModal" tabindex="-1" aria-labelledby="rewardsCodeModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content justify-content-center">
+			<div class="container">
+				<div class="modal-header">
+					<button type="button" class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5"
+						data-bs-dismiss="modal" aria-label="Close">
+						Close
+					</button>
+				</div>
+
+				<form action="#">
+					<div class="modal-body">
+						<h2 class="modal-title mb-5 text-primary text-center" id="rewardsCodeModalLabel">
+							<span class="d-block text-uppercase">Get rewards</span>
+							<span>Current balance: XXX PTS</span>
+						</h2>
+
+						<div class="row justify-content-center">
+							<div class="col-xl-3 col-lg-5">
+								<div class="text-black text-center text-uppercase mb-3">
+									<span class="d-block h5 mb-0">GET $XX.XX OFF</span>
+									<span>
+										USED CODE: <span id="rewardsCode">GH5D-8JDF-W9D3</span>
+									</span>
+								</div>
+								<button type="button" id="rewardsCodeBtn"
+									class="btn btn-primary btn-accent btn-lg w-100 text-uppercase">
+									Copy code
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="row w-100 justify-content-center">
+							<div class="col-xl-3 col-lg-5">
+								<button type="button" class="btn btn-outline-secondary btn-lg w-100 text-uppercase"
+									data-bs-dismiss="modal">
+									Cancel
+								</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="helpRewardsModal" tabindex="-1" aria-labelledby="helpRewardsCodeModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content justify-content-center">
+			<div class="container">
+				<div class="modal-header">
+					<button type="button" class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5"
+						data-bs-dismiss="modal" aria-label="Close">
+						Close
+					</button>
+				</div>
+
+				<div class="modal-body">
+					<div class="modal-body-header text-center mb-5">
+						<h2 class="modal-title text-primary text-uppercase">
+							Loyalty point rewards
+						</h2>
+						<p class="fs-5 lh-sm">
+							With a Loyalty Point Rewards, the more you send, the more you spend, the more you earn.
+							The dollars you fuel this month determine your status and points for the next month.
+						</p>
+					</div>
+
+					<div class="row justify-content-center">
+						<div class="col-xxl-6 col-xl-7 col-lg-8">
+							<ul class="list-group list-group-horizontal">
+								<li class="list-group-item">Member status</li>
+								<li class="list-group-item">Dollars spent</li>
+								<li class="list-group-item">Points per 1$</li>
+							</ul>
+							<ul class="list-group list-group-horizontal">
+								<li class="list-group-item">Bronze</li>
+								<li class="list-group-item">$0-$499</li>
+								<li class="list-group-item">1 PTS</li>
+							</ul>
+							<ul class="list-group list-group-horizontal">
+								<li class="list-group-item">Silver</li>
+								<li class="list-group-item">$500-$1499</li>
+								<li class="list-group-item">2 PTS</li>
+							</ul>
+							<ul class="list-group list-group-horizontal">
+								<li class="list-group-item">Gold</li>
+								<li class="list-group-item">$1500-$3499</li>
+								<li class="list-group-item">3 PTS</li>
+							</ul>
+							<ul class="list-group list-group-horizontal">
+								<li class="list-group-item">Platinum</li>
+								<li class="list-group-item">$3500-$5499</li>
+								<li class="list-group-item">4 PTS</li>
+							</ul>
+							<ul class="list-group list-group-horizontal">
+								<li class="list-group-item">Diamond</li>
+								<li class="list-group-item">$5500+</li>
+								<li class="list-group-item">5 PTS</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

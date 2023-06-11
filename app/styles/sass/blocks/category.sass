@@ -64,19 +64,24 @@
 			--custom-accordion-btn-padding-x: 2rem
 			--bs-accordion-border-radius: 0
 			--bs-accordion-inner-border-radius: 0
+			--bs-accordion-border-width: 1px
 			--bs-accordion-color: var(--text-color-light)
 			--bs-accordion-btn-color: var(--text-color-light)
 			--bs-accordion-bg: var(--body-color)
+			--bs-accordion-border-color: var(--item-color-light)
 			--bs-accordion-btn-icon: url(../images/dist/icons/close-light.svg)
 			--bs-accordion-btn-active-icon: url(../images/dist/icons/close-light.svg)
-		.accordion-button
-			padding: var(--bs-accordion-btn-padding-y) 0 var(--bs-accordion-btn-padding-y) var(--custom-accordion-btn-padding-x)
-			&:focus
-				border-color: none
-				box-shadow: none
-			&:not(.collapsed)
-				background-color: var(--transparent)
-				color: var(--text-color-light)
+			&-item
+				border: none
+				border-bottom: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color)
+			&-button
+				padding: var(--bs-accordion-btn-padding-y) 0 var(--bs-accordion-btn-padding-y) var(--custom-accordion-btn-padding-x)
+				&:focus
+					border-color: none
+					box-shadow: none
+				&:not(.collapsed)
+					background-color: var(--transparent)
+					color: var(--text-color-light)
 		.list-group
 			--custom-accordion-btn-padding-x: 2rem
 			--custom-accordion-btn-padding-y: .75rem
