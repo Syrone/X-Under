@@ -988,6 +988,18 @@ document.addEventListener('DOMContentLoaded', () => {
 				spaceBetween: 40,
 				autoplay: false,
 			},
+			1200: {
+				slidesPerView: 4,
+				slidesPerGroup: 1,
+				spaceBetween: 40,
+				autoplay: false,
+			},
+			1400: {
+				slidesPerView: 5,
+				slidesPerGroup: 1,
+				spaceBetween: 40,
+				autoplay: false,
+			},
 		},
 
 		navigation: {

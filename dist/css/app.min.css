@@ -13947,6 +13947,20 @@ body, .modal {
 .icon-underwaer svg {
   fill: currentColor;
 }
+.icon-subscriptions {
+  width: auto;
+  height: 5rem;
+}
+.icon-subscriptions svg {
+  fill: currentColor;
+}
+.icon-rewards {
+  width: auto;
+  height: 5rem;
+}
+.icon-rewards svg {
+  fill: currentColor;
+}
 
 .text-underline {
   line-height: 1;
@@ -15185,13 +15199,13 @@ input[type=number] {
   padding-block: 4rem;
   border-bottom: 1px solid var(--table-body);
 }
-.account-info .icon-bag, .account-info .icon-favorite, .account-info .icon-order {
+.account-info .icon-bag, .account-info .icon-favorite, .account-info .icon-order, .account-info .icon-subscriptions, .account-info .icon-rewards {
   width: auto;
   height: 5rem;
   margin-bottom: 1rem;
   cursor: pointer;
 }
-.account-info .icon-bag svg, .account-info .icon-favorite svg, .account-info .icon-order svg {
+.account-info .icon-bag svg, .account-info .icon-favorite svg, .account-info .icon-order svg, .account-info .icon-subscriptions svg, .account-info .icon-rewards svg {
   fill: currentColor;
 }
 .account-info .btn-arrow {
@@ -15207,9 +15221,6 @@ input[type=number] {
   transition: fill var(--trt-1), transform var(--trt-1);
   transition: fill var(--trt-1), transform var(--trt-1), -webkit-transform var(--trt-1);
   fill: var(--accent);
-}
-.account-info-swiper {
-  width: 67%;
 }
 .account-info .account-info-prev, .account-info .account-info-next {
   color: var(--item-color);
@@ -15384,6 +15395,9 @@ input[type=number] {
 }
 .account-history .history-wrapper .history-order .history-item + .history-item {
   margin-top: 1.5rem;
+}
+.account-history .history-wrapper .history-order .btn-history-item {
+  max-width: 230px;
 }
 
 .advantages.section {
@@ -17580,6 +17594,9 @@ input[type=number] {
   }
   .account-order .progress-step-2, .account-order .progress-step-1 {
     text-transform: capitalize;
+  }
+  .account-history .history-wrapper .history-order .btn-history-item {
+    max-width: 100%;
   }
   .product-slider-thumbs.swiper-container {
     width: 85%;
