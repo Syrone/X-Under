@@ -13143,7 +13143,7 @@ button.swiper-pagination-bullet {
   --box-shadow-2: 0px 0px 20px 5px rgba(0, 0, 0, 0.4);
   --box-shadow-3: 0 0 0 0.25rem var(--accent-25);
   --box-shadow-card: 1px 1px 10px 3px var(--text-color);
-  --clock-fs: calc( 1rem + 3vw );
+  --clock-fs: calc( 1.75rem + 3vw );
   --clock-w: calc( var(--clock-fs) / 1.4 );
   --clock-h: calc( var(--clock-fs) * 1.25 );
   --clock-bg: white;
@@ -14972,6 +14972,9 @@ input[type=number] {
   background-color: var(--body-backdrop-50);
 }
 
+.modal-search .modal-content {
+  margin-top: -40%;
+}
 .modal-search.modal {
   --bs-modal-bg: var(--transparent);
   --bs-modal-border-width: 0;
@@ -17281,7 +17284,7 @@ input[type=number] {
 }
 @media (max-width: 1399.98px) {
   :root {
-    --clock-fs: 2.5rem;
+    --clock-fs: 3.5rem;
   }
   .alert-info .swiper-container {
     width: 60%;
@@ -17297,7 +17300,7 @@ input[type=number] {
     margin-bottom: 2rem;
   }
   .banner-img-overlay .btn-title {
-    font-size: var(--clock-fs);
+    font-size: 2.5rem;
   }
   .product-slider-thumbs.swiper-container {
     width: 90%;
@@ -17319,7 +17322,7 @@ input[type=number] {
 }
 @media (max-width: 1199.98px) {
   :root {
-    --clock-fs: 2rem;
+    --clock-fs: 3rem;
   }
   .tiny-little {
     font-size: calc(0.25rem + 0.2vw);
@@ -17366,7 +17369,7 @@ input[type=number] {
     margin-bottom: 1rem;
   }
   .banner-img-overlay .btn-title {
-    font-size: var(--clock-fs);
+    font-size: 2rem;
     margin-bottom: 0.5rem;
   }
   .gift-card-50 {
@@ -17393,7 +17396,7 @@ input[type=number] {
 }
 @media (max-width: 991.98px) {
   :root {
-    --clock-fs: 1.5rem;
+    --clock-fs: 2.2rem;
   }
   .swiper-button-next {
     right: -0.5rem;
@@ -17503,7 +17506,7 @@ input[type=number] {
     font-size: 0.8rem;
   }
   .banner-img-overlay .btn-title {
-    font-size: var(--clock-fs);
+    font-size: 1.5rem;
   }
   .notification-form .form-control {
     max-width: 100%;
@@ -17609,7 +17612,7 @@ input[type=number] {
 }
 @media (max-width: 767.98px) {
   :root {
-    --clock-fs: calc(.1rem + 4vw);
+    --clock-fs: calc(.7rem + 4vw);
   }
   .container {
     max-width: 700px;
@@ -17732,7 +17735,7 @@ input[type=number] {
     font-size: calc(0.1rem + 1.5vw);
   }
   .banner-img-overlay .btn-title {
-    font-size: var(--clock-fs);
+    font-size: calc(0.1rem + 4vw);
     margin-bottom: 0.4rem;
   }
   .advantages .swiper-container {
@@ -17806,6 +17809,9 @@ input[type=number] {
   }
 }
 @media (max-width: 575.98px) {
+  :root {
+    --clock-fs: calc(0.1rem + 8vw);
+  }
   .section {
     padding-top: 3.5rem;
     padding-bottom: 3rem;
@@ -18009,7 +18015,7 @@ input[type=number] {
     margin-bottom: 0.6rem;
   }
   .banner-img-overlay .btn-title {
-    font-size: var(--clock-fs);
+    font-size: calc(0.7rem + 4vw);
     margin-bottom: 0.3rem;
   }
   .advantages .swiper-container {
