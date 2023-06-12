@@ -174,7 +174,7 @@
 							</div>
 							<h5 class="total-dropdown text-primary text-uppercase d-flex justify-content-between pt-3 mb-5">
 								<span>Subtotal</span>
-								<p class="m-0">$<span class="total-price"></span></p>
+								<div class="m-0">$<span class="total-price"></span></div>
 							</h5>
 							<a href="./404.html"
 								class="btn btn-accent btn-checkout btn-lg w-100 border border-2 border-primary text-uppercase mb-5">Chekout</a>
@@ -610,7 +610,7 @@
 									<span class="icon icon-paypal">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 79.884">
 											<defs>
-												<clipPath id="a">
+												<clipPath>
 													<path d="M0 55.435h216V.06H0v55.375z" />
 												</clipPath>
 											</defs>
@@ -651,7 +651,7 @@
 										<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate"
 											viewBox="-26.477 -8.466 229.469 50.794">
 											<defs>
-												<clipPath id="a">
+												<clipPath>
 													<path d="M0 0h176.515v33.863H0z" />
 												</clipPath>
 											</defs>
@@ -676,32 +676,31 @@
 
 					<form action="#" class="checkout-form">
 						<label class="w-100 mb-5" for="checkout-email">
-							<div class="h4 d-flex justify-content-between align-items-end mb-4">
+							<span class="h4 d-flex justify-content-between align-items-end mb-4">
 								<span>What's your contact information?</span>
 
 								<a href="./404.html"
 									class="btn btn-link flex-shrink-0 p-0 fs-4 lh-1 text-start text-underline">Sign
 									in?</a>
-							</div>
+							</span>
 							<input class="form-control form-control-lg mb-3" type="email" id="checkout-email"
 								placeholder="Email address *">
-							<div class="d-flex align-items-center justify-content-between">
+							<span class="d-flex align-items-center justify-content-between">
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox" value="" id="checkedKeepMeUp" required>
 									<label class="form-check-label tiny" for="checkedKeepMeUp">
+										<input class="form-check-input" type="checkbox" value="" id="checkedKeepMeUp" required>
 										Keep me up to date on news and exclusive offers.
 									</label>
 								</div>
 
 								<span class="tiny align-self-start align-self-sm-center flex-shrink-0">* Required fields</span>
-							</div>
+							</span>
 						</label>
 
 						<div class="d-flex flex-sm-row flex-column align-items-start justify-content-between gap-3 mb-3">
 							<h3 class="h4 mb-0">Enter your name and shipping address:</h3>
 
-							<button type="button"
-								class="btn btn-arrow p-0 border-0 align-self-sm-end flex-shrink-0 tiny">
+							<button type="button" class="btn btn-arrow p-0 border-0 align-self-sm-end flex-shrink-0 tiny">
 								<span class="icon icon-billing">
 									<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
 										style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd"
@@ -767,7 +766,8 @@
 								Before continuing, please make sure your browser settings are set to "Allow: The site can
 								display pop-up windows".
 								<span class="d-block">
-									Check instructions for <a href="./404.html" class="d-inline-block btn btn-link px-0 tiny text-underline">Mac</a> or
+									Check instructions for <a href="./404.html"
+										class="d-inline-block btn btn-link px-0 tiny text-underline">Mac</a> or
 									<a href="./404.html" class="d-inline-block btn btn-link px-0 tiny text-underline">Chrome</a>
 								</span>
 							</span>
