@@ -1,0 +1,331 @@
+
+/** (START) ICONS **/
+.icon
+	&-arrow
+		&-right,
+		&-left
+			width: .75rem
+			height: .75rem
+		&-down
+			width: 1.25rem
+			height: 1.25rem
+
+	&-like,
+	&-email,
+	&-link
+		width: 1rem
+		height: 1rem
+
+	&-watched
+		width: 1.125rem
+		height: 1.125rem
+
+	&-facebook,
+	&-twitter,
+	&-pin,
+	&-play
+		width: 1.25rem
+		height: 1.25rem
+/** (END) ICONS **/
+
+/** (START) ACCORDION **/
+.product-accordion
+	.user-review
+		img
+			width: 100%
+			max-width: 100px
+			object-fit: cover
+			aspect-ratio: 1 / 1
+/** (END) ACCORDION **/
+
+/** (START) GIFT **/
+.gift-card-decor
+	& > span
+		height: max-content
+		position: relative
+		padding-right: .5rem
+	.vertical-text
+		top: 40%
+		left: 45%
+		position: absolute
+		text-align: center
+/** (END) GIFT **/
+
+/** (START) BTN **/
+.btn
+	&-arrow
+		gap: .5rem
+/** (END) BTN **/
+
+/** (START) CUSTOM **/
+.text-underline
+	text-decoration: underline
+	text-underline-offset: .1rem
+	text-decoration-thickness: 1px
+	position: unset
+	&::before
+		all: unset
+
+.vertical-text
+	display: inline-block
+	width: 100%
+	writing-mode: unset
+	transform: rotate(90deg)
+/** (END) CUSTOM **/
+
+/** (START) BLOG **/
+.blog-share
+	.icon-email
+		width: 1.5rem
+		height: 1.5rem
+/** (END) BLOG **/
+
+/** (START) SOCIALS **/
+.block-socials
+	a:nth-child(n)
+		width: 2rem
+		height: 2rem
+	img
+		display: block
+		width: 100%
+		height: 100%
+		object-fit: contain
+/** (END) SOCIALS **/
+
+/** (START) BAG **/
+.bag-cta
+	.cta-step
+		.icon-bag
+			width: 1.5rem
+			height: 1.5rem
+/** (END) BAG **/
+
+/** (START) PAY **/
+.pay-protection
+	width: max-content
+/** (END) PAY **/
+
+/** (START) RESPONSIVE **/
+
+@media (max-width: 1400px)
+	/** (START) PRODUCT **/
+	.product
+		&-support
+			&.fs-5,
+			.h5,
+			.fs-5
+				font-size: .875rem !important
+
+			.icon-play
+				width: 1rem
+				height: 1rem
+
+		.block-share
+			.fs-6
+				font-size: .75rem !important
+
+			.icon
+				width: 1rem
+				height: 1rem
+	/** (END) PRODUCT **/
+
+	/** (START) FOOTER **/
+	.footer
+		&-copyright
+			span
+				display: block
+	/** (END) FOOTER **/
+
+@media (max-width: 992px)
+	/** (START) SWIPERS **/
+	.modal-qview
+		&-prev,
+		&-next
+			display: none
+	/** (END) SWIPERS **/
+
+	/** (START) FOOTER **/
+	.footer
+		&-copyright
+			span
+				display: inline
+	/** (END) FOOTER **/
+
+@media (max-width: 768px)
+	/** (START) SWIPERS **/
+	.featured-swiper
+		width: 75%
+		padding-inline: 2rem
+	/** (END) SWIPERS **/
+
+	/** (START) PRODUCT **/
+	.product-support
+		&-duplicate
+			&.fs-5,
+			.h5,
+			.fs-5
+				font-size: .875rem !important
+
+			.icon-play
+				width: 1rem
+				height: 1rem
+
+		.block-share
+			.fs-6
+				font-size: .75rem !important
+
+			.icon
+				width: 1rem
+				height: 1rem
+	/** (END) PRODUCT **/
+
+@media (max-width: 576px)
+	/** (START) MODAL **/
+	#helpRewardsModal
+		.modal-body-header
+			.fs-5
+				font-size: 1rem !important
+
+		.modal-title
+			margin-bottom: .5rem
+	/** (END) MODAL **/
+
+	/** (START) SWIPERS **/
+	.banner-swiper-slide
+		.card-img
+			object-position: right
+			object-fit: cover
+			aspect-ratio: 4 / 3
+
+	.featured-swiper
+		width: 80%
+	/** (END) SWIPERS **/
+
+	/** (START) SOCIALS **/
+	.block-socials
+		a:nth-child(n)
+			width: 6vw
+			height: 6vw
+	/** (END) SOCIALS **/
+
+	/** (START) CUSTOM **/
+	.block-together
+		width: 100%
+		max-width: 240px
+		margin-block-start: .25rem
+		& > div
+			display: contents
+	/** (END) CUSTOM **/
+
+	/** (START) SHIPPING **/
+	.shipping-policy
+		.fs-5
+			font-size: 1rem !important
+	/** (END) SHIPPING **/
+
+	/** (START) BAG **/
+	.bag-cta
+		.cta-step
+			gap: .25rem !important
+			& + .cta-step
+				margin-left: .25rem
+			.icon
+				width: 1rem
+				height: 1rem
+	/** (END) BAG **/
+
+	/** (START) PRODUCT **/
+	.product
+		&-installments
+			font-size: .875rem
+			.btn
+				font-size: inherit
+			img
+				width: 80px
+	/** (END) PRODUCT **/
+
+	/** (START) ACCOUNT **/
+	.account-order
+		.progress-step
+			&-1,
+			&-2,
+			&-3,
+			&-4,
+			&-5
+				font-size: calc(0.25rem + 2vw)
+				bottom: .75rem
+	/** (END) ACCOUNT **/
+
+	/** (START) FOOTER **/
+	.footer
+		&-copyright
+			span
+				display: block
+	/** (END) FOOTER **/
+
+@media (max-width: 400px)
+	/** (START) SWIPER **/
+	.recent
+		.swiper-container
+			width: 75%
+
+		.recent-pagination
+			bottom: var(--swiper-pagination-bottom, -10px)
+	/** (END) SWIPER **/
+
+	/** (START) ACCOUNT **/
+	.account-settings
+		.col-6
+			width: 100%
+	/** (END) ACCOUNT **/
+
+	/** (START) BLOCK FILTER **/
+	.block-filter
+		flex-direction: column
+	/** (END) BLOCK FILTER **/
+
+	/** (START) CATEGORY **/
+	.category-cards
+		& > .col-6
+			width: 100%
+	/** (START) CATEGORY **/
+
+	/** (START) QVIEW **/
+	.modal-qview
+		.pay-protection-duplicate
+			img
+				height: 8vw
+	/** (END) QVIEW **/
+
+	/** (START) BLOG **/
+	.block-action
+		flex-direction: column
+	/** (END) BLOG **/
+
+	/** (START) PRODUCT **/
+	.product
+		&-header
+			&-duplicate
+				.pagination
+					margin-bottom: 0
+				.page-item
+					&:first-child
+						.page-link
+							padding-inline-start: 0
+					&:last-child
+						.page-link
+							padding-inline-end: 0
+
+		&-support
+			&-duplicate
+				gap: 1rem
+				.col-6
+					width: 100%
+
+			&-item
+				display: flex
+				flex-direction: column-reverse
+				gap: 2rem
+	/** (END) PRODUCT **/
+
+/** (END) RESPONSIVE **/

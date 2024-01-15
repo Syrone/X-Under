@@ -14,7 +14,9 @@
 
 	<link rel="icon" href="images/favicon.svg">
 	
-	<link rel="stylesheet" href="css/app.min.css">
+	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="css/fix.min.css">
+	<link rel="stylesheet" href="css/modal-size.min.css">
 
 </head>
 
@@ -583,7 +585,7 @@
 							</h2>
 						</div>
 
-						<div class="d-flex justify-content-between">
+						<div class="d-flex flex-wrap gap-sm-0 gap-2 justify-content-between">
 							<div>
 								<div class="card-reviews d-flex align-items-center gap-3">
 									<div class="card-stars">
@@ -632,11 +634,11 @@
 									<span class="badge tiny text-bg-primary px-2 py-2">You save 11%</span>
 								</div>
 
-								<div class="d-flex flex-wrap align-items-center gap-1">
+								<div class="product-installments d-flex flex-wrap align-items-center gap-1">
 									Or 4 <button class="btn btn-link text-underline" data-bs-toggle="modal"
 										data-bs-target="#installmentsModal">installments</button> of
 									<span>$XX.XX</span> by <img class="d-inline-block" width="100"
-										src="./images/dist/icons/afterpay.svg" alt="AfterPay">
+										src="./images/dist/icons/afterpay_banner.svg" alt="AfterPay">
 								</div>
 							</div>
 
@@ -749,8 +751,8 @@
 					</div>
 
 					<div class="product-support d-lg-flex d-none row fs-5">
-						<div class="col-xxl-5 col-6 lh-sm">
-							<div class="mb-md-4 mb-3">
+						<div class="product-support-item col-xxl-5 col-6 lh-sm">
+							<div class="block-shipping mb-md-4 mb-3">
 								<h4 class="h5 mb-0"><b>Shipping:</b></h4>
 								<div class="lh-sm">Standrat / 5-10 Business days</div>
 								<div class="lh-sm">Priority / 3-5 Business days</div>
@@ -804,9 +806,37 @@
 						<div class="col-xxl-5 col-6 lh-sm">
 							<div class="mb-md-4 mb-3">
 								<h4 class="h5 mb-0"><b>Help:</b></h4>
-								<button class="btn fs-5 btn-link text-underline" data-bs-toggle="modal"
-									data-bs-target="#sizeGuideModal">
-									Size guide
+								<button class="btn fs-5 btn-link d-block text-underline" data-bs-toggle="modal"
+									data-bs-target="#sizeGuideModalMTop">
+									Size guide M Top
+								</button>
+								<button class="btn fs-5 btn-link d-block text-underline" data-bs-toggle="modal"
+									data-bs-target="#sizeGuideModalMBottom">
+									Size guide M Bottom
+								</button>
+								<button class="btn fs-5 btn-link d-block text-underline" data-bs-toggle="modal"
+									data-bs-target="#sizeGuideModalMShort">
+									Size guide M Short
+								</button>
+								<button class="btn fs-5 btn-link d-block text-underline" data-bs-toggle="modal"
+									data-bs-target="#sizeGuideModalFTop">
+									Size guide F Top
+								</button>
+								<button class="btn fs-5 btn-link d-block text-underline" data-bs-toggle="modal"
+									data-bs-target="#sizeGuideModalFTop2">
+									Size guide F Top 2
+								</button>
+								<button class="btn fs-5 btn-link d-block text-underline" data-bs-toggle="modal"
+									data-bs-target="#sizeGuideModalFBottom">
+									Size guide F Bottom
+								</button>
+								<button class="btn fs-5 btn-link d-block text-underline" data-bs-toggle="modal"
+									data-bs-target="#sizeGuideModalFBottom2">
+									Size guide F Bottom 2
+								</button>
+								<button class="btn fs-5 btn-link d-block text-underline" data-bs-toggle="modal"
+									data-bs-target="#sizeGuideModalFSwimwear">
+									Size guide F Swimwear
 								</button>
 								<div class="lh-sm">
 									Availability:
@@ -1976,7 +2006,7 @@
 	</div>
 </div>
 
-<div class="modal modal-guide fade" id="sizeGuideModal" tabindex="-1" aria-labelledby="sizeGuideModalLabel"
+<!-- <div class="modal modal-guide fade" id="sizeGuideModal" tabindex="-1" aria-labelledby="sizeGuideModalLabel"
 	aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered modal-xl">
 		<div class="modal-content py-5">
@@ -1995,7 +2025,8 @@
 						</div>
 						<div class="col-lg-5 col-12">
 							<h2 class="modal-title h4 text-primary text-center text-uppercase mb-4" id="sizeGuideModalLabel">
-								Underwaer</h2>
+								Underwaer
+							</h2>
 
 							<ul class="list-group">
 								<li class="list-group-item d-flex align-items-center justify-content-around active text-uppercase"
@@ -2046,7 +2077,840 @@
 			</div>
 		</div>
 	</div>
+</div> -->
+
+<div class="modal modal-guide fade" id="sizeGuideModalMTop" tabindex="-1" aria-labelledby="sizeGuideModalMTopLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content py-5">
+			<div class="modal-header">
+				<button type="button"
+					class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5 me-2 me-sm-0"
+					data-bs-dismiss="modal" aria-label="Close">
+					Close
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="container">
+					<div class="row justify-content-around">
+						<div class="col-lg-5 col-12 d-flex align-items-end mt-lg-0 mt-5 order-lg-0 order-1">
+							<img src="./images/dist/XU_Size-m_top.svg" loading="lazy" alt="Size Guide" class="modal-image img-fluid">
+						</div>
+						<div class="col-xl-5 col-lg-7 col-12">
+							<h2 class="modal-title h4 text-primary text-center text-uppercase mb-4" id="sizeGuideModalMTopLabel">
+								Top
+							</h2>
+
+							<div class="table-responsive">
+								<table class="table table-size">
+									<thead>
+										<tr>
+											<th scope="col">size</th>
+											<th scope="col">neck</th>
+											<th scope="col">chest</th>
+											<th scope="col">sleeve</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">s</th>
+											<td>14 1/2</td>
+											<td>40</td>
+											<td>32/33</td>
+										</tr>
+										<tr>
+											<th scope="row">m</th>
+											<td>15</td>
+											<td>42</td>
+											<td>32/33, 34/35</td>
+										</tr>
+										<tr>
+											<th scope="row">m</th>
+											<td>15 1/2</td>
+											<td>44</td>
+											<td>32/33, 34/35</td>
+										</tr>
+										<tr>
+											<th scope="row">l</th>
+											<td>16</td>
+											<td>46</td>
+											<td>32/33, 34/35</td>
+										</tr>
+										<tr>
+											<th scope="row">l</th>
+											<td>16 1/2</td>
+											<td>48</td>
+											<td>32/33, 34/35, 36/37</td>
+										</tr>
+										<tr>
+											<th scope="row">xl</th>
+											<td>17</td>
+											<td>50</td>
+											<td>32/33, 34/35, 36/37</td>
+										</tr>
+										<tr>
+											<th scope="row">xl</th>
+											<td>17 1/2</td>
+											<td>52</td>
+											<td>32/33, 34/35, 36/37</td>
+										</tr>
+										<tr>
+											<th scope="row">xxl</th>
+											<td>18</td>
+											<td>54</td>
+											<td>34/35, 36/37</td>
+										</tr>
+										<tr>
+											<th scope="row">xxl</th>
+											<td>18 1/2</td>
+											<td>56</td>
+											<td>34/35, 36/37</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+
+<div class="modal modal-guide fade" id="sizeGuideModalMBottom" tabindex="-1" aria-labelledby="sizeGuideModalMBottomLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content py-5">
+			<div class="modal-header">
+				<button type="button"
+					class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5 me-2 me-sm-0"
+					data-bs-dismiss="modal" aria-label="Close">
+					Close
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="container">
+					<div class="row justify-content-around">
+						<div class="col-lg-5 col-12 d-flex align-items-end mt-lg-0 mt-5 order-lg-0 order-1">
+							<img src="./images/dist/XU_Size-m-btm.svg" loading="lazy" alt="Size Guide" class="modal-image img-fluid">
+						</div>
+						<div class="col-xl-5 col-lg-7 col-12">
+							<h2 class="modal-title h4 text-primary text-center text-uppercase mb-4" id="sizeGuideModalMBottomLabel">
+								Bottom
+							</h2>
+
+							<div class="table-responsive">
+								<table class="table table-size">
+									<thead>
+										<tr>
+											<th scope="col">size</th>
+											<th scope="col">waist</th>
+											<th scope="col">outseam</th>
+											<th scope="col">hip</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">28</th>
+											<td>31</td>
+											<td>14</td>
+											<td>38.5</td>
+										</tr>
+										<tr>
+											<th scope="row">29</th>
+											<td>32</td>
+											<td>14</td>
+											<td>39.5</td>
+										</tr>
+										<tr>
+											<th scope="row">30</th>
+											<td>33</td>
+											<td>14</td>
+											<td>40.5</td>
+										</tr>
+										<tr>
+											<th scope="row">31</th>
+											<td>34</td>
+											<td>14</td>
+											<td>41.5</td>
+										</tr>
+										<tr>
+											<th scope="row">32</th>
+											<td>35</td>
+											<td>14</td>
+											<td>42.5</td>
+										</tr>
+										<tr>
+											<th scope="row">33</th>
+											<td>36</td>
+											<td>14</td>
+											<td>43.5</td>
+										</tr>
+										<tr>
+											<th scope="row">34</th>
+											<td>37</td>
+											<td>14</td>
+											<td>44.5</td>
+										</tr>
+										<tr>
+											<th scope="row">35</th>
+											<td>38</td>
+											<td>14</td>
+											<td>45.5</td>
+										</tr>
+										<tr>
+											<th scope="row">36</th>
+											<td>39</td>
+											<td>14</td>
+											<td>46.5</td>
+										</tr>
+										<tr>
+											<th scope="row">38</th>
+											<td>41</td>
+											<td>14</td>
+											<td>48.5</td>
+										</tr>
+										<tr>
+											<th scope="row">40</th>
+											<td>43</td>
+											<td>14</td>
+											<td>50.5</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-guide fade" id="sizeGuideModalMShort" tabindex="-1" aria-labelledby="sizeGuideModalMShortLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content py-5">
+			<div class="modal-header">
+				<button type="button"
+					class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5 me-2 me-sm-0"
+					data-bs-dismiss="modal" aria-label="Close">
+					Close
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="container">
+					<div class="row justify-content-around">
+						<div class="col-lg-5 col-12 d-flex align-items-end mt-lg-0 mt-5 order-lg-0 order-1">
+							<img src="./images/dist/XU_size-m-short.svg" loading="lazy" alt="Size Guide" class="modal-image img-fluid">
+						</div>
+						<div class="col-xl-5 col-lg-7 col-12">
+							<h2 class="modal-title h4 text-primary text-center text-uppercase mb-4" id="sizeGuideModalMShortLabel">
+								Short
+							</h2>
+
+							<div class="table-responsive">
+								<table class="table table-size">
+									<thead>
+										<tr>
+											<th scope="col"
+												style="width: 35%;">size</th>
+											<th scope="col">waist</th>
+											<th scope="col">inseam</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">xs</th>
+											<td>26-28</td>
+											<td>26-28</td>
+										</tr>
+										<tr>
+											<th scope="row">s</th>
+											<td>29-31</td>
+											<td>29-31</td>
+										</tr>
+										<tr>
+											<th scope="row">m</th>
+											<td>32-34</td>
+											<td>32-34</td>
+										</tr>
+										<tr>
+											<th scope="row">l</th>
+											<td>35-37</td>
+											<td>35-37</td>
+										</tr>
+										<tr>
+											<th scope="row">xl</th>
+											<td>38-40</td>
+											<td>38-40</td>
+										</tr>
+										<tr>
+											<th scope="row">xxl</th>
+											<td>41-43</td>
+											<td>41-43</td>
+										</tr>
+										<tr>
+											<th scope="row">xxxl</th>
+											<td>44-46</td>
+											<td>44-46</td>
+										</tr>
+										<tr>
+											<th scope="row">na</th>
+											<td>48-50</td>
+											<td>48-50</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-guide fade" id="sizeGuideModalFTop" tabindex="-1" aria-labelledby="sizeGuideModalFTopLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content py-5">
+			<div class="modal-header">
+				<button type="button"
+					class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5 me-2 me-sm-0"
+					data-bs-dismiss="modal" aria-label="Close">
+					Close
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="container">
+					<div class="row justify-content-around">
+						<div class="col-lg-5 col-12 d-flex align-items-end mt-lg-0 mt-5 order-lg-0 order-1">
+							<img src="./images/dist/XU_Size-f-top.svg" loading="lazy" alt="Size Guide" class="modal-image img-fluid">
+						</div>
+						<div class="col-xl-5 col-lg-7 col-12">
+							<h2 class="modal-title h4 text-primary text-center text-uppercase mb-4" id="sizeGuideModalFTopLabel">
+								Top
+							</h2>
+
+							<div class="table-responsive">
+								<table class="table table-size">
+									<thead>
+										<tr>
+											<th scope="col"
+												style="width: 27%;">size</th>
+											<th scope="col">band size</th>
+											<th scope="col">bust</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">xs</th>
+											<td>32B</td>
+											<td>34</td>
+										</tr>
+										<tr>
+											<th scope="row">xs</th>
+											<td>32C</td>
+											<td>35</td>
+										</tr>
+										<tr>
+											<th scope="row">xs</th>
+											<td>32D</td>
+											<td>36</td>
+										</tr>
+										<tr>
+											<th scope="row">xs</th>
+											<td>34B</td>
+											<td>36</td>
+										</tr>
+										<tr>
+											<th scope="row">s</th>
+											<td>34C</td>
+											<td>37</td>
+										</tr>
+										<tr>
+											<th scope="row">s</th>
+											<td>34D</td>
+											<td>38</td>
+										</tr>
+										<tr>
+											<th scope="row">s</th>
+											<td>36B</td>
+											<td>38</td>
+										</tr>
+										<tr>
+											<th scope="row">s</th>
+											<td>36C</td>
+											<td>39</td>
+										</tr>
+										<tr>
+											<th scope="row">m</th>
+											<td>36D</td>
+											<td>40</td>
+										</tr>
+										<tr>
+											<th scope="row">m</th>
+											<td>36DD</td>
+											<td>41</td>
+										</tr>
+										<tr>
+											<th scope="row">m</th>
+											<td>38B</td>
+											<td>40</td>
+										</tr>
+										<tr>
+											<th scope="row">m</th>
+											<td>38C</td>
+											<td>41</td>
+										</tr>
+										<tr>
+											<th scope="row">l</th>
+											<td>38D</td>
+											<td>42</td>
+										</tr>
+										<tr>
+											<th scope="row">l</th>
+											<td>38DD</td>
+											<td>43</td>
+										</tr>
+										<tr>
+											<th scope="row">l</th>
+											<td>40B</td>
+											<td>42</td>
+										</tr>
+										<tr>
+											<th scope="row">l</th>
+											<td>40C</td>
+											<td>43</td>
+										</tr>
+										<tr>
+											<th scope="row">xl</th>
+											<td>40D</td>
+											<td>44</td>
+										</tr>
+										<tr>
+											<th scope="row">xl</th>
+											<td>40DD</td>
+											<td>45</td>
+										</tr>
+										<tr>
+											<th scope="row">xl</th>
+											<td>42C</td>
+											<td>45</td>
+										</tr>
+										<tr>
+											<th scope="row">xl</th>
+											<td>42D</td>
+											<td>46</td>
+										</tr>
+										<tr>
+											<th scope="row">2x</th>
+											<td>42DD</td>
+											<td>47</td>
+										</tr>
+										<tr>
+											<th scope="row">2x</th>
+											<td>44C</td>
+											<td>47</td>
+										</tr>
+										<tr>
+											<th scope="row">2x</th>
+											<td>44D</td>
+											<td>48</td>
+										</tr>
+										<tr>
+											<th scope="row">2x</th>
+											<td>44DD</td>
+											<td>49</td>
+										</tr>
+										<tr>
+											<th scope="row">3x</th>
+											<td>46C</td>
+											<td>49</td>
+										</tr>
+										<tr>
+											<th scope="row">3x</th>
+											<td>46D</td>
+											<td>50</td>
+										</tr>
+										<tr>
+											<th scope="row">3x</th>
+											<td>46DD</td>
+											<td>51</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-guide fade" id="sizeGuideModalFTop2" tabindex="-1" aria-labelledby="sizeGuideModalFTop2Label"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content py-5">
+			<div class="modal-header">
+				<button type="button"
+					class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5 me-2 me-sm-0"
+					data-bs-dismiss="modal" aria-label="Close">
+					Close
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="container">
+					<div class="row justify-content-around">
+						<div class="col-lg-5 col-12 d-flex align-items-end mt-lg-0 mt-5 order-lg-0 order-1">
+							<img src="./images/dist/XU-Size-f-top2.svg" loading="lazy" alt="Size Guide" class="modal-image img-fluid">
+						</div>
+						<div class="col-xl-5 col-lg-7 col-12">
+							<h2 class="modal-title h4 text-primary text-center text-uppercase mb-4" id="sizeGuideModalFTop2Label">
+								Top
+							</h2>
+
+							<div class="table-responsive">
+								<table class="table table-size">
+									<thead>
+										<tr>
+											<th scope="col"
+												style="width: 33%;">size</th>
+											<th scope="col">chest</th>
+											<th scope="col">waist</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">xxs</th>
+											<td>31.5</td>
+											<td>25</td>
+										</tr>
+										<tr>
+											<th scope="row">xs</th>
+											<td>32.5</td>
+											<td>26</td>
+										</tr>
+										<tr>
+											<th scope="row">xs</th>
+											<td>33.5</td>
+											<td>27</td>
+										</tr>
+										<tr>
+											<th scope="row">s</th>
+											<td>34.5</td>
+											<td>28</td>
+										</tr>
+										<tr>
+											<th scope="row">s</th>
+											<td>35.5</td>
+											<td>29</td>
+										</tr>
+										<tr>
+											<th scope="row">m</th>
+											<td>36.5</td>
+											<td>30</td>
+										</tr>
+										<tr>
+											<th scope="row">m</th>
+											<td>37.5</td>
+											<td>31</td>
+										</tr>
+										<tr>
+											<th scope="row">l</th>
+											<td>39.5</td>
+											<td>32.5</td>
+										</tr>
+										<tr>
+											<th scope="row">l</th>
+											<td>40.5</td>
+											<td>34</td>
+										</tr>
+										<tr>
+											<th scope="row">xl</th>
+											<td>42</td>
+											<td>35.5</td>
+										</tr>
+										<tr>
+											<th scope="row">xl</th>
+											<td>44</td>
+											<td>37.5</td>
+										</tr>
+										<tr>
+											<th scope="row">xxl</th>
+											<td>46</td>
+											<td>39.5</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-guide fade" id="sizeGuideModalFBottom" tabindex="-1" aria-labelledby="sizeGuideModalFBottomLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content py-5">
+			<div class="modal-header">
+				<button type="button"
+					class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5 me-2 me-sm-0"
+					data-bs-dismiss="modal" aria-label="Close">
+					Close
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="container">
+					<div class="row justify-content-around">
+						<div class="col-lg-5 col-12 d-flex align-items-end mt-lg-0 mt-5 order-lg-0 order-1">
+							<img src="./images/dist/XU_Size-f-btm.svg" loading="lazy" alt="Size Guide" class="modal-image img-fluid">
+						</div>
+						<div class="col-xl-5 col-lg-7 col-12">
+							<h2 class="modal-title h4 text-primary text-center text-uppercase mb-4" id="sizeGuideModalFBottomLabel">
+								Bottom
+							</h2>
+
+							<div class="table-responsive">
+								<table class="table table-size">
+									<thead>
+										<tr>
+											<th scope="col"
+												style="width: 33%;">size</th>
+											<th scope="col">waist</th>
+											<th scope="col">hip</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">xs</th>
+											<td>20-22"</td>
+											<td>29-32"</td>
+										</tr>
+										<tr>
+											<th scope="row">s</th>
+											<td>23-25"</td>
+											<td>33-35"</td>
+										</tr>
+										<tr>
+											<th scope="row">m</th>
+											<td>26-28"</td>
+											<td>36-38"</td>
+										</tr>
+										<tr>
+											<th scope="row">l</th>
+											<td>29-31"</td>
+											<td>39-41"</td>
+										</tr>
+										<tr>
+											<th scope="row">xl</th>
+											<td>32-34"</td>
+											<td>42-44"</td>
+										</tr>
+										<tr>
+											<th scope="row">2xl</th>
+											<td>35-37"</td>
+											<td>45-47"</td>
+										</tr>
+										<tr>
+											<th scope="row">3xl</th>
+											<td>38-41"</td>
+											<td>48-50"</td>
+										</tr>
+										<tr>
+											<th scope="row">4xl</th>
+											<td>42-44"</td>
+											<td>51-53"</td>
+										</tr>
+										<tr>
+											<th scope="row">5xl</th>
+											<td>45-47"</td>
+											<td>54-56"</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-guide fade" id="sizeGuideModalFBottom2" tabindex="-1" aria-labelledby="sizeGuideModalFBottom2Label"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content py-5">
+			<div class="modal-header">
+				<button type="button"
+					class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5 me-2 me-sm-0"
+					data-bs-dismiss="modal" aria-label="Close">
+					Close
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="container">
+					<div class="row justify-content-around">
+						<div class="col-lg-5 col-12 d-flex align-items-end mt-lg-0 mt-5 order-lg-0 order-1">
+							<img src="./images/dist/XU_Size-f-btm2.svg" loading="lazy" alt="Size Guide" class="modal-image img-fluid">
+						</div>
+						<div class="col-xl-5 col-lg-7 col-12">
+							<h2 class="modal-title h4 text-primary text-center text-uppercase mb-4" id="sizeGuideModalFBottom2Label">
+								Bottom
+							</h2>
+
+							<div class="table-responsive">
+								<table class="table table-size">
+									<thead>
+										<tr>
+											<th scope="col"
+												style="width: 33%;">size</th>
+											<th scope="col">waist</th>
+											<th scope="col">hip</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">xs</th>
+											<td>25</td>
+											<td>35</td>
+										</tr>
+										<tr>
+											<th scope="row">xs</th>
+											<td>26</td>
+											<td>36</td>
+										</tr>
+										<tr>
+											<th scope="row">s</th>
+											<td>27</td>
+											<td>37</td>
+										</tr>
+										<tr>
+											<th scope="row">s</th>
+											<td>28</td>
+											<td>38</td>
+										</tr>
+										<tr>
+											<th scope="row">m</th>
+											<td>29</td>
+											<td>39</td>
+										</tr>
+										<tr>
+											<th scope="row">m</th>
+											<td>30</td>
+											<td>40</td>
+										</tr>
+										<tr>
+											<th scope="row">l</th>
+											<td>31.5</td>
+											<td>41.5</td>
+										</tr>
+										<tr>
+											<th scope="row">l</th>
+											<td>33</td>
+											<td>43</td>
+										</tr>
+										<tr>
+											<th scope="row">xl</th>
+											<td>34.5</td>
+											<td>44.5</td>
+										</tr>
+										<tr>
+											<th scope="row">xl</th>
+											<td>36.5</td>
+											<td>46.5</td>
+										</tr>
+										<tr>
+											<th scope="row">xxl</th>
+											<td>38.5</td>
+											<td>48.5</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-guide fade" id="sizeGuideModalFSwimwear" tabindex="-1" aria-labelledby="sizeGuideModalFSwimwearLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content py-5">
+			<div class="modal-header">
+				<button type="button"
+					class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5 me-2 me-sm-0"
+					data-bs-dismiss="modal" aria-label="Close">
+					Close
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="container">
+					<div class="row justify-content-around">
+						<div class="col-lg-5 col-12 d-flex align-items-end mt-lg-0 mt-5 order-lg-0 order-1">
+							<img src="./images/dist/XU_Size-f-swim.svg" loading="lazy" alt="Size Guide" class="modal-image img-fluid">
+						</div>
+						<div class="col-xl-5 col-lg-7 col-12">
+							<h2 class="modal-title h4 text-primary text-center text-uppercase mb-4" id="sizeGuideModalFSwimwearLabel">
+								Swimwear
+							</h2>
+
+							<div class="table-responsive">
+								<table class="table table-size">
+									<thead>
+										<tr>
+											<th scope="col"
+												style="width: 33%;">size</th>
+											<th scope="col">waist</th>
+											<th scope="col">hip</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">xs 0-2</th>
+											<td>25-26.5</td>
+											<td>35-36.5</td>
+										</tr>
+										<tr>
+											<th scope="row">s 4-6</th>
+											<td>27-28.5</td>
+											<td>37-38.5</td>
+										</tr>
+										<tr>
+											<th scope="row">m 8-10</th>
+											<td>29-30.5</td>
+											<td>39-40.5</td>
+										</tr>
+										<tr>
+											<th scope="row">l 12-14</th>
+											<td>32-33.5</td>
+											<td>42-43.5</td>
+										</tr>
+										<tr>
+											<th scope="row">xl 16-18</th>
+											<td>35-36.5</td>
+											<td>45-46.5</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 <div class="modal modal-notific fade" id="itemNotificModal" tabindex="-1" aria-labelledby="itemNotificModalLabel"
 	aria-hidden="true">
@@ -2259,7 +3123,7 @@
 			</div>
 			<div class="col-12 col-lg-5 col-xxl-4 text-start text-lg-end">
 				<div class="footer-copyright">
-					Copyright 2023 X-Under LLC. All rights reserved. Powered by Dennetic Group.
+					Copyright 2023 X-Under LLC. <span>All rights reserved. Powered by Dennetic Group.</span>
 				</div>
 
 				<div class="footer-address">
@@ -2270,8 +3134,8 @@
 	</div>
 </footer>
 
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/app.min.js"></script>
+<script src="js/bootstrap.bundle.min.js" defer></script>
+<script src="js/app.min-7.js" defer></script>
 
 </body>
 

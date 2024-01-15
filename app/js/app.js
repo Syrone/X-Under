@@ -213,23 +213,24 @@ document.addEventListener('DOMContentLoaded', () => {
 	const wrapper = document.querySelector('.wrapper');
 	const headerDropdownBag = document.querySelector('.bag-dropdown-menu');
 
-
 	if (wrapper) {
 		const dropdownOverflow = headerDropdownBag.querySelector('.dropdown-overflow');
+
 		function updateWrapperMarginTop() {
 			const navbarHeight = navbar.clientHeight;
 			const bagDropdownHeight = 100 * window.innerHeight / 100 - (navbarHeight + 64);
 
-			wrapper.style.marginTop = navbarHeight + 'px'
+			wrapper.style.marginTop = navbarHeight + 'px';
 			dropdownOverflow.style.maxHeight = `${bagDropdownHeight}px`;
 		}
 
+		const observerNavbar = new MutationObserver(updateWrapperMarginTop);
+		observerNavbar.observe(navbar, { subtree: true, childList: true });
 
 		window.addEventListener('load', updateWrapperMarginTop);
 		window.addEventListener('resize', updateWrapperMarginTop);
-
-		navbar.addEventListener('DOMSubtreeModified', updateWrapperMarginTop);
 	}
+
 
 
 	//SCROLL TOP
@@ -379,7 +380,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		window.addEventListener('resize', delayHandler(setHeroSwiperPaginationTop, 100));
 
-		window.addEventListener('orientationchange', setHeroSwiperPaginationTop);
+		window.addEventListener('resize', setHeroSwiperPaginationTop);
 	}
 
 	const bannerSwiper = new Swiper('.banner-swiper', {
@@ -1201,154 +1202,4 @@ document.addEventListener('DOMContentLoaded', () => {
 		categoryBottomDuplicate.insertAdjacentHTML('beforeend', categoryBottom.innerHTML);
 	}
 
-
-
-
-
-	//ВCЁ ЧТО НИЖЕ МОЖНО УДАЛИТЬ. ЖЕЛАТЕЛЬНО ОЗНАКОМИТЬСЯ.
-	//Этот код можно будет удалить. Сделан был для демонстрации на странице checkout.html.
-	const bagCtas = document.querySelectorAll('.bag-cta');
-	const orderButtons = document.querySelectorAll('.btn-bag-order');
-
-	orderButtons.forEach((button, index) => {
-		button.addEventListener('click', () => {
-			bagCtas[index].classList.add('d-none');
-
-			if (index < bagCtas.length - 1) {
-				bagCtas[index + 1].classList.remove('d-none');
-			}
-		});
-	});
-
-	// Возможно этот код тоже не понадобиться. Показывает скрытые карточки на странице категории.
-	//BTN SHOW MORE
-	const showMoreButton = document.querySelector('#show-more');
-
-	if (showMoreButton) {
-		showMoreButton.addEventListener('click', () => {
-			const hiddenCards = document.querySelectorAll('.category-card-none.d-none');
-			hiddenCards.forEach(card => card.classList.remove('d-none'));
-			showMoreButton.classList.add('d-none');
-		});
-	}
-
-	// Этот код демострировал разные состояние корзины в шапке сайта. Также можно удалить.
-	// HEADER BAG
-	const closeButtons = document.querySelectorAll('.btn-close-card');
-	const dropdownCard = document.querySelector('.dropdown-cards');
-	const currentCard = document.querySelector('.current-bag');
-	const totalPriceTag = document.querySelector('.total-price');
-	const emptyCartMsg = document.querySelector('.empty-cart-msg');
-	const bagText = document.querySelector('.bag-text');
-	const totalDropdown = document.querySelector('.total-dropdown');
-	const btnCheckout = document.querySelector('.btn-checkout');
-	const brackets = document.querySelector('.brackets')
-
-	const observer = new MutationObserver(updateCardInfo);
-	if (dropdownCard && dropdownCard instanceof Node) {
-		observer.observe(dropdownCard, { childList: true, subtree: true });
-	}
-
-	closeButtons.forEach(button => button.addEventListener('click', function () {
-		button.closest('.dropdown-card').remove();
-		updateCardInfo();
-	}));
-
-	function updateCardInfo() {
-		const cards = dropdownCard.querySelectorAll('.dropdown-card');
-		const cardCount = cards.length;
-		document.querySelectorAll('.current-bag').forEach(card => {
-			if (cardCount > 0) {
-				card.textContent = cardCount;
-				emptyCartMsg.classList.add('d-none');
-				brackets.classList.add('d-inline-block');
-			} else {
-				card.textContent = '';
-				emptyCartMsg.classList.add('d-flex');
-				brackets.classList.add('d-none');
-				bagText.classList.add('d-none');
-				totalDropdown.classList.add('d-none');
-				btnCheckout.classList.add('d-none');
-			}
-		});
-		if (cards.length === 0) {
-			emptyCartMsg.classList.remove('d-none');
-			brackets.classList.add('d-none');
-			bagText.classList.add('d-none');
-			totalDropdown.classList.add('d-none');
-			btnCheckout.classList.add('d-none');
-		} else {
-			emptyCartMsg.classList.add('d-none');
-			brackets.classList.remove('d-none');
-			bagText.classList.remove('d-none');
-			totalDropdown.classList.remove('d-none');
-			btnCheckout.classList.remove('d-none');
-			totalPriceTag.textContent = Array.from(cards).reduce((sum, card) => sum + parseFloat(card.querySelector('.card-price').textContent), 0).toFixed(2);
-		}
-	}
-
-	if (closeButtons && dropdownCard && currentCard && totalPriceTag && emptyCartMsg && bagText && totalDropdown && btnCheckout && brackets) {
-		updateCardInfo();
-	}
-
-	//Можно удалить, сделано для демонстрации.
-	//Affiliate Account Form and toggle d-none and without reloading
-	const affiliatePaymentForm = document.querySelector('#paymentMethodForm');
-	const paymentSection = document.querySelector('.account-affiliate-payment');
-	const affiliateSection = document.querySelector('.account-affiliate');
-
-	if (affiliatePaymentForm) {
-		affiliatePaymentForm.addEventListener('submit', (event) => {
-			event.preventDefault(); // отменяем стандартное поведение формы
-
-			const formData = new FormData(affiliatePaymentForm); // получаем данные формы
-
-			const xhr = new XMLHttpRequest(); // создаем объект XMLHttpRequest
-			xhr.open('POST', '/submit-form'); // настраиваем запрос
-			xhr.send(formData); // отправляем данные на сервер
-
-			xhr.onload = function () {
-				if (xhr.status === 200) {
-					console.log(xhr.responseText); // выводим ответ сервера в консоль
-				}
-			};
-
-			paymentSection.classList.add('d-none');
-			affiliateSection.classList.remove('d-none');
-		});
-	}
-
-	if (document.getElementById('guideBankModal') && document.getElementById('guideBankClose')) {
-		document.getElementById('guideBankModal').addEventListener('click', function () {
-			document.querySelector('.account-affiliate-modal').classList.remove('d-none');
-		});
-
-		document.getElementById('guideBankClose').addEventListener('click', function () {
-			document.querySelector('.account-affiliate-modal').classList.add('d-none');
-		});
-	}
-
-	if (document.querySelector('.favorite')) {
-		const favorite = document.querySelector('.favorite');
-		const favoriteEmpty = document.querySelector('.favorite--empty');
-
-		// Функция для удаления элемента из списка избранного
-		function removeFavoriteItem(event) {
-			const favoriteItem = event.target.closest('.product-item');
-			favoriteItem.classList.add('d-none');
-
-			// Проверяем, есть ли еще элементы в списке избранного
-			const favoriteItems = favorite.querySelectorAll('.product-item:not(.d-none)');
-			if (favoriteItems.length === 0) {
-				favorite.classList.add('d-none');
-				favoriteEmpty.classList.remove('d-none');
-			}
-		}
-
-		// Навешиваем обработчик событий на кнопки удаления
-		const btnRemoveList = favorite.querySelectorAll('.btn-remove');
-		btnRemoveList.forEach(btnRemove => {
-			btnRemove.addEventListener('click', removeFavoriteItem);
-		});
-	}
 });

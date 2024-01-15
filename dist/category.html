@@ -14,7 +14,9 @@
 
 	<link rel="icon" href="images/favicon.svg">
 	
-	<link rel="stylesheet" href="css/app.min.css">
+	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="css/fix.min.css">
+	<link rel="stylesheet" href="css/modal-size.min.css">
 
 </head>
 
@@ -573,7 +575,7 @@
 				</span>
 			</button>
 
-			<div class="d-md-none d-flex justify-content-between gap-sm-4 gap-2">
+			<div class="block-filter d-md-none d-flex justify-content-between gap-sm-4 gap-2">
 				<button class="btn btn-dark btn-lg w-100 text-uppercase" type="button" data-bs-toggle="offcanvas"
 					data-bs-target="#offcanvasCategoryTop" aria-controls="offcanvasCategoryTop">
 					Filter by
@@ -925,7 +927,7 @@
 				</div>
 
 				<div class="col-lg-9 col-md-8">
-					<div class="row g-lg-5 g-md-4 g-sm-5 g-3">
+					<div class="category-cards row g-lg-5 g-md-4 g-sm-5 g-3">
 						<div class="col-xl-4 col-6">
 							<div class="card standart-card bg-black text-primary">
 	<div class="position-relative">
@@ -2597,7 +2599,7 @@
 			</div>
 			<div class="col-12 col-lg-5 col-xxl-4 text-start text-lg-end">
 				<div class="footer-copyright">
-					Copyright 2023 X-Under LLC. All rights reserved. Powered by Dennetic Group.
+					Copyright 2023 X-Under LLC. <span>All rights reserved. Powered by Dennetic Group.</span>
 				</div>
 
 				<div class="footer-address">
@@ -2608,8 +2610,8 @@
 	</div>
 </footer>
 
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/app.min.js"></script>
+<script src="js/bootstrap.bundle.min.js" defer></script>
+<script src="js/app.min-7.js" defer></script>
 
 </body>
 
