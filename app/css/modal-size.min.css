@@ -65,6 +65,30 @@
   object-fit: cover;
 }
 
+.modal-error .modal-body {
+  flex-direction: column;
+}
+
+.modal-error .modal-title {
+  margin-bottom: 4rem;
+}
+
+.modal-error .modal-text {
+  margin-bottom: 5rem;
+}
+
+.modal-error .error-text {
+  color: #FF3232;
+}
+
+.modal-error .modal-text p {
+  margin: 0;
+}
+
+.modal-error .modal-text p:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
 /** (End) Modal Size **/
 
 @media (max-width: 1200px) {
