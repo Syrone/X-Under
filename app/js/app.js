@@ -1202,4 +1202,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		categoryBottomDuplicate.insertAdjacentHTML('beforeend', categoryBottom.innerHTML);
 	}
 
+	//** Modal **//
+	const passwordResetModal = new bootstrap.Modal(document.getElementById('passwordResetModal'));
+	if (passwordResetModal) passwordResetModal.show();
+
 });

@@ -777,14 +777,25 @@ textarea.form-control
 			color: var(--transparent)
 	&>.form-control
 		height: 3rem
-		&:focus
+		&:focus,
+		&:not(:placeholder-shown)
 			&~label
+				color: var(--text-color)
 				transform: scale(.85) translateY(-0.6rem) translateX(0.15rem)
+				&::after
+					background-color: transparent
+	&>.form-select
+		&~label
+			color: var(--text-color)
+			transform: scale(.85) translateY(-0.6rem) translateX(0.15rem)
+			&::after
+				background-color: transparent
 	label
-		padding-block: .6rem
+		padding-block: 1rem
 
 	.form-select
-		padding-top: 1.3rem
+		padding-top: 1.625rem
+		padding-bottom: .625rem
 		height: 3rem
 
 input::-webkit-outer-spin-button,

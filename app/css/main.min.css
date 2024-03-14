@@ -15608,16 +15608,45 @@ textarea.form-control {
 .form-floating > .form-control {
   height: 3rem;
 }
-.form-floating > .form-control:focus ~ label {
+.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
+  color: var(--text-color);
+  transform: scale(0.85) translateY(-0.6rem) translateX(0.15rem);
+}
+.form-floating > .form-control:not(:-ms-input-placeholder) ~ label {
+  color: var(--text-color);
+  -ms-transform: scale(0.85) translateY(-0.6rem) translateX(0.15rem);
+      transform: scale(0.85) translateY(-0.6rem) translateX(0.15rem);
+}
+.form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label {
+  color: var(--text-color);
   -webkit-transform: scale(0.85) translateY(-0.6rem) translateX(0.15rem);
       -ms-transform: scale(0.85) translateY(-0.6rem) translateX(0.15rem);
           transform: scale(0.85) translateY(-0.6rem) translateX(0.15rem);
 }
+.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label::after {
+  background-color: transparent;
+}
+.form-floating > .form-control:not(:-ms-input-placeholder) ~ label::after {
+  background-color: transparent;
+}
+.form-floating > .form-control:focus ~ label::after, .form-floating > .form-control:not(:placeholder-shown) ~ label::after {
+  background-color: transparent;
+}
+.form-floating > .form-select ~ label {
+  color: var(--text-color);
+  -webkit-transform: scale(0.85) translateY(-0.6rem) translateX(0.15rem);
+      -ms-transform: scale(0.85) translateY(-0.6rem) translateX(0.15rem);
+          transform: scale(0.85) translateY(-0.6rem) translateX(0.15rem);
+}
+.form-floating > .form-select ~ label::after {
+  background-color: transparent;
+}
 .form-floating label {
-  padding-block: 0.6rem;
+  padding-block: 1rem;
 }
 .form-floating .form-select {
-  padding-top: 1.3rem;
+  padding-top: 1.625rem;
+  padding-bottom: 0.625rem;
   height: 3rem;
 }
 
