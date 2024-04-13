@@ -18,8 +18,8 @@
 								<div class="row g-3 mb-3">
 									<div class="col-lg-12 col-6">
 										<div class="form-floating">
-											<input type="text" class="form-control form-control-dark"
-												id="floatingShippingFirstName" placeholder="First name" required>
+											<input type="text" class="form-control form-control-dark" id="floatingShippingFirstName"
+												placeholder="First name" required>
 											<label for="floatingShippingFirstName">First name</label>
 										</div>
 									</div>
@@ -46,15 +46,15 @@
 
 							<div class="col-lg-6 col-12">
 								<div class="form-floating mb-3">
-									<input type="text" class="form-control form-control-dark" id="floatingShippingCity"
-										placeholder="City" required>
+									<input type="text" class="form-control form-control-dark" id="floatingShippingCity" placeholder="City"
+										required>
 									<label for="floatingShippingCity">City</label>
 								</div>
 								<div class="row g-3 mb-3">
 									<div class="col-6">
 										<div class="form-floating">
-											<input type="number" class="form-control form-control-dark"
-												id="floatingShippingZipCode" placeholder="Zip code" required>
+											<input type="number" class="form-control form-control-dark" id="floatingShippingZipCode"
+												placeholder="Zip code" required>
 											<label for="floatingShippingZipCode">Zip code</label>
 										</div>
 									</div>
@@ -139,8 +139,8 @@
 									<label for="floatingBillingAptSuite">Apt. Suite</label>
 								</div>
 								<div class="form-floating">
-									<input type="text" class="form-control form-control-dark" id="floatingBillingCity"
-										placeholder="City" required>
+									<input type="text" class="form-control form-control-dark" id="floatingBillingCity" placeholder="City"
+										required>
 									<label for="floatingBillingCity">City</label>
 								</div>
 							</div>
@@ -284,16 +284,16 @@
 								<div class="row g-3">
 									<div class="col-lg-12 col-6">
 										<div class="form-floating mb-3">
-											<input type="text" class="form-control form-control-dark"
-												id="floatingBillingContactFirstName" placeholder="First name" required>
+											<input type="text" class="form-control form-control-dark" id="floatingBillingContactFirstName"
+												placeholder="First name" required>
 											<label for="floatingBillingContactFirstName">First name</label>
 										</div>
 									</div>
 
 									<div class="col-lg-12 col-6">
 										<div class="form-floating mb-3">
-											<input type="text" class="form-control form-control-dark"
-												id="floatingBillingContactLastName" placeholder="Last name" required>
+											<input type="text" class="form-control form-control-dark" id="floatingBillingContactLastName"
+												placeholder="Last name" required>
 											<label for="floatingBillingContactLastName">Last name</label>
 										</div>
 									</div>
@@ -356,23 +356,23 @@
 						<div class="row justify-content-center">
 							<div class="col-lg-6 col-12">
 								<div class="form-floating mb-3">
-									<input type="number" class="form-control form-control-dark"
-										id="floatingCreditCard" placeholder="Credit or Debit Card number" required>
+									<input type="number" class="form-control form-control-dark" id="floatingCreditCard"
+										placeholder="Credit or Debit Card number" required>
 									<label for="floatingCreditCard">Credit or Debit Card number</label>
 								</div>
 								<div class="form-floating mb-3">
-									<input type="text" maxlength="30" class="form-control form-control-dark"
-										id="floatingCardHolder" placeholder="Card holder" required>
+									<input type="text" maxlength="30" class="form-control form-control-dark" id="floatingCardHolder"
+										placeholder="Card holder" required>
 									<label for="floatingCardHolder">Card holder</label>
 								</div>
 								<div class="form-floating mb-3">
-									<input type="number" class="form-control form-control-dark"
-										id="floatingExpiration" placeholder="Expiration MM/YY" required>
+									<input type="number" class="form-control form-control-dark" id="floatingExpiration"
+										placeholder="Expiration MM/YY" required>
 									<label for="floatingExpiration">Expiration MM/YY</label>
 								</div>
 								<div class="form-floating mb-3">
-									<input type="password" maxlength="4" class="form-control form-control-dark"
-										id="floatingCvvCode" placeholder="CVV" required>
+									<input type="password" maxlength="4" class="form-control form-control-dark" id="floatingCvvCode"
+										placeholder="CVV" required>
 									<label for="floatingCvvCode">CVV</label>
 								</div>
 							</div>
@@ -400,6 +400,59 @@
 					</div>
 				</form>
 			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="userBirthdayModal" tabindex="-1" aria-labelledby="userBirthdayModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content justify-content-center py-5">
+			<div class="modal-header">
+				<button type="button" class="btn-close btn-close-white btn-close-word d-flex align-items-center fs-5"
+					data-bs-dismiss="modal" aria-label="Close">
+					Close
+				</button>
+			</div>
+			<form action="#" class="container d-flex flex-column justify-content-between flex-grow-1">
+				<div class="modal-body d-block">
+					<h2 class="modal-title mb-4 text-center text-primary text-uppercase" id="userBirthdayModalLabel">
+						Date of Birth
+					</h2>
+					<div class="row justify-content-center">
+						<div class="col-lg-6 col-12">
+							<div class="form-floating mb-3">
+								<input type="date" class="form-control form-control-dark" id="floatingUserBirthday" placeholder="Date"
+									required>
+								<label for="floatingUserBirthday">Date</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<div class="row gy-sm-0 gy-3 w-100 m-0 justify-content-center">
+						<div class="col-lg-6">
+							<div class="row g-3">
+								<div class="col-sm-6">
+
+									<button type="submit" class="btn btn-accent btn-lg w-100 text-uppercase">
+										Save
+									</button>
+
+								</div>
+
+								<div class="col-sm-6">
+
+									<button type="button" class="btn btn-outline-secondary btn-lg w-100 text-uppercase"
+										data-bs-dismiss="modal">
+										Cancel
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
