@@ -44,6 +44,7 @@
 	"dependencies": {
 		"bootstrap": "^5.2.3",
 		"gulp-rename": "^2.0.0",
-		"swiper": "^9.3.2"
+		"swiper": "^9.3.2",
+		"vanilla-calendar-pro": "^2.9.6"
 	}
 }

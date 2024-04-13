@@ -15605,9 +15605,6 @@ textarea.form-control {
 .form-floating .form-control-dark:focus::placeholder {
   color: var(--transparent);
 }
-.form-floating > .form-control {
-  height: 3rem;
-}
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
   color: var(--text-color);
   transform: scale(0.85) translateY(-0.6rem) translateX(0.15rem);

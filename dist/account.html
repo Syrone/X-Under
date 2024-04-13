@@ -17,6 +17,8 @@
 	<link rel="stylesheet" href="css/main.min.css">
 	<link rel="stylesheet" href="css/fix.min.css">
 	<link rel="stylesheet" href="css/modal-size.min.css">
+	<link rel="stylesheet" href="css/floating-input.min.css">
+	<link rel="stylesheet" href="css/vanilla-calendar.min.css">
 
 </head>
 
@@ -1317,10 +1319,15 @@
 					</h2>
 					<div class="row justify-content-center">
 						<div class="col-lg-6 col-12">
-							<div class="form-floating mb-3">
-								<input type="date" class="form-control form-control-dark" id="floatingUserBirthday" placeholder="Date"
-									required>
-								<label for="floatingUserBirthday">Date</label>
+							<div class="dropdown dropdown-calendar">
+								<div id="dropdownCalendar" class="form-floating mb-3 dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" data-bs-offset="0,20" aria-expanded="false">
+									<input type="text" class="form-control form-control-dark dropdown-input" id="floatingUserBirthday" placeholder="Date"
+										required>
+									<label for="floatingUserBirthday">Date</label>
+								</div>
+								<div class="dropdown-menu" aria-labelledby="dropdownCalendar">
+									<div class="vanilla-calendar"></div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -1507,6 +1514,7 @@
 
 <script src="js/bootstrap.bundle.min.js" defer></script>
 <script src="js/app.min.js" defer></script>
+<script src="js/vanilla-canlendar.min.js" defer></script>
 
 </body>
 

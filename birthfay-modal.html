@@ -15,10 +15,16 @@
 					</h2>
 					<div class="row justify-content-center">
 						<div class="col-lg-6 col-12">
-							<div class="form-floating mb-3">
-								<input type="date" class="form-control form-control-dark" id="floatingUserBirthday" placeholder="Date"
-									required>
-								<label for="floatingUserBirthday">Date</label>
+							<div class="dropdown dropdown-calendar">
+								<div id="dropdownCalendar" class="form-floating mb-3 dropdown-toggle" data-bs-toggle="dropdown"
+									data-bs-auto-close="outside" data-bs-offset="0,20" aria-expanded="false">
+									<input type="text" class="form-control form-control-dark dropdown-input" id="floatingUserBirthday"
+										placeholder="Date" required>
+									<label for="floatingUserBirthday">Date</label>
+								</div>
+								<div class="dropdown-menu" aria-labelledby="dropdownCalendar">
+									<div class="vanilla-calendar"></div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -50,24 +56,3 @@
 		</div>
 	</div>
 </div>
-
-<!-- Если fix.min.css изменялся, то этот css вставить в конец файла -->
-<style>
-	input[type=date] {
-		position: relative;
-	}
-
-	input[type=date]::-webkit-calendar-picker-indicator,
-	input[type=date]::-webkit-inner-spin-button,
-	input[type=date]::-webkit-clear-button {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		width: auto;
-		height: auto;
-		color: transparent;
-		background: transparent;
-	}
-</style>
