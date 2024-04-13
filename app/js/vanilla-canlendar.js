@@ -17,10 +17,12 @@ calendars?.forEach((wrapperClass) => {
 					dropdownMenu = parentCalendar.querySelector('.dropdown-menu'),
 					inputCalendar = parentCalendar.querySelector('.dropdown-input')
 
-				inputCalendar.value = self.selectedDates[0];
-				dropdownMenu.classList.remove('show');
-				dropdownToggle.classList.remove('show');
-				dropdownToggle.setAttribute('aria-expanded', 'false');
+				if (self.selectedDates[0]) {
+					inputCalendar.value = self.selectedDates[0];
+					dropdownMenu.classList.remove('show');
+					dropdownToggle.classList.remove('show');
+					dropdownToggle.setAttribute('aria-expanded', 'false');
+				}
 			},
 		},
 		settings: {

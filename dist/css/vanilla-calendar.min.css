@@ -1124,3 +1124,8 @@
 .dropdown-calendar .dropdown-toggle:after {
   all: unset;
 }
+.dropdown-calendar .dropdown-menu {
+  background-color: transparent;
+  border: 1px solid var(--light-color);
+  padding: 0;
+}
