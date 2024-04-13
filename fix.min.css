@@ -112,16 +112,6 @@
 }
 
 /** (END) PAY **/
-/** (START) Modal **/
-.modal-v2 {
-  --bs-modal-header-padding: 1rem 2rem;
-  --bs-modal-padding: 1rem 2rem;
-}
-.modal-v2 .modal-footer {
-  padding: var(--bs-modal-padding);
-}
-
-/** (END) Modal **/
 /** (START) input date **/
 input[type=date] {
   position: relative;
