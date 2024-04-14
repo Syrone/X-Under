@@ -16582,11 +16582,7 @@ input[type=number] {
   --bs-btn-active-border-color: var(--transparent);
   --bs-btn-active-color: var(--text-color);
 }
-.account-affiliate-payment {
-  padding-block: 4rem;
-  background: var(--body-color);
-}
-.account-affiliate-payment .btn-icon {
+.account-affiliate-payment .btn-hint {
   right: -7rem;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -16594,13 +16590,13 @@ input[type=number] {
           transform: translateY(-50%);
   position: absolute;
 }
-.account-affiliate-payment .btn-icon .icon-info {
+.account-affiliate-payment .btn-hint .icon-info {
   width: 1.5rem;
 }
-.account-affiliate-payment .btn-icon .icon-info svg {
+.account-affiliate-payment .btn-hint .icon-info svg {
   --item-color: var(--text-color);
 }
-.account-affiliate-modal {
+.account-affiliate-hint {
   top: 0;
   height: 100%;
   background-color: var(--body-color);
@@ -18943,7 +18939,7 @@ input[type=number] {
     --bs-btn-padding-x: .5rem;
     margin-left: unset;
   }
-  .account-affiliate-payment .btn-icon {
+  .account-affiliate-payment .btn-hint {
     right: -6rem;
   }
   .account-order .orders .order-item {
@@ -19240,7 +19236,7 @@ input[type=number] {
   .bag-cta.step-2 .pay-protection img {
     width: calc(8vw + 50px);
   }
-  .account-affiliate-payment #guideBankModal {
+  .account-affiliate-payment .btn-hint {
     right: 0.25rem;
     top: -1.5rem;
   }

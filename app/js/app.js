@@ -1203,7 +1203,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	//** Modal **//
-	const passwordResetModal = new bootstrap.Modal(document.getElementById('passwordResetModal'));
-	if (passwordResetModal) passwordResetModal.show();
+	// const passwordResetModal = new bootstrap.Modal(document.getElementById('passwordResetModal'));
+	// if (passwordResetModal) passwordResetModal.show();
 
 });

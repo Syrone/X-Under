@@ -1,0 +1,46 @@
+.affiliate-popup {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  -webkit-transition: opacity var(--trt-1), visibility var(--trt-1);
+  transition: opacity var(--trt-1), visibility var(--trt-1);
+}
+.affiliate-popup.is-show {
+  opacity: 1;
+  visibility: visible;
+  position: static;
+  z-index: 1;
+}
+
+.affiliate-popup-dialog {
+  min-height: 47.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-block: 4rem;
+}
+
+.account-affiliate-modals {
+  background-color: var(--body-color);
+}
+
+@media (max-width: 768px) {
+  .account-affiliate-payment .btn-hint {
+    right: -6rem;
+  }
+}
+@media (max-width: 576px) {
+  .account-affiliate-payment .btn-hint {
+    right: 0.25rem;
+    top: -1.5rem;
+  }
+}

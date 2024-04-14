@@ -42,7 +42,7 @@ function browsersync() {
 }
 
 function scripts() {
-	return src(['app/js/vanilla-canlendar.js', '!app/js/*.min.js'])
+	return src(['app/js/account.js', '!app/js/*.min.js'])
 		.pipe(webpackStream({
 			mode: 'production',
 			performance: { hints: false },
@@ -76,7 +76,7 @@ function scripts() {
 		}, webpack)).on('error', (err) => {
 			this.emit('end')
 		})
-		.pipe(concat('vanilla-canlendar.min.js'))
+		.pipe(concat('account.min.js'))
 		.pipe(dest('app/js'))
 		.pipe(browserSync.stream())
 }
