@@ -15,7 +15,7 @@
 }
 
 .affiliate-popup-dialog {
-  min-height: 47.5rem;
+  min-height: 55rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,6 +31,12 @@
 
 .account-affiliate-modals {
   background-color: var(--body-color);
+}
+
+.table-secondary {
+  --bs-table-bg: var(--table-body);
+  --bs-table-border-color: #cfcfcf;
+  border-color: var(--bs-table-border-color);
 }
 
 @media (max-width: 768px) {

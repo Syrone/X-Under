@@ -519,6 +519,7 @@
 		</div>
 	</nav>
 
+	<!-- Класс is-show показывает окно -->
 	<section class="account-affiliate position-relative">
 		<div class="container">
 			<div id="accountInfoModal" class="affiliate-popup">
@@ -548,7 +549,7 @@
 					<div class="row justify-content-between text-item">
 						<div class="col-lg-6 col-xxl-5">
 							<h3 class="text-capitalize mb-3">Rewards History</h3>
-							<table class="table account-table rounded-1">
+							<table class="table table-secondary account-table rounded-1">
 								<thead class="fw-normal">
 									<tr>
 										<th scope="col">Date</th>
@@ -634,9 +635,9 @@
 									<button type="button" class="btn btn-outline-secondary btn-lg w-100" data-popup-target="paymentEmailFormModal">
 										PayPal
 									</button>
-										<span class="d-block tiny text-black text-center mt-2">
-											Auto-withdrawal
-										</span>
+									<span class="d-block tiny text-black text-center mt-2">
+										Auto-withdrawal
+									</span>
 								</div>
 								<button type="button" class="btn btn-outline-secondary btn-lg w-100" data-popup-target="paymentMethodFormModal">
 									Bank
@@ -672,6 +673,12 @@
 
 								<button type="submit" class="btn btn-accent btn-lg w-100 text-uppercase">
 									Save
+								</button>
+								<span class="d-flex justify-content-center fs-5 text-black my-3">
+									- or -
+								</span>
+								<button type="button" class="btn btn-outline-secondary btn-lg w-100" data-popup-target="paymentMethodFormModal">
+									Bank
 								</button>
 							</form>
 
@@ -744,6 +751,17 @@
 								<button type="submit" class="btn btn-accent btn-lg w-100 text-uppercase">
 									Save
 								</button>
+								<span class="d-flex justify-content-center fs-5 text-black my-3">
+									- or -
+								</span>
+								<div class="w-100">
+									<button type="button" class="btn btn-outline-secondary btn-lg w-100" data-popup-target="paymentEmailFormModal">
+										PayPal
+									</button>
+									<span class="d-block tiny text-black text-center mt-2">
+										Auto-withdrawal
+									</span>
+								</div>
 							</form>
 
 							<div class="tiny text-black text-center mt-auto">
