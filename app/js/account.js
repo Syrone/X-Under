@@ -31,18 +31,14 @@ buttons.forEach(function (button) {
 /** (End) Affiliate Popup **/
 
 /** (Start) Affiliate Form **/
-const emailForm = document.getElementById('paymentEmailForm'),
-			methodForm = document.getElementById('paymentMethodForm')
+const affiliateEmailForms = document.getElementsByClassName('affiliate-popup-form')
 
-emailForm?.addEventListener('submit', function(event) {
-  event.preventDefault();
+affiliateEmailForms?.forEach((form) => {
+	form?.addEventListener('submit', function(event) {
+		event.preventDefault();
+	
+		openPopup('accountInfoModal')
+	});
+})
 
-	openPopup('paymentMethodFormModal')
-});
-
-methodForm?.addEventListener('submit', function(event) {
-  event.preventDefault();
-
-	openPopup('accountInfoModal')
-});
 /** (End) Affiliate Form **/
