@@ -13,8 +13,8 @@
 }
 
 .form-floating label {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
 }
 
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {

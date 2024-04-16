@@ -31,7 +31,7 @@ buttons.forEach(function (button) {
 /** (End) Affiliate Popup **/
 
 /** (Start) Affiliate Form **/
-const affiliateEmailForms = document.getElementsByClassName('affiliate-popup-form')
+const affiliateEmailForms = document.querySelectorAll('.affiliate-popup-form')
 
 affiliateEmailForms?.forEach((form) => {
 	form?.addEventListener('submit', function(event) {
@@ -42,3 +42,8 @@ affiliateEmailForms?.forEach((form) => {
 })
 
 /** (End) Affiliate Form **/
+
+if (document.getElementById('modalFeedback')) {
+	const modalFeedback = new bootstrap.Modal(document.getElementById('modalFeedback'));
+	modalFeedback.show();
+}

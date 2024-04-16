@@ -1,25 +1,38 @@
-.affiliate-popup
-	opacity: 0
-	visibility: hidden
-	position: absolute
-	inset: 0
-	z-index: -1
-	transition: opacity var(--trt-1), visibility var(--trt-1)
+.affiliate
 
-	&.is-show
-		opacity: 1
-		visibility: visible
-		position: static
-		z-index: 1
+	&-popup
+		opacity: 0
+		visibility: hidden
+		position: absolute
+		inset: 0
+		z-index: -1
+		transition: opacity var(--trt-1), visibility var(--trt-1)
 
-.affiliate-popup
+		&.is-show
+			opacity: 1
+			visibility: visible
+			position: static
+			z-index: 1
 
-	&-dialog
-		min-height: 55rem
-		display: flex
-		flex-direction: column
-		justify-content: center
-		padding-block: 4rem
+		&-dialog
+			min-height: 55rem
+			display: flex
+			flex-direction: column
+			justify-content: center
+			padding-block: 4rem
+
+	&-nav
+		--bs-nav-link-font-weight: 500
+		--bs-nav-link-color: var(--text-color-light)
+		--bs-nav-link-hover-color: var(--item-color)
+		--bs-nav-tabs-border-width: 0
+		--bs-nav-link-padding-x: 0
+		--bs-nav-link-padding-y: 0
+
+		--bs-nav-pills-link-active-color: var(--item-color)
+		--bs-nav-pills-link-active-bg: transparent
+
+		gap: 1rem
 	
 .account
 
@@ -28,11 +41,31 @@
 		&-modals
 			background-color: var(--body-color)
 
+.text-transform-unset
+	text-transform: initial !important
+
 .table-secondary
+	--bs-table-color: var(--item-color)
 	--bs-table-bg: var(--table-body)
 	--bs-table-border-color: #cfcfcf
 
 	border-color: var(--bs-table-border-color)
+
+.form-check-input--small
+	background-size: .625rem
+
+.form-check-input--dark
+	border-color: var(--text-color)
+
+	&:focus
+		border-color: var(--text-color)
+		box-shadow: 0 0 0 0.25rem rgba(128, 128, 128, .25)
+
+	&:checked
+		border-color: var(--text-color)
+
+		&[type=radio]
+			--bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23808080'/%3e%3c/svg%3e")
 
 @media (max-width: 768px)
 

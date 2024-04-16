@@ -342,8 +342,7 @@
 	</div>
 </div>
 
-<div class="modal fade" id="paymentMethodModal2" tabindex="-1" aria-labelledby="paymentMethodModalLabel"
-	aria-hidden="true">
+<div class="modal fade" id="paymentMethodModal2" tabindex="-1" aria-labelledby="paymentMethodModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered modal-xl">
 		<div class="modal-content justify-content-center">
 			<div class="modal-header">
@@ -353,8 +352,8 @@
 				</button>
 			</div>
 			<div class="container">
-				<form action="">
-					<div class="modal-body">
+				<form>
+					<div class="modal-body mb-0">
 						<h2 class="modal-title mb-4 text-center text-primary text-uppercase" id="paymentMethodModalLabel">
 							Edit your payment method
 						</h2>
@@ -379,6 +378,14 @@
 									<input type="number" class="form-control form-control-dark" id="floatingAccountNumber"
 										placeholder="Account number" required>
 									<label for="floatingAccountNumber">Account number</label>
+								</div>
+								<span class="d-flex justify-content-center fs-5 text-black my-3">
+									- or -
+								</span>
+								<div class="form-floating overflow-hidden">
+									<input type="email" class="form-control form-control-dark" id="floatingAccountEmail3"
+										placeholder="Enter the email address from your PayPal account" required>
+									<label for="floatingAccountEmail3">Enter the email address from your PayPal account</label>
 								</div>
 							</div>
 						</div>
