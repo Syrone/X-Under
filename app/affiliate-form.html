@@ -108,8 +108,14 @@
 							required>
 						<input class="form-control form-control-light form-control-lg mb-3" type="text"
 							placeholder="Blog / Site Category *" aria-label="Enter your Blog or Site Category" required>
-						<input class="form-control form-control-light form-control-lg mb-3" type="number" placeholder="Age *"
-							aria-label="Enter your Age" required>
+						<div class="dropdown dropdown-calendar">
+							<div id="dropdownCalendar" class="mb-3 dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" data-bs-offset="0,20" aria-expanded="false">
+								<input type="text" class="form-control form-control-light form-control-lg dropdown-input" placeholder="Birthday *" aria-label="Enter your Birthday" autocomplete="off" required>
+							</div>
+							<div class="dropdown-menu shadow" aria-labelledby="dropdownCalendar">
+								<div class="vanilla-calendar"></div>
+							</div>
+						</div>
 
 						<div class="form-check-custom mb-3">
 							<div class="form-check form-check-lg form-check-inline">

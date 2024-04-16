@@ -42,8 +42,3 @@ affiliateEmailForms?.forEach((form) => {
 })
 
 /** (End) Affiliate Form **/
-
-if (document.getElementById('modalFeedback')) {
-	const modalFeedback = new bootstrap.Modal(document.getElementById('modalFeedback'));
-	modalFeedback.show();
-}
